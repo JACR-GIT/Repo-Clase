@@ -1,0 +1,31 @@
+ID;Nombre;Apellido;Edad;Departamento;Salario
+1;Ana;Gómez;29;Contabilidad;37400.00
+2;Juan;Pérez;41;Recursos Humanos;41800.00
+3;María;Lopez;35;Marketing;43050.00
+4;Carlos;Sánchez;28;Desarrollo;52500.00
+5;Lucía;Fernández;32;Ventas;39600.00
+6;Pedro;Martínez;27;Logística;38500.00
+7;Laura;García;45;Desarrollo;54600.00
+8;Andrés;Hernández;38;Soporte;42900.00
+9;Silvia;Rodríguez;30;Marketing;42000.00
+10;David;Ruiz;33;Logística;40700.00
+11;Paula;Molina;26;Recursos Humanos;38500.00
+12;Roberto;Morales;50;Contabilidad;47250.00
+13;Elena;Ortiz;31;Desarrollo;49350.00
+14;Mario;Delgado;29;Marketing;44100.00
+15;Sandra;Gómez;34;Soporte;42000.00
+16;Javier;Castillo;43;Ventas;46200.00
+17;Patricia;Ibañez;39;Contabilidad;43050.00
+18;Luis;Blanco;36;Desarrollo;55650.00
+19;Ana;López;24;Logística;36300.00
+20;Raúl;Suárez;37;Recursos Humanos;41800.00
+21;Carolina;Romero;29;Marketing;43050.00
+22;Diego;Nieto;28;Soporte;42900.00
+23;Clara;Reyes;40;Desarrollo;53550.00
+24;Sergio;Herrera;32;Contabilidad;42900.00
+25;Inés;Cruz;27;Logística;38500.00
+26;Victor;Méndez;34;Desarrollo;48300.00
+27;Carmen;Giménez;33;Recursos Humanos;41800.00
+28;Fernando;Fuentes;31;Marketing;42000.00
+29;Sara;Soto;30;Soporte;42900.00
+30;Antonio;Vázquez;29;Ventas;40700.00

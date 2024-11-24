@@ -1,0 +1,38 @@
+Nombre: Ana Gómez; Edad: 29; Teléfono: 612345678; Localidad: Madrid; Provincia: Madrid; Email: ana.gomez@email.com
+Nombre: Juan Pérez; Edad: 41; Teléfono: 623456789; Localidad: Barcelona; Provincia: Barcelona; Email: juan.perez@email.com
+Nombre: María López; Edad: 35; Teléfono: 634567890; Localidad: Valencia; Provincia: Valencia; Email: maria.lopez@email.com
+Nombre: Carlos Sánchez; Edad: 28; Teléfono: 645678901; Localidad: Sevilla; Provincia: Sevilla; Email: carlos.sanchez@email.com
+Nombre: Lucía Fernández; Edad: 32; Teléfono: 656789012; Localidad: Málaga; Provincia: Málaga; Email: lucia.fernandez@email.com
+Nombre: Pedro Martínez; Edad: 45; Teléfono: 667890123; Localidad: Zaragoza; Provincia: Zaragoza; Email: pedro.martinez@email.com
+Nombre: Laura Rodríguez; Edad: 27; Teléfono: 678901234; Localidad: Alicante; Provincia: Alicante; Email: laura.rodriguez@email.com
+Nombre: Juan Carlos Ruiz; Edad: 52; Teléfono: 689012345; Localidad: Cádiz; Provincia: Cádiz; Email: juan.ruiz@email.com
+Nombre: Teresa Gómez; Edad: 38; Teléfono: 690123456; Localidad: Valladolid; Provincia: Valladolid; Email: teresa.gomez@email.com
+Nombre: Jorge Sánchez; Edad: 33; Teléfono: 701234567; Localidad: Toledo; Provincia: Toledo; Email: jorge.sanchez@email.com
+Nombre: Ana María Martínez; Edad: 29; Teléfono: 712345678; Localidad: Granada; Provincia: Granada; Email: ana.martinez@email.com
+Nombre: Raúl García; Edad: 44; Teléfono: 723456789; Localidad: Valencia; Provincia: Valencia; Email: raul.garcia@email.com
+Nombre: Isabel Pérez; Edad: 40; Teléfono: 734567890; Localidad: Córdoba; Provincia: Córdoba; Email: isabel.perez@email.com
+Nombre: Luis Sánchez; Edad: 36; Teléfono: 745678901; Localidad: Bilbao; Provincia: Vizcaya; Email: luis.sanchez@email.com
+Nombre: José Antonio Gómez; Edad: 50; Teléfono: 756789012; Localidad: Lleida; Provincia: Lleida; Email: jose.gomez@email.com
+Nombre: Marta Rodríguez; Edad: 26; Teléfono: 767890123; Localidad: Salamanca; Provincia: Salamanca; Email: marta.rodriguez@email.com
+Nombre: Alberto Ruiz; Edad: 48; Teléfono: 778901234; Localidad: Burgos; Provincia: Burgos; Email: alberto.ruiz@email.com
+Nombre: Gloria Martínez; Edad: 30; Teléfono: 789012345; Localidad: Segovia; Provincia: Segovia; Email: gloria.martinez@email.com
+Nombre: Manuel García; Edad: 31; Teléfono: 790123456; Localidad: Huesca; Provincia: Huesca; Email: manuel.garcia@email.com
+Nombre: Cristina Sánchez; Edad: 39; Teléfono: 801234567; Localidad: La Rioja; Provincia: La Rioja; Email: cristina.sanchez@email.com
+Nombre: Ramón Pérez; Edad: 50; Teléfono: 812345678; Localidad: Ávila; Provincia: Ávila; Email: ramon.perez@email.com
+Nombre: Javier López; Edad: 43; Teléfono: 823456789; Localidad: Badajoz; Provincia: Badajoz; Email: javier.lopez@email.com
+Nombre: Isabel Fernández; Edad: 46; Teléfono: 834567890; Localidad: Albacete; Provincia: Albacete; Email: isabel.fernandez@email.com
+Nombre: Sergio Ruiz; Edad: 37; Teléfono: 845678901; Localidad: León; Provincia: León; Email: sergio.ruiz@email.com
+Nombre: Eva González; Edad: 28; Teléfono: 856789012; Localidad: Soria; Provincia: Soria; Email: eva.gonzalez@email.com
+Nombre: Francisco López; Edad: 41; Teléfono: 867890123; Localidad: Teruel; Provincia: Teruel; Email: francisco.lopez@email.com
+Nombre: Carmen Díaz; Edad: 54; Teléfono: 878901234; Localidad: Lugo; Provincia: Lugo; Email: carmen.diaz@email.com
+Nombre: Juan José Pérez; Edad: 29; Teléfono: 889012345; Localidad: Cáceres; Provincia: Cáceres; Email: juan.jose.perez@email.com
+Nombre: Olga Rodríguez; Edad: 38; Teléfono: 890123456; Localidad: Melilla; Provincia: Melilla; Email: olga.rodriguez@email.com
+Nombre: Ricardo González; Edad: 40; Teléfono: 901234567; Localidad: Ceuta; Provincia: Ceuta; Email: ricardo.gonzalez@email.com
+Nombre: Mónica Martín; Edad: 33; Teléfono: 912345678; Localidad: Getafe; Provincia: Madrid; Email: monica.martin@email.com
+Nombre: Enrique Sánchez; Edad: 47; Teléfono: 923456789; Localidad: Santa Cruz de Tenerife; Provincia: Santa Cruz de Tenerife; Email: enrique.sanchez@email.com
+Nombre: Verónica Martínez; Edad: 45; Teléfono: 934567890; Localidad: Santa Coloma de Gramenet; Provincia: Barcelona; Email: veronica.martinez@email.com
+Nombre: Guillermo Pérez; Edad: 50; Teléfono: 945678901; Localidad: Gijón; Provincia: Asturias; Email: guillermo.perez@email.com
+Nombre: Alicia Torres; Edad: 29; Teléfono: 956789012; Localidad: Marbella; Provincia: Málaga; Email: alicia.torres@email.com
+Nombre: Alberto Fernández; Edad: 44; Teléfono: 967890123; Localidad: Teruel; Provincia: Teruel; Email: alberto.fernandez@email.com
+Nombre: Adriana Ruiz; Edad: 31; Teléfono: 978901234; Localidad: Lérida; Provincia: Lérida; Email: adriana.ruiz@email.com
+Nombre: Guillermo López; Edad: 35; Teléfono: 989012345; Localidad: Santa Pola; Provincia: Alicante; Email: guillermo.lopez@email.com

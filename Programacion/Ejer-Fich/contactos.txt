@@ -1,0 +1,20 @@
+Nombre: Ana Gómez, Edad: 29, Teléfono: 612345678, Localidad: Getafe, Provincia: Madrid, Email: ana.gomez@email.com
+Nombre: Juan Pérez, Edad: 41, Teléfono: 623456789, Localidad: Lleida, Provincia: Lleida, Email: juan.perez@email.com
+Nombre: María López, Edad: 35, Teléfono: 634567890, Localidad: Paterna, Provincia: Valencia, Email: maria.lopez@email.com
+Nombre: Carlos Sánchez, Edad: 28, Teléfono: 645678901, Localidad: Dos Hermanas, Provincia: Sevilla, Email: carlos.sanchez@email.com
+Nombre: Lucía Fernández, Edad: 32, Teléfono: 656789012, Localidad: Torremolinos, Provincia: Málaga, Email: lucia.fernandez@email.com
+Nombre: Pedro Martínez, Edad: 27, Teléfono: 667890123, Localidad: Calatayud, Provincia: Zaragoza, Email: pedro.martinez@email.com
+Nombre: Laura García, Edad: 45, Teléfono: 678901234, Localidad: Elche, Provincia: Alicante, Email: laura.garcia@email.com
+Nombre: Andrés Hernández, Edad: 38, Teléfono: 689012345, Localidad: Béjar, Provincia: Salamanca, Email: andres.hernandez@email.com
+Nombre: Silvia Rodríguez, Edad: 30, Teléfono: 690123456, Localidad: Eibar, Provincia: Gipuzkoa, Email: silvia.rodriguez@email.com
+Nombre: David Ruiz, Edad: 33, Teléfono: 701234567, Localidad: Gandía, Provincia: Valencia, Email: david.ruiz@email.com
+Nombre: Paula Molina, Edad: 26, Teléfono: 712345678, Localidad: Medina del Campo, Provincia: Valladolid, Email: paula.molina@email.com
+Nombre: Roberto Morales, Edad: 50, Teléfono: 723456789, Localidad: Almuñécar, Provincia: Granada, Email: roberto.morales@email.com
+Nombre: Elena Ortiz, Edad: 31, Teléfono: 734567890, Localidad: Jerez de la Frontera, Provincia: Cádiz, Email: elena.ortiz@email.com
+Nombre: Mario Delgado, Edad: 29, Teléfono: 745678901, Localidad: Puente Genil, Provincia: Córdoba, Email: mario.delgado@email.com
+Nombre: Sandra Gómez, Edad: 34, Teléfono: 756789012, Localidad: Utrera, Provincia: Sevilla, Email: sandra.gomez@email.com
+Nombre: Javier Castillo, Edad: 43, Teléfono: 767890123, Localidad: Isla Cristina, Provincia: Huelva, Email: javier.castillo@email.com
+Nombre: Patricia Ibañez, Edad: 39, Teléfono: 778901234, Localidad: Ripoll, Provincia: Girona, Email: patricia.ibanez@email.com
+Nombre: Luis Blanco, Edad: 36, Teléfono: 789012345, Localidad: Talavera de la Reina, Provincia: Toledo, Email: luis.blanco@email.com
+Nombre: Ana López, Edad: 24, Teléfono: 790123456, Localidad: Avilés, Provincia: Asturias, Email: ana.lopez@email.com
+Nombre: Raúl Suárez, Edad: 37, Teléfono: 801234567, Localidad: Mahón, Provincia: Baleares, Email: raul.suarez@email.com

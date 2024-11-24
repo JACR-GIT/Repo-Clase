@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Media Queries</title>
+    <link rel="stylesheet" href="../CSS/Formulario_responsive.css">
+</head>
+<body>
+<div class="container">
+    <div class="cajas_superior">
+        <div class="caja">
+                <div class="imagen">
+                    <img src="../Imagenes/Maps.png" alt="icono ubicacion">
+                </div>
+                <div class="titulo">
+                    <h3>NUESTRA OFICINA PRINCIPAL</h3>
+                </div>
+                <div class="texto">
+                    <p id="ubi">SoHo 94 Broadway St Nueva York, NY 1001</p>
+                </div>
+        </div>
+        <div class="caja">
+            <div class="imagen">
+                <img src="../Imagenes/Telefono.png" alt="icono telefono">
+            </div>
+            <div class="titulo">
+                <h3>NÚMERO DE <br> TELÉFONO</h3>
+            </div>
+            <div class="texto">
+                <p>234-9876-5400 <br> 888-0123-4567(llamada gratuita)</p>
+            </div>
+        </div>
+        <div class="caja">
+            <div class="imagen">
+                <img src="../Imagenes/FaX.png" alt="icono fax">
+            </div>
+            <div class="titulo">
+                <h3>FAX</h3>
+            </div>
+            <div class="texto">
+                <p>1-234-567-8900</p>
+            </div>
+        </div>
+        <div class="caja">
+            <div class="imagen">
+                <img src="../Imagenes/Email.png" alt="icono correo electronico">
+            </div>
+            <div class="titulo">
+                <h3>CORREO <br> ELECTRONICO</h3>
+            </div>
+            <div class="texto">
+                <p>Hello@theme.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="cajas_inferior">
+        <div class="contenedor_formulario">
+            <form action="x" method="post" class="formulario">
+                <h2>Datos de contacto</h2>
+                <div class="fila">
+                    <div class="email">
+                        <label for="mail">Email:</label>
+                        <input type="email" name="mail" id="mail" required placeholder="Enter a valid email address"><br>
+                    </div>
+                    <div class="nombre">
+                        <label for="name">Nombre:</label>
+                        <input type="text" name="name" id="name" required placeholder="Enter your name"><br>
+                    </div>
+                </div>
+                <div id="area">
+                    <p>Comentarios:</p>
+                    <textarea name="comentario" placeholder="Enter your messenge" rows="5"></textarea>
+                </div>
+                <div class="boton_centrao">
+                    <button type="submit" class="boton_enviar">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="gmaps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d792.365875767532!2d-5.99446774751868!3d37.40251805371725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126bf7ff12a3cf%3A0x438da41c551c80d5!2sEscuelas%20Profesionales%20de%20la%20Sagrada%20Familia%20Nuestra%20Se%C3%B1ora%20de%20los%20Reyes!5e0!3m2!1ses!2ses!4v1729769648004!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

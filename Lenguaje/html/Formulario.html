@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="../CSS/Formulario.css">
+</head>
+<body>
+    <div class="Formulario">
+        <h1>Reserva de Hotel</h1>
+        <form action="mailto:reservas@mihotel.com" method="post" enctype="text/plain">
+            
+            <label class="forma" for="nombre">Nombre:
+            <input type="text" id="nombre" name="nombre" required>
+            </label>
+
+
+            <label class="forma" for="apellidos">Apellidos:
+            <input type="text" id="apellidos" name="apellidos" required>
+            </label>
+
+            
+            <label class="forma" for="telefono">Teléfono:
+            <input type="tel" id="telefono" name="telefono" required>
+            </label>
+
+            <label class="forma" for="email">E-mail:
+            <input type="email" id="email" name="email" required>
+            </label>
+
+            
+            <label class="forma" for="noches">Número de noches:
+            <input type="number" id="noches" name="noches" min="1" required>
+            </label>
+
+
+            <label class="forma" for="mes">Fecha de entrada:
+            <input type="date" id="mes" name="mes" >
+            </label>
+          
+
+            
+            <p>Tipo de habitación:</p>
+            <div class="elemento1"><label><input type="radio" name="habitacion" value="simple" required> Simple</label></div>
+            <div class="elemento2"><label><input type="radio" name="habitacion" value="doble"> Doble</label></div>
+            <div class="elemento3"><label><input type="radio" name="habitacion" value="matrimonio"> Matrimonio</label></div>
+
+            
+            <p>Servicios adicionales:</p>
+            <div class="elemento4"><label><input type="checkbox" name="servicios" value="desayuno"> Desayuno</label></div>
+            <div class="elemento5"><label><input type="checkbox" name="servicios" value="comida"> Comida</label></div>
+            <div class="elemento6"><label><input type="checkbox" name="servicios" value="cena"> Cena</label></div>
+            <div class="elemento7"><label><input type="checkbox" name="servicios" value="cama-supletoria"> Cama supletoria</label></div>
+
+           
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+
+            
+            <div class="buttons">
+                <button type="reset">Limpiar</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
