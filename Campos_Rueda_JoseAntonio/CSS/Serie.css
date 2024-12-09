@@ -8,16 +8,16 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-  }
-  
+}
+
 /* Contenedor Web */
 .contenedor_web {
     display: grid;
     width: 80vw;
     margin: 0 auto;
     gap: 2rem;
-  }
-  
+}
+
 /* Estilo para el menú de navegación */
 .nav {
     display: grid;
@@ -27,13 +27,13 @@ body {
     padding: 1rem;
     border-bottom: 2px solid #ccc;
     gap: 1rem;
-  }
-  
+}
+
 .nav img {
     max-height: 60px;
     width: auto;
-  }
-  
+}
+
 .nav h1 {
     font-size: 1.2rem;
     margin: 0;
@@ -42,30 +42,37 @@ body {
     text-align: center;
     padding: 1rem;
     border-radius: 8px;
-  }
-  
+}
+
 .nav h1 a {
     text-decoration: none;
     color: black;
     display: block;
-  }
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Estilo para el h2 (fuera de #temporada_1) */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    border: 2px solid orange; /* Borde alrededor del h2 */
+    border-radius: 8px;
+    background-color: #fff; /* Fondo blanco */
+    color: black; /* Texto negro */
+    margin: 0 auto 2rem; /* Centrado con espacio debajo */
+    max-width: fit-content; /* Ajusta el ancho al contenido */
 }
 
 /* Temporada */
-#temporada_1 {
+.temporada_1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    margin-top: 2rem;
     text-align: center;
 }
 
+/* Capítulos */
 .capitulo {
     display: flex;
     flex-direction: column;
@@ -98,7 +105,7 @@ body {
         gap: 0.5rem;
     }
 
-    #temporada_1 {
+    .temporada_1 {
         grid-template-columns: 1fr;
     }
 
