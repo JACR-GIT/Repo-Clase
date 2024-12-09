@@ -100,7 +100,7 @@ body {
 .juego_info p {
     font-size: 1.2rem;
     margin: 0.5rem 0;
-    text-align: justify; /* Justifica el texto para un aspecto más limpio */
+    text-align: center; /* Justifica el texto para un aspecto más limpio */
 }
 
 .juego_video {
