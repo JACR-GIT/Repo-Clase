@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor Web */
+.contenedor_web {
+    display: grid;
+    width: 80vw;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+/* Estilo para el menú de navegación */
+.nav {
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr);
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-bottom: 2px solid #ccc;
+    gap: 1rem;
+}
+
+.nav img {
+    max-height: 60px;
+    width: auto;
+}
+
+.nav h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    background-color: orange;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.nav h1 a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/* Lista de juegos */
+#lista_juegos {
+    display: grid;
+    gap: 2rem;
+    padding: 3vw;
+    text-align: center; /* Centra horizontalmente todos los elementos */
+}
+
+.juego {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el contenido dentro de cada .juego */
+}
+
+.juego_imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente las imágenes */
+    align-items: center; /* Centra horizontalmente las imágenes */
+    gap: 1rem; /* Espacio entre imágenes */
+}
+
+.juego_imagen img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Mantiene la proporción de las imágenes */
+}
+
+.juego_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra horizontalmente el texto */
+    text-align: justify; /* Justifica el texto para alinearlo a ambos lados */
+}
+
+.juego_info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.juego_info p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    text-align: justify; /* Justifica el texto para un aspecto más limpio */
+}
+
+.juego_video {
+    display: flex;
+    justify-content: center; /* Centra el iframe horizontalmente */
+    align-items: center; /* Centra el iframe verticalmente */
+}
+
+.juego_video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav {
+        grid-template-columns: 1fr;
+    }
+
+    .juego {
+        grid-template-columns: 1fr;
+    }
+
+    .juego_imagen img {
+        max-width: 100%;
+    }
+
+    .juego_video iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
