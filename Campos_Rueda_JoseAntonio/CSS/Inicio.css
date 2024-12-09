@@ -1,0 +1,161 @@
+/* Estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  font-size: 1rem; /* Base para responsividad */
+}
+
+.web {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo para toda la web */
+  margin: 0 auto; /* Centrar la web horizontalmente */
+}
+
+/* Menú de navegación */
+.nav {
+  display: grid;
+  grid-template-columns: auto repeat(4, 1fr);
+  align-items: center;
+  background-color: #ffffff;
+  padding: 2vw;
+  border-bottom: 2px solid #ccc;
+  gap: 1rem;
+  width: 100%;
+}
+
+.nav img {
+  max-height: 7vh;
+  width: auto;
+}
+
+.nav h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  background-color: orange;
+  color: black;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.nav h1 a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+/* Contenedor principal */
+.Contenedor_principal {
+  display: grid;
+  gap: 2rem;
+  width: 100%; /* Alineación con el contenedor principal */
+  padding: 3vw;
+}
+
+/* Historia */
+.Hisotoria {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2vw;
+  background-color: #ffffff;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.Hisotoria h1 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.Hisotoria p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Equipos */
+.Equipos {
+  display: grid;
+  gap: 2vw;
+  padding: 2vw;
+  background-color: #ffffff;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.Equipos h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.contenedor_equipos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  gap: 2vw;
+}
+
+.contenedor_equipos div {
+  display: grid;
+  gap: 1vw;
+  justify-items: center;
+  text-align: center;
+}
+
+.contenedor_equipos img {
+  width: 10vw; /* Tamaño uniforme y proporcional */
+  height: auto;
+  max-width: 120px; /* Límite máximo de tamaño */
+}
+
+.contenedor_equipos h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+/* Supertecnicas */
+.Supertecnicas {
+  display: grid;
+  gap: 2vw;
+  padding: 2vw;
+  background-color: #ffffff;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.Supertecnicas h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.contenedor_supertecnicas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  gap: 2vw;
+}
+
+.contenedor_supertecnicas div {
+  display: grid;
+  gap: 1vw;
+  justify-items: center;
+  text-align: center;
+}
+
+.contenedor_supertecnicas img {
+  width: 10vw; /* Tamaño uniforme y proporcional */
+  height: auto;
+  max-width: 120px; /* Límite máximo de tamaño */
+}
+
+.contenedor_supertecnicas h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
