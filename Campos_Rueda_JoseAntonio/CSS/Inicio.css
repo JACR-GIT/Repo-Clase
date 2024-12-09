@@ -27,6 +27,7 @@ body {
   padding: 1rem;
   border-bottom: 2px solid #ccc;
   gap: 1rem;
+  border-radius: 0.8rem;
 }
 
 .nav img {
@@ -48,6 +49,10 @@ body {
   text-decoration: none;
   color: black;
   display: block;
+}
+
+.nav h1:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Contenedor principal */
@@ -110,6 +115,14 @@ body {
   gap: 1vw;
   justify-items: center;
   text-align: center;
+  border: 2px solid black; /* Borde negro */
+  padding: 1rem;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.contenedor_equipos div:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efecto de iluminación */
 }
 
 .contenedor_equipos img {
@@ -122,6 +135,8 @@ body {
 .contenedor_equipos h2 {
   font-size: 1.3rem;
   margin: 0;
+  color: black;
+  text-decoration: none;
 }
 
 /* Supertecnicas */
@@ -154,6 +169,10 @@ body {
   text-align: center;
 }
 
+.contenedor_supertecnicas div:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efecto de iluminación */
+}
+
 .contenedor_supertecnicas img {
   width: 13.8vw; /* Tamaño más grande para GIFs */
   height: auto;
@@ -163,4 +182,10 @@ body {
 .contenedor_supertecnicas h2 {
   font-size: 1.3rem;
   margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .contenedor_equipos, .contenedor_supertecnicas {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
 }
