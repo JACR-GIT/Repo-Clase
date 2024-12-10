@@ -106,9 +106,10 @@ h2 {
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        gap: 0.5rem;
+  .nav {
+    grid-template-rows: auto repeat(2, 1fr);
+    gap: 0.5rem;
+    grid-template-columns: auto;
     }
 
     .temporada_1 {
@@ -117,5 +118,12 @@ h2 {
 
     .capitulo iframe {
         max-width: 100%;
+    }
+    .contenedor_web{
+      justify-content: center;
+    }
+    .contenedor_imagen {
+      display: flex;
+      justify-content: center;
     }
 }

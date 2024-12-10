@@ -104,6 +104,7 @@ body {
   margin: 0;
 }
 
+
 .contenedor_equipos {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columnas */
@@ -136,6 +137,9 @@ body {
   font-size: 1.3rem;
   margin: 0;
   color: black;
+}
+
+.contenedor_equipos a {
   text-decoration: none;
 }
 
@@ -184,8 +188,26 @@ body {
   margin: 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .contenedor_equipos, .contenedor_supertecnicas {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nav {
+    grid-template-rows: auto repeat(2, 1fr);
+    gap: 0.5rem;
+    grid-template-columns: auto;
+  }
+  .contenedor_web{
+    justify-content: center;
+  }
+  .contenedor_equipos h2{
+    font-size: 0.9rem;
+  }
+  .contenedor_supertecnicas h2{
+    font-size: 0.9rem;
+  }
+  .contenedor_imagen {
+    display: flex;
+    justify-content: center;
   }
 }

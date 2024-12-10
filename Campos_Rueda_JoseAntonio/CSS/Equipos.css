@@ -67,6 +67,7 @@ body {
     border-collapse: collapse;
     gap: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    -webkit-overflow-scrolling: touch ;
 }
 
 /* Título de la tabla */
@@ -115,8 +116,9 @@ body {
 /* Responsividad adicional */
 @media (max-width: 768px) {
     .nav {
-        grid-template-columns: auto repeat(2, 1fr);
+        grid-template-rows: auto repeat(2, 1fr);
         gap: 0.5rem;
+        grid-template-columns: auto;
     }
 
     .nav img {
@@ -127,16 +129,11 @@ body {
         font-size: 1rem;
         padding: 0.8rem;
     }
-
-    .tabla {
-        grid-template-columns: repeat(2, 1fr);
+    .contenedor_imagen {
+        display: flex;
+        justify-content: center;
     }
-
-    .tabla .titulo img {
-        max-width: 120px;
-    }
-
-    .tabla .celda {
-        font-size: 0.9rem;
+    .contenedor_web{
+      justify-content: center;
     }
 }
