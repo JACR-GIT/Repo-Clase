@@ -4,7 +4,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: orange;
@@ -16,6 +15,7 @@ body {
   width: 80vw;
   margin: 0 auto;
   gap: 2rem;
+  justify-content: center;
 }
 
 /* Estilo para el menú de navegación */
@@ -28,6 +28,9 @@ body {
   border-bottom: 2px solid #ccc;
   gap: 1rem;
   border-radius: 0.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .nav img {
@@ -59,7 +62,7 @@ body {
 .Contenedor_principal {
   display: grid;
   gap: 2rem;
-  width: 100%; /* Alineación con el contenedor principal */
+  width: 100%;
   padding: 1vw;
 }
 
@@ -82,9 +85,9 @@ body {
 .Hisotoria p {
   font-size: 1.2rem;
   line-height: 1.8;
-  word-wrap: break-word; /* Ajustar el texto automáticamente */
-  overflow-wrap: break-word; /* Compatibilidad adicional */
-  white-space: normal; /* Evitar desbordamiento horizontal */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; 
 }
 
 /* Equipos */
@@ -107,7 +110,7 @@ body {
 
 .contenedor_equipos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  grid-template-columns: repeat(5, 1fr);
   gap: 2vw;
 }
 
@@ -116,21 +119,21 @@ body {
   gap: 1vw;
   justify-items: center;
   text-align: center;
-  border: 2px solid black; /* Borde negro */
+  border: 2px solid black;
   padding: 1rem;
   border-radius: 5px;
   transition: box-shadow 0.3s ease;
 }
 
 .contenedor_equipos div:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efecto de iluminación */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .contenedor_equipos img {
-  width: 8vw; /* Tamaño uniforme y proporcional para escudos */
+  width: 8vw;
   height: auto;
-  max-width: 100px; /* Límite máximo de tamaño */
-  max-height: 100px; /* Asegurar proporciones */
+  max-width: 100px; 
+  max-height: 100px;
 }
 
 .contenedor_equipos h2 {
@@ -162,7 +165,7 @@ body {
 
 .contenedor_supertecnicas {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+  grid-template-columns: repeat(5, 1fr);
   gap: 2vw;
 }
 
@@ -171,14 +174,15 @@ body {
   gap: 1vw;
   justify-items: center;
   text-align: center;
+  border: 2px solid #000000;
 }
 
 .contenedor_supertecnicas div:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efecto de iluminación */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .contenedor_supertecnicas img {
-  width: 13.8vw; /* Tamaño más grande para GIFs */
+  width: 13.8vw;
   height: auto;
 
 }

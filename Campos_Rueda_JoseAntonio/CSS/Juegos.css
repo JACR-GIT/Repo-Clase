@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: orange;
@@ -28,6 +27,9 @@ body {
     border-bottom: 2px solid #ccc;
     gap: 1rem;
     border-radius: 0.8rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   
   .nav img {
@@ -61,7 +63,7 @@ body {
     display: grid;
     gap: 2rem;
     padding: 3vw;
-    text-align: center; /* Centra horizontalmente todos los elementos */
+    text-align: center;
 }
 
 .juego {
@@ -73,30 +75,30 @@ body {
     border: 0.1rem solid #ccc;
     border-radius: 0.8rem;
     box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centra el contenido dentro de cada .juego */
+    text-align: center;
 }
 
 .juego_imagen {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente las imágenes */
-    align-items: center; /* Centra horizontalmente las imágenes */
-    gap: 1rem; /* Espacio entre imágenes */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .juego_imagen img {
     width: auto;
     max-width: 100%;
     height: auto;
-    object-fit: contain; /* Mantiene la proporción de las imágenes */
+    object-fit: contain;
 }
 
 .juego_info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centra horizontalmente el texto */
-    text-align: justify; /* Justifica el texto para alinearlo a ambos lados */
+    align-items: center;
+    text-align: justify;
 }
 
 .juego_info h2 {
@@ -107,13 +109,13 @@ body {
 .juego_info p {
     font-size: 1.2rem;
     margin: 0.5rem 0;
-    text-align: center; /* Justifica el texto para un aspecto más limpio */
+    text-align: center;
 }
 
 .juego_video {
     display: flex;
-    justify-content: center; /* Centra el iframe horizontalmente */
-    align-items: center; /* Centra el iframe verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .juego_video iframe {

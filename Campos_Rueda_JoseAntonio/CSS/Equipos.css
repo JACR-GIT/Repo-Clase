@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: orange;
@@ -28,6 +27,9 @@ body {
     border-bottom: 2px solid #ccc;
     gap: 1rem;
     border-radius: 0.8rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   
   .nav img {
@@ -94,7 +96,7 @@ body {
 
 /* Filas y celdas */
 .tabla .fila {
-    display: contents; /* Mantener la estructura de grid para filas */
+    display: contents;
 }
 
 .tabla .celda {

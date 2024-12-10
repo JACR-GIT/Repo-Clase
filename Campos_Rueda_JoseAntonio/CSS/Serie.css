@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: orange;
@@ -28,6 +27,9 @@ body {
     border-bottom: 2px solid #ccc;
     gap: 1rem;
     border-radius: 0.8rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   
   .nav img {
@@ -62,12 +64,12 @@ h2 {
     font-size: 2rem;
     font-weight: bold;
     padding: 1rem;
-    border: 2px solid orange; /* Borde alrededor del h2 */
+    border: 2px solid orange;
     border-radius: 8px;
-    background-color: #fff; /* Fondo blanco */
-    color: black; /* Texto negro */
-    margin: 0 auto 2rem; /* Centrado con espacio debajo */
-    max-width: fit-content; /* Ajusta el ancho al contenido */
+    background-color: #fff;
+    color: black;
+    margin: 0 auto 2rem;
+    max-width: fit-content;
 }
 
 /* Temporada */
