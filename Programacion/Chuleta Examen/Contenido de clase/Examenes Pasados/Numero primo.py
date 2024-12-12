@@ -33,12 +33,11 @@ def generar_primos(limite):
     for numero in range(2, limite + 1):
         if es_primo(numero):
             primos.append(numero)
+
     return primos
 
 
-# Ejemplo de uso:
-numero = 29
-print(f"¿El número {numero} es primo? {es_primo(numero)}")
+# Ejemplo de uso
 
 limite = 50
 print(f"Números primos hasta {limite}: {generar_primos(limite)}")
