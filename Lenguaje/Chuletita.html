@@ -1,0 +1,293 @@
+Resumen de HTML y CSS
+
+1. Estructura básica de un documento HTML
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Título de la página</title>
+</head>
+<body>
+    <!-- Contenido de la página -->
+</body>
+</html>
+```
+- `<!DOCTYPE html>`: Declara el tipo de documento.
+- `<html>`: Contenedor principal de la página.
+- `<head>`: Contiene metadatos como el título y enlaces a estilos.
+- `<body>`: Contiene el contenido visible de la página.
+
+2. Etiquetas principales
+a. Títulos
+```html
+<h1>Título principal</h1>
+<h2>Subtítulo</h2>
+<h6>Título más pequeño</h6>
+```
+- `<h1>` a `<h6>`: Encabezados, donde `<h1>` es el más grande y `<h6>` el más pequeño.
+
+b. Párrafos
+```html
+<p>Este es un párrafo.</p>
+```
+
+c. Imágenes
+```html
+<img src="imagen.jpg" alt="Descripción de la imagen">
+```
+- `src`: Ruta de la imagen.
+- `alt`: Texto alternativo para accesibilidad.
+
+d. Enlaces
+```html
+<a href="https://www.ejemplo.com">Haz clic aquí</a>
+```
+- `href`: Dirección del enlace.
+
+e. Listas
+- **No ordenadas:**
+```html
+<ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+</ul>
+```
+- **Ordenadas:**
+```html
+<ol>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+</ol>
+```
+
+f. Tablas
+```html
+<table>
+    <tr>
+        <th>Columna 1</th>
+        <th>Columna 2</th>
+    </tr>
+    <tr>
+        <td>Dato 1</td>
+        <td>Dato 2</td>
+    </tr>
+</table>
+```
+- `<tr>`: Fila.
+- `<th>`: Celda de encabezado.
+- `<td>`: Celda de datos.
+
+g. Formularios
+```html
+<form action="/enviar" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <button type="submit">Enviar</button>
+</form>
+```
+- `action`: URL donde se envían los datos.
+- `method`: Método de envío (`get` o `post`).
+- `<input>`: Campo de entrada.
+- `<button>`: Botón de envío.
+
+h. Divisiones y spans
+- **Divisiones:** Agrupan bloques de contenido.
+```html
+<div class="contenedor">
+    <p>Texto dentro de un div.</p>
+</div>
+```
+- **Span:** Agrupa contenido en línea.
+```html
+<p>Texto con <span style="color: red;">color rojo</span>.</p>
+```
+
+i. Comentarios
+```html
+<!-- Esto es un comentario en HTML -->
+```
+
+j. Multimedia
+- **Audio:**
+```html
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+```
+- **Video:**
+```html
+<video width="320" height="240" controls>
+    <source src="video.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+</video>
+```
+
+k. Metaetiquetas
+```html
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+- `charset`: Codificación de caracteres.
+- `viewport`: Ajuste de diseño en dispositivos móviles.
+
+---
+
+CSS (Cascading Style Sheets)
+CSS se utiliza para dar estilo y formato a las páginas web.
+
+1. Estructura básica de CSS
+```css
+selector {
+    propiedad: valor;
+}
+```
+- `selector`: Elemento HTML al que se aplica el estilo.
+- `propiedad`: Atributo del estilo (por ejemplo, color, tamaño).
+- `valor`: Especifica cómo se verá el atributo.
+
+2. Métodos para aplicar CSS
+a. En línea
+```html
+<p style="color: blue; font-size: 14px;">Texto azul</p>
+```
+b. En el `<head>` (CSS interno)
+```html
+<head>
+<style>
+p {
+    color: blue;
+    font-size: 14px;
+}
+</style>
+</head>
+```
+c. Archivo externo
+```html
+<head>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+```
+En el archivo `estilos.css`:
+```css
+p {
+    color: blue;
+    font-size: 14px;
+}
+```
+
+3. Propiedades principales de CSS
+a. Colores
+- **Texto:**
+```css
+color: red;
+```
+- **Fondo:**
+```css
+background-color: yellow;
+```
+
+b. Fuentes
+```css
+font-family: Arial, sans-serif;
+font-size: 16px;
+font-weight: bold; /* Valores: normal, bold, lighter */
+font-style: italic; /* Valores: normal, italic, oblique */
+```
+
+c. Bordes
+```css
+border: 2px solid black; /* Ancho, estilo y color */
+border-radius: 10px; /* Bordes redondeados */
+```
+
+d. Margen y relleno
+- **Margen:** Espacio fuera del borde.
+```css
+margin: 20px;
+```
+- **Relleno:** Espacio dentro del borde.
+```css
+padding: 10px;
+```
+
+e. Tamaño y posición
+```css
+width: 100px; /* Ancho */
+height: 200px; /* Alto */
+text-align: center; /* Alineación de texto: left, right, center */
+```
+
+f. Display y flexbox
+- **Display:** Define cómo se muestran los elementos.
+```css
+display: block; /* Valores: block, inline, flex, grid, none */
+```
+- **Flexbox:** Organización flexible de elementos.
+```css
+display: flex;
+justify-content: center; /* Alineación horizontal */
+align-items: center; /* Alineación vertical */
+```
+
+g. Grid
+- **Display grid:** Permite organizar elementos en un sistema de filas y columnas.
+```css
+display: grid;
+grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
+grid-template-rows: auto 200px; /* Dos filas: una automática y otra de 200px */
+gap: 10px; /* Espacio entre filas y columnas */
+```
+- **Ejemplo:**
+```html
+<div class="grid-container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+</div>
+```
+```css
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 15px;
+}
+.item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+```
+
+h. Posicionamiento
+```css
+position: relative; /* Valores: static, relative, absolute, fixed, sticky */
+left: 10px; /* Desplazamiento desde la izquierda */
+top: 20px; /* Desplazamiento desde arriba */
+```
+
+i. Z-index
+```css
+z-index: 10; /* Controla la superposición de elementos */
+```
+
+j. Transiciones
+```css
+transition: all 0.3s ease;
+```
+- **Ejemplo:**
+```css
+div {
+    background-color: blue;
+    transition: background-color 0.5s;
+}
+div:hover {
+    background-color: red;
+}
+```
+
+---
+
+Este resumen incluye los conceptos básicos y más utilizados de HTML y CSS. Con esta base puedes empezar a construir y estilizar páginas web. ¡Buena suerte!
+
