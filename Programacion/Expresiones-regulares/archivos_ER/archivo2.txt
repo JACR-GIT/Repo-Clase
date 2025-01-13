@@ -1,0 +1,25 @@
+2024-12-01 08:12:34 - INFO - Usuario_102 conectado desde 192.168.1.1
+2024-12-01 08:15:02 - ERROR - Fallo al conectar con la base de datos: Timeout expirado
+2024-12-01 08:16:45 - WARNING - Intento de inicio de sesión fallido para usuario: admin desde 203.0.113.42
+2024-12-01 08:18:19 - INFO - Usuario_102 desconectado desde 192.168.1.1
+2024-12-01 08:20:11 - ERROR - Excepción no controlada: NullPointerException en el módulo de autenticación
+2024-12-01 08:21:56 - INFO - Usuario_205 conectado desde 10.0.0.3
+2024-12-01 08:25:33 - ERROR - Error al cargar recurso: 404 - /static/css/styles.css
+2024-12-01 08:27:44 - WARNING - Uso alto de memoria: 85% en el servidor web
+2024-12-01 08:30:12 - INFO - Usuario_305 conectado desde 192.168.2.14
+2024-12-01 08:32:50 - ERROR - Intento de acceso no autorizado a /admin desde 198.51.100.23
+2024-12-01 08:35:11 - INFO - Usuario_205 desconectado desde 10.0.0.3
+2024-12-01 08:40:07 - ERROR - No se pudo enviar el correo electrónico: smtp.example.com no responde
+2024-12-01 08:42:15 - WARNING - Demora alta en la respuesta: 2.3s en /api/getUserData
+2024-12-01 08:45:00 - INFO - Usuario_305 desconectado desde 192.168.2.14
+2024-12-01 08:47:22 - ERROR - Error de validación de formulario: Campo "email" vacío
+2024-12-01 08:50:30 - INFO - Usuario_405 conectado desde 192.0.2.15
+2024-12-01 08:52:19 - ERROR - Se alcanzó el límite de conexiones simultáneas al servidor
+2024-12-01 08:55:01 - WARNING - Sesión expirada para usuario 405
+2024-12-01 08:57:43 - INFO - Usuario_501 conectado desde 172.16.0.2
+2024-12-01 09:00:05 - ERROR - Error al procesar la solicitud: Código 500 - Internal Server Error
+2024-12-01 09:02:25 - WARNING - Certificado SSL a punto de expirar: vence en 7 días
+2024-12-01 09:05:18 - INFO - Usuario_601 conectado desde 10.1.1.1
+2024-12-01 09:10:47 - ERROR - Excepción no controlada: IndexOutOfBoundsException en el módulo de estadísticas
+2024-12-01 09:12:30 - WARNING - Base de datos cercana al límite de almacenamiento: 95% usado
+2024-12-01 09:15:09 - INFO - Usuario_601 desconectado desde 10.1.1.1

@@ -1,0 +1,12 @@
+email;nombre;edad;registro;activo
+usuario1@gmail.com;Juan;25;2022-05-15;true
+usuario2@hotmail.com;Ana;30;2021-11-20;false
+usuario3@fake;Pedro;40;2023-02-10;true
+maria_lopez@yahoo.com;Maria;28;2021-09-12;true
+roberto123@company.com;Roberto;35;2020-07-18;false
+no_email;Miguel;22;2024-01-01;true
+luis.garcia@example.net;Luis;31;2023-06-05;true
+sofia.martinez@outlook.com;Sofia;29;2022-12-10;false
+andrea_perez@mail.com;Andrea;27;2023-09-15;true
+carlos_ruiz@corporate.org;Carlos;45;2020-03-20;true
+susana.fernandez@example.com;Susana;33;2021-07-07;false

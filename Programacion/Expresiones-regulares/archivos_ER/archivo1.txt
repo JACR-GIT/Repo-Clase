@@ -1,0 +1,5 @@
+Este es 1 texto de ejemplo para probar expresiones regulares.
+Incluye direcciones como prueba@gmail.com o info@example.org.
+También tiene números como 123, 456 y fechas como 15/08/2024.
+Si tienes alguna duda, consulta a través de jabenitez@fundacionsafa.es.
+Sevilla, a 16/12/2024.
