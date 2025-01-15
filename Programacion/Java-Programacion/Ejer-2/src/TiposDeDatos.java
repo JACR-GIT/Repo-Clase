@@ -5,9 +5,9 @@ public class TiposDeDatos {
         char inicial = 'H';
         boolean esEstudiante = true;
 
-        System.out.println("Edad: " + edad);
-        System.out.println("Altura: " + altura);
-        System.out.println("Inicial: " + inicial);
-        System.out.println("Estado: " + esEstudiante);
+        System.out.println("Edad: " + edad+ inicial);
+        System.out.println("Altura: " + altura+ inicial);
+        System.out.println("Inicial: " + inicial + inicial);
+        System.out.println("Estado: " + esEstudiante+ inicial);
     }
 }
