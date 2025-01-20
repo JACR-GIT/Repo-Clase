@@ -1,0 +1,19 @@
+{
+    "categoria": "Electrónica",
+    "productos": [
+        {
+            "nombre": "Auriculares",
+            "detalles": {
+                "precio": 50,
+                "stock": 20
+            }
+        },
+        {
+            "nombre": "Altavoz Bluetooth",
+            "detalles": {
+                "precio": 100,
+                "stock": 15
+            }
+        }
+    ]
+}

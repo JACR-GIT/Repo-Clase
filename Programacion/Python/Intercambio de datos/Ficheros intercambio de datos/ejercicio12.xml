@@ -1,0 +1,32 @@
+<peliculas>
+    <pelicula>
+        <titulo>Inception</titulo>
+        <director>Christopher Nolan</director>
+        <año>2010</año>
+    </pelicula>
+    <pelicula>
+        <titulo>El Señor de los Anillos</titulo>
+        <director>Peter Jackson</director>
+        <año>2001</año>
+    </pelicula>
+    <pelicula>
+        <titulo>Matrix</titulo>
+        <director>The Wachowskis</director>
+        <año>1999</año>
+    </pelicula>
+    <pelicula>
+        <titulo>Avatar</titulo>
+        <director>James Cameron</director>
+        <año>2009</año>
+    </pelicula>
+    <pelicula>
+        <titulo>Interstellar</titulo>
+        <director>Christopher Nolan</director>
+        <año>2014</año>
+    </pelicula>
+    <pelicula>
+        <titulo>Gladiator</titulo>
+        <director>Ridley Scott</director>
+        <año>2000</año>
+    </pelicula>
+</peliculas>

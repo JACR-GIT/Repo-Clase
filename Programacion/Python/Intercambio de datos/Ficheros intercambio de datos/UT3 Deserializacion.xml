@@ -1,0 +1,12 @@
+<empleados>
+    <empleado id="1">
+        <nombre>Ana</nombre>
+        <apellido>García</apellido>
+        <edad>30</edad>
+    </empleado>
+    <empleado id="2">
+        <nombre>Pedro</nombre>
+        <apellido>López</apellido>
+        <edad>45</edad>
+    </empleado>
+</empleados>
