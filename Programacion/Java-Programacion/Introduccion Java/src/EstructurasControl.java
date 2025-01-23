@@ -15,8 +15,7 @@ public class EstructurasControl {
         }
 
         //Bucle
-        for ( int i <= 10) {
-            int i++;
+        for (int i = 0; i <= 10; i++) {
             System.out.println(i);
         }
     }
