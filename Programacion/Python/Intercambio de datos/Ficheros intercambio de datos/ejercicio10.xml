@@ -1,0 +1,35 @@
+<alumnos>
+    <alumno id="1">
+        <nombre>María</nombre>
+        <edad>20</edad>
+        <notas>
+            <nota asignatura="Matemáticas">8</nota>
+            <nota asignatura="Historia">7</nota>
+        </notas>
+    </alumno>
+    <alumno id="2">
+        <nombre>Juan</nombre>
+        <edad>22</edad>
+        <notas>
+            <nota asignatura="Matemáticas">5</nota>
+            <nota asignatura="Historia">9</nota>
+            <nota asignatura="Física">6</nota>
+        </notas>
+    </alumno>
+    <alumno id="3">
+        <nombre>Lucía</nombre>
+        <edad>21</edad>
+        <notas>
+            <nota asignatura="Matemáticas">9</nota>
+            <nota asignatura="Historia">8</nota>
+        </notas>
+    </alumno>
+    <alumno id="4">
+        <nombre>Pablo</nombre>
+        <edad>23</edad>
+        <notas>
+            <nota asignatura="Historia">6</nota>
+            <nota asignatura="Filosofía">7</nota>
+        </notas>
+    </alumno>
+</alumnos>

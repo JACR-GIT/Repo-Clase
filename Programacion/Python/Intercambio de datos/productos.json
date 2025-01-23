@@ -1,0 +1,29 @@
+{
+    "productos": [
+        {
+            "nombre": "Manzanas",
+            "precio": 1.5,
+            "cantidad": 10
+        },
+        {
+            "nombre": "Pl\u00e1tanos",
+            "precio": 0.8,
+            "cantidad": 20
+        },
+        {
+            "nombre": "Naranjas",
+            "precio": 1.2,
+            "cantidad": 15
+        },
+        {
+            "nombre": "Peras",
+            "precio": 1.8,
+            "cantidad": 8
+        },
+        {
+            "nombre": "Uvas",
+            "precio": 2.5,
+            "cantidad": 5
+        }
+    ]
+}

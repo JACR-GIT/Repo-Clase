@@ -1,0 +1,41 @@
+{
+    "tienda": "ElectroHouse",
+    "ventas": [
+        {
+            "id_venta": 1,
+            "producto": "Televisor",
+            "cantidad": 2,
+            "precio_unitario": 400
+        },
+        {
+            "id_venta": 2,
+            "producto": "Auriculares",
+            "cantidad": 5,
+            "precio_unitario": 30
+        },
+        {
+            "id_venta": 3,
+            "producto": "Laptop",
+            "cantidad": 1,
+            "precio_unitario": 1000
+        },
+        {
+            "id_venta": 4,
+            "producto": "Tablet",
+            "cantidad": 3,
+            "precio_unitario": 200
+        },
+        {
+            "id_venta": 5,
+            "producto": "Cámara",
+            "cantidad": 4,
+            "precio_unitario": 300
+        },
+        {
+            "id_venta": 6,
+            "producto": "Reloj Inteligente",
+            "cantidad": 7,
+            "precio_unitario": 150
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "nombre": "Jose",
+    "edad": 12,
+    "hijos": [
+        {
+            "nombre": "jose",
+            "edad": 12
+        },
+        {
+            "nombre": "jose",
+            "edad": 12
+        },
+        {
+            "nombre": "jose",
+            "edad": 13
+        }
+    ]
+}
