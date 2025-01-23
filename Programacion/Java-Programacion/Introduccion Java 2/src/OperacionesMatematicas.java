@@ -10,3 +10,4 @@ public class OperacionesMatematicas {
         System.out.println("Modulo: "+(num1 %num2));
     }
 }
+
