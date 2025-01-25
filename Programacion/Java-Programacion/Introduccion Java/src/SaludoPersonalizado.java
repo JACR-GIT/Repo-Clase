@@ -7,6 +7,6 @@ public class SaludoPersonalizado {
         String usuario = scanner.nextLine();
 
 
-        System.out.println("¡Hola, [usuario]! Bienvenido a Java. ");
+        System.out.println("¡Hola, "+ usuario +" ! Bienvenido a Java. ");
     }
 }
