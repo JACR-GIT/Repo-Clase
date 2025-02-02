@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         //Constructorç
-        Punto p = new PuntoImpl (1, 2);
+        Punto p = new PuntoImpl(1, 2);
         //NombreInterface nombre= new nombreClase();
         System.out.println("La cordenada X vale: "+p.getX());
 
