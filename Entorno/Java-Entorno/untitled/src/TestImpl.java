@@ -1,10 +1,10 @@
-public class Test {
+public class TestImpl {
     public static void main(String[] args) {
         // Crear una fecha de lanzamiento
-        Fecha fechaLanzamiento = new Fecha(1, 1, 2019);
+        FechaImpl fechaLanzamiento = new FechaImpl(1, 1, 2019);
 
         // Crear una canción
-        Cancion cancion = new Cancion("Buenos Tiempos", "Dillom", 354, fechaLanzamiento, "Rock");
+        CancionImpl cancion = new CancionImpl("Buenos Tiempos", "Dillom", 354, fechaLanzamiento, "Rock");
 
         // Mostrar información de la canción
         System.out.println("Canción: " + cancion);
