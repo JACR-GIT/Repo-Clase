@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e837226c-5b2b-4587-808c-b46460ab09c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Nuevos Tipos/src/Punto3DImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Aseguradora/src/main/java/modelos/Coche.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Aseguradora/src/main/java/modelos/Conductor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Aseguradora/src/main/java/modelos/Direccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Aseguradora/src/main/java/modelos/Moto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Aseguradora/src/main/java/modelos/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Aseguradora/src/main/java/modelos/Vehiculo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Aseguradora/src/main/java/utilidades/UtilidadesPersonas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Aseguradora/src/main/java/utilidades/UtilidadesVehiculo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +77,7 @@
       <workItem from="1738498223163" duration="107000" />
       <workItem from="1738498843246" duration="17000" />
       <workItem from="1738672718068" duration="31000" />
+      <workItem from="1738741045705" duration="15000" />
     </task>
     <servers />
   </component>
