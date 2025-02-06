@@ -14,10 +14,16 @@ public class Persona {
     private String nif;
     private LocalDate fechaNacimiento;
     private Direccion direccion;
+    private Sexo sexo;
+    private String paisOrigen;
+    private String email;
+    private String telefono;
 
     //Constructor
 
-    public Persona(int id, String nombre, String apellido1, String apellido2, String nif, LocalDate fechaNacimiento, Direccion direccion) {
+    public Persona(int id, String nombre, String apellido1, String apellido2, String nif,
+                   LocalDate fechaNacimiento, Direccion direccion, Sexo sexo, String paisOrigen,
+                   String email, String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -25,6 +31,10 @@ public class Persona {
         this.nif = nif;
         this.fechaNacimiento = fechaNacimiento;
         this.direccion = direccion;
+        this.sexo = sexo;
+        this.paisOrigen = paisOrigen;
+        this.email = email;
+        this.telefono = telefono;
     }
 
     public Persona(){
@@ -106,7 +116,38 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    //toString
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPaisOrigen() {
+        return paisOrigen;
+    }
+
+    public void setPaisOrigen(String paisOrigen) {
+        this.paisOrigen = paisOrigen;
+    }
+
+    public Sexo getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
+//toString
 
     public String toString() {
         return "Persona{" +

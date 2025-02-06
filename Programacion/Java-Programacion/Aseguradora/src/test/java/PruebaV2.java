@@ -1,8 +1,9 @@
+import modelos.*;
+import utilidades.UtilidadesPersonas;
+
 import java.time.LocalDate;
 
-import modelos.*;
-
-public class PruebaV1 {
+public class PruebaV2 {
     public static void main(String[] args) {
         // Crear un objeto de Direccion
         Direccion direccion = new Direccion(1, TipoVia.AVENIDA, "Gran Vía", 45, "Piso 3, Puerta B", "28013", "Madrid", "Madrid");

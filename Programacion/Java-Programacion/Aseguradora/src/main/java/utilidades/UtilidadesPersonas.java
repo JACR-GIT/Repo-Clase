@@ -1,6 +1,8 @@
 package utilidades;
 
 import modelos.Persona;
+
+import java.time.LocalDate;
 //Partiendo de la versión V1 del proyecto:
 //En la clase UtilidadesPersonas se crearán los métodos:
 //public static boolean esNIFValido(String nif)
@@ -10,7 +12,7 @@ import modelos.Persona;
 public class UtilidadesPersonas {
 
     //Metodos
-    public static boolean esNIFValidos(String nif) {
+    public static boolean esNIFValido(String nif) {
         String LETRAS_NIF = "TRWAGMYFPDXBNJZSQVHLCKE";
         if (nif == null || nif.length() != 9) return false;
 
@@ -40,7 +42,19 @@ public class UtilidadesPersonas {
         }
     }
 
-    public static boolean esNIFValidos(Persona p){
+    public static boolean esNIFValido(Persona p){
         return p != null && esNIFValido(p.getNif());
+    }
+
+    public static int getEdad(Persona p){
+        return p.getFechaNacimiento().until(LocalDate.now()).getYears();
+    }
+
+    public static boolean esMayorDeEdad(Persona p){
+        return getEdad(p) >= 18;
+    }
+
+    public static boolean esMenor25(Persona p){
+        return esMayorDeEdad(p) && getEdad(p) <= 24;
     }
 }
