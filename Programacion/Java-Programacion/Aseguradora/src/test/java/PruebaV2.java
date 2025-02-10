@@ -43,5 +43,12 @@ public class PruebaV2 {
 
         System.out.println("\nObjeto Coche:");
         System.out.println(coche);
+
+        System.out.println(UtilidadesPersonas.esNIFValido(persona));
+        if(UtilidadesPersonas.esNIFValido("00000000T")){
+            System.out.println("El nif 00000000T es válido");
+        }else{
+            System.out.println("El nif 00000000T no es válido");
+        }
     }
 }

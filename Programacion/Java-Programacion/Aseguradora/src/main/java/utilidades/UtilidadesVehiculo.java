@@ -7,12 +7,20 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-//Matrícula normal (coches y motocicletas): 0000BBB (4 números, del 0 al 9, seguidas
-//de letras). Las letras de este tipo de matrícula no pueden ser A, E, I, O, U, Ñ o Q.
 public class UtilidadesVehiculo {
 
     public static boolean esMatriculaValida(String mat) {
-        if (mat == null || mat.length() != 7) return false;
+
+
+        if (mat == null || mat.length() < 5 || mat.length()>9) return false;
+
+        if (matricula.matches(regexNormal)) {
+            System.out.println("Matrícula normal válida.");
+        } else if (matricula.matches(regexFuerzas)) {
+            System.out.println("Matrícula de las fuerzas del estado válida.");
+        } else {
+            System.out.println("Formato de matrícula no válido.");
+        }
 
         String numeros = mat.substring(0, 4);
         String letras = mat.substring(4, 7);
@@ -25,7 +33,9 @@ public class UtilidadesVehiculo {
         }
     }
 
-    Vehiculos especiales
+    public static boolean esMatriculaValida(Vehiculo veh) {
+
+    }
 
     public static int calculaEdad(Vehiculo v){
         return v.getFechaMatriculacion().until(LocalDate.now()).getYears();
