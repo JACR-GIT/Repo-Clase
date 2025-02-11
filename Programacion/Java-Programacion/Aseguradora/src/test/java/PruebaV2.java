@@ -1,7 +1,10 @@
 import modelos.*;
 import utilidades.UtilidadesPersonas;
+import utilidades.UtilidadesVehiculo;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.List;
 
 public class PruebaV2 {
     public static void main(String[] args) {
@@ -44,11 +47,26 @@ public class PruebaV2 {
         System.out.println("\nObjeto Coche:");
         System.out.println(coche);
 
-        System.out.println(UtilidadesPersonas.esNIFValido(persona));
-        if(UtilidadesPersonas.esNIFValido("00000000T")){
-            System.out.println("El nif 00000000T es válido");
-        }else{
-            System.out.println("El nif 00000000T no es válido");
+        // UtilidadesPersonas
+        System.out.println("\nUtilidadesPersonas:");
+        System.out.println("NIF de persona válido: " + UtilidadesPersonas.esNIFValido(persona));
+        System.out.println("NIF 'EA456789' válido: " + UtilidadesPersonas.esNIFValido("EA456789"));
+        System.out.println("Edad de persona: " + UtilidadesPersonas.getEdad(persona));
+        System.out.println("Persona mayor de edad: " + UtilidadesPersonas.esMayorDeEdad(persona));
+        System.out.println("Persona menor de 25: " + UtilidadesPersonas.esMenor25(persona));
+
+        // UtilidadesVehiculo
+        System.out.println("\nUtilidadesVehiculo:");
+        System.out.println("Matrícula de vehículo válida: " + UtilidadesVehiculo.esMatriculaValida(vehiculo));
+        System.out.println("Matrícula '1234ABC' válida: " + UtilidadesVehiculo.esMatriculaValida("1234ABC"));
+        System.out.println("Edad del vehículo: " + UtilidadesVehiculo.calculaEdad(vehiculo));
+        System.out.println("Fecha de matriculación válida: " + UtilidadesVehiculo.validaFechaMatriculacion(vehiculo.getFechaMatriculacion()));
+
+        List<Vehiculo> listaVehiculos = Arrays.asList(vehiculo, moto, coche);
+        List<Vehiculo> vehiculosDePersona = UtilidadesVehiculo.getVehiculos(listaVehiculos, persona);
+        System.out.println("Vehículos de la persona:");
+        for (Vehiculo v : vehiculosDePersona) {
+            System.out.println(v);
         }
     }
 }

@@ -1,19 +1,29 @@
 package modelos;
 
+import com.aseguradora.utils.Marca;
+import com.aseguradora.utils.Modelo;
+import utilidades.UtilidadesVehiculo;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class Vehiculo {
 
     private int id;
-    private String marca;
-    private String modelo;
+    private Marca marca;
+    private Modelo modelo;
     private String matricula;
     private LocalDate fechaMatriculacion;
     private String color;
     private Persona duenyoActual;
 
-    public Vehiculo(int id, String marca, String modelo, String matricula, LocalDate fechaMatriculacion, String color, Persona duenyoActual) {
+    public Vehiculo(int id, Marca marca, Modelo modelo, String matricula, LocalDate fechaMatriculacion, String color, Persona duenyoActual) {
+        if (!UtilidadesVehiculo.validaFechaMatriculacion(fechaMatriculacion)) {
+            throw new IllegalArgumentException("Fecha de matriculación no válida.");
+        }
+        if (!UtilidadesVehiculo.esMatriculaValida(matricula)) {
+            throw new IllegalArgumentException("Matrícula no válida.");
+        }
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -22,15 +32,21 @@ public class Vehiculo {
         this.color = color;
         this.duenyoActual = duenyoActual;
     }
+
+    public Vehiculo(int id, String marca, String modelo, String matricula, LocalDate fechaMatriculacion, String color, Persona duenyoActual) throws IllegalArgumentException {
+        this(id, new Marca(marca), new Modelo(modelo), matricula, fechaMatriculacion, color, duenyoActual);
+    }
+
     public Vehiculo() {
         this.id = 0;
-        this.marca = "ninguno";
-        this.modelo = "ninguno";
+        this.marca = null;
+        this.modelo = null;
         this.matricula = "ninguno";
         this.fechaMatriculacion = LocalDate.now();
         this.color = "ninguno";
         this.duenyoActual = null;
     }
+
     public Vehiculo(Vehiculo vehiculo2) {
         this.id = vehiculo2.id;
         this.marca = vehiculo2.marca;
@@ -49,19 +65,19 @@ public class Vehiculo {
         this.id = id;
     }
 
-    public String getMarca() {
+    public Marca getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
+    public void setMarca(Marca marca) {
         this.marca = marca;
     }
 
-    public String getModelo() {
+    public Modelo getModelo() {
         return modelo;
     }
 
-    public void setModelo(String modelo) {
+    public void setModelo(Modelo modelo) {
         this.modelo = modelo;
     }
 

@@ -11,12 +11,14 @@ public class UtilidadesVehiculo {
 
     public static boolean esMatriculaValida(String mat) {
 
+        String regexNormal = "^[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}$";
+        String regexFuerzas = "^[A-Z]{1,2}[0-9]{4}[A-Z]{2}$";
 
-        if (mat == null || mat.length() < 5 || mat.length()>9) return false;
+        if (mat == null || mat.length() < 5 || mat.length() > 9) return false;
 
-        if (matricula.matches(regexNormal)) {
+        if (mat.matches(regexNormal)) {
             System.out.println("Matrícula normal válida.");
-        } else if (matricula.matches(regexFuerzas)) {
+        } else if (mat.matches(regexFuerzas)) {
             System.out.println("Matrícula de las fuerzas del estado válida.");
         } else {
             System.out.println("Formato de matrícula no válido.");
@@ -34,7 +36,7 @@ public class UtilidadesVehiculo {
     }
 
     public static boolean esMatriculaValida(Vehiculo veh) {
-
+        return veh != null && esMatriculaValida(veh.getMatricula());
     }
 
     public static int calculaEdad(Vehiculo v){
