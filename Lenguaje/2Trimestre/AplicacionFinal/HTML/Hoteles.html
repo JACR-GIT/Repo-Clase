@@ -6,6 +6,131 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafaTel - Hoteles</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Iconos de FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .hoteles-section {
+      padding: 40px 0;
+    }
+    .hotel-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .hotel-card:hover {
+      transform: translateY(-5px);
+    }
+    .hotel-card h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .hotel-card p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 5px;
+    }
+    .hotel-card .rating {
+      color: #ffc107;
+      font-size: 1.2rem;
+    }
+    .hotel-card .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #28a745;
+    }
+    .hotel-card .btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .hotel-card .btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sección de Hoteles -->
+  <section class="hoteles-section">
+    <div class="container">
+      <h1 class="text-center mb-5">Hoteles Disponibles</h1>
+      <div class="row">
+        <!-- Hotel 1 -->
+        <div class="col-md-4">
+          <div class="hotel-card">
+            <h3>Nombre Hotel</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel</p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="price">$100</p>
+            <button class="btn">Ver más detalles</button>
+          </div>
+        </div>
+        <!-- Hotel 2 -->
+        <div class="col-md-4">
+          <div class="hotel-card">
+            <h3>Nombre Hotel</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel</p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">$120</p>
+            <button class="btn">Ver más detalles</button>
+          </div>
+        </div>
+        <!-- Hotel 3 -->
+        <div class="col-md-4">
+          <div class="hotel-card">
+            <h3>Nombre Hotel</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel</p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="price">$150</p>
+            <button class="btn">Ver más detalles</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 </body>
 </html>
