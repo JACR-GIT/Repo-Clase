@@ -33,9 +33,7 @@ public class Vehiculo {
         this.duenyoActual = duenyoActual;
     }
 
-    public Vehiculo(int id, String marca, String modelo, String matricula, LocalDate fechaMatriculacion, String color, Persona duenyoActual) throws IllegalArgumentException {
-        this(id, new Marca(marca), new Modelo(modelo), matricula, fechaMatriculacion, color, duenyoActual);
-    }
+   
 
     public Vehiculo() {
         this.id = 0;
