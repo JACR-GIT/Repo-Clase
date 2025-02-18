@@ -10,9 +10,9 @@ public class Direccion {
     private String restoDireccion;
     private String codigoPostal;
     private String localidad;
-    private String provincia;
+    private Provincia provincia;
 
-    public Direccion(int id, TipoVia tipoVia, String nombreVia, int numero, String restoDireccion, String codigoPostal, String localidad, String provincia) {
+    public Direccion(int id, TipoVia tipoVia, String nombreVia, int numero, String restoDireccion, String codigoPostal, String localidad, Provincia provincia) {
         this.id = id;
         this.tipoVia = tipoVia;
         this.nombreVia = nombreVia;
@@ -31,7 +31,7 @@ public class Direccion {
         this.restoDireccion = "ninguno";
         this.codigoPostal = "ninguno";
         this.localidad = "ninguno";
-        this.provincia = "ninguno";
+        this.provincia = null;
     }
 
     public Direccion(Direccion direccion2) {

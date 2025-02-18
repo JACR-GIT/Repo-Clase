@@ -1,5 +1,7 @@
 package modelos;
 
+import utilidades.UtilidadesPersonas;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -24,6 +26,11 @@ public class Persona {
     public Persona(int id, String nombre, String apellido1, String apellido2, String nif,
                    LocalDate fechaNacimiento, Direccion direccion, Sexo sexo, String paisOrigen,
                    String email, String telefono) {
+
+        if (!UtilidadesPersonas.esNIFValido(nif)) {
+            throw new IllegalArgumentException("El NIF no es válido");
+        }
+
         this.id = id;
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -58,7 +65,6 @@ public class Persona {
     }
 
     //Getter y Setters
-
 
     public int getId() {
         return id;
@@ -147,8 +153,8 @@ public class Persona {
     public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
-//toString
 
+    //toString
     public String toString() {
         return "Persona{" +
                 "id=" + id +
@@ -162,7 +168,6 @@ public class Persona {
     }
 
     //equals
-
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Persona persona = (Persona) o;

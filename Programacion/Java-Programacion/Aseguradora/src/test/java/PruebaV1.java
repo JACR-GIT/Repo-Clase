@@ -5,7 +5,7 @@ import modelos.*;
 public class PruebaV1 {
     public static void main(String[] args) {
         // Crear un objeto de Direccion
-        Direccion direccion = new Direccion(1, TipoVia.AVENIDA, "Gran Vía", 45, "Piso 3, Puerta B", "28013", "Madrid", "Madrid");
+        Direccion direccion = new Direccion(1, TipoVia.AVENIDA, "Gran Vía", 45, "Piso 3, Puerta B", "28013", "Madrid", null);
 
         // Crear un objeto de Persona
         Persona persona = new Persona(1, "Carlos", "Gómez", "Fernández", "12345678X", LocalDate.of(1990, 3, 15), direccion, Sexo.masculino, "España", "aionifda", "123456789");

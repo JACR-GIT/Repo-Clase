@@ -5,6 +5,7 @@ import com.aseguradora.utils.Modelo;
 import utilidades.UtilidadesVehiculo;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Vehiculo {
@@ -33,7 +34,28 @@ public class Vehiculo {
         this.duenyoActual = duenyoActual;
     }
 
-   
+    public Vehiculo(int id, String marca, String modelo, String matricula, LocalDate fechaMatriculacion, String color, Persona duenyoActual) {
+        if (!UtilidadesVehiculo.validaFechaMatriculacion(fechaMatriculacion)) {
+            throw new IllegalArgumentException("Fecha de matriculación no válida.");
+        }
+        if (!UtilidadesVehiculo.esMatriculaValida(matricula)) {
+            throw new IllegalArgumentException("Matrícula no válida.");
+        }
+        if (!UtilidadesVehiculo.validarMarca(marca)) {
+            throw new IllegalArgumentException("Fecha de matriculación no válida.");
+        }
+        if (!UtilidadesVehiculo.validarModelo(modelo)) {
+            throw new IllegalArgumentException("Matrícula no válida.");
+        }
+
+        this.id = id;
+        this.marca = new Marca(marca,new ArrayList<Modelo>());
+        this.modelo = new Modelo(modelo,0,0,0);
+        this.matricula = matricula;
+        this.fechaMatriculacion = fechaMatriculacion;
+        this.color = color;
+        this.duenyoActual = duenyoActual;
+    }
 
     public Vehiculo() {
         this.id = 0;

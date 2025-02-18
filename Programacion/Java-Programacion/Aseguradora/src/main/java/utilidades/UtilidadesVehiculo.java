@@ -58,4 +58,11 @@ public class UtilidadesVehiculo {
         return fecha.isBefore(LocalDate.now());
     }
 
+    public static boolean validarModelo(String modelo) {
+        return false;
+    }
+
+    public static boolean validarMarca(String marca) {
+        return false;
+    }
 }

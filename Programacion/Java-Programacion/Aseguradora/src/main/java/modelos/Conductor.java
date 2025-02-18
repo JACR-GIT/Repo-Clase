@@ -1,5 +1,7 @@
 package modelos;
 
+import utilidades.UtilidadesPersonas;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -10,7 +12,13 @@ public class Conductor extends Persona {
 
     public Conductor(int id, String nombre, String apellido1, String apellido2, String nif, LocalDate fechaNacimiento, Direccion direccion,
                      LocalDate fechaCarnet, int puntosCarnet, int anyosAsegurado) {
+
         super(id, nombre, apellido1, apellido2, nif, fechaNacimiento, direccion, Sexo.masculino, "España", "aionifda", "123456789");
+
+        if (!UtilidadesPersonas.esMayorDeEdad(this)) {
+            throw new IllegalArgumentException("El NIF no es válido");
+        }
+
         this.fechaCarnet = fechaCarnet;
         this.puntosCarnet = puntosCarnet;
         this.anyosAsegurado = anyosAsegurado;
