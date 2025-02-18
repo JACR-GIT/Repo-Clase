@@ -6,131 +6,385 @@
     <title>Document</title>
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SafaTel - Hoteles</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Iconos de FontAwesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <!-- Estilos personalizados -->
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-    }
-    .hoteles-section {
-      padding: 40px 0;
-    }
-    .hotel-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-      transition: transform 0.3s ease;
-    }
-    .hotel-card:hover {
-      transform: translateY(-5px);
-    }
-    .hotel-card h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .hotel-card p {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 5px;
-    }
-    .hotel-card .rating {
-      color: #ffc107;
-      font-size: 1.2rem;
-    }
-    .hotel-card .price {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #28a745;
-    }
-    .hotel-card .btn {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .hotel-card .btn:hover {
-      background-color: #218838;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Sección de Hoteles -->
-  <section class="hoteles-section">
-    <div class="container">
-      <h1 class="text-center mb-5">Hoteles Disponibles</h1>
-      <div class="row">
-        <!-- Hotel 1 -->
-        <div class="col-md-4">
-          <div class="hotel-card">
-            <h3>Nombre Hotel</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel</p>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <p class="price">$100</p>
-            <button class="btn">Ver más detalles</button>
-          </div>
+  <!DOCTYPE html>
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafaTel - Hoteles</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Iconos de FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+      }
+      .navbar {
+        background-color: #28a745;
+      }
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white !important;
+      }
+      .navbar-nav .nav-link {
+        color: white !important;
+      }
+      .search-filter {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+      .search-filter h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .search-filter .form-group {
+        margin-bottom: 15px;
+      }
+      .search-filter label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .search-filter input,
+      .search-filter select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .search-filter button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+      }
+      .search-filter button:hover {
+        background-color: #218838;
+      }
+      .hotel-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        padding: 20px;
+        transition: transform 0.3s ease;
+        display: flex;
+        align-items: center;
+      }
+      .hotel-card:hover {
+        transform: translateY(-5px);
+      }
+      .hotel-card img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
+      .hotel-card .info {
+        flex: 1;
+      }
+      .hotel-card h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .hotel-card p {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 5px;
+      }
+      .hotel-card .rating {
+        color: #ffc107;
+        font-size: 1.2rem;
+      }
+      .hotel-card .price {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #28a745;
+      }
+      .hotel-card .btn {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .hotel-card .btn:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">SafaTel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hoteles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registro/Login</a>
+            </li>
+          </ul>
         </div>
-        <!-- Hotel 2 -->
-        <div class="col-md-4">
-          <div class="hotel-card">
-            <h3>Nombre Hotel</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel</p>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+      </div>
+    </nav>
+  
+    <!-- Sección de Hoteles -->
+    <section class="hoteles-section">
+      <div class="container">
+        <!-- Buscador/Filtro Mejorado -->
+        <div class="search-filter">
+          <h2>Buscar Hoteles</h2>
+          <form>
+            <div class="form-group">
+              <label for="ubicacion">Ubicación</label>
+              <input type="text" id="ubicacion" placeholder="Ej: Vigo, España">
             </div>
-            <p class="price">$120</p>
-            <button class="btn">Ver más detalles</button>
-          </div>
+            <div class="form-group">
+              <label for="calificacion">Calificación</label>
+              <select id="calificacion">
+                <option value="">Seleccione una calificación</option>
+                <option value="1">1 Estrella</option>
+                <option value="2">2 Estrellas</option>
+                <option value="3">3 Estrellas</option>
+                <option value="4">4 Estrellas</option>
+                <option value="5">5 Estrellas</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="precio">Precio máximo por noche</label>
+              <input type="number" id="precio" placeholder="Ej: 150">
+            </div>
+            <button type="submit">Buscar</button>
+          </form>
         </div>
-        <!-- Hotel 3 -->
-        <div class="col-md-4">
-          <div class="hotel-card">
-            <h3>Nombre Hotel</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel</p>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+  
+        <!-- Lista de Hoteles -->
+        <h1 class="text-center mb-5">Hoteles Disponibles</h1>
+        <div class="row">
+          <!-- Hotel 1 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 1">
+              <div class="info">
+                <h3>Hotel 1</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 1</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="price">$100</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
             </div>
-            <p class="price">$150</p>
-            <button class="btn">Ver más detalles</button>
+          </div>
+          <!-- Hotel 2 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 2">
+              <div class="info">
+                <h3>Hotel 2</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 2</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$120</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
+            </div>
+          </div>
+          <!-- Hotel 3 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 3">
+              <div class="info">
+                <h3>Hotel 3</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 3</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$150</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
+            </div>
+          </div>
+          <!-- Hotel 4 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 4">
+              <div class="info">
+                <h3>Hotel 4</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 4</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$130</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
+            </div>
+          </div>
+          <!-- Hotel 5 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 5">
+              <div class="info">
+                <h3>Hotel 5</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 5</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$140</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
+            </div>
+          </div>
+          <!-- Hotel 6 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 6">
+              <div class="info">
+                <h3>Hotel 6</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 6</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$160</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
+            </div>
+          </div>
+          <!-- Hotel 7 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 7">
+              <div class="info">
+                <h3>Hotel 7</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 7</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$170</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
+            </div>
+          </div>
+          <!-- Hotel 8 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 8">
+              <div class="info">
+                <h3>Hotel 8</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 8</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$180</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
+            </div>
+          </div>
+          <!-- Hotel 9 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 9">
+              <div class="info">
+                <h3>Hotel 9</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 9</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$190</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
+            </div>
+          </div>
+          <!-- Hotel 10 -->
+          <div class="col-12 mb-4">
+            <div class="hotel-card">
+              <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="Hotel 10">
+              <div class="info">
+                <h3>Hotel 10</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel 10</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="price">$200</p>
+                <button class="btn">Ver más detalles</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-</body>
-</html>
+    </section>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>
