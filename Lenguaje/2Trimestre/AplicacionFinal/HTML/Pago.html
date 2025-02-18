@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Safatel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Pago.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="inicio.html">SAFATEL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hoteles.html">Hoteles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.html">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Payment Section -->
+    <div class="payment-container">
+        <div class="container">
+            <div class="row">
+                <!-- Payment Form -->
+                <div class="col-md-8">
+                    <div class="payment-box">
+                        <h2 class="mb-4">Detalles del Pago</h2>
+                        <form>
+                            <!-- Personal Information -->
+                            <div class="mb-4">
+                                <h4>Información Personal</h4>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nombre" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="apellidos" class="form-label">Apellidos</label>
+                                        <input type="text" class="form-control" id="apellidos" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" required>
+                                </div>
+                            </div>
+
+                            <!-- Payment Information -->
+                            <div class="mb-4">
+                                <h4>Información de Pago</h4>
+                                <div class="mb-3">
+                                    <label for="card-number" class="form-label">Número de Tarjeta</label>
+                                    <input type="text" class="form-control" id="card-number" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="expiry" class="form-label">Fecha de Expiración</label>
+                                        <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <input type="text" class="form-control" id="cvv" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-secondary w-100 mb-3" onclick="history.back()">Volver Atrás</button>
+                            <button type="submit" class="btn btn-success w-100">Confirmar Pago</button>
+                            </form>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-md-4">
+                    <div class="summary-box">
+                        <h3 class="mb-4">Resumen de la Reserva</h3>
+                        <div class="hotel-info mb-4">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hotel" class="img-fluid rounded mb-3">
+                            <h5>Safatel Madrid</h5>
+                            <p class="text-muted">Habitación Deluxe</p>
+                        </div>
+                        <div class="booking-details">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Check-in</span>
+                                <span>15 Mar 2024</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Check-out</span>
+                                <span>18 Mar 2024</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Noches</span>
+                                <span>3</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Huéspedes</span>
+                                <span>2</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Precio por noche</span>
+                                <span>150€</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Impuestos</span>
+                                <span>45€</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between total">
+                                <strong>Total</strong>
+                                <strong>495€</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

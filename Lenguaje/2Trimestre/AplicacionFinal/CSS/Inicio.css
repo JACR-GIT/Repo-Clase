@@ -1,62 +1,297 @@
+/* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Barra de navegación */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Sección Hero */
+.hero-section {
+  background: url('../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+/* Carrusel de destinos */
+.carousel-item {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Sección de servicios destacados */
+.servicios-section {
+  padding: 60px 0;
+}
+
+.servicio-card {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+}
+
+.servicio-icon {
+  font-size: 2.5rem;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+/* Estilos para la sección de hoteles populares */
+.popular-hotels {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.popular-hotels h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.hotel-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hotel-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-10px);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.hotel-card .card-body {
+  padding: 20px;
+}
+
+.hotel-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hotel-card .card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/*Hoteles Populares*/
+.hoteles-populares-section {
+  padding: 60px 0;
+}
+.hotel-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.hotel-card:hover {
+  transform: translateY(-5px);
+}
+.hotel-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.hotel-card.tall img {
+  height: 300px; /* Doble de altura */
+}
+.hotel-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.hotel-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+.hotel-card .rating {
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+.hotel-card .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+}
+.hotel-card .btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.hotel-card .btn:hover {
+  background-color: #218838;
+}
+
+/* Sección de nuestra historia */
+.sobre-nosotros-section {
+  padding: 60px 0;
+}
+.sobre-nosotros-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.sobre-nosotros-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #28a745;
+}
+.sobre-nosotros-section p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.sobre-nosotros-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.footer a {
+  color: #28a745;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #218838;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #28a745;
+}
+
+.social-icons a:hover {
+  color: #218838;
+}
+
+.footer .contact-info {
+  margin-top: 20px;
+}
+
+.footer .contact-info i {
+  margin-right: 10px;
+  color: #28a745;
+}
+
+/* Igualar altura de tarjetas en "Nuestros Servicios Destacados" y "Hoteles Populares" */
+.servicio-card, .hotel-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Hace que todas las tarjetas tengan la misma altura */
+}
+
+/* Garantiza que las tarjetas dentro de una fila sean del mismo tamaño */
+.row .servicio-card, .row .hotel-card {
+  display: flex;
+  flex: 1;
+}
+
+/* Ajustar tamaño de imágenes en "Nuestra Historia" para que sean proporcionales al texto */
+.sobre-nosotros-section img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Evita que las imágenes sean demasiado grandes */
+  object-fit: cover;
+}
+
+/* Ajuste responsive para mantener la relación entre imagen y texto */
+@media (max-width: 992px) {
+  .sobre-nosotros-section .row {
+      flex-direction: column; /* En pantallas pequeñas, imagen y texto en columna */
   }
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+
+  .sobre-nosotros-section img {
+      max-height: 300px; /* Reduce el tamaño de la imagen en pantallas más pequeñas */
   }
-  .hero-section {
-    background: url('../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-  }
-  .hero-section h1 {
-    font-size: 4rem;
-    font-weight: bold;
-  }
-  .hero-section p {
-    font-size: 1.5rem;
-  }
-  .btn-primary {
-    background-color: #28a745;
-    border: none;
-    padding: 10px 30px;
-    font-size: 1.2rem;
-  }
-  .btn-primary:hover {
-    background-color: #218838;
-  }
-  .card {
-    margin: 20px 0;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .card img {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-  }
-  .carousel-item {
-    height: 500px; /* Altura del carrusel */
-    background-size: cover;
-    background-position: center;
-  }
-  .carousel-caption {
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    padding: 20px;
-    border-radius: 10px;
-  }
-  .carousel-caption h3 {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  .carousel-caption p {
-    font-size: 1.2rem;
-  }
+}

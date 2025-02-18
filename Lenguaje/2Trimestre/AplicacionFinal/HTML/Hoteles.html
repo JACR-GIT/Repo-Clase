@@ -1,136 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SafaTel - Hoteles</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link href="../CSS/Hoteles.css" rel="stylesheet">
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SafaTel - Hoteles</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Iconos de FontAwesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <!-- Estilos personalizados -->
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-    }
-    .hoteles-section {
-      padding: 40px 0;
-    }
-    .hotel-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-      transition: transform 0.3s ease;
-    }
-    .hotel-card:hover {
-      transform: translateY(-5px);
-    }
-    .hotel-card h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .hotel-card p {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 5px;
-    }
-    .hotel-card .rating {
-      color: #ffc107;
-      font-size: 1.2rem;
-    }
-    .hotel-card .price {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #28a745;
-    }
-    .hotel-card .btn {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .hotel-card .btn:hover {
-      background-color: #218838;
-    }
-  </style>
-</head>
-<body>
+     <!-- Barra de navegación -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+          <a class="navbar-brand" href="Inicio.html">SafaTel</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="Inicio.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Hoteles.html">Hoteles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Inicio.html#sobrenosotros">Sobre Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Registro.html">Registro</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Login.html">Login</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
 
-  <!-- Sección de Hoteles -->
-  <section class="hoteles-section">
-    <div class="container">
+    <!-- Sección de Búsqueda -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <form class="row g-3">
+                    <div class="col-md-3">
+                        <label for="destino" class="form-label">Destino</label>
+                        <input type="text" class="form-control" id="destino" placeholder="¿A dónde vas?">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="checkin" class="form-label">Entrada</label>
+                        <input type="date" class="form-control" id="checkin">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="checkout" class="form-label">Salida</label>
+                        <input type="date" class="form-control" id="checkout">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="huespedes" class="form-label">Huéspedes</label>
+                        <select class="form-select" id="huespedes">
+                            <option value="1">1 persona</option>
+                            <option value="2">2 personas</option>
+                            <option value="3">3 personas</option>
+                            <option value="4">4 personas</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-label">&nbsp;</label>
+                        <button type="submit" class="btn btn-success w-100">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Hoteles -->
+<section class="hoteles-section">
+  <div class="container">
       <h1 class="text-center mb-5">Hoteles Disponibles</h1>
       <div class="row">
-        <!-- Hotel 1 -->
-        <div class="col-md-4">
-          <div class="hotel-card">
-            <h3>Nombre Hotel</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel</p>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <p class="price">$100</p>
-            <button class="btn">Ver más detalles</button>
+          <!-- Hotel 1 -->
+          <div class="col-12 mb-4">
+              <div class="hotel-card">
+                  <img src="../IMAGENES/2387cacd_y.webp" alt="SafaTel Madrid">
+                  <div class="info">
+                      <h3>SafaTel Madrid</h3>
+                      <p><i class="fas fa-map-marker-alt"></i> Gran Vía 45, Madrid, España</p>
+                      <div class="rating">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <p class="price">$100/noche</p>
+                      <a href="pago.html" class="btn btn-success">Ver más detalles</a>
+                  </div>
+              </div>
           </div>
-        </div>
-        <!-- Hotel 2 -->
-        <div class="col-md-4">
-          <div class="hotel-card">
-            <h3>Nombre Hotel</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel</p>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="price">$120</p>
-            <button class="btn">Ver más detalles</button>
-          </div>
-        </div>
-        <!-- Hotel 3 -->
-        <div class="col-md-4">
-          <div class="hotel-card">
-            <h3>Nombre Hotel</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Dirección del Hotel</p>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="price">$150</p>
-            <button class="btn">Ver más detalles</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+          <!-- Hotel 2 -->
+          <div class="col-12 mb-4">
+              <div class="hotel-card">
+                  <img src="../IMAGENES/sara-dubler-Koei_7yYtIo-unsplash.jpg" alt="SafaTel París">
+                  <div class="info">
+                      <h3>SafaTel París</h3>
+                      <p><i class="fas fa-map-marker-alt"></i> Champs-Élysées 10, París, Francia</p>
+                      <div class="rating">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                      <p class="price">$120/noche</p>
+                      <a href="pago.html" class="btn btn-success">Ver más detalles</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Hotel 3 -->
+          <div class="col-12 mb-4">
+              <div class="hotel-card">
+                  <img src="../IMAGENES/the-anam-_twiIcIsp2s-unsplash.jpg" alt="SafaTel Roma">
+                  <div class="info">
+                      <h3>SafaTel Roma</h3>
+                      <p><i class="fas fa-map-marker-alt"></i> Via Veneto 50, Roma, Italia</p>
+                      <div class="rating">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                      <p class="price">$150/noche</p>
+                      <a href="pago.html" class="btn btn-success">Ver más detalles</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Hotel 4 -->
+          <div class="col-12 mb-4">
+              <div class="hotel-card">
+                  <img src="../IMAGENES/valeriia-bugaiova-_pPHgeHz1uk-unsplash.jpg" alt="SafaTel Moscú">
+                  <div class="info">
+                      <h3>SafaTel Moscú</h3>
+                      <p><i class="fas fa-map-marker-alt"></i> Tverskaya Ulitsa 3, Moscú, Rusia</p>
+                      <div class="rating">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                      <p class="price">$130/noche</p>
+                      <a href="pago.html" class="btn btn-success">Ver más detalles</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Hotel 5 -->
+          <div class="col-12 mb-4">
+              <div class="hotel-card">
+                  <img src="../IMAGENES/saad-khan-425b2PhNuHA-unsplash.jpg" alt="SafaTel Sídney">
+                  <div class="info">
+                      <h3>SafaTel Sídney</h3>
+                      <p><i class="fas fa-map-marker-alt"></i> 200 George St, Sídney, Australia</p>
+                      <div class="rating">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                      <p class="price">$140/noche</p>
+                      <a href="pago.html" class="btn btn-success">Ver más detalles</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Hotel 6 -->
+          <div class="col-12 mb-4">
+              <div class="hotel-card">
+                  <img src="../IMAGENES/bhumil-chheda-o1lALNEP2BQ-unsplash.jpg" alt="SafaTel Melbourne">
+                  <div class="info">
+                      <h3>SafaTel Melbourne</h3>
+                      <p><i class="fas fa-map-marker-alt"></i> 123 Collins St, Melbourne, Australia</p>
+                      <div class="rating">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                      <p class="price">$160/noche</p>
+                      <a href="pago.html" class="btn btn-success">Ver más detalles</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Hotel 7 -->
+          <div class="col-12 mb-4">
+              <div class="hotel-card">
+                  <img src="../IMAGENES/ciudad-maderas-MXbM1NrRqtI-unsplash.jpg" alt="SafaTel Punta Cana">
+                  <div class="info">
+                      <h3>SafaTel Punta Cana</h3>
+                      <p><i class="fas fa-map-marker-alt"></i> Carretera Arena Gorda, Punta Cana, R. Dominicana</p>
+                      <div class="rating">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                      <p class="price">$170/noche</p>
+                      <a href="pago.html" class="btn btn-success">Ver más detalles</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Hotel 8 -->
+          <div class="col-12 mb-4">
+              <div class="hotel-card">
+                  <img src="../IMAGENES/the-anam-_twiIcIsp2s-unsplash.jpg" alt="SafaTel Puerto Rico">
+                  <div class="info">
+                      <h3>SafaTel Puerto Rico</h3>
+                      <p><i class="fas fa-map-marker-alt"></i> Avenida Ashford 1369, San Juan, Puerto Rico</p>
+                      <div class="rating">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      </div>
+                      <p class="price">$180/noche</p>
+                      <a href="pago.html" class="btn btn-success">Ver más detalles</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Localización -->
+                <div class="col-md-4 mb-4">
+                    <h4>Localización</h4>
+                    <p>Rúa do Príncipe, 123<br>Vigo, España</p>
+                    <p>Explora nuestros hoteles en más de 30 destinos alrededor del mundo.</p>
+                </div>
+                <!-- Columna 2: Redes Sociales -->
+                <div class="col-md-4 mb-4">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <p>Síguenos para conocer nuestras últimas noticias y ofertas.</p>
+                </div>
+                <!-- Columna 3: Contacto -->
+                <div class="col-md-4 mb-4">
+                    <h4>Comunícate con nosotros</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +34 362 548 561</p>
+                        <p><i class="fas fa-envelope"></i> safatel@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Oficina Central: Vigo, España</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Derechos de autor -->
+            <div class="text-center mt-4">
+                <p>&copy; 2025 SafaTel. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
