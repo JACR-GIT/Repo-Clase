@@ -1,0 +1,138 @@
+<?xml version = "1.0" encoding= "UTF-8"?>
+
+<cancion>
+    <titulo>Rock with you</titulo>
+    <compositor>Rod Temperton</compositor>
+    <productor>Quincy Jones</productor>
+    <discografica>Epic</discografica>
+    <artista>Mickel Jackson</artista>
+</cancion>
+
+<cancion duracion= "3:40" año="1979">
+    <titulo>Rock with you</titulo>
+    <compositores>
+        <compositor>Rod</compositor> 
+        <compositor>Temperton</compositor>
+    </compositores>
+    <discografica>Epic</discografica>
+    <productores>
+        <productor>
+            <nombre>Quincy</nombre> 
+            <apellido>Jones</apellido>
+        </productor></productores>
+    <artista>Mickel Jackson</artista>
+</cancion>
+
+<Servidores>
+    <Servidor>
+        <IDServidor>SVR001</IDServidor>
+        <Ubicacion>Madrid</Ubicacion>
+        <CaracteristicasHardware>
+            <Placa tplaca="ATX">ASUS Z390</Placa>
+            <TipoMem>DDR4</TipoMem>
+            <CantMem amp="Ghz">16</CantMem>
+            <VeloMem veloc="Ghz">3200</VeloMem>
+            <TecnHD>SSD</TecnHD>
+            <CapacHD ahd="Tb">1</CapacHD>
+            <TarjRed>Ethernet 10/100/1000</TarjRed>
+        </CaracteristicasHardware>
+        <Marca>HP</Marca>
+        <Uso>Correo</Uso>
+        <Fecha_UF>2023-09-15</Fecha_UF>
+    </Servidor>
+    <Servidor>
+        <IDServidor>SVR002</IDServidor>
+        <Ubicacion>Barcelona</Ubicacion>
+        <CaracteristicasHardware>
+            <Placa tplaca="AT">Gigabyte B450</Placa>
+            <TipoMem>DDR4</TipoMem>
+            <CantMem amp="Ghz">32</CantMem>
+            <VeloMem veloc="Ghz">2666</VeloMem>
+            <TecnHD>HDD</TecnHD>
+            <CapacHD ahd="Tb">2</CapacHD>
+            <TarjRed>Ethernet 10/100/1000</TarjRed>
+        </CaracteristicasHardware>
+        <Marca>IBM</Marca>
+        <Uso>ERP/CRM</Uso>
+        <Fecha_UF>2023-08-20</Fecha_UF>
+    </Servidor>
+    <Servidor>
+        <IDServidor>SVR003</IDServidor>
+        <Ubicacion>Valencia</Ubicacion>
+        <CaracteristicasHardware>
+            <Placa tplaca="ATX">MSI X570</Placa>
+            <TipoMem>DDR4</TipoMem>
+            <CantMem amp="Ghz">64</CantMem>
+            <VeloMem veloc="Ghz">3600</VeloMem>
+            <TecnHD>SSD</TecnHD>
+            <CapacHD ahd="Tb">4</CapacHD>
+            <TarjRed>Ethernet 10/100/1000</TarjRed>
+        </CaracteristicasHardware>
+        <Marca>HP</Marca>
+        <Uso>DiseñoGrafico</Uso>
+        <Fecha_UF>2023-07-10</Fecha_UF>
+    </Servidor>
+</Servidores>
+
+<E-books>
+    <E-book>
+        <Titulo>Lenguaje de Marcas</Titulo>
+        <Autores>
+            <Autor>
+                <Nombre>Alex</Nombre>
+                <Apellido>Tolon</Apellido>
+            </Autor>
+        </Autores>
+        <Modulo>LMSGI</Modulo>
+        <Licencia>CC3.0</Licencia>
+        <Fecha_Publi>2011-09-15</Fecha_Publi>
+        <ISBN>978929212456</ISBN>
+        <Lecciones>
+            <Leccion>
+                <Texto>Primer párrafo de la primera lección.</Texto>
+                <Texto>Segundo párrafo de la primera lección.</Texto>
+                <Imagenes>1</Imagenes>
+                <Animaciones>0</Animaciones>
+                <Autoevaluaciones>2</Autoevaluaciones>
+                <Ejercicios>1</Ejercicios>
+            </Leccion>
+            <Leccion>
+                <Texto>Primer párrafo de la segunda lección.</Texto>
+                <Texto>Segundo párrafo de la segunda lección.</Texto>
+                <Texto>Tercer párrafo de la segunda lección.</Texto>
+                <Imagenes>0</Imagenes>
+                <Animaciones>1</Animaciones>
+                <Autoevaluaciones>1</Autoevaluaciones>
+                <Ejercicios>1</Ejercicios>
+            </Leccion>
+        </Lecciones>
+    </E-book>
+    <E-book>
+        <Titulo>Empresa e Iniciativa Emprendedora</Titulo>
+        <Autores>
+            <Autor>
+                <Nombre>Miguel Ángel</Nombre>
+                <Apellido>Sánchez</Apellido>
+            </Autor>
+            <Autor>
+                <Nombre>Xabier</Nombre>
+                <Apellido>Epelde</Apellido>
+            </Autor>
+        </Autores>
+        <Modulo>EIE</Modulo>
+        <Licencia>Public Domain</Licencia>
+        <Fecha_Publi>2010-06-25</Fecha_Publi>
+        <ISBN>978439288416</ISBN>
+        <Lecciones>
+            <Leccion>
+                <Texto>Primer párrafo de la lección.</Texto>
+                <Texto>Segundo párrafo de la lección.</Texto>
+                <Texto>Tercer párrafo de la lección.</Texto>
+                <Imagenes>0</Imagenes>
+                <Animaciones>2</Animaciones>
+                <Autoevaluaciones>1</Autoevaluaciones>
+                <Ejercicios>2</Ejercicios>
+            </Leccion>
+        </Lecciones>
+    </E-book>
+</E-books>
