@@ -91,4 +91,14 @@ group by codigo_pedido
 order by 1;
 
 --12
-Select nombre_cliente, limite_cliente_credito || '€' "Cantidad Total"
+Select nombre_cliente, limite_cliente_credito || '€' "Limite de credito", sum (total)||'€' "Cantidad pagada", limite_credito-sum(total)
+from cliente NATURAL JOIN pago
+GROUP by nombre_cliente, limite_credito
+having(sum(total))<limite_credito
+order by 1;
+
+--13
+SELECT ej.nombre, e.nombre
+FROM empleado e 
+JOIN empleado ej ON e.codigo_empleado = ej.codigo_jefe
+order by 2,1 desc;

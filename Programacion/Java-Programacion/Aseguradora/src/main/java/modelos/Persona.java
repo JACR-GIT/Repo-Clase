@@ -7,8 +7,7 @@ import java.util.Objects;
 
 public class Persona {
 
-    //Variables
-
+    // Variables
     private int id;
     private String nombre;
     private String apellido1;
@@ -21,8 +20,7 @@ public class Persona {
     private String email;
     private String telefono;
 
-    //Constructor
-
+    // Constructor completo (V2)
     public Persona(int id, String nombre, String apellido1, String apellido2, String nif,
                    LocalDate fechaNacimiento, Direccion direccion, Sexo sexo, String paisOrigen,
                    String email, String telefono) {
@@ -44,28 +42,25 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    public Persona(){
-        this.id = 0;
-        this.nombre = "ninguno";
-        this.apellido1 = "ninguno";
-        this.apellido2 = "ninguno";
-        this.nif = "ninguno";
-        this.fechaNacimiento = LocalDate.now();
-        this.direccion = null;
+    // Constructor V1 (sin sexo, paisOrigen, email y telefono)
+    public Persona(int id, String nombre, String apellido1, String apellido2, String nif,
+                   LocalDate fechaNacimiento, Direccion direccion) {
+        this(id, nombre, apellido1, apellido2, nif, fechaNacimiento, direccion, null, null, null, null);
     }
 
-    public Persona(Persona persona2){
-        this.id = persona2.id;
-        this.nombre = persona2.nombre;
-        this.apellido1 = persona2.apellido1;
-        this.apellido2 = persona2.apellido2;
-        this.nif = persona2.nif;
-        this.fechaNacimiento = persona2.fechaNacimiento;
-        this.direccion = persona2.direccion;
+    // Constructor vacío
+    public Persona() {
+        this(0, "ninguno", "ninguno", "ninguno", "ninguno", LocalDate.now(), null, null, null, null, null);
     }
 
-    //Getter y Setters
+    // Constructor de copia
+    public Persona(Persona otraPersona) {
+        this(otraPersona.id, otraPersona.nombre, otraPersona.apellido1, otraPersona.apellido2, otraPersona.nif,
+                otraPersona.fechaNacimiento, otraPersona.direccion, otraPersona.sexo, otraPersona.paisOrigen,
+                otraPersona.email, otraPersona.telefono);
+    }
 
+    // Getters y Setters
     public int getId() {
         return id;
     }
@@ -103,6 +98,9 @@ public class Persona {
     }
 
     public void setNif(String nif) {
+        if (!UtilidadesPersonas.esNIFValido(nif)) {
+            throw new IllegalArgumentException("El NIF no es válido");
+        }
         this.nif = nif;
     }
 
@@ -122,20 +120,12 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public Sexo getSexo() {
+        return sexo;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
     }
 
     public String getPaisOrigen() {
@@ -146,15 +136,24 @@ public class Persona {
         this.paisOrigen = paisOrigen;
     }
 
-    public Sexo getSexo() {
-        return sexo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSexo(Sexo sexo) {
-        this.sexo = sexo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    //toString
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    // toString
+    @Override
     public String toString() {
         return "Persona{" +
                 "id=" + id +
@@ -164,18 +163,27 @@ public class Persona {
                 ", nif='" + nif + '\'' +
                 ", fechaNacimiento=" + fechaNacimiento +
                 ", direccion=" + direccion +
+                ", sexo=" + sexo +
+                ", paisOrigen='" + paisOrigen + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
                 '}';
     }
 
-    //equals
+    // equals
+    @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Persona persona = (Persona) o;
-        return id == persona.id && Objects.equals(nombre, persona.nombre) && Objects.equals(apellido1, persona.apellido1) && Objects.equals(apellido2, persona.apellido2) && Objects.equals(nif, persona.nif) && Objects.equals(fechaNacimiento, persona.fechaNacimiento) && Objects.equals(direccion, persona.direccion);
+        return id == persona.id &&
+                Objects.equals(nif, persona.nif) &&
+                Objects.equals(fechaNacimiento, persona.fechaNacimiento);
     }
 
-    //hashCode
+    // hashCode
+    @Override
     public int hashCode() {
-        return Objects.hash(id, nombre, apellido1, apellido2, nif, fechaNacimiento, direccion);
+        return Objects.hash(id, nif, fechaNacimiento);
     }
 }
