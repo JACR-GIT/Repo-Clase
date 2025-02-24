@@ -12,31 +12,31 @@ public class Conductor extends Persona {
 
     public Conductor(int id, String nombre, String apellido1, String apellido2, String nif, LocalDate fechaNacimiento, Direccion direccion,
                      LocalDate fechaCarnet, int puntosCarnet, int anyosAsegurado) {
-
         super(id, nombre, apellido1, apellido2, nif, fechaNacimiento, direccion, Sexo.masculino, "España", "aionifda", "123456789");
 
         if (!UtilidadesPersonas.esMayorDeEdad(this)) {
-            throw new IllegalArgumentException("El NIF no es válido");
+            throw new IllegalArgumentException("No es mayor de edad");
         }
 
         this.fechaCarnet = fechaCarnet;
         this.puntosCarnet = puntosCarnet;
         this.anyosAsegurado = anyosAsegurado;
     }
-    public Conductor() {
 
+    public Conductor() {
         this.fechaCarnet = LocalDate.now();
         this.puntosCarnet = 0;
         this.anyosAsegurado = 0;
     }
 
     public Conductor(Conductor conductor2) {
-
-        this.fechaCarnet = fechaCarnet;
-        this.puntosCarnet = puntosCarnet;
-        this.anyosAsegurado = anyosAsegurado;
+        super(conductor2);
+        this.fechaCarnet = conductor2.fechaCarnet;
+        this.puntosCarnet = conductor2.puntosCarnet;
+        this.anyosAsegurado = conductor2.anyosAsegurado;
     }
 
+    @Override
     public String toString() {
         return "Conductor{" +
                 super.toString() +
@@ -46,6 +46,7 @@ public class Conductor extends Persona {
                 '}';
     }
 
+    @Override
     public boolean equals(Object obj) {
         if (!super.equals(obj)) return false;
         Conductor conductor = (Conductor) obj;
@@ -54,6 +55,7 @@ public class Conductor extends Persona {
                 Objects.equals(fechaCarnet, conductor.fechaCarnet);
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), fechaCarnet, puntosCarnet, anyosAsegurado);
     }

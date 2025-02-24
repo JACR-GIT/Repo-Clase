@@ -44,6 +44,19 @@ public class Persona {
         this.telefono = telefono;
     }
 
+
+    //PersonaV1
+    public Persona(int id, String nombre, String apellido1, String apellido2, String nif, LocalDate fechaNacimiento, Direccion direccion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
+        this.nif = nif;
+        this.fechaNacimiento = fechaNacimiento;
+        this.direccion = direccion;
+    }
+
+
     public Persona(){
         this.id = 0;
         this.nombre = "ninguno";

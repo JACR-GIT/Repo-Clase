@@ -1,37 +1,41 @@
 package utilidades;
 
-import modelos.Cotizacion;
-import modelos.Conductor;
-import soporte.SoporteVehiculos;
+import com.aseguradora.utils.SoporteVehiculos;
+import com.aseguradora.utils.Tarifa;
 
-public class UtilidadesTarifa extends SoporteVehiculos {
+public class UtilidadesTarifa {
+    SoporteVehiculos sp = SoporteVehiculos.getInstance();
 
-    @Override
-    public double calcularTarifa(Cotizacion cotizacion) {
-        double tarifaBase = super.calcularTarifa(cotizacion);
-        double multiplicador = 1.0;
-
-        String cp = cotizacion.getConductorPrincipal().getDireccion().getCodigoPostal();
-        multiplicador *= multiplicadorCP(cp);
-
-        if (!cotizacion.isTieneAparcamientoPrivado()) {
-            multiplicador *= 1.1; // Increase by 10% if the car sleeps on the street
+    public Tarifa calcularTarifa(String marca, String modelo, int anyo, String cp, boolean tieneParking, boolean conductorMenor25, boolean conductorPrincipalMenor25, int siniestrosConCulpa) throws IllegalArgumentException {
+        if (marca == null || modelo == null || cp == null) {
+            throw new IllegalArgumentException("Los parámetros marca, modelo y cp no pueden ser nulos");
         }
 
-        if (cotizacion.getConductorPrincipal().getEdad() < 25) {
-            multiplicador *= 1.2; // Increase by 20% if the principal driver is under 25
-        } else {
-            for (Conductor conductor : cotizacion.getConductoresOcasionales()) {
-                if (conductor.getEdad() < 25) {
-                    multiplicador *= 1.1; // Increase by 10% if any occasional driver is under 25
-                    break;
-                }
-            }
+        Tarifa tarifaBase = sp.calcularTarifa(marca, modelo, anyo);
+        double multiplicadorCP = sp.multiplicadorCP(cp);
+        double multiplicadorParking = tieneParking ? 0.9 : 1.1;
+        double multiplicadorEdad = 1.0;
+
+        if (conductorPrincipalMenor25) {
+            multiplicadorEdad = 1.3;
+        } else if (conductorMenor25) {
+            multiplicadorEdad = 1.1;
         }
 
-        int numSiniestros = cotizacion.getNumSini5();
-        multiplicador *= (1 + numSiniestros * 0.05); // Increase by 5% per accident in the last 5 years
+        double multiplicadorSiniestros = 1.0 + (siniestrosConCulpa * 0.1);
+        double nuevoPrecioTERC = tarifaBase.getPrecioTERC() * multiplicadorCP * multiplicadorParking * multiplicadorEdad * multiplicadorSiniestros;
+        double nuevoPrecioTAMP = tarifaBase.getPrecioTAMP() * multiplicadorCP * multiplicadorParking * multiplicadorEdad * multiplicadorSiniestros;
+        double nuevoPrecioTRIE = tarifaBase.getPrecioTRIE() * multiplicadorCP * multiplicadorParking * multiplicadorEdad * multiplicadorSiniestros;
+        return new Tarifa(marca, modelo, anyo, nuevoPrecioTERC, nuevoPrecioTAMP, nuevoPrecioTRIE);
+    }
 
-        return tarifaBase * multiplicador;
+    public String preciosFinalesTarifas(String marca, String modelo, int anyo, String cp, boolean tieneParking, boolean conductorMenor25, boolean conductorPrincipalMenor25, int siniestrosConCulpa) {
+        try {
+            Tarifa tarifa = calcularTarifa(marca, modelo, anyo, cp, tieneParking, conductorMenor25, conductorPrincipalMenor25, siniestrosConCulpa);
+            return String.format("Precios finales para %s %s (%d):\nTERC: %.2f\nTAMP: %.2f\nTRIE: %.2f",
+                    marca, modelo, anyo, tarifa.getPrecioTERC(), tarifa.getPrecioTAMP(), tarifa.getPrecioTRIE());
+        } catch (IllegalArgumentException e) {
+            return "Error al calcular la tarifa: " + e.getMessage();
+        }
     }
 }

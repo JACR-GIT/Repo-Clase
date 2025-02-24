@@ -1,46 +1,21 @@
-import java.time.LocalDate;
-
+// src/test/java/pruebaV1.java
 import modelos.*;
 
-public class PruebaV1 {
+import java.time.LocalDate;
+
+public class pruebaV1 {
     public static void main(String[] args) {
-        // Crear un objeto de Direccion
-        Direccion direccion = new Direccion(1, TipoVia.AVENIDA, "Gran Vía", 45, "Piso 3, Puerta B", "28013", "Madrid", null);
+        Direccion direccion = new Direccion(1, TipoVia.CALLE, "Gran Via", 10, "2B", "28013", "Madrid", new Provincia("1","Madrid"));
+        Persona persona = new Persona(1, "Juan", "Perez", "Gomez", "12345678A", LocalDate.of(1990, 1, 1), direccion);
+        Conductor conductor = new Conductor(2, "Ana", "Lopez", "Martinez", "87654321B", LocalDate.of(1985, 5, 5), direccion, LocalDate.of(2005, 5, 5), 12, 5);
+        Vehiculo vehiculo = new Vehiculo(1, "Toyota", "Corolla", "1234ABC", LocalDate.of(2015, 6, 15), "Rojo", persona);
+        Coche coche = new Coche(2, "Ford", "Focus", "5678DEF", LocalDate.of(2018, 3, 20), "Azul", persona, 5, Coche.TipoCombustible.GASOLINA, Coche.Traccion.DELANTERA, false);
+        Moto moto = new Moto(3, "Yamaha", "R1", "9101GHI", LocalDate.of(2020, 8, 25), "Negro", persona, 1000, false);
 
-        // Crear un objeto de Persona
-        Persona persona = new Persona(1, "Carlos", "Gómez", "Fernández", "12345678X", LocalDate.of(1990, 3, 15), direccion, Sexo.masculino, "España", "aionifda", "123456789");
-
-        // Crear un objeto de Conductor
-        Conductor conductor = new Conductor(2, "Laura", "Martínez", "Ruiz", "87654321Y", LocalDate.of(1985, 7, 22), direccion,
-                LocalDate.of(2003, 5, 10), 12, 10);
-
-        // Crear un objeto de Vehiculo
-        Vehiculo vehiculo = new Vehiculo(1, "Toyota", "Corolla", "1234ABC", LocalDate.of(2015, 6, 10), "Rojo", persona);
-
-        // Crear un objeto de Moto
-        Moto moto = new Moto(2, "Yamaha", "YZF-R6", "5678XYZ", LocalDate.of(2020, 3, 5), "Azul", conductor, 600, false);
-
-        // Crear un objeto de Coche
-        Coche coche = new Coche(3, "Ford", "Focus", "9101DEF", LocalDate.of(2018, 9, 20), "Negro", persona, 5,
-                Coche.TipoCombusible.GASOLINA, Coche.TipoTraccion.DELANTERA, false);
-
-        // Mostrar los objetos en consola
-        System.out.println("Objeto Direccion:");
-        System.out.println(direccion);
-
-        System.out.println("\nObjeto Persona:");
         System.out.println(persona);
-
-        System.out.println("\nObjeto Conductor:");
         System.out.println(conductor);
-
-        System.out.println("\nObjeto Vehiculo:");
         System.out.println(vehiculo);
-
-        System.out.println("\nObjeto Moto:");
-        System.out.println(moto);
-
-        System.out.println("\nObjeto Coche:");
         System.out.println(coche);
+        System.out.println(moto);
     }
 }
