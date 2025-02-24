@@ -1,29 +1,29 @@
 package utilidades;
 
-import modelos.Cotizacion;
-import modelos.Conductor;
-import soporte.SoporteVehiculos;
+import com.aseguradora.utils.SoporteVehiculos;
+import modelos.*;
 
-public class UtilidadesTarifa extends SoporteVehiculos {
+public class UtilidadesTarifa {
 
-    @Override
-    public double calcularTarifa(Cotizacion cotizacion) {
-        double tarifaBase = super.calcularTarifa(cotizacion);
+    public double calcularTarifa  {
+
+        double tarifaBase = SoporteVehiculos.getInstance().calcularTarifa(cotizacion.getVehiculo().getMarca().getNombre(),cotizacion.getVehiculo().getModelo().getNombre(),UtilidadesVehiculo.calculaEdad(cotizacion.getVehiculo()));
         double multiplicador = 1.0;
 
         String cp = cotizacion.getConductorPrincipal().getDireccion().getCodigoPostal();
-        multiplicador *= multiplicadorCP(cp);
+        double multiplicadorCP = SoporteVehiculos.getInstance().multiplicadorCP(cp);
+        multiplicador *= SoporteVehiculos.getInstance().multiplicadorCP(cp);
 
         if (!cotizacion.isTieneAparcamientoPrivado()) {
-            multiplicador *= 1.1; // Increase by 10% if the car sleeps on the street
+            multiplicador *= 1.1;
         }
 
-        if (cotizacion.getConductorPrincipal().getEdad() < 25) {
-            multiplicador *= 1.2; // Increase by 20% if the principal driver is under 25
+        if (UtilidadesPersonas.getEdad(cotizacion.getConductorPrincipal()) < 25) {
+            multiplicador *= 1.2;
         } else {
             for (Conductor conductor : cotizacion.getConductoresOcasionales()) {
-                if (conductor.getEdad() < 25) {
-                    multiplicador *= 1.1; // Increase by 10% if any occasional driver is under 25
+                if (UtilidadesPersonas.getEdad(conductor) < 25) {
+                    multiplicador *= 1.1;
                     break;
                 }
             }

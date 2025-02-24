@@ -45,6 +45,73 @@ public class Direccion {
         this.provincia = direccion2.provincia;
     }
 
+    //Getters y Setters
+
+
+    public Provincia getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(Provincia provincia) {
+        this.provincia = provincia;
+    }
+
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
+    }
+
+    public String getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    public void setCodigoPostal(String codigoPostal) {
+        this.codigoPostal = codigoPostal;
+    }
+
+    public String getRestoDireccion() {
+        return restoDireccion;
+    }
+
+    public void setRestoDireccion(String restoDireccion) {
+        this.restoDireccion = restoDireccion;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public String getNombreVia() {
+        return nombreVia;
+    }
+
+    public void setNombreVia(String nombreVia) {
+        this.nombreVia = nombreVia;
+    }
+
+    public TipoVia getTipoVia() {
+        return tipoVia;
+    }
+
+    public void setTipoVia(TipoVia tipoVia) {
+        this.tipoVia = tipoVia;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String toString() {
         return "Direccion{" +
                 "id=" + id +

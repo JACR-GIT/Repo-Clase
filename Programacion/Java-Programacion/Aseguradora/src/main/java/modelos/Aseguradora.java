@@ -10,6 +10,7 @@ public class Aseguradora {
     private Direccion direccion;
     private String telefono;
     private List<Vehiculo> vehiculosAsegurados;
+    private List<Poliza> listaPolizas;
 
     public Aseguradora(int ide, String nombre, Direccion direccion, String telefono, List<Vehiculo> vehiculosAsegurados) {
         this.ide = ide;
@@ -74,6 +75,27 @@ public class Aseguradora {
     public void setVehiculosAsegurados(List<Vehiculo> vehiculosAsegurados) {
         this.vehiculosAsegurados = vehiculosAsegurados;
     }
+
+    public List<Poliza> getListaPolizas() {
+        return listaPolizas;
+    }
+
+    public void setListaPolizas(List<Poliza> ListaPolizas) {
+        this.listaPolizas = ListaPolizas;
+    }
+
+
+
+    //Metodos
+
+    public void addPoliza(Poliza poliza){
+        listaPolizas.add(poliza);
+    }
+
+    public void removePoliza(Poliza poliza){
+        listaPolizas.remove(poliza);
+    }
+
 
     public String toString() {
         return "Aseguradora{" +
