@@ -7,20 +7,39 @@ import java.util.Objects;
 
 public class Persona {
 
-    // Variables
-    private int id;
-    private String nombre;
-    private String apellido1;
-    private String apellido2;
-    private String nif;
-    private LocalDate fechaNacimiento;
-    private Direccion direccion;
-    private Sexo sexo;
-    private String paisOrigen;
-    private String email;
-    private String telefono;
+    // ==================== PROPIEDADES O VARIABLES ====================
 
-    // Constructor completo (V2)
+    private int id; // Identificador único de la persona.
+    private String nombre; // Nombre de la persona.
+    private String apellido1; // Primer apellido de la persona.
+    private String apellido2; // Segundo apellido de la persona.
+    private String nif; // NIF (Número de Identificación Fiscal) de la persona.
+    private LocalDate fechaNacimiento; // Fecha de nacimiento de la persona.
+    private Direccion direccion; // Dirección de la persona.
+    private Sexo sexo; // Sexo de la persona (MASCULINO, FEMENINO, NO_ESPECIFICADO).
+    private String paisOrigen; // País de origen de la persona.
+    private String email; // Correo electrónico de la persona.
+    private String telefono; // Número de teléfono de la persona.
+
+    // ==================== CONSTRUCTORES ====================
+
+    /**
+     * Constructor completo (V2).
+     * Crea una persona con todos los atributos.
+     *
+     * @param id              Identificador único de la persona.
+     * @param nombre          Nombre de la persona.
+     * @param apellido1       Primer apellido de la persona.
+     * @param apellido2       Segundo apellido de la persona.
+     * @param nif             NIF de la persona.
+     * @param fechaNacimiento Fecha de nacimiento de la persona.
+     * @param direccion       Dirección de la persona.
+     * @param sexo            Sexo de la persona.
+     * @param paisOrigen      País de origen de la persona.
+     * @param email           Correo electrónico de la persona.
+     * @param telefono        Número de teléfono de la persona.
+     * @throws IllegalArgumentException Si el NIF no es válido.
+     */
     public Persona(int id, String nombre, String apellido1, String apellido2, String nif,
                    LocalDate fechaNacimiento, Direccion direccion, Sexo sexo, String paisOrigen,
                    String email, String telefono) {
@@ -42,25 +61,45 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    // Constructor V1 (sin sexo, paisOrigen, email y telefono)
+    /**
+     * Constructor de la V1 (sin sexo, paisOrigen, email y telefono).
+     * Crea una persona con los atributos básicos.
+     *
+     * @param id              Identificador único de la persona.
+     * @param nombre          Nombre de la persona.
+     * @param apellido1       Primer apellido de la persona.
+     * @param apellido2       Segundo apellido de la persona.
+     * @param nif             NIF de la persona.
+     * @param fechaNacimiento Fecha de nacimiento de la persona.
+     * @param direccion       Dirección de la persona.
+     */
     public Persona(int id, String nombre, String apellido1, String apellido2, String nif,
                    LocalDate fechaNacimiento, Direccion direccion) {
         this(id, nombre, apellido1, apellido2, nif, fechaNacimiento, direccion, null, null, null, null);
     }
 
-    // Constructor vacío
+    /**
+     * Constructor vacío.
+     * Inicializa todos los atributos con valores por defecto.
+     */
     public Persona() {
         this(0, "ninguno", "ninguno", "ninguno", "ninguno", LocalDate.now(), null, null, null, null, null);
     }
 
-    // Constructor de copia
-    public Persona(Persona otraPersona) {
-        this(otraPersona.id, otraPersona.nombre, otraPersona.apellido1, otraPersona.apellido2, otraPersona.nif,
-                otraPersona.fechaNacimiento, otraPersona.direccion, otraPersona.sexo, otraPersona.paisOrigen,
-                otraPersona.email, otraPersona.telefono);
+    /**
+     * Constructor de copia.
+     * Crea una nueva persona a partir de otra existente.
+     *
+     * @param persona2 Persona de la cual se copiarán los atributos.
+     */
+    public Persona(Persona persona2) {
+        this(persona2.id, persona2.nombre, persona2.apellido1, persona2.apellido2, persona2.nif,
+                persona2.fechaNacimiento, persona2.direccion, persona2.sexo, persona2.paisOrigen,
+                persona2.email, persona2.telefono);
     }
 
-    // Getters y Setters
+    // ==================== GETTERS Y SETTERS ====================
+
     public int getId() {
         return id;
     }
@@ -152,7 +191,13 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    // toString
+    // ==================== MÉTODOS ====================
+
+    /**
+     * Devuelve una representación en cadena de la persona.
+     *
+     * @return Cadena que representa a la persona.
+     */
     @Override
     public String toString() {
         return "Persona{" +
@@ -170,7 +215,12 @@ public class Persona {
                 '}';
     }
 
-    // equals
+    /**
+     * Compara si dos personas son iguales basándose en su id, nif y fecha de nacimiento.
+     *
+     * @param o Objeto a comparar.
+     * @return true si son iguales, false en caso contrario.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -181,7 +231,11 @@ public class Persona {
                 Objects.equals(fechaNacimiento, persona.fechaNacimiento);
     }
 
-    // hashCode
+    /**
+     * Devuelve el código hash de la persona basado en su id, nif y fecha de nacimiento.
+     *
+     * @return Código hash.
+     */
     @Override
     public int hashCode() {
         return Objects.hash(id, nif, fechaNacimiento);

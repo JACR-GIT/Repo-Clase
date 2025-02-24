@@ -1,25 +1,42 @@
+import com.aseguradora.utils.SoporteVehiculos;
 import modelos.*;
 import utilidades.UtilidadesTarifa;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
 
 public class PruebaV4 {
     public static void main(String[] args) {
-        // Create a sample Cotizacion
-        Persona tomador = new Persona(1, "Juan", "Perez", "Gomez", "12345678A", LocalDate.of(1980, 1, 1), new Direccion(1, null, "Calle Falsa", 1, "", "28001", "Madrid", new Provincia("28", "Madrid")));
-        Conductor conductorPrincipal = new Conductor(2, "Ana", "Lopez", "Martinez", "87654321B", LocalDate.of(2000, 5, 15), new Direccion(1, null, "Calle Falsa", 1, "", "28001", "Madrid", new Provincia("28", "Madrid")));
-        List<Conductor> conductoresOcasionales = new ArrayList<>();
-        conductoresOcasionales.add(new Conductor(3, "Carlos", "Garcia", "Fernandez", "11223344C", LocalDate.of(1998, 8, 25), new Direccion(1, null, "Calle Falsa", 1, "", "28001", "Madrid", new Provincia("28", "Madrid")));
+        SoporteVehiculos soporte = SoporteVehiculos.getInstance();
 
-        Cotizacion cotizacion = new Cotizacion(1, 1001, LocalDate.now(), LocalDate.of(2024, 1, 1), new Vehiculo(), tomador, conductorPrincipal, conductoresOcasionales, false, 2, 500.0, 600.0, 700.0, Cotizacion.Modalidad.TERC);
+        // Crear datos básicos
+        Provincia prov = new Provincia("46", "Valencia");
+        Direccion dir = new Direccion(1, TipoVia.CALLE, "Colón", 50, "", "46001", "Valencia", prov);
+        Persona tomador = new Persona(1, "Pedro", "Ramírez", "López", "98765432K", LocalDate.of(1980, 12, 1), dir,
+                Sexo.masculino, "España", "pedro@example.com", "600777888");
+        Conductor conductor = new Conductor(1, "Pedro", "Ramírez", "López", "98765432K", LocalDate.of(1980, 12, 1), dir,
+                LocalDate.of(2000, 5, 20), 12, 10);
+        Coche coche = new Coche(1, soporte.getMarcaByName("Volkswagen"), new com.aseguradora.utils.Modelo("Golf", 110, 130, 160),
+                "1111BBB", LocalDate.of(2019, 2, 10), "Gris", tomador, 5, Coche.TipoCombustible.HIBRIDO,
+                Coche.TipoTraccion.DELANTERA, false);
 
-        // Calculate the customized tariff
-        UtilidadesTarifa utilidadesTarifa = new UtilidadesTarifa();
-        double tarifaFinal = utilidadesTarifa.calcularTarifa(cotizacion);
+        // Crear cotización
+        Cotizacion cot = new Cotizacion(1, 1001, LocalDate.now(), LocalDate.now().plusDays(10), coche, tomador, conductor,
+                Collections.emptyList(), true, 1, 0, 0, 0, Cotizacion.Modalidad.TRIE);
+        UtilidadesTarifa.calcularTodasLasTarifas(cot);
+        cot.setModalidadElegida(Cotizacion.Modalidad.TRIE);
+        System.out.println("Cotización: " + cot);
 
-        // Print the result
-        System.out.println("Tarifa final: " + tarifaFinal);
+        // Crear anualidad
+        AnualidadPoliza anualidad = new AnualidadPoliza(1, "XYZ/2025/000001", AnualidadPoliza.EstadoPoliza.VIGENTE, null,
+                cot, AnualidadPoliza.ModoPago.IBAN, false, tomador, conductor, Collections.emptyList(),
+                cot.getPrecioTRIE(), UtilidadesTarifa.calcularTarifa(cot), LocalDate.now(), LocalDate.now().plusYears(1), null);
+        System.out.println("Anualidad: " + anualidad);
+
+        // Crear póliza
+        Poliza poliza = new Poliza(1, "XYZ/2025/000001", Collections.singletonList(anualidad), Poliza.EstadoPoliza.VIGENTE,
+                null, cot, tomador, conductor, Collections.emptyList(), cot.getPrecioTRIE(), UtilidadesTarifa.calcularTarifa(cot),
+                LocalDate.now(), LocalDate.now().plusYears(1), null);
+        System.out.println("Póliza: " + poliza);
     }
 }

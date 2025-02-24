@@ -1,29 +1,44 @@
-import modelos.Aseguradora;
-import modelos.Poliza;
+import modelos.*;
 import utilidades.UtilidadesAseguradora;
+import utilidades.UtilidadesTarifa;
 
-import java.util.List;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class PruebaV5 {
     public static void main(String[] args) {
-        Aseguradora aseguradora = new Aseguradora();
-        UtilidadesAseguradora utilidades = new UtilidadesAseguradora();
+        // Crear datos básicos
+        Provincia prov = new Provincia("41", "Sevilla");
+        Direccion dir = new Direccion(1, TipoVia.AVENIDA, "Reyes Católicos", 20, "", "41001", "Sevilla", prov);
+        Persona tomador = new Persona(1, "Sofía", "Moreno", "Vega", "45678912M", LocalDate.of(1992, 7, 14), dir,
+                Sexo.femenino, "España", "sofia@example.com", "600999000");
+        Conductor conductor = new Conductor(1, "Sofía", "Moreno", "Vega", "45678912M", LocalDate.of(1992, 7, 14), dir,
+                LocalDate.of(2012, 9, 1), 12, 8);
+        Coche coche = new Coche(1, "Renault", "Clio", "2222CCC", LocalDate.of(2022, 11, 30), "Blanco", tomador, 5,
+                Coche.TipoCombustible.GASOLINA, Coche.TipoTraccion.DELANTERA, false);
 
-        // Simulación de recuperación de pólizas
-        Poliza poliza = utilidades.recuperarPoliza(aseguradora, "12345");
-        if (poliza != null) {
-            System.out.println("Poliza recuperada: " + poliza);
-        } else {
-            System.out.println("No se encontró la póliza con número 12345");
-        }
+        // Crear cotización y póliza
+        Cotizacion cot = new Cotizacion(1, 1002, LocalDate.now(), LocalDate.now().plusDays(5), coche, tomador, conductor,
+                Collections.emptyList(), false, 0, 0, 0, 0, Cotizacion.Modalidad.TAMP);
+        UtilidadesTarifa.calcularTodasLasTarifas(cot);
+        AnualidadPoliza anualidad = new AnualidadPoliza(1, "ABC/2025/000002", AnualidadPoliza.EstadoPoliza.VIGENTE, null,
+                cot, AnualidadPoliza.ModoPago.TARJETA, true, tomador, conductor, Collections.emptyList(),
+                cot.getPrecioTAMP(), UtilidadesTarifa.calcularTarifa(cot), LocalDate.now(), LocalDate.now().plusYears(1), null);
+        Poliza poliza = new Poliza(1, "ABC/2025/000002", Collections.singletonList(anualidad), Poliza.EstadoPoliza.VIGENTE,
+                null, cot, tomador, conductor, Collections.emptyList(), cot.getPrecioTAMP(), UtilidadesTarifa.calcularTarifa(cot),
+                LocalDate.now(), LocalDate.now().plusYears(1), null);
 
-        List<Poliza> polizasActivas = utilidades.recuperarPolizasActivas(aseguradora);
-        System.out.println("Polizas activas: " + polizasActivas);
+        // Crear aseguradora
+        Aseguradora a = new Aseguradora(1, "AseguradoraABC", dir, "954123456", new ArrayList<>());
+        a.addPoliza(poliza);
+        System.out.println(a);
 
-        List<Poliza> polizasTomador = utilidades.recuperarPolizasPorTomador(aseguradora, "NIF123");
-        System.out.println("Polizas por tomador: " + polizasTomador);
-
-        List<Poliza> polizasConductor = utilidades.recuperarPolizasPorConductor(aseguradora, "NIF456");
-        System.out.println("Polizas por conductor: " + polizasConductor);
+        // Probar UtilidadesAseguradora
+        UtilidadesAseguradora util = new UtilidadesAseguradora();
+        System.out.println("Póliza recuperada: " + util.recuperarPoliza(a, "ABC/2025/000002"));
+        System.out.println("Pólizas activas: " + util.recuperarPolizasActivas(a));
+        System.out.println("Pólizas por tomador: " + util.recuperarPolizasPorTomador(a, "45678912M"));
+        System.out.println("Pólizas por conductor: " + util.recuperarPolizasPorConductor(a, "45678912M"));
     }
 }

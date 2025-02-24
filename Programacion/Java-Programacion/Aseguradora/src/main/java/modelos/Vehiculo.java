@@ -2,6 +2,7 @@ package modelos;
 
 import com.aseguradora.utils.Marca;
 import com.aseguradora.utils.Modelo;
+import com.aseguradora.utils.SoporteVehiculos;
 import utilidades.UtilidadesVehiculo;
 
 import java.time.LocalDate;
@@ -22,19 +23,6 @@ public class Vehiculo {
 
     // ==================== CONSTRUCTORES ====================
 
-    /**
-     * Constructor completo.
-     * Crea un vehículo con todos los atributos.
-     *
-     * @param id                Identificador único del vehículo.
-     * @param marca             Marca del vehículo.
-     * @param modelo            Modelo del vehículo.
-     * @param matricula         Matrícula del vehículo.
-     * @param fechaMatriculacion Fecha de matriculación del vehículo.
-     * @param color             Color del vehículo.
-     * @param duenyoActual      Dueño actual del vehículo.
-     * @throws IllegalArgumentException Si la fecha de matriculación o la matrícula no son válidas.
-     */
     public Vehiculo(int id, Marca marca, Modelo modelo, String matricula, LocalDate fechaMatriculacion, String color, Persona duenyoActual) {
         if (!UtilidadesVehiculo.validaFechaMatriculacion(fechaMatriculacion)) {
             throw new IllegalArgumentException("Fecha de matriculación no válida.");
@@ -51,19 +39,6 @@ public class Vehiculo {
         this.duenyoActual = duenyoActual;
     }
 
-    /**
-     * Constructor con marca y modelo como String.
-     * Crea un vehículo con marca y modelo como cadenas de texto.
-     *
-     * @param id                Identificador único del vehículo.
-     * @param marca             Marca del vehículo como String.
-     * @param modelo            Modelo del vehículo como String.
-     * @param matricula         Matrícula del vehículo.
-     * @param fechaMatriculacion Fecha de matriculación del vehículo.
-     * @param color             Color del vehículo.
-     * @param duenyoActual      Dueño actual del vehículo.
-     * @throws IllegalArgumentException Si la fecha de matriculación, la matrícula, la marca o el modelo no son válidos.
-     */
     public Vehiculo(int id, String marca, String modelo, String matricula, LocalDate fechaMatriculacion, String color, Persona duenyoActual) {
         if (!UtilidadesVehiculo.validaFechaMatriculacion(fechaMatriculacion)) {
             throw new IllegalArgumentException("Fecha de matriculación no válida.");
@@ -74,13 +49,12 @@ public class Vehiculo {
         if (!UtilidadesVehiculo.validarMarca(marca)) {
             throw new IllegalArgumentException("Marca no válida.");
         }
-        if (!UtilidadesVehiculo.validarModelo(modelo)) {
+        if (!UtilidadesVehiculo.validarModelo(marca, modelo)) { // Ajustado para incluir marca
             throw new IllegalArgumentException("Modelo no válido.");
         }
-
         this.id = id;
-        this.marca = new Marca(marca, new ArrayList<Modelo>());
-        this.modelo = new Modelo(modelo, 0, 0, 0);
+        this.marca = SoporteVehiculos.getInstance().getMarcaByName(marca);
+        this.modelo = new Modelo(modelo, 0, 0, 0); // Precios ficticios, ajustar si necesario
         this.matricula = matricula;
         this.fechaMatriculacion = fechaMatriculacion;
         this.color = color;

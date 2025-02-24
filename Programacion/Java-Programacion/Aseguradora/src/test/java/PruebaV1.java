@@ -1,20 +1,29 @@
-// src/test/java/pruebaV1.java
+import com.aseguradora.utils.SoporteVehiculos;
 import modelos.*;
 
 import java.time.LocalDate;
 
 public class PruebaV1 {
     public static void main(String[] args) {
-        Direccion direccion = new Direccion(1, TipoVia.CALLE, "Gran Via", 10, "2B", "28013", "Madrid", new Provincia("1","Madrid"));
-        Persona persona = new Persona(1, "Juan", "Perez", "Gomez", "12345678A", LocalDate.of(1990, 1, 1), direccion);
-        Conductor conductor = new Conductor(2, "Ana", "Lopez", "Martinez", "87654321B", LocalDate.of(1985, 5, 5), direccion, LocalDate.of(2005, 5, 5), 12, 5);
-        Vehiculo vehiculo = new Vehiculo(1, "Toyota", "Corolla", "1234ABC", LocalDate.of(2015, 6, 15), "Rojo", persona);
-        Coche coche = new Coche(2, "Ford", "Focus", "5678DEF", LocalDate.of(2018, 3, 20), "Azul", persona, 5, Coche.TipoCombusible.GASOLINA, Coche.TipoTraccion.DELANTERA, false);
-        Moto moto = new Moto(3, "Yamaha", "R1", "9101GHI", LocalDate.of(2020, 8, 25), "Negro", persona, 1000, false);
 
-        System.out.println(persona);
-        System.out.println(conductor);
-        System.out.println(vehiculo);
+        SoporteVehiculos soporte = SoporteVehiculos.getInstance();
+
+        // Crear una dirección
+        Direccion dir = new Direccion(1, TipoVia.CALLE, "Mayor", 10, "1A", "28001", "Madrid", new Provincia("Madrid", "28"));
+        // Crear una persona
+        Persona p = new Persona(1, "Juan", "Pérez", "Gómez", "12345678Z", LocalDate.of(1990, 5, 15), dir);
+        // Crear un conductor
+        Conductor c = new Conductor(2, "Ana", "López", "Martín", "87654321X", LocalDate.of(1985, 8, 20), dir,
+                LocalDate.of(2005, 1, 10), 12, 5);
+        // Crear un coche
+        Coche coche = new Coche(1, soporte.getMarcaByName("Seat"), new com.aseguradora.utils.Modelo("Leon", 100, 120, 150), "1234BCD", LocalDate.of(2018, 3, 25), "Azul", p, 4,
+                Coche.TipoCombustible.GASOLINA, Coche.TipoTraccion.DELANTERA, false);
+        // Crear una moto
+        Moto moto = new Moto(2, "Honda", "CBR", "5678XYZ", LocalDate.of(2020, 6, 15), "Negro", c, 500, false);
+
+        // Mostrar por consola
+        System.out.println(p);
+        System.out.println(c);
         System.out.println(coche);
         System.out.println(moto);
     }

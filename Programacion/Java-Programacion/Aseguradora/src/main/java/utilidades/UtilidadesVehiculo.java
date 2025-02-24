@@ -1,5 +1,6 @@
 package utilidades;
 
+import com.aseguradora.utils.SoporteVehiculos;
 import modelos.Persona;
 import modelos.Vehiculo;
 
@@ -58,11 +59,11 @@ public class UtilidadesVehiculo {
         return fecha.isBefore(LocalDate.now());
     }
 
-    public static boolean validarModelo(String modelo) {
-        return false;
+    public static boolean validarMarca(String marca) {
+        return SoporteVehiculos.getInstance().esMarcaValida(marca);
     }
 
-    public static boolean validarMarca(String marca) {
-        return false;
+    public static boolean validarModelo(String marca, String modelo) {
+        return SoporteVehiculos.getInstance().esModeloValido(marca,modelo); // Necesita marca como parámetro
     }
 }
