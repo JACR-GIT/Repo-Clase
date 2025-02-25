@@ -1,7 +1,6 @@
 package modelos;
 
 import utilidades.UtilidadesPersonas;
-
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -34,7 +33,7 @@ public class Conductor extends Persona {
         this.anyosAsegurado = conductor2.anyosAsegurado;
     }
 
-    @Override
+
     public String toString() {
         return "Conductor{" +
                 super.toString() +
@@ -44,7 +43,6 @@ public class Conductor extends Persona {
                 '}';
     }
 
-    @Override
     public boolean equals(Object obj) {
         if (!super.equals(obj)) return false;
         Conductor conductor = (Conductor) obj;
@@ -53,7 +51,6 @@ public class Conductor extends Persona {
                 Objects.equals(fechaCarnet, conductor.fechaCarnet);
     }
 
-    @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), fechaCarnet, puntosCarnet, anyosAsegurado);
     }

@@ -49,7 +49,7 @@ public class Vehiculo {
         if (!UtilidadesVehiculo.validarMarca(marca)) {
             throw new IllegalArgumentException("Marca no válida.");
         }
-        if (!UtilidadesVehiculo.validarModelo(marca, modelo)) { // Ajustado para incluir marca
+        if (!UtilidadesVehiculo.validarModelo(marca,modelo)) { // Ajustado para incluir marca
             throw new IllegalArgumentException("Modelo no válido.");
         }
         this.id = id;

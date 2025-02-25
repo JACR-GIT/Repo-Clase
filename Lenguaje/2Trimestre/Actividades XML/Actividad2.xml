@@ -30,3 +30,64 @@
         <vehiculo>helicóptero</vehiculo>
     </aereos>
 </Vehiculos>
+
+<equipos>
+    <equipo>
+        <nombre>Real Madrid</nombre>
+        <ciudad>Madrid</ciudad>
+        <entrenador>
+            <nombre>Zinedine</nombre>
+            <apellidos>Zidane</apellidos>
+        </entrenador>
+        <jugadores>
+            <jugador>
+                <posicion>portero</posicion>
+                <nombre>Thibaut Courtois</nombre>
+                <nacionalidad>Belga</nacionalidad>
+            </jugador>
+            <jugador>
+            <posicion>delantero</posicion>
+                <nombre>Karim Benzema</nombre>
+                <nacionalidad>Francés</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+    <equipo>
+        <nombre>FC Barcelona</nombre>
+        <ciudad>Barcelona</ciudad>
+        <entrenador>
+            <nombre>Ronald</nombre>
+            <apellidos>Koeman</apellidos>
+        </entrenador>
+        <jugadores>
+            <jugador>
+                <posicion>defensa</posicion>
+                <nombre>Gerard Piqué</nombre>
+                <nacionalidad>Español</nacionalidad>
+            </jugador>
+            <jugador>
+                <posicion>medio</posicion>
+                <nombre>Frenkie de Jong</nombre>
+                <nacionalidad>Holandés</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+</equipos>
+
+<cancion duracion="4:47" anio="2008">
+    <titulo>Give it 2 me</titulo>
+    <compositores>
+        <compositor>
+            <nombres>Pharrell</nombres>
+            <apellidos>Williams</apellidos>
+        </compositor>
+    </compositores>
+    <productores>
+        <productor>
+            <nombres>Pharrell</nombres>
+            <apellidos>Williams</apellidos>
+        </productor>
+    </productores>
+    <sello>Warner Bros. Records</sello>
+    <artista>Madonna</artista>
+</cancion>

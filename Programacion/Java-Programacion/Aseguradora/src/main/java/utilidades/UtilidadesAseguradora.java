@@ -8,15 +8,6 @@ import java.util.List;
 
 public class UtilidadesAseguradora {
 
-    // ==================== MÉTODOS ====================
-
-    /**
-     * Recupera una póliza específica de una aseguradora basándose en su número de póliza.
-     *
-     * @param a            Aseguradora en la que se buscará la póliza.
-     * @param numeroPoliza Número de la póliza a buscar.
-     * @return La póliza encontrada, o null si no se encuentra.
-     */
     public Poliza recuperarPoliza(Aseguradora a, String numeroPoliza) {
         if (a == null || numeroPoliza == null || a.getListaPolizas() == null) {
             return null; // Validación básica para evitar NullPointerException.
@@ -30,12 +21,8 @@ public class UtilidadesAseguradora {
         return null; // Si no se encuentra la póliza, se devuelve null.
     }
 
-    /**
-     * Recupera todas las pólizas activas (vigentes) de una aseguradora.
-     *
-     * @param aseguradora Aseguradora de la cual se recuperarán las pólizas activas.
-     * @return Lista de pólizas activas.
-     */
+    // ==================== MÉTODOS ====================
+
     public List<Poliza> recuperarPolizasActivas(Aseguradora aseguradora) {
         List<Poliza> polizasActivas = new ArrayList<>();
 
@@ -51,23 +38,17 @@ public class UtilidadesAseguradora {
         return polizasActivas;
     }
 
-    /**
-     * Recupera todas las pólizas asociadas a un tomador específico basándose en su NIF.
-     *
-     * @param aseguradora Aseguradora en la que se buscarán las pólizas.
-     * @param nif         NIF del tomador de las pólizas.
-     * @return Lista de pólizas asociadas al tomador.
-     */
     public List<Poliza> recuperarPolizasPorTomador(Aseguradora aseguradora, String nif) {
         List<Poliza> polizasTomador = new ArrayList<>();
 
         if (aseguradora == null || nif == null || aseguradora.getListaPolizas() == null) {
-            return polizasTomador; // Validación básica para evitar NullPointerException.
-        }
+            System.out.println("Error: aseguradora, nif o lista de pólizas nulos.");
+        }else if(aseguradora.getListaPolizas().getLast().getTomador().getNif().equalsIgnoreCase(nif)) {
 
-        for (Poliza p : aseguradora.getListaPolizas()) {
-            if (p != null && p.getTomador() != null && nif.equals(p.getTomador().getNif())) {
-                polizasTomador.add(p);
+            for (Poliza p : aseguradora.getListaPolizas()) {
+                if (p != null && p.getTomador() != null && nif.equals(p.getTomador().getNif())) {
+                    polizasTomador.add(p);
+                }
             }
         }
         return polizasTomador;

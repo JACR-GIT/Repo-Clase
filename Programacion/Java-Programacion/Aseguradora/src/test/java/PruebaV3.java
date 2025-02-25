@@ -20,14 +20,14 @@ public class PruebaV3 {
             System.out.println(p);
 
         // Crear conductor
-            Conductor c = new Conductor(2, "Luis", "Martínez", "Gómez", "12345678Z", LocalDate.of(2000, 1, 15), dir,
+            Conductor conductor = new Conductor(2, "Luis", "Martínez", "Gómez", "12345678Z", LocalDate.of(2000, 1, 15), dir,
                     LocalDate.of(2018, 6, 10), 12, 2);
-            System.out.println(c);
+            System.out.println(conductor);
 
         // Crear coche
             Coche coche = new Coche(1, soporte.getMarcaByName("Ford"), new com.aseguradora.utils.Modelo("Focus", 100, 120, 150),
-                    "5678XYZ", LocalDate.of(2021, 9, 5), "Negro", null, 4, Coche.TipoCombustible.ELECTRICO,
-                    Coche.TipoTraccion.TRASERA, false);
+                    "5678XYZ", LocalDate.of(2021, 9, 5), "Negro", null, 4, TipoCombustible.ELECTRICO,
+                    TipoTraccion.TRASERA, false);
             System.out.println(coche);
             System.out.println("Tarifa: " + soporte.calcularTarifa("Ford", "Focus", 2021));
     }

@@ -8,16 +8,6 @@ import java.util.Objects;
 
 public class Coche extends Vehiculo {
 
-    // ==================== ENUMERACIONES ====================
-
-    public enum TipoCombustible {
-        GASOLINA, DIESEL, ELECTRICO, HIBRIDO
-    }
-
-    public enum TipoTraccion {
-        DELANTERA, TRASERA, INTEGRAL
-    }
-
     // ==================== PROPIEDADES O VARIABLES ====================
 
     private int numeroPuertas;
@@ -45,10 +35,6 @@ public class Coche extends Vehiculo {
         this.esTodoTerreno = esTodoTerreno;
     }
 
-    /**
-     * Constructor vacío.
-     * Inicializa todos los atributos con valores por defecto.
-     */
     public Coche() {
         this.numeroPuertas = 0;
         this.tipoCombustible = null;
@@ -56,12 +42,6 @@ public class Coche extends Vehiculo {
         this.esTodoTerreno = false;
     }
 
-    /**
-     * Constructor de copia.
-     * Crea un nuevo coche a partir de otro existente.
-     *
-     * @param coche2 Coche del cual se copiarán los atributos.
-     */
     public Coche(Coche coche2) {
         super(coche2); // Llama al constructor de copia de la clase base (Vehiculo).
         this.numeroPuertas = coche2.numeroPuertas;

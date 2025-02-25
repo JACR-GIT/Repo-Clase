@@ -1,145 +1,277 @@
 import com.aseguradora.utils.SoporteVehiculos;
 import modelos.*;
-import utilidades.UtilidadesTarifa;
-import utilidades.UtilidadesVehiculo;
+import utilidades.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class PruebaContratacion {
+
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("=== SIMULACIÓN DE CONTRATACIÓN DE PÓLIZA ===");
         SoporteVehiculos soporte = SoporteVehiculos.getInstance();
 
-        // Pedir tipo de vehículo
-        System.out.println("¿Coche (1) o Moto (2)?");
-        Vehiculo vehiculo = null;
-        while (vehiculo == null) {
+        // Crear objetos necesarios
+        Vehiculo vehiculo = crearVehiculo();
+        Persona tomador = crearTomador();
+        Conductor conductorPrincipal = crearConductor(tomador);
+        List<Conductor> conductoresOcasionales = crearConductoresOcasionales();
+        Cotizacion cotizacion = crearCotizacion(vehiculo, tomador, conductorPrincipal, conductoresOcasionales);
+
+        // Calcular y mostrar tarifas
+        UtilidadesTarifa.calcularTodasLasTarifas(cotizacion);
+        mostrarOpcionesCotizacion(cotizacion);
+
+        // Elegir modalidad
+        Cotizacion.Modalidad modalidadElegida = elegirModalidad();
+        if (modalidadElegida == null) {
+            System.out.println("Contratación cancelada por el usuario.");
+            return;
+        }
+        cotizacion.setModalidadElegida(modalidadElegida);
+
+        // Crear anualidad y póliza
+        AnualidadPoliza anualidad = crearAnualidad(cotizacion);
+        Poliza poliza = crearPoliza(anualidad, cotizacion);
+
+        // Mostrar resumen
+        mostrarResumen(poliza);
+
+        scanner.close();
+    }
+
+    private static Vehiculo crearVehiculo() {
+        while (true) {
             try {
+                System.out.println("\n=== Datos del Vehículo ===");
+                System.out.print("¿Coche (1) o Moto (2)? ");
                 int tipo = Integer.parseInt(scanner.nextLine());
-                System.out.println("Marca:");
+
+                System.out.print("Marca: ");
                 String marca = scanner.nextLine();
-                System.out.println("Modelo:");
+                if (!UtilidadesVehiculo.validarMarca(marca)) throw new IllegalArgumentException("Marca no válida");
+
+                System.out.print("Modelo: ");
                 String modelo = scanner.nextLine();
-                System.out.println("Matrícula:");
+                if (!UtilidadesVehiculo.validarModelo(marca, modelo)) throw new IllegalArgumentException("Modelo no válido");
+
+                System.out.print("Matrícula: ");
                 String matricula = scanner.nextLine();
-                System.out.println("Fecha matriculación (dd/MM/yyyy):");
-                LocalDate fechaMat = LocalDate.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-                System.out.println("Color:");
+                if (!UtilidadesVehiculo.esMatriculaValida(matricula)) throw new IllegalArgumentException("Matrícula no válida");
+
+                System.out.print("Fecha de matriculación (yyyy/MM/dd): ");
+                LocalDate fechaMatriculacion = LocalDate.parse(scanner.nextLine(), formatter);
+                if (!UtilidadesVehiculo.validaFechaMatriculacion(fechaMatriculacion)) throw new IllegalArgumentException("Fecha de matriculación inválida");
+
+                System.out.print("Color: ");
                 String color = scanner.nextLine();
 
                 if (tipo == 1) {
-                    System.out.println("Número de puertas:");
+                    System.out.print("Número de puertas: ");
                     int puertas = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Combustible (GASOLINA/DIESEL/ELECTRICO/HIBRIDO):");
-                    Coche.TipoCombustible comb = Coche.TipoCombustible.valueOf(scanner.nextLine().toUpperCase());
-                    System.out.println("Tracción (DELANTERA/TRASERA/TOTAL):");
-                    Coche.TipoTraccion trac = Coche.TipoTraccion.valueOf(scanner.nextLine().toUpperCase());
-                    vehiculo = new Coche(1, marca, modelo, matricula, fechaMat, color, null, puertas, comb, trac, false);
-                } else {
-                    System.out.println("Cilindrada (CC):");
+                    System.out.print("Combustible (GASOLINA/DIESEL/ELECTRICO/HIBRIDO): ");
+                    TipoCombustible combustible = TipoCombustible.valueOf(scanner.nextLine().toUpperCase());
+                    System.out.print("Tracción (DELANTERA/TRASERA/INTEGRAL): ");
+                    TipoTraccion traccion = TipoTraccion.valueOf(scanner.nextLine().toUpperCase());
+                    System.out.print("¿Es todoterreno? (s/n): ");
+                    boolean esTodoTerreno = scanner.nextLine().equalsIgnoreCase("s");
+
+                    return new Coche(1, marca, modelo, matricula, fechaMatriculacion, color, null, puertas, combustible, traccion, esTodoTerreno);
+                } else if (tipo == 2) {
+                    System.out.print("Cilindrada (CC): ");
                     int cc = Integer.parseInt(scanner.nextLine());
-                    System.out.println("¿Sidecar? (s/n):");
+                    System.out.print("¿Tiene sidecar? (s/n): ");
                     boolean sidecar = scanner.nextLine().equalsIgnoreCase("s");
-                    vehiculo = new Moto(1, marca, modelo, matricula, fechaMat, color, null, cc, sidecar);
+
+                    return new Moto(1, marca, modelo, matricula, fechaMatriculacion, color, null, cc, sidecar);
+                } else {
+                    System.out.println("Tipo de vehículo no válido.");
                 }
-            } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage() + ". Intenta de nuevo.");
+            } catch (IllegalArgumentException | DateTimeParseException e) {
+                System.out.println("Error: " + e.getMessage() + ". Por favor, intenta de nuevo.");
             }
         }
+    }
 
-        // Pedir datos del tomador
-        System.out.println("Datos del tomador:");
-        Persona tomador = null;
-        while (tomador == null) {
+    private static Persona crearTomador() {
+        while (true) {
             try {
-                System.out.println("NIF:");
+                System.out.println("\n=== Datos del Tomador ===");
+                System.out.print("NIF: ");
                 String nif = scanner.nextLine();
-                System.out.println("Nombre:");
+                if (!UtilidadesPersonas.esNIFValido(nif)) throw new IllegalArgumentException("NIF no válido");
+
+                System.out.print("Nombre: ");
                 String nombre = scanner.nextLine();
-                System.out.println("Apellido1:");
+                System.out.print("Primer apellido: ");
                 String ape1 = scanner.nextLine();
-                System.out.println("Apellido2:");
+                System.out.print("Segundo apellido: ");
                 String ape2 = scanner.nextLine();
-                System.out.println("Fecha nacimiento (dd/MM/yyyy):");
-                LocalDate fechaNac = LocalDate.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-                System.out.println("Código postal:");
-                String cp = scanner.nextLine();
-                System.out.println("Localidad:");
-                String loc = scanner.nextLine();
-                System.out.println("Provincia:");
-                String prov = scanner.nextLine();
-                Direccion dir = new Direccion(1, TipoVia.CALLE, "Principal", 1, "", cp, loc, new Provincia(prov));
-                tomador = new Persona(1, nombre, ape1, ape2, nif, fechaNac, dir, Sexo.otro, "España", "", "");
-            } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage() + ". Intenta de nuevo.");
+                System.out.print("Fecha de nacimiento (yyyy/MM/dd): ");
+                LocalDate fechaNac = LocalDate.parse(scanner.nextLine(), formatter);
+
+                Direccion direccion = crearDireccion();
+                return new Persona(1, nombre, ape1, ape2, nif, fechaNac, direccion, Sexo.otro, "España", "", "");
+            } catch (IllegalArgumentException | DateTimeParseException e) {
+                System.out.println("Error: " + e.getMessage() + ". Por favor, intenta de nuevo.");
             }
         }
+    }
 
-        // Conductor principal
-        System.out.println("¿Conductor principal es el tomador? (s/n):");
-        Conductor conductor = null;
+    private static Direccion crearDireccion() {
+        while (true) {
+            try {
+                System.out.println("\n=== Dirección del Tomador ===");
+                System.out.print("Tipo de vía (CALLE/AVENIDA/PLAZA, etc.): ");
+                TipoVia tipoVia = TipoVia.valueOf(scanner.nextLine().toUpperCase());
+                System.out.print("Nombre de la vía: ");
+                String nombreVia = scanner.nextLine();
+                System.out.print("Número: ");
+                int numero = Integer.parseInt(scanner.nextLine());
+                System.out.print("Resto (piso, puerta, etc.): ");
+                String resto = scanner.nextLine();
+                System.out.print("Código postal: ");
+                String cp = scanner.nextLine();
+                if (!UtilidadesDireccion.esCPValido(cp)) throw new IllegalArgumentException("Código postal no válido");
+                System.out.print("Localidad: ");
+                String localidad = scanner.nextLine();
+                System.out.print("Provincia: ");
+                String provincia = scanner.nextLine();
+                String codProvincia = UtilidadesDireccion.obtenerCodigoProvincia(provincia);
+                if (codProvincia == null) throw new IllegalArgumentException("Provincia no válida");
+
+                return new Direccion(1, tipoVia, nombreVia, numero, resto, cp, localidad, new Provincia(codProvincia, provincia));
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage() + ". Por favor, intenta de nuevo.");
+            }
+        }
+    }
+
+    private static Conductor crearConductor(Persona tomador) {
+        while (true) {
+            try {
+                System.out.println("\n=== Conductor Principal ===");
+                System.out.print("¿Es el mismo que el tomador? (s/n): ");
+                if (scanner.nextLine().equalsIgnoreCase("s")) {
+                    System.out.print("Fecha del carnet (yyyy/MM/dd): ");
+                    LocalDate fechaCarnet = LocalDate.parse(scanner.nextLine(), formatter);
+                    return new Conductor(tomador.getId(), tomador.getNombre(), tomador.getApellido1(), tomador.getApellido2(),
+                            tomador.getNif(), tomador.getFechaNacimiento(), tomador.getDireccion(), fechaCarnet, 12, 5);
+                } else {
+                    Persona conductor = crearTomador(); // Reutilizamos para crear una persona distinta
+                    System.out.print("Fecha del carnet (yyyy/MM/dd): ");
+                    LocalDate fechaCarnet = LocalDate.parse(scanner.nextLine(), formatter);
+                    return new Conductor(conductor.getId(), conductor.getNombre(), conductor.getApellido1(), conductor.getApellido2(),
+                            conductor.getNif(), conductor.getFechaNacimiento(), conductor.getDireccion(), fechaCarnet, 12, 0);
+                }
+            } catch (IllegalArgumentException | DateTimeParseException e) {
+                System.out.println("Error: " + e.getMessage() + ". Por favor, intenta de nuevo.");
+            }
+        }
+    }
+
+    private static List<Conductor> crearConductoresOcasionales() {
+        List<Conductor> ocasionales = new ArrayList<>();
+        System.out.print("\n¿Añadir conductor ocasional? (s/n): ");
         if (scanner.nextLine().equalsIgnoreCase("s")) {
-            conductor = new Conductor(tomador.getId(), tomador.getNombre(), tomador.getApellido1(), tomador.getApellido2(),
-                    tomador.getNif(), tomador.getFechaNacimiento(), tomador.getDireccion(), LocalDate.now().minusYears(5), 12, 5);
-        } else {
-            // Similar al tomador, pero separado (omitido por brevedad, implementar si necesario)
+            Conductor ocasional = crearConductor(null); // Null para no vincular al tomador
+            ocasionales.add(ocasional);
         }
+        return ocasionales;
+    }
 
-        // Conductores ocasionales
-        ArrayList<Conductor> ocasionales = new ArrayList<>();
-        System.out.println("¿Conductor adicional? (s/n):");
-        if (scanner.nextLine().equalsIgnoreCase("s")) {
-            // Similar al tomador, añadir a la lista (omitido por brevedad)
+    private static Cotizacion crearCotizacion(Vehiculo vehiculo, Persona tomador, Conductor conductor, List<Conductor> ocasionales) {
+        while (true) {
+            try {
+                System.out.println("\n=== Datos de la Cotización ===");
+                System.out.print("Fecha de inicio (yyyy/MM/dd): ");
+                LocalDate fechaInicio = LocalDate.parse(scanner.nextLine(), formatter);
+                System.out.print("¿Tiene parking privado? (s/n): ");
+                boolean parking = scanner.nextLine().equalsIgnoreCase("s");
+                System.out.print("Número de siniestros en los últimos 5 años: ");
+                int siniestros = Integer.parseInt(scanner.nextLine());
+
+                return new Cotizacion(1, 1003, LocalDate.now(), fechaInicio, vehiculo, tomador, conductor,
+                        ocasionales, parking, siniestros, 0, 0, 0, Cotizacion.Modalidad.TERC);
+            } catch (DateTimeParseException | NumberFormatException e) {
+                System.out.println("Error: " + e.getMessage() + ". Por favor, intenta de nuevo.");
+            }
         }
+    }
 
-        // Cotización
-        System.out.println("¿Parking privado? (s/n):");
-        boolean parking = scanner.nextLine().equalsIgnoreCase("s");
-        System.out.println("Siniestros en 5 años:");
-        int siniestros = Integer.parseInt(scanner.nextLine());
-        Cotizacion cot = new Cotizacion(1, 1003, LocalDate.now(), LocalDate.now().plusDays(1), vehiculo, tomador, conductor,
-                ocasionales, parking, siniestros, 0, 0, 0, Cotizacion.Modalidad.TERC);
-        UtilidadesTarifa.calcularTodasLasTarifas(cot);
+    private static void mostrarOpcionesCotizacion(Cotizacion cotizacion) {
+        System.out.println("\n=== Opciones de Seguro ===");
+        System.out.printf("1. Terceros (TERC): %.2f€%n", cotizacion.getPrecioTERC());
+        System.out.printf("2. Terceros Ampliado (TAMP): %.2f€%n", cotizacion.getPrecioTAMP());
+        System.out.printf("3. Todo Riesgo (TRIE): %.2f€%n", cotizacion.getPrecioTRIE());
+    }
 
-        // Mostrar opciones
-        System.out.println("1. Terceros: " + cot.getPrecioTERC());
-        System.out.println("2. Terceros Ampliado: " + cot.getPrecioTAMP());
-        System.out.println("3. Todo Riesgo: " + cot.getPrecioTRIE());
-        System.out.println("Elige (1-3) o 0 para cancelar:");
-        int eleccion = Integer.parseInt(scanner.nextLine());
-        if (eleccion == 0) {
-            System.out.println("Cancelado.");
-            return;
+    private static Cotizacion.Modalidad elegirModalidad() {
+        while (true) {
+            try {
+                System.out.print("\nElija una opción (1-3) o 0 para cancelar: ");
+                int eleccion = Integer.parseInt(scanner.nextLine());
+                switch (eleccion) {
+                    case 0: return null;
+                    case 1: return Cotizacion.Modalidad.TERC;
+                    case 2: return Cotizacion.Modalidad.TAMP;
+                    case 3: return Cotizacion.Modalidad.TRIE;
+                    default: System.out.println("Opción no válida.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Introduzca un número válido.");
+            }
         }
-        cot.setModalidadElegida(eleccion == 1 ? Cotizacion.Modalidad.TERC : eleccion == 2 ? Cotizacion.Modalidad.TAMP : Cotizacion.Modalidad.TRIE);
+    }
 
-        // Pago
-        System.out.println("Pago (1: IBAN, 2: Tarjeta):");
-        AnualidadPoliza.ModoPago modo = Integer.parseInt(scanner.nextLine()) == 1 ? AnualidadPoliza.ModoPago.IBAN : AnualidadPoliza.ModoPago.TARJETA;
-        System.out.println("¿Fraccionado? (s/n):");
-        boolean fracc = scanner.nextLine().equalsIgnoreCase("s");
-        double precioFinal = fracc ? UtilidadesTarifa.calcularTarifa(cot) * 1.05 : UtilidadesTarifa.calcularTarifa(cot);
+    private static AnualidadPoliza crearAnualidad(Cotizacion cotizacion) {
+        while (true) {
+            try {
+                System.out.println("\n=== Pago de la Anualidad ===");
+                System.out.print("Método de pago (1: IBAN, 2: TARJETA): ");
+                int modoInt = Integer.parseInt(scanner.nextLine());
+                AnualidadPoliza.ModoPago modo = (modoInt == 1) ? AnualidadPoliza.ModoPago.IBAN : AnualidadPoliza.ModoPago.TARJETA;
+                System.out.print("¿Fraccionado? (s/n): ");
+                boolean fraccionado = scanner.nextLine().equalsIgnoreCase("s");
+                double precioBase = UtilidadesTarifa.calcularTarifa(cotizacion);
+                double precioFinal = fraccionado ? precioBase * 1.05 : precioBase;
 
-        // Crear póliza
-        AnualidadPoliza anualidad = new AnualidadPoliza(1, "DEF/2025/000003", AnualidadPoliza.EstadoPoliza.VIGENTE, null,
-                cot, modo, fracc, tomador, conductor, ocasionales, UtilidadesTarifa.calcularTarifa(cot), precioFinal,
+                return new AnualidadPoliza(1, "DEF/2025/000003", AnualidadPoliza.EstadoPoliza.VIGENTE, null, cotizacion,
+                        modo, fraccionado, cotizacion.getTomador(), cotizacion.getConductorPrincipal(),
+                        cotizacion.getConductoresOcasionales(), precioBase, precioFinal, LocalDate.now(), LocalDate.now().plusYears(1), null);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage() + ". Por favor, intenta de nuevo.");
+            }
+        }
+    }
+
+    private static Poliza crearPoliza(AnualidadPoliza anualidad, Cotizacion cotizacion) {
+        return new Poliza(1, "DEF/2025/000003", Collections.singletonList(anualidad), Poliza.EstadoPoliza.VIGENTE,
+                null, cotizacion, cotizacion.getTomador(), cotizacion.getConductorPrincipal(),
+                cotizacion.getConductoresOcasionales(), anualidad.getPrecioModalidad(), anualidad.getPrecioFinal(),
                 LocalDate.now(), LocalDate.now().plusYears(1), null);
-        Poliza poliza = new Poliza(1, "DEF/2025/000003", Collections.singletonList(anualidad), Poliza.EstadoPoliza.VIGENTE,
-                null, cot, tomador, conductor, ocasionales, UtilidadesTarifa.calcularTarifa(cot), precioFinal,
-                LocalDate.now(), LocalDate.now().plusYears(1), null);
+    }
 
-        // Resumen
-        System.out.println("Póliza contratada:");
+    private static void mostrarResumen(Poliza poliza) {
+        System.out.println("\n=== Resumen de la Póliza ===");
         System.out.println("Número: " + poliza.getNumero());
+        System.out.println("Estado: " + poliza.getEstadoPoliza());
         System.out.println("Tomador: " + poliza.getTomador().getNombre() + " " + poliza.getTomador().getApellido1());
-        System.out.println("Vehículo: " + poliza.getUltimaCotizacionBase().getVehiculo().getMatricula());
+        System.out.println("Vehículo: " + poliza.getUltimaCotizacionBase().getVehiculo().getMarca() + " " + poliza.getUltimaCotizacionBase().getVehiculo().getModelo());
         System.out.println("Modalidad: " + poliza.getUltimaCotizacionBase().getModalidadElegida());
-        System.out.println("Precio final: " + poliza.getPrecioFinal());
-
-        scanner.close();
+        System.out.printf("Precio final: %.2f€%n", poliza.getPrecioFinal());
+        System.out.println("Fecha de inicio: " + poliza.getFechaInicioAnualidad());
+        System.out.println("Fecha de fin: " + poliza.getFechaFinAnualidad());
+        System.out.println("Método de pago: " + poliza.getAnualidades().get(0).getModoPago());
+        System.out.println("Fraccionado: " + (poliza.getAnualidades().get(0).isEsPagoFraccionado() ? "Sí" : "No"));
+        System.out.println("¡Póliza contratada con éxito!");
     }
 }

@@ -17,7 +17,7 @@ public class PruebaV1 {
                 LocalDate.of(2005, 1, 10), 12, 5);
         // Crear un coche
         Coche coche = new Coche(1, soporte.getMarcaByName("Seat"), new com.aseguradora.utils.Modelo("Leon", 100, 120, 150), "1234BCD", LocalDate.of(2018, 3, 25), "Azul", p, 4,
-                Coche.TipoCombustible.GASOLINA, Coche.TipoTraccion.DELANTERA, false);
+                TipoCombustible.GASOLINA, TipoTraccion.DELANTERA, false);
         // Crear una moto
         Moto moto = new Moto(2, "Honda", "CBR", "5678XYZ", LocalDate.of(2020, 6, 15), "Negro", c, 500, false);
 

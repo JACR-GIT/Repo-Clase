@@ -11,12 +11,12 @@ public class PruebaV5 {
         // Crear datos básicos
         Provincia prov = new Provincia("41", "Sevilla");
         Direccion dir = new Direccion(1, TipoVia.AVENIDA, "Reyes Católicos", 20, "", "41001", "Sevilla", prov);
-        Persona tomador = new Persona(1, "Sofía", "Moreno", "Vega", "45678912M", LocalDate.of(1992, 7, 14), dir,
+        Persona tomador = new Persona(1, "Sofía", "Moreno", "Vega", "12345678Z", LocalDate.of(1992, 7, 14), dir,
                 Sexo.femenino, "España", "sofia@example.com", "600999000");
-        Conductor conductor = new Conductor(1, "Sofía", "Moreno", "Vega", "45678912M", LocalDate.of(1992, 7, 14), dir,
+        Conductor conductor = new Conductor(1, "Sofía", "Moreno", "Vega", "12345678Z", LocalDate.of(1992, 7, 14), dir,
                 LocalDate.of(2012, 9, 1), 12, 8);
         Coche coche = new Coche(1, "Renault", "Clio", "2222CCC", LocalDate.of(2022, 11, 30), "Blanco", tomador, 5,
-                Coche.TipoCombustible.GASOLINA, Coche.TipoTraccion.DELANTERA, false);
+                TipoCombustible.GASOLINA, TipoTraccion.DELANTERA, false);
 
         // Crear cotización y póliza
         Cotizacion cot = new Cotizacion(1, 1002, LocalDate.now(), LocalDate.now().plusDays(5), coche, tomador, conductor,
@@ -38,7 +38,7 @@ public class PruebaV5 {
         UtilidadesAseguradora util = new UtilidadesAseguradora();
         System.out.println("Póliza recuperada: " + util.recuperarPoliza(a, "ABC/2025/000002"));
         System.out.println("Pólizas activas: " + util.recuperarPolizasActivas(a));
-        System.out.println("Pólizas por tomador: " + util.recuperarPolizasPorTomador(a, "45678912M"));
-        System.out.println("Pólizas por conductor: " + util.recuperarPolizasPorConductor(a, "45678912M"));
+        System.out.println("Pólizas por tomador: " + util.recuperarPolizasPorTomador(a, "12345678Z"));
+        System.out.println("Pólizas por conductor: " + util.recuperarPolizasPorConductor(a, "12345678Z"));
     }
 }

@@ -6,30 +6,17 @@ public class Direccion {
 
     // ==================== PROPIEDADES O VARIABLES ====================
 
-    private int id; // Identificador único de la dirección.
-    private TipoVia tipoVia; // Tipo de vía (calle, avenida, etc.).
-    private String nombreVia; // Nombre de la vía.
-    private int numero; // Número de la vía.
-    private String restoDireccion; // Resto de la dirección (piso, puerta, etc.).
-    private String codigoPostal; // Código postal de la dirección.
-    private String localidad; // Localidad de la dirección.
-    private Provincia provincia; // Provincia de la dirección.
+    private int id;
+    private TipoVia tipoVia;
+    private String nombreVia;
+    private int numero;
+    private String restoDireccion;
+    private String codigoPostal;
+    private String localidad;
+    private Provincia provincia;
 
     // ==================== CONSTRUCTORES ====================
 
-    /**
-     * Constructor completo.
-     * Crea una dirección con todos los atributos.
-     *
-     * @param id             Identificador único de la dirección.
-     * @param tipoVia        Tipo de vía (calle, avenida, etc.).
-     * @param nombreVia      Nombre de la vía.
-     * @param numero         Número de la vía.
-     * @param restoDireccion Resto de la dirección (piso, puerta, etc.).
-     * @param codigoPostal   Código postal de la dirección.
-     * @param localidad      Localidad de la dirección.
-     * @param provincia      Provincia de la dirección.
-     */
     public Direccion(int id, TipoVia tipoVia, String nombreVia, int numero, String restoDireccion, String codigoPostal, String localidad, Provincia provincia) {
         this.id = id;
         this.tipoVia = tipoVia;
@@ -41,10 +28,7 @@ public class Direccion {
         this.provincia = provincia;
     }
 
-    /**
-     * Constructor vacío.
-     * Inicializa todos los atributos con valores por defecto.
-     */
+
     public Direccion() {
         this.id = 0;
         this.tipoVia = null;
@@ -56,12 +40,6 @@ public class Direccion {
         this.provincia = null;
     }
 
-    /**
-     * Constructor de copia.
-     * Crea una nueva dirección a partir de otra existente.
-     *
-     * @param direccion2 Dirección de la cual se copiarán los atributos.
-     */
     public Direccion(Direccion direccion2) {
         this.id = direccion2.id;
         this.tipoVia = direccion2.tipoVia;
@@ -139,14 +117,8 @@ public class Direccion {
         this.provincia = provincia;
     }
 
-    // ==================== MÉTODOS ====================
+    // ====================  ====================
 
-    /**
-     * Devuelve una representación en cadena de la dirección.
-     *
-     * @return Cadena que representa la dirección.
-     */
-    @Override
     public String toString() {
         return "Direccion{" +
                 "id=" + id +
@@ -160,13 +132,6 @@ public class Direccion {
                 '}';
     }
 
-    /**
-     * Compara si dos direcciones son iguales basándose en todos sus atributos.
-     *
-     * @param obj Objeto a comparar.
-     * @return true si son iguales, false en caso contrario.
-     */
-    @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
@@ -181,12 +146,6 @@ public class Direccion {
                 Objects.equals(provincia, direccion.provincia);
     }
 
-    /**
-     * Devuelve el código hash de la dirección basado en todos sus atributos.
-     *
-     * @return Código hash.
-     */
-    @Override
     public int hashCode() {
         return Objects.hash(id, tipoVia, nombreVia, numero, restoDireccion, codigoPostal, localidad, provincia);
     }

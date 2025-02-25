@@ -10,23 +10,23 @@ import java.util.List;
 
 public class UtilidadesVehiculo {
 
-    public static boolean esMatriculaValida(String mat) {
+    public static boolean esMatriculaValida(String matricula) {
 
         String regexNormal = "^[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}$";
         String regexFuerzas = "^[A-Z]{1,2}[0-9]{4}[A-Z]{2}$";
 
-        if (mat == null || mat.length() < 5 || mat.length() > 9) return false;
+        if (matricula == null || matricula.length() < 5 || matricula.length() > 9) return false;
 
-        if (mat.matches(regexNormal)) {
+        if (matricula.matches(regexNormal)) {
             System.out.println("Matrícula normal válida.");
-        } else if (mat.matches(regexFuerzas)) {
+        } else if (matricula.matches(regexFuerzas)) {
             System.out.println("Matrícula de las fuerzas del estado válida.");
         } else {
             System.out.println("Formato de matrícula no válido.");
         }
 
-        String numeros = mat.substring(0, 4);
-        String letras = mat.substring(4, 7);
+        String numeros = matricula.substring(0, 4);
+        String letras = matricula.substring(4, 7);
 
         try {
             int num = Integer.parseInt(numeros);

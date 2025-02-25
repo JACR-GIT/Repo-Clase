@@ -12,13 +12,13 @@ public class PruebaV4 {
         // Crear datos básicos
         Provincia prov = new Provincia("46", "Valencia");
         Direccion dir = new Direccion(1, TipoVia.CALLE, "Colón", 50, "", "46001", "Valencia", prov);
-        Persona tomador = new Persona(1, "Pedro", "Ramírez", "López", "98765432K", LocalDate.of(1980, 12, 1), dir,
+        Persona tomador = new Persona(1, "Pedro", "Ramírez", "López", "12345678Z", LocalDate.of(1980, 12, 1), dir,
                 Sexo.masculino, "España", "pedro@example.com", "600777888");
-        Conductor conductor = new Conductor(1, "Pedro", "Ramírez", "López", "98765432K", LocalDate.of(1980, 12, 1), dir,
+        Conductor conductor = new Conductor(1, "Pedro", "Ramírez", "López", "12345678Z", LocalDate.of(1980, 12, 1), dir,
                 LocalDate.of(2000, 5, 20), 12, 10);
         Coche coche = new Coche(1, soporte.getMarcaByName("Volkswagen"), new com.aseguradora.utils.Modelo("Golf", 110, 130, 160),
-                "1111BBB", LocalDate.of(2019, 2, 10), "Gris", tomador, 5, Coche.TipoCombustible.HIBRIDO,
-                Coche.TipoTraccion.DELANTERA, false);
+                "1111BBB", LocalDate.of(2019, 2, 10), "Gris", tomador, 5, TipoCombustible.HIBRIDO,
+                TipoTraccion.DELANTERA, false);
 
         // Crear cotización
         Cotizacion cot = new Cotizacion(1, 1001, LocalDate.now(), LocalDate.now().plusDays(10), coche, tomador, conductor,
