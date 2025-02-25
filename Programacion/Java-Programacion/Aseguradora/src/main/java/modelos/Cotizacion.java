@@ -10,49 +10,30 @@ public class Cotizacion {
     // ==================== ENUMERACIONES ====================
 
     public enum Modalidad {
-        TERC, // Terceros básico.
-        TAMP, // Terceros ampliado.
-        TRIE  // Todo riesgo.
+        TERC,
+        TAMP,
+        TRIE
     }
 
     // ==================== PROPIEDADES O VARIABLES ====================
 
-    private int id; // Identificador único de la cotización.
-    private int codigo; // Código de la cotización (visible para el cliente).
-    private LocalDate fechaCotizacion; // Fecha en la que se crea la cotización.
-    private LocalDate fechaInicio; // Fecha en la que se inicia el seguro.
-    private Vehiculo vehiculo; // Vehículo que se quiere asegurar.
-    private Persona tomador; // Persona a nombre de quien estaría el seguro (el que paga).
-    private Conductor conductorPrincipal; // Conductor principal del vehículo.
-    private List<Conductor> conductoresOcasionales; // Lista de conductores ocasionales.
-    private boolean tieneAparcamientoPrivado; // Indica si el vehículo tiene aparcamiento privado.
-    private int numSini5; // Número de siniestros con culpa en los últimos 5 años.
-    private double precioTERC; // Precio de la modalidad de terceros básico.
-    private double precioTAMP; // Precio de la modalidad de terceros ampliado.
-    private double precioTRIE; // Precio de la modalidad de todo riesgo.
-    private Modalidad modalidadElegida; // Modalidad de seguro elegida por el cliente.
+    private int id;
+    private int codigo;
+    private LocalDate fechaCotizacion;
+    private LocalDate fechaInicio;
+    private Vehiculo vehiculo;
+    private Persona tomador;
+    private Conductor conductorPrincipal;
+    private List<Conductor> conductoresOcasionales;
+    private boolean tieneAparcamientoPrivado;
+    private int numSini5;
+    private double precioTERC;
+    private double precioTAMP;
+    private double precioTRIE;
+    private Modalidad modalidadElegida;
 
     // ==================== CONSTRUCTORES ====================
 
-    /**
-     * Constructor completo.
-     * Crea una cotización con todos los atributos.
-     *
-     * @param id                       Identificador único de la cotización.
-     * @param codigo                   Código de la cotización (visible para el cliente).
-     * @param fechaCotizacion          Fecha en la que se crea la cotización.
-     * @param fechaInicio              Fecha en la que se inicia el seguro.
-     * @param vehiculo                 Vehículo que se quiere asegurar.
-     * @param tomador                  Persona a nombre de quien estaría el seguro (el que paga).
-     * @param conductorPrincipal       Conductor principal del vehículo.
-     * @param conductoresOcasionales   Lista de conductores ocasionales.
-     * @param tieneAparcamientoPrivado Indica si el vehículo tiene aparcamiento privado.
-     * @param numSini5                 Número de siniestros con culpa en los últimos 5 años.
-     * @param precioTERC               Precio de la modalidad de terceros básico.
-     * @param precioTAMP               Precio de la modalidad de terceros ampliado.
-     * @param precioTRIE               Precio de la modalidad de todo riesgo.
-     * @param modalidadElegida         Modalidad de seguro elegida por el cliente.
-     */
     public Cotizacion(int id, int codigo, LocalDate fechaCotizacion, LocalDate fechaInicio, Vehiculo vehiculo,
                       Persona tomador, Conductor conductorPrincipal, List<Conductor> conductoresOcasionales,
                       boolean tieneAparcamientoPrivado, int numSini5, double precioTERC, double precioTAMP,
@@ -73,10 +54,6 @@ public class Cotizacion {
         this.modalidadElegida = modalidadElegida;
     }
 
-    /**
-     * Constructor vacío.
-     * Inicializa todos los atributos con valores por defecto.
-     */
     public Cotizacion() {
         this.id = 0;
         this.codigo = 0;
@@ -94,21 +71,15 @@ public class Cotizacion {
         this.modalidadElegida = Modalidad.TERC;
     }
 
-    /**
-     * Constructor de copia.
-     * Crea una nueva cotización a partir de otra existente.
-     *
-     * @param cotizacion2 Cotización de la cual se copiarán los atributos.
-     */
     public Cotizacion(Cotizacion cotizacion2) {
         this.id = cotizacion2.id;
         this.codigo = cotizacion2.codigo;
         this.fechaCotizacion = cotizacion2.fechaCotizacion;
         this.fechaInicio = cotizacion2.fechaInicio;
-        this.vehiculo = new Vehiculo(cotizacion2.vehiculo); // Copia profunda del vehículo.
-        this.tomador = new Persona(cotizacion2.tomador); // Copia profunda del tomador.
-        this.conductorPrincipal = new Conductor(cotizacion2.conductorPrincipal); // Copia profunda del conductor principal.
-        this.conductoresOcasionales = new ArrayList<>(cotizacion2.conductoresOcasionales); // Copia profunda de la lista de conductores ocasionales.
+        this.vehiculo = new Vehiculo(cotizacion2.vehiculo);
+        this.tomador = new Persona(cotizacion2.tomador);
+        this.conductorPrincipal = new Conductor(cotizacion2.conductorPrincipal);
+        this.conductoresOcasionales = new ArrayList<>(cotizacion2.conductoresOcasionales);
         this.tieneAparcamientoPrivado = cotizacion2.tieneAparcamientoPrivado;
         this.numSini5 = cotizacion2.numSini5;
         this.precioTERC = cotizacion2.precioTERC;
@@ -233,35 +204,16 @@ public class Cotizacion {
 
     // ==================== MÉTODOS ====================
 
-    /**
-     * Compara si dos cotizaciones son iguales basándose en su identificador único (id).
-     *
-     * @param o Objeto a comparar.
-     * @return true si son iguales, false en caso contrario.
-     */
-    @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Cotizacion cotizacion = (Cotizacion) o;
         return id == cotizacion.id;
     }
 
-    /**
-     * Devuelve el código hash de la cotización basado en su identificador único (id).
-     *
-     * @return Código hash.
-     */
-    @Override
     public int hashCode() {
         return Objects.hash(id);
     }
 
-    /**
-     * Devuelve una representación en cadena de la cotización.
-     *
-     * @return Cadena que representa la cotización.
-     */
-    @Override
     public String toString() {
         return "Cotizacion{" +
                 "id=" + id +

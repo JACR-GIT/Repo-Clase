@@ -52,15 +52,15 @@ public class UtilidadesTarifa {
             // Revisar conductores ocasionales
             for (Conductor conductor : cotizacion.getConductoresOcasionales()) {
                 if (UtilidadesPersonas.getEdad(conductor) < 25) {
-                    multiplicador *= 1.1; // 10% más si hay un conductor ocasional menor de 25
-                    break; // Solo aplica una vez
+                    multiplicador *= 1.1;
+                    break;
                 }
             }
         }
 
         // Ajustar por número de siniestros
         int numSiniestros = cotizacion.getNumSini5();
-        multiplicador *= (1 + numSiniestros * 0.05); // 5% más por cada siniestro
+        multiplicador *= (1 + numSiniestros * 0.05);
 
         // Calcular y devolver el precio final
         return precioBase * multiplicador;
@@ -68,26 +68,22 @@ public class UtilidadesTarifa {
 
     // Método para calcular todas las tarifas y asignarlas a la cotización
     public static void calcularTodasLasTarifas(Cotizacion cotizacion) {
-        // Obtener la tarifa base
+
         Tarifa tarifaBase = SoporteVehiculos.getInstance().calcularTarifa(
                 cotizacion.getVehiculo().getMarca().getNombre(),
                 cotizacion.getVehiculo().getModelo().getNombre(),
                 cotizacion.getVehiculo().getFechaMatriculacion().getYear()
         );
 
-        // Iniciar el multiplicador
         double multiplicador = 1.0;
 
-        // Aplicar multiplicador por código postal
         String cp = cotizacion.getConductorPrincipal().getDireccion().getCodigoPostal();
         multiplicador *= SoporteVehiculos.getInstance().multiplicadorCP(cp);
 
-        // Ajustar por aparcamiento privado
         if (!cotizacion.isTieneAparcamientoPrivado()) {
             multiplicador *= 1.1;
         }
 
-        // Ajustar por edad
         if (UtilidadesPersonas.getEdad(cotizacion.getConductorPrincipal()) < 25) {
             multiplicador *= 1.2;
         } else {
@@ -99,11 +95,9 @@ public class UtilidadesTarifa {
             }
         }
 
-        // Ajustar por siniestros
         int numSiniestros = cotizacion.getNumSini5();
         multiplicador *= (1 + numSiniestros * 0.05);
 
-        // Asignar los precios calculados a la cotización
         cotizacion.setPrecioTERC(tarifaBase.getPrecioTERC() * multiplicador);
         cotizacion.setPrecioTAMP(tarifaBase.getPrecioTAMP() * multiplicador);
         cotizacion.setPrecioTRIE(tarifaBase.getPrecioTRIE() * multiplicador);

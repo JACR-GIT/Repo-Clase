@@ -54,13 +54,6 @@ public class UtilidadesAseguradora {
         return polizasTomador;
     }
 
-    /**
-     * Recupera todas las pólizas asociadas a un conductor específico basándose en su NIF.
-     *
-     * @param aseguradora Aseguradora en la que se buscarán las pólizas.
-     * @param nif         NIF del conductor de las pólizas.
-     * @return Lista de pólizas asociadas al conductor.
-     */
     public List<Poliza> recuperarPolizasPorConductor(Aseguradora aseguradora, String nif) {
         List<Poliza> polizasConductor = new ArrayList<>();
 

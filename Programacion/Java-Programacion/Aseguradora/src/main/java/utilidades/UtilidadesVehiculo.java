@@ -13,27 +13,21 @@ public class UtilidadesVehiculo {
     public static boolean esMatriculaValida(String matricula) {
 
         String regexNormal = "^[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}$";
-        String regexFuerzas = "^[A-Z]{1,2}[0-9]{4}[A-Z]{2}$";
+        String regexFuerzas = "^[A-Z]{1,4}[0-9]{4,6}[A-Z]{0,2}$";
+        boolean valido = false;
 
         if (matricula == null || matricula.length() < 5 || matricula.length() > 9) return false;
 
         if (matricula.matches(regexNormal)) {
             System.out.println("Matrícula normal válida.");
+            valido = true;
         } else if (matricula.matches(regexFuerzas)) {
             System.out.println("Matrícula de las fuerzas del estado válida.");
+            valido = true;
         } else {
             System.out.println("Formato de matrícula no válido.");
         }
-
-        String numeros = matricula.substring(0, 4);
-        String letras = matricula.substring(4, 7);
-
-        try {
-            int num = Integer.parseInt(numeros);
-            return letras.matches("[B-DF-HJ-NP-TV-Z]{3}") && num >= 0;
-        } catch (NumberFormatException e) {
-            return false;
-        }
+        return valido;
     }
 
     public static boolean esMatriculaValida(Vehiculo veh) {
@@ -45,7 +39,7 @@ public class UtilidadesVehiculo {
     }
 
     public static List<Vehiculo> getVehiculos(List<Vehiculo> listaVehiculos, Persona p) {
-        List<Vehiculo> vehiculosFiltrados = new ArrayList<>(); // Nueva lista para almacenar resultados
+        List<Vehiculo> vehiculosFiltrados = new ArrayList<>();
 
         for (Vehiculo v : listaVehiculos) {
             if (v.getDuenyoActual().equals(p)) {
@@ -64,6 +58,6 @@ public class UtilidadesVehiculo {
     }
 
     public static boolean validarModelo(String marca, String modelo) {
-        return SoporteVehiculos.getInstance().esModeloValido(marca,modelo); // Necesita marca como parámetro
+        return SoporteVehiculos.getInstance().esModeloValido(marca,modelo);
     }
 }
