@@ -7,10 +7,6 @@ public class UtilidadesDireccion {
 
     // ==================== MAPA ESTÁTICO DE PROVINCIAS ====================
 
-    /**
-     * Mapa estático que contiene las provincias de España con sus códigos correspondientes.
-     * La clave es el nombre de la provincia y el valor es el código de la provincia.
-     */
     private static final Map<String, String> PROVINCIAS = new HashMap<>();
 
     // Bloque estático para inicializar el mapa de provincias.
@@ -71,14 +67,6 @@ public class UtilidadesDireccion {
 
     // ==================== MÉTODOS ====================
 
-    /**
-     * Valida si un código postal es válido en España.
-     * Un código postal es válido si tiene exactamente 5 dígitos y los dos primeros dígitos
-     * corresponden a un código de provincia válido (entre 01 y 52).
-     *
-     * @param cp Código postal a validar.
-     * @return true si el código postal es válido, false en caso contrario.
-     */
     public static boolean esCPValido(String cp) {
         if (cp == null || cp.length() != 5 || !cp.matches("\\d{5}")) {
             return false; // Validación básica: el código postal debe tener 5 dígitos.
@@ -88,22 +76,10 @@ public class UtilidadesDireccion {
         return codigoProvincia >= 1 && codigoProvincia <= 52; // Verifica que el código de provincia esté entre 01 y 52.
     }
 
-    /**
-     * Obtiene el código de provincia a partir del nombre de la provincia.
-     *
-     * @param nombreProvincia Nombre de la provincia.
-     * @return Código de la provincia, o null si no se encuentra.
-     */
     public static String obtenerCodigoProvincia(String nombreProvincia) {
         return PROVINCIAS.get(nombreProvincia);
     }
 
-    /**
-     * Obtiene el nombre de la provincia a partir de su código.
-     *
-     * @param codigoProvincia Código de la provincia.
-     * @return Nombre de la provincia, o null si no se encuentra.
-     */
     public static String obtenerNombreProvincia(String codigoProvincia) {
         for (Map.Entry<String, String> entry : PROVINCIAS.entrySet()) {
             if (entry.getValue().equals(codigoProvincia)) {

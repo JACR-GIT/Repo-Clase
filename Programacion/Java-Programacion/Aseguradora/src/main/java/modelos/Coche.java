@@ -43,7 +43,7 @@ public class Coche extends Vehiculo {
     }
 
     public Coche(Coche coche2) {
-        super(coche2); // Llama al constructor de copia de la clase base (Vehiculo).
+        super(coche2);
         this.numeroPuertas = coche2.numeroPuertas;
         this.tipoCombustible = coche2.tipoCombustible;
         this.traccion = coche2.traccion;
@@ -86,12 +86,6 @@ public class Coche extends Vehiculo {
 
     // ==================== MÉTODOS ====================
 
-    /**
-     * Devuelve una representación en cadena del coche.
-     *
-     * @return Cadena que representa al coche.
-     */
-    @Override
     public String toString() {
         return "Coche{" +
                 "numeroPuertas=" + numeroPuertas +
@@ -101,13 +95,6 @@ public class Coche extends Vehiculo {
                 '}';
     }
 
-    /**
-     * Compara si dos coches son iguales basándose en todos sus atributos.
-     *
-     * @param o Objeto a comparar.
-     * @return true si son iguales, false en caso contrario.
-     */
-    @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false; // Llama al equals de la clase base (Vehiculo).
@@ -118,12 +105,6 @@ public class Coche extends Vehiculo {
                 traccion == coche.traccion;
     }
 
-    /**
-     * Devuelve el código hash del coche basado en todos sus atributos.
-     *
-     * @return Código hash.
-     */
-    @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), numeroPuertas, tipoCombustible, traccion, esTodoTerreno);
     }

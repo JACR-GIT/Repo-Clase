@@ -25,7 +25,7 @@ public class Moto extends Vehiculo {
     }
 
     public Moto(Moto moto2) {
-        super(moto2); // Llama al constructor de copia de la clase base (Vehiculo).
+        super(moto2);
         this.cilindradaCC = moto2.cilindradaCC;
         this.tieneSidecar = moto2.tieneSidecar;
     }
