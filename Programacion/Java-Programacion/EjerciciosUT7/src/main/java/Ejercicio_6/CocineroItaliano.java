@@ -1,9 +1,12 @@
 package Ejercicio_6;
 
-public class CocineroItaliano extends  Cocinero{
+public class CocineroItaliano extends Cocinero{
 
-    String ingredientes = "Pasta";
-    String cocinado = "a fuego lento";
+    public void prepararIngredientes(){
+        System.out.println("Preparando pasta");
+    };
 
-    System.out.print(comer(ingredientes, cocinado));
+    public void cocinarPlato(){
+        System.out.println("Cocinado a fuego lento");
+    };
 }

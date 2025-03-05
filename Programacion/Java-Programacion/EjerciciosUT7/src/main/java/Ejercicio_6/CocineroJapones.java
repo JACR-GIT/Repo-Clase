@@ -2,8 +2,11 @@ package Ejercicio_6;
 
 public class CocineroJapones extends Cocinero{
 
-    String ingredientes = "Pescado";
-    String cocinado = "";
+    public void prepararIngredientes(){
+        System.out.println("Cortando pescado");
+    };
 
-    System.out.print(comer(ingredientes, cocinado));
+    public void cocinarPlato(){
+        System.out.println("Preparando sushi");
+    };
 }
