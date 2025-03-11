@@ -1,0 +1,13 @@
+<!ELEMENT pokemons (pokemon+)>
+
+<!ELEMENT pokemon (nombre, tipo, habilidades, estadisticas)>
+<!ATTLIST pokemon id ID #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT habilidades (habilidad+)>
+<!ELEMENT habilidad (#PCDATA)>
+<!ELEMENT estadisticas (estadistica+)>
+<!ELEMENT estadistica (nombre, valor)>
+
+<!ELEMENT valor (#PCDATA)>

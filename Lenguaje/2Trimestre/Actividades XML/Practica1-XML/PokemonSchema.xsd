@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="pokedex" minOccurs="1" maxOccurs="unbounded">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:attribute name="num_pokedex" type="xs:integer"></xs:attribute>
+            <xs:attribute name="nombre" type="xs:string"></xs:attribute>
+            <xs:element name="datos_generales" minOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="altura" type="xs:double"></xs:element>
+                        <xs:element name="peso" type="xs:double"></xs:element>
+                        <xs:element name="sexo">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="M"/>
+                                    <xs:enumeration value="H"/>
+                                    <xs:enumeration value="I"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="categoria" type="xs:string"></xs:element>
+                        <xs:element name="habilidad" type="xs:string"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="tipoplogia"  minOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tipos" minOccurs="1" maxOccurs="2">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="tipo" type="xs:string"></xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="debilidades">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="debilidad" minOccurs="1" maxOccurs="2">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="tipo" type="xs:string"></xs:element>
+                                                <xs:element name="efectividad" type="xs:string"></xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="stast_base" minOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ps" type="xs:integer" >
+                            <xs:simpleType>
+                                <xs:restriction base="xs:int">
+                                    <xs:minInclusive value="1"/>
+                                    <xs:maxInclusive value="255"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="at" type="xs:integer">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:int">
+                                    <xs:minInclusive value="1"/>
+                                    <xs:maxInclusive value="255"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="def" type="xs:integer">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:int">
+                                    <xs:minInclusive value="1"/>
+                                    <xs:maxInclusive value="255"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="spat" type="xs:integer">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:int">
+                                    <xs:minInclusive value="1"/>
+                                    <xs:maxInclusive value="255"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="spde" type="xs:integer">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:int">
+                                    <xs:minInclusive value="1"/>
+                                    <xs:maxInclusive value="255"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="vel" type="xs:integer">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:int">
+                                    <xs:minInclusive value="1"/>
+                                    <xs:maxInclusive value="255"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="evoluciones">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="evolucion" maxOccurs="2">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="orden" type="xs:integer">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:int">
+                                                <xs:minInclusive value="-2"/>
+                                                <xs:maxInclusive value="2"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="num_pokedex" type="xs:integer"></xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+
