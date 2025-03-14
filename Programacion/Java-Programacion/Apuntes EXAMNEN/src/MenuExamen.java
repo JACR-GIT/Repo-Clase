@@ -14,20 +14,11 @@ public class MenuExamen {
         System.out.print("Selecciona una opción (1-6): ");
     }
 
+public static String saludaSegunHora
     public static boolean ejecutarOpcion(int opcion) {
         switch (opcion) {
             case 1:
-                LocalTime horaActual = LocalTime.now();
-                int hora = horaActual.getHour();
-
-                if (hora >= 6 && hora < 12) {
-                    System.out.println("\n¡Buenos días! Este es el Ejercicio 1.");
-                } else if (hora >= 12 && hora < 18) {
-                    System.out.println("\n¡Buenas tardes! Este es el Ejercicio 1.");
-                } else {
-                    System.out.println("\n¡Buenas noches! Este es el Ejercicio 1.");
-                }
-                break;
+                
             case 2:
                 System.out.println("Ejecutando Ejercicio 2...");
                 // Aquí puedes agregar la lógica del Ejercicio 2
