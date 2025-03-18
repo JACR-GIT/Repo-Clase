@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c58af1-d8b4-451f-b31b-02d7de788e5c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Lenguaje/2Trimestre/Actividades XML/Campos_Rueda_JoseAntonio.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lenguaje/2Trimestre/Actividades XML/Campos_Rueda_JoseAntonio.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Lenguaje/2Trimestre/Actividades XML/Practica1-XML/Pokemon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lenguaje/2Trimestre/Actividades XML/Practica1-XML/Pokemon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Lenguaje/2Trimestre/Actividades XML/Practica1-XML/PokemonDTD.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lenguaje/2Trimestre/Actividades XML/Practica1-XML/PokemonDTD.dtd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Lenguaje/2Trimestre/Actividades XML/Practica1-XML/PokemonSchema.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Lenguaje/2Trimestre/Actividades XML/Practica1-XML/PokemonSchema.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio_19/Calculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio_19/Calculadora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio_19/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio_19/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio_22/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio_22/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -63,7 +62,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -88,6 +87,8 @@
       <workItem from="1741945576650" duration="43000" />
       <workItem from="1741946066164" duration="120000" />
       <workItem from="1741951827632" duration="35000" />
+      <workItem from="1742295118415" duration="1797000" />
+      <workItem from="1742297264886" duration="1501000" />
     </task>
     <servers />
   </component>
