@@ -7,6 +7,7 @@ public class Camion {
     private String modelo;
     private String matricula;
     private Conductor conductorAsignado;
+    private int añoFabricacion;
 
     public Camion(int id, String marca, String modelo, String matricula, Conductor conductorAsignado) {
         this.id = id;
@@ -16,7 +17,20 @@ public class Camion {
         this.conductorAsignado = conductorAsignado;
     }
 
+    public Camion(int id, String marca, String modelo, String matricula, Conductor conductorAsignado, int añoFabricacion) {
+        this.id = id;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.matricula = matricula;
+        this.conductorAsignado = conductorAsignado;
+        this.añoFabricacion = añoFabricacion;
+    }
+
     public Camion() {}
+
+    public static boolean validarMatricula(String matricula) {
+        return matricula.matches("[0-9]{4}[BCDFGHJKLMNPRSTVWXYZ]{4}");
+    }
 
 
     public int getId() {
@@ -59,6 +73,10 @@ public class Camion {
         this.conductorAsignado = conductorAsignado;
     }
 
+    public int getAñoFabricacion() {
+        return añoFabricacion;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -74,11 +92,8 @@ public class Camion {
     @Override
     public String toString() {
         return "Camion: " +
-                "(" + getMarca()+ ")" +
-                " - " + getMatricula() + '\n' +
-                "\t, modelo='" + modelo + '\'' +
-                ", matricula='" + matricula + '\'' +
-                ", conductorAsignado=" + conductorAsignado +
-                '}';
+                "(" + marca+ ")" +
+                " - " + matricula + '\n' +
+                "\tConductor: " + conductorAsignado.getNombre() + " .";
     }
 }

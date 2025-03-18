@@ -72,12 +72,6 @@ public class Conductor {
 
     @Override
     public String toString() {
-        return "Conductor{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", licencia='" + licencia + '\'' +
-                ", fechaContratacion=" + fechaContratacion +
-                '}';
+        return  "Conductor: " + nombre + " " + apellido + " (" + licencia + ")";
     }
 }
