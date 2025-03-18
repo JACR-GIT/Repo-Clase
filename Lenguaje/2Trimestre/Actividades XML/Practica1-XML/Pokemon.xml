@@ -22,7 +22,8 @@
                 <debilidad>
                     <tipo>fuego</tipo>
                     <efectividad>X2</efectividad>
-                </debilidad>	
+                </debilidad>
+            </debilidades>	
         </tipoplogia>
         <stast_base>
             <ps>30</ps>

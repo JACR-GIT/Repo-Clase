@@ -14,10 +14,9 @@
 <!ELEMENT habilidad (#PCDATA)>
 
 <!ELEMENT tipologia (tipos, debilidades)>
-<!ELEMENT tipos (tipo+)>
+<!ELEMENT tipos (tipo, tipo?)>
 <!ELEMENT tipo (descripcion)>
 <!ELEMENT descripcion (#PCDATA)>
-
 <!ELEMENT debilidades (debilidad+)>
 <!ELEMENT debilidad (tipo, efectividad)>
 <!ELEMENT tipo (#PCDATA)>
