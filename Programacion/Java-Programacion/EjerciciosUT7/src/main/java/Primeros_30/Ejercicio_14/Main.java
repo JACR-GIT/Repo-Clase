@@ -1,4 +1,4 @@
-package Ejercicio_14;
+package Primeros_30.Ejercicio_14;
 
 import java.util.function.Supplier;
 
@@ -18,5 +18,8 @@ public class Main {
             }
         };
         System.out.println(saludoAleatorio.get());
+
+        Supplier<Double> generarAleatorio = () -> Math.random();
+        System.out.println(generarAleatorio.get());
     }
 }

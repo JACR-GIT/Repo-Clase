@@ -1,4 +1,4 @@
-package Ejercicio_12;
+package Primeros_30.Ejercicio_12;
 
 import java.util.List;
 import java.util.function.Function;
@@ -35,5 +35,8 @@ public class Main {
         for (Integer numero : numeros) {
             System.out.println(convertirNumero.apply(numero));
         }
+
+        Function<Integer, String> convertirAString = num -> "Número: " + num;
+        System.out.println(convertirAString.apply(5));
     }
 }

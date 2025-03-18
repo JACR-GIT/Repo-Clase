@@ -5,30 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c58af1-d8b4-451f-b31b-02d7de788e5c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/Apuntes EXAMNEN.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/src/ActividadesExamen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/src/Explicacion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apuntes EXAMNEN/src/MenuExamen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/Ejercicios Colecciones.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/src/BasicoArrays.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/src/ContarOcurrencias.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/src/FiltrarNumeros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/src/FrutasArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/src/Matriz3x3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/src/UsoHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicios Colecciones/src/UsoHashSet.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Examen/src/main/java/com/safa/jacr/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Primeros_30/Ejercicio_12/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Primeros_30/Ejercicio_12/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Primeros_30/Ejercicio_14/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Primeros_30/Ejercicio_14/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +54,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mrnat/Desktop/Repo-clase/Repo-Clase/Programacion/Java-Programacion/Actividades_Camiones&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mrnat/Desktop/Repo-clase/Repo-Clase/Programacion/Java-Programacion/Examen&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -113,6 +93,8 @@
       <workItem from="1742311713439" duration="860000" />
       <workItem from="1742322497773" duration="3197000" />
       <workItem from="1742326618693" duration="466000" />
+      <workItem from="1742331361219" duration="976000" />
+      <workItem from="1742332532152" duration="618000" />
     </task>
     <servers />
   </component>
