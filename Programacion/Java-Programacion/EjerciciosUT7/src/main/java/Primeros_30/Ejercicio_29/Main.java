@@ -1,18 +1,18 @@
-package Ejercicio_29;
+package Primeros_30.Ejercicio_29;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        List<Persona> listaPersonas = List.of(
-                new Persona("Ana", 25),
-                new Persona("Pedro", 30),
-                new Persona("Luis", 22)
+        List<Ejercicio_29.Persona> listaPersonas = List.of(
+                new Ejercicio_29.Persona("Ana", 25),
+                new Ejercicio_29.Persona("Pedro", 30),
+                new Ejercicio_29.Persona("Luis", 22)
         );
 
         List<String> listaNombres = listaPersonas.stream()
-                .map(Persona::getNombre)
+                .map(Ejercicio_29.Persona::getNombre)
                 .collect(Collectors.toList());
 
         System.out.println(listaNombres);

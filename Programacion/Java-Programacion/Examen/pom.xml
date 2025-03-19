@@ -14,10 +14,9 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.heroes</groupId>
-            <artifactId>heroes</artifactId>
+            <groupId>com.joey-fountains</groupId>
+            <artifactId>joey-fountains</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>
-
 </project>
