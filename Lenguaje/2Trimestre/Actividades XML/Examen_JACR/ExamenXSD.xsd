@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="NOMBREGENERAL">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NombreELEMENTO" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"></xs:element>
+                            <xs:element name="autor" type="xs:string" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                            <xs:element name="anyo" type="xs:string"></xs:element>
+                            <xs:element name="editorial" type="xs:string"></xs:element>
+                            <xs:element name="sexo">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="M"/>
+                                    <xs:enumeration value="F"/>
+                                    <xs:enumeration value="NB"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="Cod" type="xs:string"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,83 @@
+<!--
+    DTD (Document Type Definition) for defining the structure of an XML document named "ejemplo".
+
+    ELEMENTS:
+    - ejemplo: Root element containing titulo, autor, fecha, and contenido.
+    - titulo: Contains parsed character data (#PCDATA).
+    - autor: Contains parsed character data (#PCDATA).
+    - fecha: Contains parsed character data (#PCDATA).
+    - contenido: Contains zero or more parrafo elements and an optional lista element.
+    - parrafo: Contains parsed character data (#PCDATA).
+    - lista: Contains one or more item elements.
+    - item: Contains parsed character data (#PCDATA).
+
+    ATTRIBUTES:
+    - ejemplo:
+        - id: Required attribute of type ID.
+        - lang: Optional attribute of type CDATA.
+        - version: Fixed attribute with value "1.0".
+    - autor:
+        - email: Optional attribute of type CDATA.
+    - fecha:
+        - type: Attribute with possible values "created" or "modified", default is "created".
+-->
+<!-- 
+Datos de un elemento:
+
+element-name es el nombre del elemento.
+• element-content especifica la estructura del contenido del elemento. Puede ser
+uno de los siguientes:
+• Un elemento vacío, indicado con EMPTY (<!ELEMENT coche EMPTY>)
+• (#PCDATA): significa que el elemento puede contener texto. (<!ELEMENT coche
+(#PCDATA)>)
+• ANY: el elemento puede contener cualquier cosa, texto y otros elementos.
+(<!ELEMENT coche ANY>)
+• Un conjunto de elementos, indicado con una lista de elementos entre paréntesis y
+separados por comas.
+• Una secuencia de elementos, indicado con una lista de elementos entre paréntesis
+y separados por comas, y además se indica cuales son opcionales con el signo (?) y
+cuales pueden repetirse con el signo +
+• ?: significa que el elemento puede aparecer o no, pero sólo una vez.
+• *: significa que el elemento puede no aparecer o aparecer una o más veces. 
+
+Datos de un atributo:
+
+element-name es el nombre del elemento al que se asocia el atributo.
+• attribute-name es el nombre del atributo.
+• attribute-type es el tipo de datos del atributo. Puede ser uno de los siguientes:
+• CDATA (Character Data): cualquier tipo de texto. Es el valor por defecto.
+• ID: un identificador único dentro del documento.
+• IDREF: una referencia a un identificador único dentro del documento.
+• IDREFS: una lista de referencias a identificadores únicos dentro del documento.
+• NMTOKEN: un token de nombre.
+• NMTOKENS: una lista de tokens de nombre.
+• default-value es el valor predeterminado del atributo. Puede ser uno de los
+siguientes:
+• Un valor específico, como por ejemplo verde, rojo…
+• #REQUIRED: el atributo es requerido.
+• #IMPLIED: el atributo no es requerido pero se puede incluir.
+-->
+
+<!ELEMENT ejemplo (titulo, autor, fecha, contenido)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT contenido (parrafo*, lista?)>
+
+<!ELEMENT parrafo (#PCDATA)>
+<!ELEMENT lista (item+)>
+<!ELEMENT item (#PCDATA)>
+
+<!ATTLIST ejemplo
+    id ID #REQUIRED
+    lang CDATA #IMPLIED
+    version CDATA #FIXED "1.0"
+>
+
+<!ATTLIST autor
+    email CDATA #IMPLIED
+>
+
+<!ATTLIST fecha
+    type (created|modified) "created"
+>

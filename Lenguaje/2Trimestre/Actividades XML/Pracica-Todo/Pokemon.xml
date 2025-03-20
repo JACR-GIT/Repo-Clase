@@ -2,14 +2,15 @@
 
 <!DOCTYPE pokedex SYSTEM "PokemonDTD.dtd">
 <?xml-stylesheet type="text/xsd" href="PokemonSchema.xsd"?>
+<?xml-stylesheet type="text/xsl" href="Pokedex.xslt"?>
 
 <pokedex>
     <pokemon num_pokedex="1" nombre="Bulbasaur">
-        <imagen>https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png</imagen>
+        <imagen ruta="Bulbasur.png" />
         <datos_generales>
             <altura>0.45</altura>
             <peso>20</peso>
-            <sexo>M/F</sexo>
+            <sexo>M</sexo>
             <categoria>Semilla</categoria>
             <habilidad>Espesura</habilidad>
         </datos_generales>
@@ -24,7 +25,21 @@
                     <tipo>fuego</tipo>
                     <efectividad>X2</efectividad>
                 </debilidad>
-            </debilidades>	
+                <debilidad>
+                    <tipo>Volador</tipo>
+                    <efectividad>X2</efectividad>
+                </debilidad>
+            </debilidades>
+            <fortalezas>
+                <fortaleza>
+                    <tipo>Agua</tipo>
+                    <efectividad>X2</efectividad>
+                </fortaleza>
+                <fortaleza>
+                    <tipo>Tierra</tipo>
+                    <efectividad>X2</efectividad>
+                </fortaleza>
+            </fortalezas>	
         </tipoplogia>
         <stast_base>
             <ps>30</ps>
