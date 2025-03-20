@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9c58af1-d8b4-451f-b31b-02d7de788e5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Examen/src/main/java/com/safa/jacr/PerroDeJose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Primeros_30/Ejercicio_29/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Primeros_30/Ejercicio_29/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Primeros_30/Ejercicio_30/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio_30/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen/src/main/java/com/safa/jacr/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen/src/main/java/com/safa/jacr/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="f9c58af1-d8b4-451f-b31b-02d7de788e5c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +96,7 @@
       <workItem from="1742368174173" duration="1318000" />
       <workItem from="1742370740766" duration="2206000" />
       <workItem from="1742375527644" duration="153000" />
+      <workItem from="1742472155954" duration="8000" />
     </task>
     <servers />
   </component>
