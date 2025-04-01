@@ -1,0 +1,24 @@
+<!ELEMENT Streamers (streamer+)>
+<!ELEMENT streamer (datos_streamer, plataforma, juegos)>
+<!ATTLIST streamer id ID #REQUIRED>
+<!ATTLIST streamer nombre CDATA #REQUIRED>
+<!ATTLIST streamer imagen CDATA #REQUIRED>
+
+<!ELEMENT datos_streamer (nombre_ds, apellidos, sexo, nacimiento)>
+<!ELEMENT nombre_ds (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT sexo (#PCDATA)>
+<!ELEMENT nacimiento (#PCDATA)>
+
+<!ELEMENT plataformas (plataformas+)>
+<!ELEMENT plataforma (datos, segidores)>
+<!ELEMENT datos (nombre_pd, tipo_contenido)>
+<!ELEMENT nombre_pd (#PCDATA)>
+<!ELEMENT tipo_contenido (#PCDATA)>
+<!ELEMENT segidores (#PCDATA)>
+
+<!ELEMENT juegos (juegos+)>
+<!ELEMENT juego (nombre_j, tipos, horas)>
+<!ELEMENT nombre_j (#PCDATA)>
+<!ELEMENT tipos (#PCDATA)>
+<!ELEMENT horas (#PCDATA)>

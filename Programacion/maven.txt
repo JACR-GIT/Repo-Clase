@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=joey-fountains-javadoc.jar -DgroupId=com.joey-fountains-javadoc -DartifactId=joey-fountains-javadoc -Dversion=1.0 -Dpackaging=jar
