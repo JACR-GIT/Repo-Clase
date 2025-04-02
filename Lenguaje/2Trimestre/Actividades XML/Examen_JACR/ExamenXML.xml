@@ -2,5 +2,5 @@
 <!DOCTYPE examen SYSTEM "ExamenDTD.dtd">
 <?xml-stylesheet type="text/xsl" href="ExamenXSLT.xslt"?>
 <examen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ExamenXSD.xsd">
-    <!-- Contenido del examen -->
+
 </examen>
