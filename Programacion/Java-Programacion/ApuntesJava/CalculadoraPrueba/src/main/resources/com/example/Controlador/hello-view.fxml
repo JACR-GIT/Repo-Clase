@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="351.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controlador.HelloController">
+    <children>
+        <Label layoutX="68.0" layoutY="100.0" text="Operador 1" />
+        <Label layoutX="68.0" layoutY="142.0" text="Operador 2" />
+        <Label layoutX="68.0" layoutY="200.0" text="Resultado" />
+        <TextField fx:id="txtop1" layoutX="157.0" layoutY="96.0" promptText="Inserta numero" />
+        <TextField fx:id="txtresultado" editable="false" layoutX="157.0" layoutY="196.0" />
+        <TextField fx:id="txtop2" layoutX="157.0" layoutY="138.0" promptText="Inserta numero" />
+        <Button fx:id="sumar" layoutX="205.0" layoutY="242.0" mnemonicParsing="false" onAction="#HandlerSumar" text="Sumar" />
+    </children>
+</Pane>
