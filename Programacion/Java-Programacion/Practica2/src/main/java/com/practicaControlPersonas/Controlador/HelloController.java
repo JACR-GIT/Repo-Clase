@@ -1,4 +1,4 @@
-package org.example.Controlador;
+package com.practicaControlPersonas.Controlador;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
