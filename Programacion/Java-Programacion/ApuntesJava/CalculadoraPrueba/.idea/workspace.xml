@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fca296af-b65b-4769-af7d-5fadff0da472" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Calculadora/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/src/main/java/com/example/calculadora/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/src/main/java/com/example/calculadora/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculadora/src/main/resources/com/example/calculadora/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/src/main/java/Controlador/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/src/main/java/com/example/Modelo/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CalculadoraDemo/src/main/resources/com/example/Modelo/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Controlador/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Controlador/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Modelo/Suma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Vista/Vista1.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/Controlador/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/src/main/java/com/example/Controlador/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/src/main/java/com/example/Controlador/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/src/main/java/com/example/Modelo/Suma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Camculadora/src/main/resources/com/example/Controlador/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/src/main/java/Vista/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/src/main/java/com/example/Controlador/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/src/main/java/com/example/Controlador/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prueba1Calculadora/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/example/demo/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/example/demo/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/resources/com/example/demo/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/src/main/java/com/practicaControlPersonas/Controlador/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/src/main/java/com/practicaControlPersonas/Controlador/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/src/main/resources/com/practicaControlPersonas/Vista/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica2/src/main/resources/com/practicaControlPersonas/css/Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/src/main/java/org/example/practican2/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/src/main/java/org/example/practican2/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticaN2/src/main/resources/org/example/practican2/hello-view.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2uuutERY1ZssnAX8N2gYWUZXKzN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mrnat\Desktop\Repo-clase\Repo-Clase\Programacion\Java-Programacion\ApuntesJava\CalculadoraPrueba\src\main\resources\Vista" />
+      <recent name="C:\Users\mrnat\Desktop\Repo-clase\Repo-Clase\Programacion\Java-Programacion\ApuntesJava\CalculadoraPrueba\src\main\java\com\example\Vista" />
+      <recent name="C:\Users\mrnat\Desktop\Repo-clase\Repo-Clase\Programacion\Java-Programacion\ApuntesJava\CalculadoraPrueba\src\main\resources\com\example\Controlador" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fca296af-b65b-4769-af7d-5fadff0da472" name="Changes" comment="" />
+      <created>1743110995238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743110995238</updated>
+      <workItem from="1743110996268" duration="1959000" />
+      <workItem from="1743113191381" duration="272000" />
+      <workItem from="1743696901704" duration="539000" />
+      <workItem from="1743697453799" duration="5000" />
+      <workItem from="1743698533421" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

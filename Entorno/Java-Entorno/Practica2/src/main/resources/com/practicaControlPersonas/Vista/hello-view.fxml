@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.practicaControlPersonas.Controlador.HelloController">
+   <children>
+      <Label layoutX="56.0" layoutY="76.0" text="Nombre" />
+      <Label layoutX="53.0" layoutY="161.0" text="Apellidos" />
+      <Label layoutX="56.0" layoutY="242.0" text="Edad" />
+      <TableView fx:id="TBcontenido" layoutX="242.0" layoutY="76.0" prefHeight="300.0" prefWidth="423.0">
+        <columns>
+          <TableColumn fx:id="CLnombre" prefWidth="155.0" text="Nombre" />
+          <TableColumn fx:id="CLapellidos" prefWidth="183.0" text="Apellidos" />
+          <TableColumn fx:id="CLedad" prefWidth="84.0" text="Edad" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtnombre" layoutX="50.0" layoutY="107.0" />
+      <TextField fx:id="txtedad" layoutX="50.0" layoutY="267.0" />
+      <TextField fx:id="txtapellidos" layoutX="50.0" layoutY="193.0" />
+      <Button fx:id="BTagregarpersona" layoutX="50.0" layoutY="351.0" mnemonicParsing="false" onAction="#HandlerAgregar" prefHeight="25.0" prefWidth="149.0" text="Agregar persona" />
+      <Button fx:id="BTactualizar" layoutX="291.0" layoutY="405.0" mnemonicParsing="false" onAction="#HandlerActualizar" prefHeight="25.0" prefWidth="129.0" text="Actualizar" />
+      <Button fx:id="BTeliminar" layoutX="502.0" layoutY="405.0" mnemonicParsing="false" onAction="#HandlerEliminar" prefHeight="25.0" prefWidth="129.0" text="Eliminar" />
+   </children>
+</Pane>

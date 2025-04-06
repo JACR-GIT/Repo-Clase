@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.practicacontrolpersonas.Controladores.HelloController">
+  <children>
+    <TableView fx:id="TBcontenido" layoutX="69.0" layoutY="74.0" prefHeight="300.0" prefWidth="587.0">
+      <columns>
+        <TableColumn fx:id="CLnombre" prefWidth="224.0" text="Nombre" />
+        <TableColumn fx:id="CLapellidos" prefWidth="222.0" text="Apellidos" />
+        <TableColumn fx:id="CLedad" prefWidth="140.0" text="Edad" />
+      </columns>
+    </TableView>
+    <Button fx:id="BTagregarpersona" layoutX="90.0" layoutY="404.0" mnemonicParsing="false" onAction="#HandlerAgregar" prefHeight="25.0" prefWidth="149.0" text="Agregar persona" />
+  </children>
+</Pane>
