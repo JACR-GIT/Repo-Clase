@@ -13,11 +13,15 @@
   <children>
     <TableView fx:id="TBcontenido" layoutX="69.0" layoutY="74.0" prefHeight="300.0" prefWidth="587.0">
       <columns>
-        <TableColumn fx:id="CLnombre" prefWidth="224.0" text="Nombre" />
-        <TableColumn fx:id="CLapellidos" prefWidth="222.0" text="Apellidos" />
-        <TableColumn fx:id="CLedad" prefWidth="140.0" text="Edad" />
+        <TableColumn fx:id="CLnombre" prefWidth="224.0" sortable="true" text="Nombre" />
+        <TableColumn fx:id="CLapellidos" prefWidth="222.0" sortable="true" text="Apellidos" />
+        <TableColumn fx:id="CLedad" prefWidth="140.0" sortable="true" text="Edad" />
       </columns>
     </TableView>
     <Button fx:id="BTagregarpersona" layoutX="90.0" layoutY="404.0" mnemonicParsing="false" onAction="#HandlerAgregar" prefHeight="25.0" prefWidth="149.0" text="Agregar persona" />
+    <Button fx:id="BTmodificarpersona" layoutX="288.0" layoutY="404.0" mnemonicParsing="false" onAction="#HandlerModificar" prefHeight="25.0" prefWidth="149.0" text="Modificar persona" />
+      <Button fx:id="BTeliminarpersona" layoutX="482.0" layoutY="404.0" mnemonicParsing="false" onAction="#HandlerEliminar" prefHeight="25.0" prefWidth="149.0" text="Eliminar persona" />
+      <Label layoutX="69.0" layoutY="39.0" text="Filtrar por nombre:" />
+      <TextField fx:id="txt_filtro_nombre" layoutX="178.0" layoutY="35.0" promptText="Nombre" />
   </children>
 </Pane>

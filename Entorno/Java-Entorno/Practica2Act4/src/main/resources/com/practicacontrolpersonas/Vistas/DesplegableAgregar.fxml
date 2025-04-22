@@ -8,10 +8,10 @@
 <?import javafx.scene.layout.*?>
 
 
-<Pane fx:controller="com.practicacontrolpersonas.Controladores.DesplegableControlador" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="253.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="com.practicacontrolpersonas.Controladores.DesplegableControladorAgragar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="253.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="BTsalir" layoutX="70.0" layoutY="318.0" mnemonicParsing="false" onAction="#HandlerSalir" prefHeight="25.0" prefWidth="115.0" text="Salir" />
-      <Button fx:id="BTguardar" layoutX="71.0" layoutY="274.0" mnemonicParsing="false" onAction="#HandlerGuardar" prefHeight="25.0" prefWidth="115.0" text="Guardar" />
+      <Button fx:id="BTguardar" layoutX="71.0" layoutY="274.0" mnemonicParsing="false" onAction="#HandlerGuardarDesplegable" prefHeight="25.0" prefWidth="115.0" text="Guardar" />
       <TextField fx:id="txt_edad_desplegable" layoutX="48.0" layoutY="227.0" />
       <Label layoutX="48.0" layoutY="200.0" text="Edad" />
       <TextField fx:id="txt_apellidos_desplegable" layoutX="48.0" layoutY="158.0" />

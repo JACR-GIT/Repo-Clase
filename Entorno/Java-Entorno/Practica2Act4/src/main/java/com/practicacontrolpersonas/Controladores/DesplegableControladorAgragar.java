@@ -4,11 +4,14 @@ import com.practicacontrolpersonas.Modelos.Persona;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class DesplegableControlador {
+public class DesplegableControladorAgragar {
     @FXML
     private TextField txt_nombre_desplegable;
     @FXML
@@ -27,7 +30,7 @@ public class DesplegableControlador {
     }
 
     @FXML
-    public void HandlerGuardar(ActionEvent event) {
+    public void HandlerGuardarDesplegable(ActionEvent event) {
         try {
             String nombre = txt_nombre_desplegable.getText();
             String apellidos = txt_apellidos_desplegable.getText();
@@ -35,7 +38,7 @@ public class DesplegableControlador {
 
             Persona nuevaPersona = new Persona(nombre, apellidos, edad);
 
-            boolean personaExiste = listaPersonas.stream().anyMatch(persona -> persona.getNombre().equals(nombre) && persona.getApellidos().equals(apellidos));
+            boolean personaExiste = listaPersonas.stream().anyMatch(persona -> persona.getNombre().equals(nombre) && persona.getApellidos().equals(apellidos) && persona.getEdad().equals(edad));
 
             if (personaExiste) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -44,7 +47,7 @@ public class DesplegableControlador {
                 alert.setContentText("La persona ya existe en la lista");
                 alert.showAndWait();
             } else {
-                listaPersonas.add(nuevaPersona);
+                HelloController.listaPersonas.add(nuevaPersona);
 
                 txt_nombre_desplegable.clear();
                 txt_apellidos_desplegable.clear();
@@ -67,6 +70,22 @@ public class DesplegableControlador {
 
     @FXML
     public void HandlerSalir(ActionEvent event) {
-        BTsalir.getScene().getWindow().hide();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/practicacontrolpersonas/Vistas/hello-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle("Controlador de Personas");
+            stage.setScene(scene);
+            stage.show();
+            Stage myStage = (Stage) this.BTsalir.getScene().getWindow();
+            myStage.close();
+
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Error inesperado: " + e.getMessage());
+            alert.showAndWait();
+        }
     }
 }
