@@ -1,16 +1,17 @@
 package com.Actividad1;
 
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvCustomBindByName;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
 public abstract class ProductoAbs {
 
-    @CsvBindByName(column = "codigo") String codigo;
-    @CsvBindByName(column = "nombre") String nombre;
-    @CsvBindByName(column = "precio") double precio;
-    @CsvBindByName(column = "fechaCaducidad") LocalDate fechaCaducidad;
+    String codigo;
+    String nombre;
+    double precio;
+    private LocalDate fechaCaducidad;
 
     public ProductoAbs(String codigo, String nombre, double precio, LocalDate fechaCaducidad) {
         this.codigo = codigo;

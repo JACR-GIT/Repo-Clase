@@ -5,22 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="565f6a82-b6a1-4ed8-aeb1-9e5488bf5f68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/libs/ConexionDB (1).jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/src/main/java/com/examenejavafx/Controlador/FormularioAñadirController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/src/main/java/com/examenejavafx/Dao/AnzueloDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/src/main/java/com/examenejavafx/Modelo/Anzuelo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/src/main/resources/com/examenejavafx/Vista/Main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/Descontable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/LectorProductos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/MainActividad1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoAbs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoNoPedecedero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoPedecedero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad2/Libro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad2/MainActividad2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/libros.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/productos.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/LocalDateConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/LectorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/LectorProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/MainActividad1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/MainActividad1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoAbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoAbs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoNoPedecedero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoNoPedecedero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoPedecedero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoPedecedero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/productos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/productos.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/LectorProductos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/LectorProductos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/MainActividad1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/MainActividad1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoAbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoAbs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoNoPedecedero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoNoPedecedero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoPedecedero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoPedecedero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/productos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/productos.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +37,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2xiRvJtoXIFbbmmgEVaKyXePVoh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,6 +51,7 @@
     "Application.MainActividad2.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -78,6 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748419138338</updated>
       <workItem from="1748419140938" duration="7596000" />
+      <workItem from="1749019820481" duration="7704000" />
     </task>
     <servers />
   </component>

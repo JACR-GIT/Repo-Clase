@@ -5,7 +5,8 @@ import com.opencsv.bean.CsvBindByName;
 import java.time.LocalDate;
 
 public class ProductoPedecedero extends ProductoAbs implements Descontable {
-    @CsvBindByName(column = "datoExtra")int diasCaducidadExtra;
+
+    int diasCaducidadExtra;
 
     public ProductoPedecedero(String codigo, String nombre, double precio, LocalDate fechaCaducidad, int diasCaducidadExtra) {
         super(codigo, nombre, precio, fechaCaducidad);
@@ -17,7 +18,7 @@ public class ProductoPedecedero extends ProductoAbs implements Descontable {
     }
 
     public double aplicarDescuento(double porcentaje) {
-        if (diasCaducidadExtra > 2) {
+        if (diasCaducidadExtra < 2) {
             return precio * (1 - porcentaje / 100);
         } else {
             return precio;

@@ -1,4 +1,4 @@
-código;nombre;precio;fechaCaducidad;tipo;datoExtra
+codigo;nombre;precio;fechaCaducidad;tipo;datoExtra
 PRD001;Leche Entera;1.20;2026-01-15;Perecedero;5
 PRD002;Arroz Largo;0.95;2027-01-01;NoPerecedero;Seco
 PRD003;Yogur Natural;0.50;2026-05-01;Perecedero;3

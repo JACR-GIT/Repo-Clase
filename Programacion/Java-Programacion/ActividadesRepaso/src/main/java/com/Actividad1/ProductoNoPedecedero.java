@@ -1,12 +1,13 @@
 package com.Actividad1;
 
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvCustomBindByName;
 
 import java.time.LocalDate;
 
 public class ProductoNoPedecedero extends ProductoAbs implements Descontable {
 
-    @CsvBindByName(column = "datoExtra") String tipoConservacion;
+    String tipoConservacion;
 
     public ProductoNoPedecedero(String codigo, String nombre, LocalDate fechaCaducidad, double precio, String tipoConservacion) {
         super(codigo, nombre, precio, fechaCaducidad);
