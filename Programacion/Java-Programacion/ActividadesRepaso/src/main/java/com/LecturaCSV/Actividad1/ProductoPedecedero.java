@@ -1,6 +1,4 @@
-package com.Actividad1;
-
-import com.opencsv.bean.CsvBindByName;
+package com.LecturaCSV.Actividad1;
 
 import java.time.LocalDate;
 

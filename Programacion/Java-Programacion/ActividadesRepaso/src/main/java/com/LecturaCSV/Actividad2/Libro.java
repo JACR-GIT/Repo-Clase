@@ -1,4 +1,4 @@
-package com.Actividad2;
+package com.LecturaCSV.Actividad2;
 
 import com.opencsv.bean.CsvBindByName;
 

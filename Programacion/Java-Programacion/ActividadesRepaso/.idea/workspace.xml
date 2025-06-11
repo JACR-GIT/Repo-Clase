@@ -5,21 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="565f6a82-b6a1-4ed8-aeb1-9e5488bf5f68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/LocalDateConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad1/FuncionesProductos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad1/MainActividad1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad1/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad1/CodigoProductoInvalidoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/LectorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/LectorProductos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/MainActividad1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/MainActividad1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoAbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoAbs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoNoPedecedero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoNoPedecedero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoPedecedero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoPedecedero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/productos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/productos.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/LectorProductos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/LectorProductos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/MainActividad1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/MainActividad1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoAbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoAbs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoNoPedecedero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoNoPedecedero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoPedecedero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoPedecedero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/productos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/productos.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/Descontable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad1/Descontable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/LectorProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad1/LectorProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/LocalDateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad1/LocalDateConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/MainActividad1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad1/MainActividad1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoAbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad1/ProductoAbs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad1/ProductoCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoNoPedecedero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad1/ProductoNoPedecedero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad1/ProductoPedecedero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad1/ProductoPedecedero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad2/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad2/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Actividad2/MainActividad2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LecturaCSV/Actividad2/MainActividad2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/Descontable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/LectorProductos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/MainActividad1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoAbs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoNoPedecedero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad1/ProductoPedecedero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad2/Libro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Actividad2/MainActividad2.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +54,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainActividad1.executor": "Run",
-    "Application.MainActividad2.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Repo-Clase/Programacion/Java-Programacion/ActividadesRepaso/src/main/java/com/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainActividad1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainActividad2.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Repo-Clase/Programacion/Java-Programacion/ActividadesRepaso/src/main/java/com/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -78,7 +87,9 @@
       <option name="presentableId" value="Default" />
       <updated>1748419138338</updated>
       <workItem from="1748419140938" duration="7596000" />
-      <workItem from="1749019820481" duration="7704000" />
+      <workItem from="1749019820481" duration="7870000" />
+      <workItem from="1749623537424" duration="715000" />
+      <workItem from="1749626550556" duration="3962000" />
     </task>
     <servers />
   </component>

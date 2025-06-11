@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="733df342-d2a9-4960-a472-b5631139cdc3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/ConexionDB (1).jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/examenejavafx/Controlador/FormularioAñadirController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/examenejavafx/Dao/AnzueloDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/examenejavafx/Modelo/Anzuelo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/examenejavafx/Vista/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Practica2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/Practica2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/ActividadesRepaso/src/main/java/com/Actividad1/CodigoProductoInvalidoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/ActividadesRepaso/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/ActividadesRepaso/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +94,7 @@
       <workItem from="1747911760921" duration="143000" />
       <workItem from="1747911966626" duration="2599000" />
       <workItem from="1748001042813" duration="10000" />
+      <workItem from="1749624274386" duration="628000" />
     </task>
     <servers />
   </component>
