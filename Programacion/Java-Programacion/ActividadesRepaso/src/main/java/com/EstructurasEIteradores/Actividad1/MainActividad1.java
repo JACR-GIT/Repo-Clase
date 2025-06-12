@@ -10,7 +10,7 @@ public class MainActividad1 {
         listaProductos.add(new Producto("P002", "Pan", 1.0));
         listaProductos.add(new Producto("P003", "Leche", 0.8));
 
-        List<Producto> productosFiltrados = FuncionesProductos.filtrarPorPrecio(listaProductos, 0.9);
+        List<Producto> productosFiltrados = FuncionesProductos.filtrarPorPrecio(listaProductos, 0.8);
         for (Producto producto : productosFiltrados) {
             System.out.println("Producto filtrado: " + producto.getNombre() + " - Precio: " + producto.getPrecio());
         }
