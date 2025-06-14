@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="565f6a82-b6a1-4ed8-aeb1-9e5488bf5f68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/BibliotecaPublica/Libro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/BibliotecaPublica/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/BibliotecaPublica/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad2/MainAdctividad2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad3/MainActividad3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad4/MainActividad4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad5/MainActividad5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad6/Configuracion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad6/MainActividad6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad7/MainActividad7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad7/Sensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/heroes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Estrellas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Saiyano.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Transformacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/UtilidadesExamen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Valoracion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad1/MainActividad1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasEIteradores/Actividad1/MainActividad1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -46,6 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Debug",
     "Application.MainActividad1.executor": "Run",
     "Application.MainActividad2.executor": "Run",
     "Application.MainActividad3.executor": "Run",
@@ -69,6 +69,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mrnat\Desktop\Repo-clase\Repo-Clase\Programacion\Java-Programacion\ActividadesRepaso\libs" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -91,11 +96,47 @@
       <workItem from="1749714448895" duration="1226000" />
       <workItem from="1749716646667" duration="41000" />
       <workItem from="1749716694544" duration="10467000" />
+      <workItem from="1749804542463" duration="6317000" />
+      <workItem from="1749893498226" duration="1004000" />
+      <workItem from="1749894607013" duration="1828000" />
+      <workItem from="1749896508904" duration="12409000" />
+      <workItem from="1749922534832" duration="90000" />
+      <workItem from="1749922626684" duration="5602000" />
+      <workItem from="1749928608686" duration="7518000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Main.java</url>
+          <line>162</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/UtilidadesExamen.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/UtilidadesExamen.java</url>
+          <line>123</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/UtilidadesExamen.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
