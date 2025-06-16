@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="565f6a82-b6a1-4ed8-aeb1-9e5488bf5f68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ActividadesExtras/Empleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ActividadesExtras/PracticaExamen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ActividadesExtras/Producto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_2/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_2/PerroDeJose.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/ExamenRecuperacion/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/ExamenRecuperacion/PerroFamoso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/ExamenRecuperacion/UtilidadesExamen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Saiyano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/Saiyano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/UtilidadesExamen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ExamenesAnteriores/EV2_1/UtilidadesExamen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +96,8 @@
       <workItem from="1749993967145" duration="6055000" />
       <workItem from="1750063603752" duration="17000" />
       <workItem from="1750063685922" duration="14463000" />
-      <workItem from="1750091239019" duration="9490000" />
+      <workItem from="1750091239019" duration="9648000" />
+      <workItem from="1750102742194" duration="1171000" />
     </task>
     <servers />
   </component>
