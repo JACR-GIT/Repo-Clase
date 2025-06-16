@@ -26,5 +26,12 @@
                     <scope>system</scope>
                     <systemPath>${project.basedir}/libs/heroes.jar</systemPath>
                 </dependency>
+                <dependency>
+                    <groupId>com.miempresa</groupId>
+                    <artifactId>libs</artifactId>
+                    <version>1.0</version>
+                    <scope>system</scope>
+                    <systemPath>${project.basedir}/libs/joey-fountains.jar</systemPath>
+                </dependency>
             </dependencies>
         </project>
