@@ -14,9 +14,11 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.joey-fountains</groupId>
-            <artifactId>joey-fountains</artifactId>
+            <groupId>com.miempresa</groupId>
+            <artifactId>libs</artifactId>
             <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/joey-fountains.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

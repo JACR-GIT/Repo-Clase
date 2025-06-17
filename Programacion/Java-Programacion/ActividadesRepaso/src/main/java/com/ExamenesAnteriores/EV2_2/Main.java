@@ -74,10 +74,11 @@ public class Main {
         java.util.regex.Matcher matcher = pattern.matcher(nombreDocumento);
 
         if (matcher.matches()) {
-            int anio = Integer.parseInt(matcher.group(3));
+            int anio = Integer.parseInt(matcher.group(2));
             int anioActual = java.time.Year.now().getValue();
             return anio >= 1975 && anio <= anioActual;
         }
+
         return false;
     }
 
