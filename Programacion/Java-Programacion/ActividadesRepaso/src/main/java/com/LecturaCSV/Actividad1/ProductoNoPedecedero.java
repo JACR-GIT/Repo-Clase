@@ -1,0 +1,25 @@
+package com.LecturaCSV.Actividad1;
+
+import java.time.LocalDate;
+
+public class ProductoNoPedecedero extends ProductoAbs implements Descontable {
+
+    String tipoConservacion;
+
+    public ProductoNoPedecedero(String codigo, String nombre, LocalDate fechaCaducidad, double precio, String tipoConservacion) {
+        super(codigo, nombre, precio, fechaCaducidad);
+        this.tipoConservacion = tipoConservacion;
+    }
+
+    public ProductoNoPedecedero() {
+        super(null, null, 0, null);
+    }
+
+    public double aplicarDescuento(double porcentaje) {
+        if (tipoConservacion.equalsIgnoreCase("Molido")) {
+            return precio - (precio * porcentaje / 100);
+        } else {
+            return precio;
+        }
+    }
+}

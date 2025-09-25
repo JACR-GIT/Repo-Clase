@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a17ddb1-31a9-4977-8612-50195623aab8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/src/main/java/com/examenejavafx/Controlador/FormularioAñadir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/src/main/java/com/examenejavafx/Dao/AnzueloDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/src/main/java/com/examenejavafx/Modelo/Anzuelo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Entorno/Java-Entorno/ExameneJavaFx/src/main/resources/com/examenejavafx/Vista/Main.fxml" afterDir="false" />
+    <list default="true" id="733df342-d2a9-4960-a472-b5631139cdc3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/ActividadesRepaso/src/main/java/com/Actividad1/CodigoProductoInvalidoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/ActividadesRepaso/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Programacion/Java-Programacion/ActividadesRepaso/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,9 +33,9 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
+  &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2vDaHpHZI8FiKcfZTTCmkqX9FKg" />
+  <component name="ProjectId" id="2xRicQzH5GXEGVZVq1MuKgG6bu9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,26 +43,32 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;oracle&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Repo-Clase\Programacion\Java-Programacion\Practica2\src\main\resources\com\practicaControlPersonas" />
-      <recent name="C:\Repo-Clase\Programacion\Java-Programacion\Practica2\src\main\resources\Vista" />
+      <recent name="C:\Repo-Clase\Entorno\Java-Entorno\ExameneJavaFx\libs" />
+      <recent name="C:\Repo-Clase\Entorno\Java-Entorno\ExameneJavaFx\src\main\resources\com\examenejavafx\asset" />
+      <recent name="C:\Repo-Clase\Entorno\Java-Entorno\ExameneJavaFx\src\main\resources\com\examenejavafx" />
+      <recent name="C:\Repo-Clase\Entorno\Java-Entorno\ExameneJavaFx\src\main\resources\com\examenejavafx\Vista" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -74,19 +79,22 @@
       </set>
     </attachedChunks>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2a17ddb1-31a9-4977-8612-50195623aab8" name="Changes" comment="" />
-      <created>1743682013746</created>
+      <changelist id="733df342-d2a9-4960-a472-b5631139cdc3" name="Changes" comment="" />
+      <created>1747907366479</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1743682013746</updated>
-      <workItem from="1743682014884" duration="297000" />
-      <workItem from="1743682321245" duration="777000" />
-      <workItem from="1744358389142" duration="2000" />
-      <workItem from="1744358486786" duration="5000" />
-      <workItem from="1747910981335" duration="19000" />
+      <updated>1747907366479</updated>
+      <workItem from="1747907367881" duration="2901000" />
+      <workItem from="1747910285056" duration="343000" />
+      <workItem from="1747910684835" duration="5000" />
+      <workItem from="1747910718154" duration="215000" />
+      <workItem from="1747911001752" duration="734000" />
+      <workItem from="1747911760921" duration="143000" />
+      <workItem from="1747911966626" duration="2599000" />
+      <workItem from="1748001042813" duration="10000" />
+      <workItem from="1749624274386" duration="628000" />
     </task>
     <servers />
   </component>
