@@ -1,0 +1,7 @@
+{
+  "name": "SwapShop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
