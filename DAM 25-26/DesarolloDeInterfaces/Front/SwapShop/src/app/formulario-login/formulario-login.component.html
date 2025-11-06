@@ -1,40 +1,51 @@
-<form class="formulario-login">
+<!--
+  (ngSubmit) se activa cuando el formulario es enviado (ej. al pulsar un botón type="submit").
+  Llamará a la función login() que definiremos en nuestro archivo .ts.
+-->
+<form class="login-form-container" (ngSubmit)="login()">
 
   <!-- Campo de Email -->
-  <ion-item lines="none">
-    <ion-label position="stacked">Email</ion-label>
-    <ion-input type="email" placeholder="Email"></ion-input>
-  </ion-item>
+  <div class="form-field">
+    <ion-label>Email</ion-label>
+    <ion-item lines="none">
+      <!-- [(ngModel)] enlaza el valor de este input a la variable 'credentials.email' -->
+      <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="credentials.email" ></ion-input>
+    </ion-item>
+  </div>
 
   <!-- Campo de Contraseña -->
-  <ion-item lines="none">
-    <ion-label position="stacked">Contraseña</ion-label>
-    <ion-input type="password" placeholder="Contraseña"></ion-input>
-  </ion-item>
+  <div class="form-field">
+    <ion-label>Contraseña</ion-label>
+    <ion-item lines="none">
+      <!-- [(ngModel)] enlaza el valor de este input a la variable 'credentials.password' -->
+      <ion-input type="password" placeholder="Contraseña" name="password" [(ngModel)]="credentials.password" ></ion-input>
+    </ion-item>
+  </div>
 
-  <!-- Fila para el Checkbox y el enlace de Registrarse -->
-  <!-- Usamos la rejilla (grid) de Ionic para alinear elementos fácilmente. -->
-  <ion-grid>
+
+  <!-- Fila para Checkbox y Registrarse -->
+  <ion-grid class="options-grid">
     <ion-row class="ion-align-items-center">
-
       <!-- Columna para el Checkbox -->
       <ion-col size="auto">
         <ion-item lines="none" class="checkbox-item">
-          <ion-checkbox slot="start" mode="md"></ion-checkbox>
+          <!-- mode="md" para que el checkbox sea un cuadrado relleno como en la imagen -->
+          <ion-checkbox slot="start" mode="md" name="remember" [(ngModel)]="credentials.rememberMe"></ion-checkbox>
           <ion-label>Mantenerse sesion</ion-label>
         </ion-item>
       </ion-col>
 
-      <!-- Columna para el enlace de Registrarse, alineada a la derecha -->
+      <!-- Columna para el enlace de Registrarse -->
       <ion-col class="ion-text-end">
-        <ion-button fill="clear" class="register-button">Registrarse</ion-button>
+        <!-- (click) puede llevar a una función para navegar a la página de registro -->
+        <ion-button fill="clear" class="register-button" (click)="goToRegister()">Registrarse</ion-button>
       </ion-col>
-
     </ion-row>
   </ion-grid>
 
+
   <!-- Botón de Iniciar Sesión -->
-  <!-- 'expand="block"' hace que el botón ocupe todo el ancho disponible. -->
-  <ion-button expand="block" class="login-button">Iniciar Sesion</ion-button>
+  <!-- 'type="submit"' es importante para que (ngSubmit) del formulario funcione -->
+  <ion-button expand="block" type="submit" class="login-button">Iniciar Sesion</ion-button>
 
 </form>

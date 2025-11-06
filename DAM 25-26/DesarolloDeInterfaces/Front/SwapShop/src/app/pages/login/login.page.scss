@@ -1,0 +1,13 @@
+.form-container {
+  /* 1. Hacemos que el contenedor ocupe el 100% de la altura disponible en la pantalla. */
+  height: 100%;
+
+  /* 2. Lo convertimos en un contenedor Flexbox. */
+  display: flex;
+
+  /* 3. Centramos su contenido (nuestro formulario) horizontalmente. */
+  justify-content: center;
+
+  /* 4. Centramos su contenido (nuestro formulario) verticalmente. */
+  align-items: center;
+}
