@@ -1,0 +1,40 @@
+<form class="formulario-login">
+
+  <!-- Campo de Email -->
+  <ion-item lines="none">
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input type="email" placeholder="Email"></ion-input>
+  </ion-item>
+
+  <!-- Campo de Contraseña -->
+  <ion-item lines="none">
+    <ion-label position="stacked">Contraseña</ion-label>
+    <ion-input type="password" placeholder="Contraseña"></ion-input>
+  </ion-item>
+
+  <!-- Fila para el Checkbox y el enlace de Registrarse -->
+  <!-- Usamos la rejilla (grid) de Ionic para alinear elementos fácilmente. -->
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+
+      <!-- Columna para el Checkbox -->
+      <ion-col size="auto">
+        <ion-item lines="none" class="checkbox-item">
+          <ion-checkbox slot="start" mode="md"></ion-checkbox>
+          <ion-label>Mantenerse sesion</ion-label>
+        </ion-item>
+      </ion-col>
+
+      <!-- Columna para el enlace de Registrarse, alineada a la derecha -->
+      <ion-col class="ion-text-end">
+        <ion-button fill="clear" class="register-button">Registrarse</ion-button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <!-- Botón de Iniciar Sesión -->
+  <!-- 'expand="block"' hace que el botón ocupe todo el ancho disponible. -->
+  <ion-button expand="block" class="login-button">Iniciar Sesion</ion-button>
+
+</form>

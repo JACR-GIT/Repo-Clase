@@ -1,0 +1,42 @@
+/* Estilo para el contenedor principal del formulario */
+.login-form {
+  border: 1px solid #e0e0e0; /* Borde gris claro */
+  border-radius: 10px;        /* Bordes redondeados */
+  padding: 24px;              /* Espacio interior */
+  max-width: 400px;           /* Ancho máximo para que no se estire demasiado en pantallas grandes */
+  margin: 0 auto;             /* Centra el formulario horizontalmente en la página */
+}
+
+/* Estilo para los campos de texto (input) */
+ion-input {
+  --background: #f9f9f9;     /* Fondo ligeramente gris */
+  --padding-start: 12px;
+  --padding-end: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;         /* Bordes redondeados para los campos */
+  margin-top: 8px;            /* Espacio entre la etiqueta y el campo */
+}
+
+/* Eliminamos el padding del ion-item que contiene el checkbox para un mejor alineamiento */
+.checkbox-item {
+  --inner-padding-end: 0;
+  --padding-start: 0;
+}
+
+/* Estilo para el botón de "Registrarse" */
+.register-button {
+  --color: #888888;          /* Color de texto gris */
+  font-size: 14px;
+  text-transform: none;       /* Evita que el texto se ponga en mayúsculas */
+}
+
+/* Estilo para el botón principal de "Iniciar Sesión" */
+.login-button {
+  --background: #222428;      /* Color de fondo oscuro */
+  --border-radius: 8px;
+  --box-shadow: none;         /* Quitamos cualquier sombra por defecto */
+  height: 48px;               /* Altura del botón */
+  margin-top: 20px;           /* Espacio superior */
+  font-size: 16px;
+  text-transform: none;
+}

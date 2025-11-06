@@ -1,3 +1,36 @@
-<p>
-  footer works!
-</p>
+<!-- El ion-tabs es el contenedor principal de toda la navegación por pestañas -->
+<ion-tabs>
+
+  <!-- El componente ion-fab-button se coloca fuera de la barra de pestañas para que pueda "flotar" por encima. -->
+  <!-- 'vertical="bottom"' y 'horizontal="center"' lo colocan en el centro de la parte inferior. -->
+  <!-- 'slot="fixed"' asegura que se mantenga en su sitio aunque hagas scroll. -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+  <!-- Esta es la barra de pestañas que se mostrará en la parte inferior -->
+  <ion-tab-bar slot="bottom">
+
+    <!-- Botón de la izquierda (Home) -->
+    <!-- 'tab' se enlaza con la ruta definida en 'tabs-routing.module.ts' -->
+    <ion-tab-button tab="tab1" layout="icon-top">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <!-- Botón central de relleno -->
+    <!-- Este botón no tiene 'tab' porque no navega a ningún sitio. -->
+    <!-- Solo está para crear el espacio para el botón flotante de arriba. -->
+    <ion-tab-button>
+    </ion-tab-button>
+
+    <!-- Botón de la derecha (Chat) -->
+    <ion-tab-button tab="tab2" layout="icon-top">
+      <ion-icon name="chatbox-outline"></ion-icon>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>
