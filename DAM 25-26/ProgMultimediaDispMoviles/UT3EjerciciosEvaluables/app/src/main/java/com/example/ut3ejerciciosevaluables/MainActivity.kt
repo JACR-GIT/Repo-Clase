@@ -27,27 +27,27 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnEjercicio1.setOnClickListener {
-            startActivity(Intent(this, Ejercicio1::class.java))
+            startActivity(Intent(this, Ejercicio1Activity::class.java))
         }
 
         binding.btnEjercicio2.setOnClickListener {
-            startActivity(Intent(this, Ejercicio2::class.java))
+            startActivity(Intent(this, Ejercicio2Activity::class.java))
         }
 
         binding.btnEjercicio3.setOnClickListener {
-            startActivity(Intent(this, Ejercicio3::class.java))
+            startActivity(Intent(this, Ejercicio3Activity::class.java))
         }
-
+        
         binding.btnEjercicio4.setOnClickListener {
-            startActivity(Intent(this, Ejercicio4::class.java))
+            startActivity(Intent(this, Ejercicio4Activity::class.java))
         }
 
         binding.btnEjercicio5.setOnClickListener {
-            startActivity(Intent(this, Ejercicio5::class.java))
+            startActivity(Intent(this, Ejercicio5Activity::class.java))
         }
 
         binding.btnEjercicio6.setOnClickListener {
-            startActivity(Intent(this, Ejercicio6::class.java))
+            startActivity(Intent(this, Ejercicio6Activity::class.java))
         }
     }
 }

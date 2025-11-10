@@ -1,3 +1,5 @@
+package com.example.ut3ejerciciosevaluables
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -6,7 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ut3ejerciciosevaluables.databinding.ActivityEjercicio1Binding
 
-class Ejercicio1 : AppCompatActivity() {
+class Ejercicio1Activity : AppCompatActivity() {
     private lateinit var binding: ActivityEjercicio1Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
