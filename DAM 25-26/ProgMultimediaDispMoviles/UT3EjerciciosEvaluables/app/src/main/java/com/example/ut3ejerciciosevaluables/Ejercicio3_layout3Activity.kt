@@ -8,16 +8,15 @@ import androidx.appcompat.app.AppCompatActivity
 // Asegúrate de tener los imports de todas las Activities a las que quieres navegar.
 import com.example.ut3ejerciciosevaluables.Ejercicio3_layout1Activity
 import com.example.ut3ejerciciosevaluables.Ejercicio3_layout2Activity
-import com.example.ut3ejerciciosevaluables.Ejercicio3_layout3Activity
 import com.example.ut3ejerciciosevaluables.MainActivity
 
-class Ejercicio3Activity : AppCompatActivity() {
+class Ejercicio3_layout3Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // 1. Carga el layout XML que contiene los cuatro botones.
-        setContentView(R.layout.activity_ejercicio3)
+        setContentView(R.layout.activity_ejercicio3_layout3)
 
         // 2. Busca cada botón en el layout usando su ID.
         val boton1 = findViewById<Button>(R.id.btn1)
@@ -39,9 +38,9 @@ class Ejercicio3Activity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Botón 3 -> Ajedrez Rojo
+        // Botón 3 -> Barras Rojas y Azules
         boton3.setOnClickListener {
-            val intent = Intent(this, Ejercicio3_layout3Activity::class.java)
+            val intent = Intent(this, Ejercicio3Activity::class.java)
             startActivity(intent)
         }
 

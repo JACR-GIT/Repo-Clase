@@ -9,9 +9,9 @@ import com.example.ut3ejerciciosevaluables.databinding.ActivityEjercicio5Binding
 class Ejercicio5Activity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEjercicio5Binding
-    private var currentNumber = ""
-    private var currentOperator = ""
-    private var result = ""
+    private var numero = ""
+    private var operador = ""
+    private var resultadoFinal = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,19 +20,19 @@ class Ejercicio5Activity : AppCompatActivity() {
 
         val numberClickListener = View.OnClickListener {
             val button = it as Button
-            currentNumber += button.text.toString()
-            updateDisplay()
+            numero += button.text.toString()
+            actualizar()
         }
 
         val operatorClickListener = View.OnClickListener {
             val button = it as Button
-            if (currentNumber.isNotEmpty()) {
-                if (result.isNotEmpty()) {
-                    calculate()
+            if (numero.isNotEmpty()) {
+                if (resultadoFinal.isNotEmpty()) {
+                    calcular()
                 }
-                currentOperator = button.text.toString()
-                result = currentNumber
-                currentNumber = ""
+                operador = button.text.toString()
+                resultadoFinal = numero
+                numero = ""
             }
         }
 
@@ -50,53 +50,53 @@ class Ejercicio5Activity : AppCompatActivity() {
         binding.buttonDecimal.setOnClickListener(numberClickListener)
 
         // Asignar listeners a los operadores
-        binding.buttonAdd.setOnClickListener(operatorClickListener)
-        binding.buttonSubtract.setOnClickListener(operatorClickListener)
-        binding.buttonMultiply.setOnClickListener(operatorClickListener)
-        binding.buttonDivide.setOnClickListener(operatorClickListener)
+        binding.buttonSuma.setOnClickListener(operatorClickListener)
+        binding.buttonRestar.setOnClickListener(operatorClickListener)
+        binding.buttonMultiplicar.setOnClickListener(operatorClickListener)
+        binding.buttonDividir.setOnClickListener(operatorClickListener)
 
         // Listener para el botón de igual
         binding.buttonEquals.setOnClickListener {
-            if (currentNumber.isNotEmpty() && result.isNotEmpty()) {
-                calculate()
-                currentOperator = ""
+            if (numero.isNotEmpty() && resultadoFinal.isNotEmpty()) {
+                calcular()
+                operador = ""
             }
         }
 
         // Listener para el botón de limpiar
-        binding.buttonClear.setOnClickListener {
-            currentNumber = ""
-            currentOperator = ""
-            result = ""
-            updateDisplay()
+        binding.buttonC.setOnClickListener {
+            numero = ""
+            operador = ""
+            resultadoFinal = ""
+            actualizar()
         }
     }
 
-    private fun updateDisplay() {
-        binding.textDisplay.text = if (currentNumber.isNotEmpty()) currentNumber else if (result.isNotEmpty()) result else "0"
+    private fun actualizar() {
+        binding.textDisplay.text = if (numero.isNotEmpty()) numero else if (resultadoFinal.isNotEmpty()) resultadoFinal else "0"
     }
 
-    private fun calculate() {
-        val num1 = result.toDouble()
-        val num2 = currentNumber.toDouble()
+    private fun calcular() {
+        val num1 = resultadoFinal.toDouble()
+        val num2 = numero.toDouble()
 
-        val calculatedResult = when (currentOperator) {
+        val resultado = when (operador) {
             "+" -> num1 + num2
             "-" -> num1 - num2
             "*" -> num1 * num2
-            "/" -> if (num2 != 0.0) num1 / num2 else Double.NaN // Manejar división por cero
+            "/" -> if (num2 != 0.0) num1 / num2 else Double.NaN
             else -> 0.0
         }
 
-        if (calculatedResult.isNaN()) {
-            currentNumber = ""
-            result = "Error"
+        if (resultado.isNaN()) {
+            numero = ""
+            resultadoFinal = "Error"
         } else {
-            result = calculatedResult.toString()
-            currentNumber = result
+            resultadoFinal = resultado.toString()
+            numero = resultadoFinal
         }
-        updateDisplay()
-        result = ""
+        actualizar()
+        resultadoFinal = ""
 
     }
 }

@@ -5,47 +5,49 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-// Asegúrate de tener los imports de todas las Activities a las que quieres navegar.
+// Importamos las clases de las Activities a las que vamos a navegar.
+// Asegúrate de que estos imports estén presentes.
 import com.example.ut3ejerciciosevaluables.Ejercicio3_layout1Activity
 import com.example.ut3ejerciciosevaluables.Ejercicio3_layout2Activity
 import com.example.ut3ejerciciosevaluables.Ejercicio3_layout3Activity
 import com.example.ut3ejerciciosevaluables.MainActivity
 
-class Ejercicio3Activity : AppCompatActivity() {
+class Ejercicio3_layout1Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // 1. Carga el layout XML que contiene los cuatro botones.
-        setContentView(R.layout.activity_ejercicio3)
+        // 1. Establece el layout que contiene los cuatro botones.
+        // Asumo que se llama 'activity_ejercicio3.xml'.
+        setContentView(R.layout.activity_ejercicio3_layout1)
 
-        // 2. Busca cada botón en el layout usando su ID.
+        // 2. Obtenemos una referencia a cada botón usando su ID del archivo XML.
         val boton1 = findViewById<Button>(R.id.btn1)
         val boton2 = findViewById<Button>(R.id.btn2)
         val boton3 = findViewById<Button>(R.id.btn3)
         val boton4 = findViewById<Button>(R.id.btn4)
 
-        // 3. Asigna a cada botón la acción de navegar a su página correspondiente.
+        // 3. Configuramos la acción para cada botón.
 
-        // Botón 1 -> Barras Azules
+        // Botón 1: Barras Rojas y Azules
         boton1.setOnClickListener {
-            val intent = Intent(this, Ejercicio3_layout1Activity::class.java)
+            val intent = Intent(this, Ejercicio3Activity::class.java)
             startActivity(intent)
         }
 
-        // Botón 2 -> Barras Verdes
+        // Botón 2: Ajedrez Rojo
         boton2.setOnClickListener {
-            val intent = Intent(this, Ejercicio3_layout2Activity::class.java)
-            startActivity(intent)
-        }
-
-        // Botón 3 -> Ajedrez Rojo
-        boton3.setOnClickListener {
             val intent = Intent(this, Ejercicio3_layout3Activity::class.java)
             startActivity(intent)
         }
 
-        // Botón 4 -> Navega a MainActivity
+        // Botón 3: Barras Verdes
+        boton3.setOnClickListener {
+            val intent = Intent(this, Ejercicio3_layout2Activity::class.java)
+            startActivity(intent)
+        }
+
+        // Botón 4: Navega a MainActivity (pantalla principal)
         boton4.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

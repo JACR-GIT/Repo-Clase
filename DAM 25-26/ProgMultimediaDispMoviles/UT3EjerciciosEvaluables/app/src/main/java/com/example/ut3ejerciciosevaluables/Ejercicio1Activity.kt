@@ -23,7 +23,7 @@ class Ejercicio1Activity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                 startActivity(intent)
             } else {
-                Toast.makeText(this, "Por favor, introduce una URL válida", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Introduce una URL válida", Toast.LENGTH_SHORT).show()
             }
         }
     }
