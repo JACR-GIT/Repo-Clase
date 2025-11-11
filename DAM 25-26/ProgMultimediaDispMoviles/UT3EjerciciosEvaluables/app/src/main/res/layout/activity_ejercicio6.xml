@@ -6,39 +6,92 @@
     android:layout_height="match_parent"
     tools:context=".Ejercicio6Activity">
 
+
     <ImageView
-        android:id="@+id/profile_image"
+        android:id="@+id/imagenPerfil"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="64dp"
-        android:src="@android:drawable/sym_def_app_icon"
+        android:src="@drawable/perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/profile_name"
-        android:layout_width="wrap_content"
+        android:id="@+id/nombreUsuario"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Nombre de Usuario"
+        android:gravity="center_horizontal"
+        android:text="Jose Antonio Campos Rueda"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+        app:layout_constraintTop_toBottomOf="@id/imagenPerfil" />
 
     <TextView
-        android:id="@+id/profile_description"
+        android:id="@+id/titularPerfil"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:text="Esto es la descripcion del usuario."
-        android:textAlignment="center"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:text="Estudiante de 2ºDAM | Desarrollo de Aplicaciones Multiplataforma"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+        app:layout_constraintTop_toBottomOf="@id/nombreUsuario" />
+
+    <TextView
+        android:id="@+id/ubicacionPerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:text="España"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titularPerfil" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_acerca_de"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ubicacionPerfil">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acerca de Mi"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descripcionPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp"
+                android:text="Soy un alumno de 2ºDAM, tengo 21 años y me apasiona la programación y el desarrollo de aplicaciones móviles. Buscando siempre aprender nuevas tecnologías." />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
