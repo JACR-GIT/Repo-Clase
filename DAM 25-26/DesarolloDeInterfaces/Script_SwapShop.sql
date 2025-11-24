@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     apellido1 VARCHAR(100) NOT NULL,
     apellido2 VARCHAR(100) NOT NULL,
     correo VARCHAR(150) UNIQUE NOT NULL,
-    contrasena_hash TEXT NOT NULL,
+    contrasena TEXT NOT NULL,
     edad INT,
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
@@ -113,10 +113,8 @@ CREATE TABLE IF NOT EXISTS mensajes (
 CREATE TABLE IF NOT EXISTS valoraciones (
     id INT NOT NULL AUTO_INCREMENT,
     id_valorador INT NOT NULL,
-    id_valorado INT NOT NULL,
-    id_intercambio INT NOT NULL,
+    id_valorado INT NOT null,
     puntuacion TINYINT NOT NULL CHECK (puntuacion BETWEEN 1 AND 5),
-    comentario TEXT,
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     CONSTRAINT fk_valorador
@@ -125,10 +123,6 @@ CREATE TABLE IF NOT EXISTS valoraciones (
         ON UPDATE CASCADE,
     CONSTRAINT fk_valorado
         FOREIGN KEY (id_valorado) REFERENCES usuarios(id)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    CONSTRAINT fk_val_intercambio
-        FOREIGN KEY (id_intercambio) REFERENCES intercambios(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 ) ENGINE=InnoDB;
