@@ -9,13 +9,11 @@ import java.sql.Timestamp;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UsuarioDTO {
+public class ValoracionesDTO {
 
     private Integer id;
-    private String nombre;
-    private String apellido1;
-    private String apellido2;
-    private String correo;
-    private String contrasena;
+    private Integer id_valorador;
+    private Integer id_valorado;
+    private Integer puntuacion;
     private Timestamp creado_en;
 }
