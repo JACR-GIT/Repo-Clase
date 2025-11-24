@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import {FooterComponent} from "../../components/footer/footer.component";
-import {FormularioLoginComponent} from "../../formulario-login/formulario-login.component";
+import {FormularioLoginComponent} from "../../components/formulario-login/formulario-login.component";
 
 @Component({
   selector: 'app-login',
