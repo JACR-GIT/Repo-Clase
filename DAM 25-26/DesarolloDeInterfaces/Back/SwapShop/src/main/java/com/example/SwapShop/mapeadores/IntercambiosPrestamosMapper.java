@@ -5,7 +5,7 @@ import com.example.SwapShop.modelos.IntercambiosPrestamos;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface IntercambiosPrendasMapper {
+public interface IntercambiosPrestamosMapper {
 
     IntercambiosPrestamosDTO toDTO (IntercambiosPrestamos intercambios);
 

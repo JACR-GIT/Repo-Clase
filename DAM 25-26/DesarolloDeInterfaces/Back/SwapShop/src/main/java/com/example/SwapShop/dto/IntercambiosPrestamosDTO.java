@@ -1,5 +1,7 @@
 package com.example.SwapShop.dto;
 
+import com.example.SwapShop.modelos.EstadoIntercambio;
+import com.example.SwapShop.modelos.TipoIntercambio;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,8 +21,8 @@ public class IntercambiosPrestamosDTO {
     private Integer id_solicitante;
     private Integer id_dueno;
 
-    private String tipo;
-    private String estado;
+    private TipoIntercambio tipo;
+    private EstadoIntercambio estado;
 
     private Date fecha_inicio;
     private Date fecha_fin;

@@ -126,3 +126,17 @@ CREATE TABLE IF NOT EXISTS valoraciones (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 ) ENGINE=InnoDB;
+
+SELECT 
+    p.id AS id_prenda,
+    p.nombre_prenda,
+    p.descripcion,
+    p.talla,
+    p.categoria,
+    p.condicion,
+    COUNT(i.id) AS total_intercambios
+FROM prendas p
+INNER JOIN intercambios i ON i.id_prenda = p.id
+GROUP BY p.id
+ORDER BY total_intercambios DESC
+LIMIT 5;
