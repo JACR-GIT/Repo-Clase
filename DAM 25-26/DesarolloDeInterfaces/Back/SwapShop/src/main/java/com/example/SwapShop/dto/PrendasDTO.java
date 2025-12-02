@@ -1,5 +1,6 @@
 package com.example.SwapShop.dto;
 
+import com.example.SwapShop.modelos.Usuario;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import java.sql.Timestamp;
 public class PrendasDTO {
 
     private Integer id;
-    private Integer id_dueno;
+    private Usuario id_dueno;
     private String nombre_prenda;
     private String descripcion;
     private String talla;

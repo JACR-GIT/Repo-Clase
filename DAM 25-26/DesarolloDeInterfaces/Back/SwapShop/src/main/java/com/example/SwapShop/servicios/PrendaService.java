@@ -3,8 +3,10 @@ package com.example.SwapShop.servicios;
 import com.example.SwapShop.dto.PrendasDTO;
 import com.example.SwapShop.mapeadores.PrendasMapper;
 import com.example.SwapShop.modelos.Prendas;
+import com.example.SwapShop.repositorios.IIntercambiosPrestamosRepository;
 import com.example.SwapShop.repositorios.IPrendasRepository;
 import lombok.AllArgsConstructor;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
@@ -14,6 +16,7 @@ import java.util.NoSuchElementException;
 public class PrendaService {
 
     private IPrendasRepository prendasRepository;
+    private IIntercambiosPrestamosRepository intercambiosPrestamosRepository;
     private PrendasMapper prendasMapper;
 
     public PrendasDTO crearPrenda(PrendasDTO prendasDTO) {
@@ -29,18 +32,26 @@ public class PrendaService {
     }
 
     public PrendasDTO modificarPrendaPorId (PrendasDTO prendasDTO) {
-        Integer id = prendasDTO.getId();
-        if (id == null) {
-            throw new IllegalArgumentException("El id de la prenda es requerido para modificar.");
+        Prendas prenda = prendasRepository.findById(prendasDTO.getId())
+                .orElseThrow(() -> new NoSuchElementException("Prenda no encontrada con id: " + prendasDTO.getId()));
+
+        if (prenda != null) {
+            prendasDTO.setNombre_prenda(prendasDTO.getNombre_prenda());
+            prendasDTO.setTalla(prendasDTO.getTalla());
+            prendasDTO.setCategoria(prendasDTO.getCategoria());
+            prendasDTO.setCondicion(prendasDTO.getCondicion());
+            prendasDTO.setDescripcion(prendasDTO.getDescripcion());
+            prendasDTO.setDisponible(prendasDTO.getDisponible());
+            prendasDTO.setId(prendasDTO.getId());
+            prendasDTO.setId_dueno(prendasDTO.getId_dueno());
+
+            prendasRepository.save(prenda);
         }
-
-        Prendas existente = prendasRepository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Prenda no encontrada con id: " + id));
-
-        Prendas prendaActualizada = prendasMapper.toEntity(prendasDTO);
-        Prendas prendaGuardada = prendasRepository.save(prendaActualizada);
-        return prendasMapper.toDTO(prendaGuardada);
+        return prendasMapper.toDTO(prenda);
     }
 
-
+    public List<PrendasDTO> top5PrendasMasIntercambiadasAceptadas() {
+        List<Prendas> prendasMasIntercambiadas = intercambiosPrestamosRepository.buscarTop5Intercambio();
+        return prendasMapper.listToDTOs(prendasMasIntercambiadas);
+    }
 }

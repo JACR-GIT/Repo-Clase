@@ -1,5 +1,6 @@
 package com.example.SwapShop.servicios;
 
+import com.example.SwapShop.dto.EstadisticasUsuarioDTO;
 import com.example.SwapShop.dto.UsuarioDTO;
 import com.example.SwapShop.mapeadores.UsuarioMapper;
 import com.example.SwapShop.modelos.Usuario;
@@ -20,8 +21,12 @@ public class UsuarioService {
         return usuarioMapper.toDTO(usuarioGuardado);
     }
 
-    public UsuarioDTO buscarUsuarioPorId(UsuarioDTO usuarioDTO) {
-        Usuario usuario = usuarioRepository.findById(usuarioDTO.getId()).orElse(null);
+    public UsuarioDTO buscarUsuarioPorId(Integer id) {
+        Usuario usuario = usuarioRepository.findById(id).orElse(null);
         return usuarioMapper.toDTO(usuario);
+    }
+
+    public EstadisticasUsuarioDTO obtenerUsuarioActivo() {
+        return usuarioRepository.findTopUsuarioByIntercambiosAceptados();
     }
 }

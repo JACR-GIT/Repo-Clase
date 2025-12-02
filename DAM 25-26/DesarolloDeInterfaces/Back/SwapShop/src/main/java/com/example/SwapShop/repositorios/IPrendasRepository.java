@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IPrendasRepository extends JpaRepository<Prendas, Integer> {
     Prendas findByTalla(String talla);
+    Integer id(int id);
 }

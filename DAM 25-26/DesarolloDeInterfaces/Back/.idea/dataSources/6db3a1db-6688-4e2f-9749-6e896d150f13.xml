@@ -1538,7 +1538,7 @@ test\\_%|schema||PUBLIC|&apos;&apos;|UPDATE|G</Grants>
     <schema id="557" parent="1" name="swapshop">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-27.09:47:29</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-02.08:58:30</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </schema>
     <schema id="558" parent="1" name="sys">
