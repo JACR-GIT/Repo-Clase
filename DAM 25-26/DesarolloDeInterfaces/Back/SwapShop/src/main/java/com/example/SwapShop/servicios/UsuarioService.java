@@ -8,6 +8,8 @@ import com.example.SwapShop.repositorios.IUsuarioRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class UsuarioService {
@@ -22,11 +24,16 @@ public class UsuarioService {
     }
 
     public UsuarioDTO buscarUsuarioPorId(Integer id) {
-        Usuario usuario = usuarioRepository.findById(id).orElse(null);
+        Usuario usuario = usuarioRepository.findById(id).orElseThrow(() -> new RuntimeException("Usuario no encontrado con id: " + id));
         return usuarioMapper.toDTO(usuario);
     }
 
-    public EstadisticasUsuarioDTO obtenerUsuarioActivo() {
-        return usuarioRepository.findTopUsuarioByIntercambiosAceptados();
+    public EstadisticasUsuarioDTO usuarioConMasIntercambios() {
+        return usuarioRepository.usuarioConMasIntercambios();
+    }
+
+    public List<UsuarioDTO> obtenerTodosLosUsuarios() {
+        List<Usuario> usuarios = usuarioRepository.findAll();
+        return usuarioMapper.toDTO(usuarios);
     }
 }

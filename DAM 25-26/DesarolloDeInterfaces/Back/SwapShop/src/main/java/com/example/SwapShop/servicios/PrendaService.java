@@ -1,5 +1,6 @@
 package com.example.SwapShop.servicios;
 
+import com.example.SwapShop.dto.EstadisticasPrendaDTO;
 import com.example.SwapShop.dto.PrendasDTO;
 import com.example.SwapShop.mapeadores.PrendasMapper;
 import com.example.SwapShop.modelos.Prendas;
@@ -25,10 +26,9 @@ public class PrendaService {
         return prendasMapper.toDTO(prendaGuardada);
     }
 
-    public PrendasDTO buscarPrendaPorTalla (PrendasDTO prendasDTO) {
-        Prendas prenda = prendasMapper.toEntity(prendasDTO);
-        Prendas prendaBuscada = prendasRepository.findByTalla(prenda.getTalla());
-        return prendasMapper.toDTO(prendaBuscada);
+    public List<PrendasDTO> buscarPrendaPorTalla (String talla) {
+        List<Prendas> prendaBuscada = prendasRepository.buscarPorTalla(talla);
+        return prendasMapper.listToDTOs(prendaBuscada);
     }
 
     public PrendasDTO modificarPrendaPorId (PrendasDTO prendasDTO) {
@@ -50,8 +50,8 @@ public class PrendaService {
         return prendasMapper.toDTO(prenda);
     }
 
-    public List<PrendasDTO> top5PrendasMasIntercambiadasAceptadas() {
+    public List<EstadisticasPrendaDTO> top5PrendasMasIntercambiadasAceptadas() {
         List<Prendas> prendasMasIntercambiadas = intercambiosPrestamosRepository.buscarTop5Intercambio();
-        return prendasMapper.listToDTOs(prendasMasIntercambiadas);
+        return prendasMapper.listEstadisticasToDTOs(prendasMasIntercambiadas);
     }
 }

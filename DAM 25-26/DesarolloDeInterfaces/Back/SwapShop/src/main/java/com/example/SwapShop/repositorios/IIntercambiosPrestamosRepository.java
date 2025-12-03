@@ -1,5 +1,6 @@
 package com.example.SwapShop.repositorios;
 
+import com.example.SwapShop.dto.EstadisticasPrendaDTO;
 import com.example.SwapShop.modelos.IntercambiosPrestamos;
 import com.example.SwapShop.modelos.Prendas;
 import org.springframework.data.jpa.repository.JpaRepository;

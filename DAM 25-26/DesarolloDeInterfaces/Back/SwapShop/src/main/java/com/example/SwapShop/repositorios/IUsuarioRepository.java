@@ -28,5 +28,5 @@ public interface IUsuarioRepository extends JpaRepository<Usuario, Integer>{
              "GROUP BY u.id\n" +
              "ORDER BY total_intercambios_aceptados DESC\n" +
              "LIMIT 1;\n", nativeQuery = true)
-     EstadisticasUsuarioDTO findTopUsuarioByIntercambiosAceptados();
+     EstadisticasUsuarioDTO usuarioConMasIntercambios();
 }

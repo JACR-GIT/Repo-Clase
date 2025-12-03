@@ -2,206 +2,169 @@
 <dataSource name="@localhost">
   <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.53">
     <root id="1">
-      <DefaultAuthPlugin>mysql_native_password</DefaultAuthPlugin>
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <Grants>|root||root|127.0.0.1|ALTER|G
 |root||root|::1|ALTER|G
-|root||root|desktop-po9u59p|ALTER|G
 |root||root|localhost|ALTER|G
+|root||root|natur824|ALTER|G
 |root||root|127.0.0.1|ALTER ROUTINE|G
 |root||root|::1|ALTER ROUTINE|G
-|root||root|desktop-po9u59p|ALTER ROUTINE|G
 |root||root|localhost|ALTER ROUTINE|G
+|root||root|natur824|ALTER ROUTINE|G
 |root||root|127.0.0.1|BINLOG ADMIN|G
 |root||root|::1|BINLOG ADMIN|G
-|root||root|desktop-po9u59p|BINLOG ADMIN|G
 |root||root|localhost|BINLOG ADMIN|G
+|root||root|natur824|BINLOG ADMIN|G
 |root||root|127.0.0.1|BINLOG MONITOR|G
 |root||root|::1|BINLOG MONITOR|G
-|root||root|desktop-po9u59p|BINLOG MONITOR|G
 |root||root|localhost|BINLOG MONITOR|G
+|root||root|natur824|BINLOG MONITOR|G
 |root||root|127.0.0.1|BINLOG REPLAY|G
 |root||root|::1|BINLOG REPLAY|G
-|root||root|desktop-po9u59p|BINLOG REPLAY|G
 |root||root|localhost|BINLOG REPLAY|G
+|root||root|natur824|BINLOG REPLAY|G
 |root||root|127.0.0.1|CONNECTION ADMIN|G
 |root||root|::1|CONNECTION ADMIN|G
-|root||root|desktop-po9u59p|CONNECTION ADMIN|G
 |root||root|localhost|CONNECTION ADMIN|G
+|root||root|natur824|CONNECTION ADMIN|G
 |root||root|127.0.0.1|CREATE|G
 |root||root|::1|CREATE|G
-|root||root|desktop-po9u59p|CREATE|G
 |root||root|localhost|CREATE|G
+|root||root|natur824|CREATE|G
 |root||root|127.0.0.1|CREATE ROUTINE|G
 |root||root|::1|CREATE ROUTINE|G
-|root||root|desktop-po9u59p|CREATE ROUTINE|G
 |root||root|localhost|CREATE ROUTINE|G
+|root||root|natur824|CREATE ROUTINE|G
 |root||root|127.0.0.1|CREATE TABLESPACE|G
 |root||root|::1|CREATE TABLESPACE|G
-|root||root|desktop-po9u59p|CREATE TABLESPACE|G
 |root||root|localhost|CREATE TABLESPACE|G
+|root||root|natur824|CREATE TABLESPACE|G
 |root||root|127.0.0.1|CREATE TEMPORARY TABLES|G
 |root||root|::1|CREATE TEMPORARY TABLES|G
-|root||root|desktop-po9u59p|CREATE TEMPORARY TABLES|G
 |root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||root|natur824|CREATE TEMPORARY TABLES|G
 |root||root|127.0.0.1|CREATE USER|G
 |root||root|::1|CREATE USER|G
-|root||root|desktop-po9u59p|CREATE USER|G
 |root||root|localhost|CREATE USER|G
+|root||root|natur824|CREATE USER|G
 |root||root|127.0.0.1|CREATE VIEW|G
 |root||root|::1|CREATE VIEW|G
-|root||root|desktop-po9u59p|CREATE VIEW|G
 |root||root|localhost|CREATE VIEW|G
+|root||root|natur824|CREATE VIEW|G
 |root||root|127.0.0.1|DELETE|G
 |root||root|::1|DELETE|G
-|root||root|desktop-po9u59p|DELETE|G
 |root||root|localhost|DELETE|G
+|root||root|natur824|DELETE|G
 |root||root|127.0.0.1|DELETE HISTORY|G
 |root||root|::1|DELETE HISTORY|G
-|root||root|desktop-po9u59p|DELETE HISTORY|G
 |root||root|localhost|DELETE HISTORY|G
+|root||root|natur824|DELETE HISTORY|G
 |root||root|127.0.0.1|DROP|G
 |root||root|::1|DROP|G
-|root||root|desktop-po9u59p|DROP|G
 |root||root|localhost|DROP|G
+|root||root|natur824|DROP|G
 |root||root|127.0.0.1|EVENT|G
 |root||root|::1|EVENT|G
-|root||root|desktop-po9u59p|EVENT|G
 |root||root|localhost|EVENT|G
+|root||root|natur824|EVENT|G
 |root||root|127.0.0.1|EXECUTE|G
 |root||root|::1|EXECUTE|G
-|root||root|desktop-po9u59p|EXECUTE|G
 |root||root|localhost|EXECUTE|G
+|root||root|natur824|EXECUTE|G
 |root||root|127.0.0.1|FEDERATED ADMIN|G
 |root||root|::1|FEDERATED ADMIN|G
-|root||root|desktop-po9u59p|FEDERATED ADMIN|G
 |root||root|localhost|FEDERATED ADMIN|G
+|root||root|natur824|FEDERATED ADMIN|G
 |root||root|127.0.0.1|FILE|G
 |root||root|::1|FILE|G
-|root||root|desktop-po9u59p|FILE|G
 |root||root|localhost|FILE|G
+|root||root|natur824|FILE|G
 |root||root|127.0.0.1|INDEX|G
 |root||root|::1|INDEX|G
-|root||root|desktop-po9u59p|INDEX|G
 |root||root|localhost|INDEX|G
+|root||root|natur824|INDEX|G
 |root||root|127.0.0.1|INSERT|G
 |root||root|::1|INSERT|G
-|root||root|desktop-po9u59p|INSERT|G
 |root||root|localhost|INSERT|G
+|root||root|natur824|INSERT|G
 |root||root|127.0.0.1|LOCK TABLES|G
 |root||root|::1|LOCK TABLES|G
-|root||root|desktop-po9u59p|LOCK TABLES|G
 |root||root|localhost|LOCK TABLES|G
+|root||root|natur824|LOCK TABLES|G
 |root||root|127.0.0.1|PROCESS|G
 |root||root|::1|PROCESS|G
-|root||root|desktop-po9u59p|PROCESS|G
 |root||root|localhost|PROCESS|G
+|root||root|natur824|PROCESS|G
 |root||root|127.0.0.1|READ_ONLY ADMIN|G
 |root||root|::1|READ_ONLY ADMIN|G
-|root||root|desktop-po9u59p|READ_ONLY ADMIN|G
 |root||root|localhost|READ_ONLY ADMIN|G
+|root||root|natur824|READ_ONLY ADMIN|G
 |root||root|127.0.0.1|REFERENCES|G
 |root||root|::1|REFERENCES|G
-|root||root|desktop-po9u59p|REFERENCES|G
 |root||root|localhost|REFERENCES|G
+|root||root|natur824|REFERENCES|G
 |root||root|127.0.0.1|RELOAD|G
 |root||root|::1|RELOAD|G
-|root||root|desktop-po9u59p|RELOAD|G
 |root||root|localhost|RELOAD|G
+|root||root|natur824|RELOAD|G
 |root||root|127.0.0.1|REPLICATION MASTER ADMIN|G
 |root||root|::1|REPLICATION MASTER ADMIN|G
-|root||root|desktop-po9u59p|REPLICATION MASTER ADMIN|G
 |root||root|localhost|REPLICATION MASTER ADMIN|G
+|root||root|natur824|REPLICATION MASTER ADMIN|G
 |root||root|127.0.0.1|REPLICATION SLAVE|G
 |root||root|::1|REPLICATION SLAVE|G
-|root||root|desktop-po9u59p|REPLICATION SLAVE|G
 |root||root|localhost|REPLICATION SLAVE|G
+|root||root|natur824|REPLICATION SLAVE|G
 |root||root|127.0.0.1|REPLICATION SLAVE ADMIN|G
 |root||root|::1|REPLICATION SLAVE ADMIN|G
-|root||root|desktop-po9u59p|REPLICATION SLAVE ADMIN|G
 |root||root|localhost|REPLICATION SLAVE ADMIN|G
+|root||root|natur824|REPLICATION SLAVE ADMIN|G
 |root||root|127.0.0.1|SELECT|G
 |root||root|::1|SELECT|G
-|root||root|desktop-po9u59p|SELECT|G
 |root||root|localhost|SELECT|G
+|root||root|natur824|SELECT|G
 |root||root|127.0.0.1|SET USER|G
 |root||root|::1|SET USER|G
-|root||root|desktop-po9u59p|SET USER|G
 |root||root|localhost|SET USER|G
+|root||root|natur824|SET USER|G
 |root||root|127.0.0.1|SHOW CREATE ROUTINE|G
 |root||root|::1|SHOW CREATE ROUTINE|G
-|root||root|desktop-po9u59p|SHOW CREATE ROUTINE|G
 |root||root|localhost|SHOW CREATE ROUTINE|G
+|root||root|natur824|SHOW CREATE ROUTINE|G
 |root||root|127.0.0.1|SHOW DATABASES|G
 |root||root|::1|SHOW DATABASES|G
-|root||root|desktop-po9u59p|SHOW DATABASES|G
 |root||root|localhost|SHOW DATABASES|G
+|root||root|natur824|SHOW DATABASES|G
 |root||root|127.0.0.1|SHOW VIEW|G
 |root||root|::1|SHOW VIEW|G
-|root||root|desktop-po9u59p|SHOW VIEW|G
 |root||root|localhost|SHOW VIEW|G
+|root||root|natur824|SHOW VIEW|G
 |root||root|127.0.0.1|SHUTDOWN|G
 |root||root|::1|SHUTDOWN|G
-|root||root|desktop-po9u59p|SHUTDOWN|G
 |root||root|localhost|SHUTDOWN|G
+|root||root|natur824|SHUTDOWN|G
 |root||root|127.0.0.1|SLAVE MONITOR|G
 |root||root|::1|SLAVE MONITOR|G
-|root||root|desktop-po9u59p|SLAVE MONITOR|G
 |root||root|localhost|SLAVE MONITOR|G
+|root||root|natur824|SLAVE MONITOR|G
 |root||root|127.0.0.1|SUPER|G
 |root||root|::1|SUPER|G
-|root||root|desktop-po9u59p|SUPER|G
 |root||root|localhost|SUPER|G
+|root||root|natur824|SUPER|G
 |root||root|127.0.0.1|TRIGGER|G
 |root||root|::1|TRIGGER|G
-|root||root|desktop-po9u59p|TRIGGER|G
 |root||root|localhost|TRIGGER|G
+|root||root|natur824|TRIGGER|G
 |root||root|127.0.0.1|UPDATE|G
 |root||root|::1|UPDATE|G
-|root||root|desktop-po9u59p|UPDATE|G
 |root||root|localhost|UPDATE|G
+|root||root|natur824|UPDATE|G
 |root||root|127.0.0.1|grant option|G
 |root||root|::1|grant option|G
-|root||root|desktop-po9u59p|grant option|G
 |root||root|localhost|grant option|G
-test|schema||PUBLIC|&apos;&apos;|ALTER|G
-test|schema||PUBLIC|&apos;&apos;|CREATE|G
-test|schema||PUBLIC|&apos;&apos;|CREATE ROUTINE|G
-test|schema||PUBLIC|&apos;&apos;|CREATE TEMPORARY TABLES|G
-test|schema||PUBLIC|&apos;&apos;|CREATE VIEW|G
-test|schema||PUBLIC|&apos;&apos;|DELETE|G
-test|schema||PUBLIC|&apos;&apos;|DELETE HISTORY|G
-test|schema||PUBLIC|&apos;&apos;|DROP|G
-test|schema||PUBLIC|&apos;&apos;|EVENT|G
-test|schema||PUBLIC|&apos;&apos;|INDEX|G
-test|schema||PUBLIC|&apos;&apos;|INSERT|G
-test|schema||PUBLIC|&apos;&apos;|LOCK TABLES|G
-test|schema||PUBLIC|&apos;&apos;|REFERENCES|G
-test|schema||PUBLIC|&apos;&apos;|SELECT|G
-test|schema||PUBLIC|&apos;&apos;|SHOW CREATE ROUTINE|G
-test|schema||PUBLIC|&apos;&apos;|SHOW VIEW|G
-test|schema||PUBLIC|&apos;&apos;|TRIGGER|G
-test|schema||PUBLIC|&apos;&apos;|UPDATE|G
-test\\_%|schema||PUBLIC|&apos;&apos;|ALTER|G
-test\\_%|schema||PUBLIC|&apos;&apos;|CREATE|G
-test\\_%|schema||PUBLIC|&apos;&apos;|CREATE ROUTINE|G
-test\\_%|schema||PUBLIC|&apos;&apos;|CREATE TEMPORARY TABLES|G
-test\\_%|schema||PUBLIC|&apos;&apos;|CREATE VIEW|G
-test\\_%|schema||PUBLIC|&apos;&apos;|DELETE|G
-test\\_%|schema||PUBLIC|&apos;&apos;|DELETE HISTORY|G
-test\\_%|schema||PUBLIC|&apos;&apos;|DROP|G
-test\\_%|schema||PUBLIC|&apos;&apos;|EVENT|G
-test\\_%|schema||PUBLIC|&apos;&apos;|INDEX|G
-test\\_%|schema||PUBLIC|&apos;&apos;|INSERT|G
-test\\_%|schema||PUBLIC|&apos;&apos;|LOCK TABLES|G
-test\\_%|schema||PUBLIC|&apos;&apos;|REFERENCES|G
-test\\_%|schema||PUBLIC|&apos;&apos;|SELECT|G
-test\\_%|schema||PUBLIC|&apos;&apos;|SHOW CREATE ROUTINE|G
-test\\_%|schema||PUBLIC|&apos;&apos;|SHOW VIEW|G
-test\\_%|schema||PUBLIC|&apos;&apos;|TRIGGER|G
-test\\_%|schema||PUBLIC|&apos;&apos;|UPDATE|G</Grants>
-      <ServerVersion>12.1.2</ServerVersion>
+|root||root|natur824|grant option|G</Grants>
+      <ServerVersion>12.0.2</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
@@ -1526,486 +1489,484 @@ test\\_%|schema||PUBLIC|&apos;&apos;|UPDATE|G</Grants>
     <collation id="553" parent="1" name="utf8mb4_vietnamese_ci">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="554" parent="1" name="information_schema">
-      <CollationName>utf8mb3_general_ci</CollationName>
-    </schema>
-    <schema id="555" parent="1" name="mysql">
+    <schema id="554" parent="1" name="escuela">
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </schema>
-    <schema id="556" parent="1" name="performance_schema">
+    <schema id="555" parent="1" name="fresa">
+      <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
+    </schema>
+    <schema id="556" parent="1" name="information_schema">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="557" parent="1" name="swapshop">
+    <schema id="557" parent="1" name="mysql">
+      <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
+    </schema>
+    <schema id="558" parent="1" name="performance_schema">
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </schema>
+    <schema id="559" parent="1" name="swapshop">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-02.08:58:30</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-03.12:45:59</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </schema>
-    <schema id="558" parent="1" name="sys">
+    <schema id="560" parent="1" name="sys">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="559" parent="1" name="test">
-      <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
-    </schema>
-    <user id="560" parent="1" name="mariadb.sys">
+    <user id="561" parent="1" name="mariadb.sys">
       <Host>localhost</Host>
     </user>
-    <user id="561" parent="1" name="root">
+    <user id="562" parent="1" name="root">
       <Host>127.0.0.1</Host>
     </user>
-    <user id="562" parent="1" name="root">
-      <Host>::1</Host>
-    </user>
     <user id="563" parent="1" name="root">
-      <Host>desktop-po9u59p</Host>
+      <Host>::1</Host>
     </user>
     <user id="564" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="565" parent="557" name="conversaciones">
+    <user id="565" parent="1" name="root">
+      <Host>natur824</Host>
+    </user>
+    <table id="566" parent="559" name="conversaciones">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </table>
-    <table id="566" parent="557" name="intercambios">
+    <table id="567" parent="559" name="intercambios">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </table>
-    <table id="567" parent="557" name="mensajes">
+    <table id="568" parent="559" name="mensajes">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </table>
-    <table id="568" parent="557" name="prendas">
+    <table id="569" parent="559" name="prendas">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </table>
-    <table id="569" parent="557" name="usuarios">
+    <table id="570" parent="559" name="usuarios">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </table>
-    <table id="570" parent="557" name="valoraciones">
+    <table id="571" parent="559" name="valoraciones">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </table>
-    <column id="571" parent="565" name="id">
+    <column id="572" parent="566" name="id">
       <AutoIncrement>11</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="572" parent="565" name="id_usuario1">
+    <column id="573" parent="566" name="id_usuario1">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="573" parent="565" name="id_usuario2">
+    <column id="574" parent="566" name="id_usuario2">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="574" parent="565" name="id_intercambio">
+    <column id="575" parent="566" name="id_intercambio">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="575" parent="565" name="creado_en">
+    <column id="576" parent="566" name="creado_en">
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <Position>5</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="576" parent="565" name="fk_conv_usuario1">
+    <foreign-key id="577" parent="566" name="fk_conv_usuario1">
       <ColNames>id_usuario1</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <foreign-key id="577" parent="565" name="fk_conv_usuario2">
+    <foreign-key id="578" parent="566" name="fk_conv_usuario2">
       <ColNames>id_usuario2</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <foreign-key id="578" parent="565" name="fk_conv_intercambio">
+    <foreign-key id="579" parent="566" name="fk_conv_intercambio">
       <ColNames>id_intercambio</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>intercambios</RefTableName>
     </foreign-key>
-    <index id="579" parent="565" name="PRIMARY">
+    <index id="580" parent="566" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="580" parent="565" name="fk_conv_usuario1">
+    <index id="581" parent="566" name="fk_conv_usuario1">
       <ColNames>id_usuario1</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="581" parent="565" name="fk_conv_usuario2">
+    <index id="582" parent="566" name="fk_conv_usuario2">
       <ColNames>id_usuario2</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="582" parent="565" name="fk_conv_intercambio">
+    <index id="583" parent="566" name="fk_conv_intercambio">
       <ColNames>id_intercambio</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="583" parent="565" name="PRIMARY">
+    <key id="584" parent="566" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="584" parent="566" name="id">
+    <column id="585" parent="567" name="id">
       <AutoIncrement>11</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="585" parent="566" name="id_prenda">
+    <column id="586" parent="567" name="id_prenda">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="586" parent="566" name="id_prenda2">
+    <column id="587" parent="567" name="id_prenda2">
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="587" parent="566" name="id_solicitante">
+    <column id="588" parent="567" name="id_solicitante">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="588" parent="566" name="id_dueno">
+    <column id="589" parent="567" name="id_dueno">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="589" parent="566" name="tipo">
+    <column id="590" parent="567" name="tipo">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>enum(&apos;intercambio&apos;, &apos;prestamo&apos;)|0e</StoredType>
     </column>
-    <column id="590" parent="566" name="estado">
+    <column id="591" parent="567" name="estado">
       <DefaultExpression>&apos;pendiente&apos;</DefaultExpression>
       <Position>7</Position>
       <StoredType>enum(&apos;pendiente&apos;, &apos;aceptado&apos;, &apos;rechazado&apos;, &apos;finalizado&apos;)|0e</StoredType>
     </column>
-    <column id="591" parent="566" name="fecha_inicio">
+    <column id="592" parent="567" name="fecha_inicio">
       <Position>8</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="592" parent="566" name="fecha_fin">
+    <column id="593" parent="567" name="fecha_fin">
       <Position>9</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="593" parent="566" name="creado_en">
+    <column id="594" parent="567" name="creado_en">
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <Position>10</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="594" parent="566" name="fk_intercambio_prenda">
+    <foreign-key id="595" parent="567" name="fk_intercambio_prenda">
       <ColNames>id_prenda</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>prendas</RefTableName>
     </foreign-key>
-    <foreign-key id="595" parent="566" name="fk_intercambio_prenda2">
+    <foreign-key id="596" parent="567" name="fk_intercambio_prenda2">
       <ColNames>id_prenda2</ColNames>
       <OnDelete>set-null</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>prendas</RefTableName>
     </foreign-key>
-    <foreign-key id="596" parent="566" name="fk_intercambio_solicitante">
+    <foreign-key id="597" parent="567" name="fk_intercambio_solicitante">
       <ColNames>id_solicitante</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <foreign-key id="597" parent="566" name="fk_intercambio_dueno">
+    <foreign-key id="598" parent="567" name="fk_intercambio_dueno">
       <ColNames>id_dueno</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <index id="598" parent="566" name="PRIMARY">
+    <index id="599" parent="567" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="599" parent="566" name="fk_intercambio_prenda">
+    <index id="600" parent="567" name="fk_intercambio_prenda">
       <ColNames>id_prenda</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="600" parent="566" name="fk_intercambio_prenda2">
+    <index id="601" parent="567" name="fk_intercambio_prenda2">
       <ColNames>id_prenda2</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="601" parent="566" name="fk_intercambio_solicitante">
+    <index id="602" parent="567" name="fk_intercambio_solicitante">
       <ColNames>id_solicitante</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="602" parent="566" name="fk_intercambio_dueno">
+    <index id="603" parent="567" name="fk_intercambio_dueno">
       <ColNames>id_dueno</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="603" parent="566" name="PRIMARY">
+    <key id="604" parent="567" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="604" parent="567" name="id">
+    <column id="605" parent="568" name="id">
       <AutoIncrement>11</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="605" parent="567" name="id_conversacion">
+    <column id="606" parent="568" name="id_conversacion">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="606" parent="567" name="id_remitente">
+    <column id="607" parent="568" name="id_remitente">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="607" parent="567" name="contenido">
+    <column id="608" parent="568" name="contenido">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="608" parent="567" name="creado_en">
+    <column id="609" parent="568" name="creado_en">
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <Position>5</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="609" parent="567" name="fk_msg_conversacion">
+    <foreign-key id="610" parent="568" name="fk_msg_conversacion">
       <ColNames>id_conversacion</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>conversaciones</RefTableName>
     </foreign-key>
-    <foreign-key id="610" parent="567" name="fk_msg_remitente">
+    <foreign-key id="611" parent="568" name="fk_msg_remitente">
       <ColNames>id_remitente</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <index id="611" parent="567" name="PRIMARY">
+    <index id="612" parent="568" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="612" parent="567" name="fk_msg_conversacion">
+    <index id="613" parent="568" name="fk_msg_conversacion">
       <ColNames>id_conversacion</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="613" parent="567" name="fk_msg_remitente">
+    <index id="614" parent="568" name="fk_msg_remitente">
       <ColNames>id_remitente</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="614" parent="567" name="PRIMARY">
+    <key id="615" parent="568" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="615" parent="568" name="id">
+    <column id="616" parent="569" name="id">
       <AutoIncrement>11</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="616" parent="568" name="id_dueno">
+    <column id="617" parent="569" name="id_dueno">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="617" parent="568" name="nombre_prenda">
+    <column id="618" parent="569" name="nombre_prenda">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="618" parent="568" name="descripcion">
+    <column id="619" parent="569" name="descripcion">
       <Position>4</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="619" parent="568" name="talla">
+    <column id="620" parent="569" name="talla">
       <Position>5</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="620" parent="568" name="categoria">
+    <column id="621" parent="569" name="categoria">
       <Position>6</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="621" parent="568" name="condicion">
+    <column id="622" parent="569" name="condicion">
       <Position>7</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="622" parent="568" name="disponible">
+    <column id="623" parent="569" name="disponible">
       <DefaultExpression>1</DefaultExpression>
       <Position>8</Position>
       <StoredType>tinyint(1)|0s</StoredType>
     </column>
-    <column id="623" parent="568" name="creado_en">
+    <column id="624" parent="569" name="creado_en">
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <Position>9</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="624" parent="568" name="fk_prendas_dueno">
+    <foreign-key id="625" parent="569" name="fk_prendas_dueno">
       <ColNames>id_dueno</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <index id="625" parent="568" name="PRIMARY">
+    <index id="626" parent="569" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="626" parent="568" name="fk_prendas_dueno">
+    <index id="627" parent="569" name="fk_prendas_dueno">
       <ColNames>id_dueno</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="627" parent="568" name="PRIMARY">
+    <key id="628" parent="569" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="628" parent="569" name="id">
-      <AutoIncrement>11</AutoIncrement>
+    <column id="629" parent="570" name="id">
+      <AutoIncrement>12</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="629" parent="569" name="nombre_usuario">
+    <column id="630" parent="570" name="nombre_usuario">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="630" parent="569" name="nombre">
+    <column id="631" parent="570" name="nombre">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="631" parent="569" name="apellido1">
+    <column id="632" parent="570" name="apellido1">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="632" parent="569" name="apellido2">
+    <column id="633" parent="570" name="apellido2">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="633" parent="569" name="correo">
+    <column id="634" parent="570" name="correo">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="634" parent="569" name="contrasena">
+    <column id="635" parent="570" name="contrasena">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="635" parent="569" name="fecha_nac">
+    <column id="636" parent="570" name="fecha_nac">
       <Position>8</Position>
-      <StoredType>date|0s</StoredType>
+      <StoredType>datetime(6)|0s</StoredType>
     </column>
-    <column id="636" parent="569" name="creado_en">
+    <column id="637" parent="570" name="creado_en">
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <Position>9</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <index id="637" parent="569" name="PRIMARY">
+    <index id="638" parent="570" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="638" parent="569" name="correo">
+    <index id="639" parent="570" name="correo">
       <ColNames>correo</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="639" parent="569" name="PRIMARY">
+    <key id="640" parent="570" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="640" parent="569" name="correo">
+    <key id="641" parent="570" name="correo">
       <UnderlyingIndexName>correo</UnderlyingIndexName>
     </key>
-    <check id="641" parent="570" name="puntuacion">
-      <ColNames>puntuacion</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Predicate>`puntuacion` between 1 and 5</Predicate>
-    </check>
-    <column id="642" parent="570" name="id">
+    <column id="642" parent="571" name="id">
       <AutoIncrement>11</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="643" parent="570" name="id_valorador">
+    <column id="643" parent="571" name="id_valorador">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="644" parent="570" name="id_valorado">
+    <column id="644" parent="571" name="id_valorado">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="645" parent="570" name="puntuacion">
+    <column id="645" parent="571" name="puntuacion">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>tinyint(4)|0s</StoredType>
+      <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="646" parent="570" name="creado_en">
+    <column id="646" parent="571" name="creado_en">
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <Position>5</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="647" parent="570" name="fk_valorador">
+    <foreign-key id="647" parent="571" name="fk_valorador">
       <ColNames>id_valorador</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <foreign-key id="648" parent="570" name="fk_valorado">
+    <foreign-key id="648" parent="571" name="fk_valorado">
       <ColNames>id_valorado</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <index id="649" parent="570" name="PRIMARY">
+    <index id="649" parent="571" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="650" parent="570" name="fk_valorador">
+    <index id="650" parent="571" name="fk_valorador">
       <ColNames>id_valorador</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="651" parent="570" name="fk_valorado">
+    <index id="651" parent="571" name="fk_valorado">
       <ColNames>id_valorado</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="652" parent="570" name="PRIMARY">
+    <key id="652" parent="571" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

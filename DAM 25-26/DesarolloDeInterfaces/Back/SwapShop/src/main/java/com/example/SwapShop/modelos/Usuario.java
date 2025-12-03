@@ -35,8 +35,5 @@ public class Usuario {
 
     @Column
     private Date fecha_nac;
-
-    @Column(name = "creado_en", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private java.sql.Timestamp creadoEn;
 }
 
