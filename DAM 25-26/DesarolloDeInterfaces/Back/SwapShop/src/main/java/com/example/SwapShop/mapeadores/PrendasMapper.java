@@ -5,6 +5,7 @@ import com.example.SwapShop.dto.PrendasDTO;
 import com.example.SwapShop.modelos.Prendas;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import java.util.List;
 
@@ -16,7 +17,9 @@ public interface PrendasMapper {
     PrendasDTO toDTO (Prendas prendas);
 
     List <PrendasDTO> listToDTOs (List<Prendas> prendasList);
-    List <EstadisticasPrendaDTO> listEstadisticasToDTOs (List<Prendas> prendasDTOList);
 
     List <Prendas> listToEntities (List<PrendasDTO> prendasDTOList);
+
+
+
 }

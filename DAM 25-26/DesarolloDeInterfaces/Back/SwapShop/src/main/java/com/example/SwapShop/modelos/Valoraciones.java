@@ -24,8 +24,5 @@ public class Valoraciones {
 
     @Column(name = "puntuacion", nullable = false)
     private int puntuacion;
-
-    @Column(name = "creado_en", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private java.sql.Timestamp creadoEn;
 }
 

@@ -51,7 +51,4 @@ public class IntercambiosPrestamos {
 
     @Column(name = "fecha_fin")
     private Date fechaFin;
-
-    @Column(name = "creado_en", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Timestamp creadoEn;
 }

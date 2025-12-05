@@ -8,6 +8,34 @@
 -- DROP TABLE IF EXISTS prendas;
 -- DROP TABLE IF EXISTS usuarios;
 
+
+SELECT 
+    p.id AS id,
+    p.nombre_prenda AS nombrePrenda,
+    p.descripcion AS descripcion,
+    p.talla AS talla,
+    p.categoria AS categoria,
+    p.condicion AS condicion,
+    p.disponible AS disponible,
+    p.id_dueno AS id_dueno,
+    COUNT(i.id) AS totalIntercambios
+FROM prendas p
+LEFT JOIN intercambios i ON i.id_prenda = p.id AND i.estado = 'aceptado'
+GROUP BY 
+    p.id, 
+    p.nombre_prenda, 
+    p.descripcion, 
+    p.talla, 
+    p.categoria, 
+    p.condicion, 
+    p.disponible, 
+    p.id_dueno
+ORDER BY totalIntercambios DESC
+LIMIT 5;
+
+
+
+
 -- ============================================================
 -- 1. USUARIOS
 -- ============================================================

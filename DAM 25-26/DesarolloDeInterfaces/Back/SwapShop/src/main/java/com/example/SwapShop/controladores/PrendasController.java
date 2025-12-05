@@ -15,7 +15,7 @@ public class PrendasController {
     private PrendaService prendasService;
 
     @PostMapping
-    public PrendasDTO crearPrenda(PrendasDTO prendasDTO) {
+    public PrendasDTO crearPrenda(@RequestBody PrendasDTO prendasDTO) {
         return prendasService.crearPrenda(prendasDTO);
     }
 
@@ -24,5 +24,5 @@ public class PrendasController {
         return prendasService.buscarPrendaPorTalla(talla);}
 
     @PutMapping("/{id}")
-    public PrendasDTO actualizarPrendaPorId (PrendasDTO prendasDTO) {return prendasService.modificarPrendaPorId(prendasDTO);}
+    public PrendasDTO actualizarPrendaPorId (@PathVariable Integer id, @RequestBody PrendasDTO prendasDTO) {return prendasService.modificarPrendaPorId(id, prendasDTO);}
 }

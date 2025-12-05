@@ -31,9 +31,9 @@ public class PrendaService {
         return prendasMapper.listToDTOs(prendaBuscada);
     }
 
-    public PrendasDTO modificarPrendaPorId (PrendasDTO prendasDTO) {
-        Prendas prenda = prendasRepository.findById(prendasDTO.getId())
-                .orElseThrow(() -> new NoSuchElementException("Prenda no encontrada con id: " + prendasDTO.getId()));
+    public PrendasDTO modificarPrendaPorId (Integer id , PrendasDTO prendasDTO) {
+        Prendas prenda = prendasRepository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Prenda no encontrada con id: " + id));
 
         if (prenda != null) {
             prendasDTO.setNombre_prenda(prendasDTO.getNombre_prenda());
@@ -51,7 +51,6 @@ public class PrendaService {
     }
 
     public List<EstadisticasPrendaDTO> top5PrendasMasIntercambiadasAceptadas() {
-        List<Prendas> prendasMasIntercambiadas = intercambiosPrestamosRepository.buscarTop5Intercambio();
-        return prendasMapper.listEstadisticasToDTOs(prendasMasIntercambiadas);
+        return intercambiosPrestamosRepository.buscarTop5Intercambio();
     }
 }

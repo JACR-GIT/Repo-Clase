@@ -20,21 +20,18 @@ public class Prendas {
     @Column(name = "nombre_prenda", nullable = false, length = 150)
     private String nombrePrenda;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "descripcion", columnDefinition = "TEXT")
     private String descripcion;
 
-    @Column(length = 20)
+    @Column(name = "talla", length = 20)
     private String talla;
 
-    @Column(length = 50)
+    @Column(name = "categoria", length = 50)
     private String categoria;
 
-    @Column(length = 50)
+    @Column(name = "condicion", length = 50)
     private String condicion;
 
-    @Column(nullable = false)
+    @Column(name = "disponible", nullable = false)
     private Boolean disponible = true;
-
-    @Column(name = "creado_en", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private java.sql.Timestamp creadoEn;
 }

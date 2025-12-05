@@ -22,5 +22,4 @@ public class PrendasDTO {
     private String condicion;
     private Boolean disponible;
 
-
 }

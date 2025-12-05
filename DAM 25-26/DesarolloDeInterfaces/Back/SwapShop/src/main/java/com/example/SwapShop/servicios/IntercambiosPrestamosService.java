@@ -2,6 +2,7 @@ package com.example.SwapShop.servicios;
 
 import com.example.SwapShop.dto.IntercambiosPrestamosDTO;
 import com.example.SwapShop.mapeadores.IntercambiosPrestamosMapper;
+import com.example.SwapShop.modelos.EstadoIntercambio;
 import com.example.SwapShop.modelos.IntercambiosPrestamos;
 import com.example.SwapShop.repositorios.IIntercambiosPrestamosRepository;
 import lombok.AllArgsConstructor;
@@ -20,8 +21,7 @@ public class IntercambiosPrestamosService {
         return intercambiosPrestamosMapper.toDTO(intercambioPrestamoGuardado);
     }
 
-    public IntercambiosPrestamosDTO cambiarEstado (IntercambiosPrestamosDTO intercambiosPrestamosDTO) {
-        Integer id = intercambiosPrestamosDTO.getId();
+    public IntercambiosPrestamosDTO cambiarEstado (Integer id, EstadoIntercambio estadoIntercambio) {
         if (id == null) {
             throw new IllegalArgumentException("El id del intercambio o préstamo es requerido para modificar.");
         }
@@ -29,7 +29,7 @@ public class IntercambiosPrestamosService {
         IntercambiosPrestamos existente = intercambiosPrestamosRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Intercambio o préstamo no encontrado con id: " + id));
 
-        existente.setEstado(intercambiosPrestamosDTO.getEstado());
+        existente.setEstado(estadoIntercambio);
         IntercambiosPrestamos intercambioPrestamoGuardado = intercambiosPrestamosRepository.save(existente);
         return intercambiosPrestamosMapper.toDTO(intercambioPrestamoGuardado);
     }

@@ -21,18 +21,13 @@ import org.springframework.web.bind.annotation.*;
         }
 
         @PostMapping("/{id}/valoraciones")
-        public ValoracionesDTO crearValoracionUsuario(ValoracionesDTO valoracionesDTO) {
-            return valoracionesServices.crearValoracion(valoracionesDTO);
+        public ValoracionesDTO crearValoracionUsuario(@PathVariable Integer id, @RequestBody ValoracionesDTO valoracionesDTO) {
+            return valoracionesServices.crearValoracion(id,valoracionesDTO);
         }
 
         @GetMapping("/{id}")
         public UsuarioDTO obtenerUsuarioId(@PathVariable Integer id) {
             return usuarioService.buscarUsuarioPorId(id);
-        }
-
-        @GetMapping("/estadisticas/usuarioActivo")
-        public EstadisticasUsuarioDTO usuarioConMasIntercambios() {
-            return usuarioService.usuarioConMasIntercambios();
         }
 
         @GetMapping("/all")

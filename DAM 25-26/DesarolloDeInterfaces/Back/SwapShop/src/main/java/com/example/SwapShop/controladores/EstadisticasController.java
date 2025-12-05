@@ -24,7 +24,6 @@ public class EstadisticasController {
     public EstadisticasUsuarioDTO usuarioConMasIntercambios() {
         return usuarioService.usuarioConMasIntercambios();
     }
-
     @GetMapping("/prendaPopular")
     public List<EstadisticasPrendaDTO> prendaPopular() {
         return prendasService.top5PrendasMasIntercambiadasAceptadas();
