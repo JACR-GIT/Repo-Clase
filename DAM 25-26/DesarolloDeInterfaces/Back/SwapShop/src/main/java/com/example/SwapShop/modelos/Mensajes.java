@@ -28,7 +28,5 @@ public class Mensajes {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String contenido;
 
-    @Column(name = "creado_en", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Timestamp creadoEn;
 }
 
