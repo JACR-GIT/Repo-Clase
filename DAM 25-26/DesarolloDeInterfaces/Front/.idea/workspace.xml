@@ -5,11 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="366493aa-6609-450b-aabd-b5f02ac8a1f9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/components/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/components/footer/footer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/components/footer/footer.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/components/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/components/footer/footer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/prendas-services/prendas-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/usuario-services/usuario-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/PrendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/PrendasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/repositorios/IPrendasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/repositorios/IPrendasRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/servicios/PrendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/servicios/PrendaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Conversaciones.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/IntercambiosPrestamos.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Mensajes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Prendas.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Usuario.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Valoraciones.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/estado-intercambio.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/tipo-intercambio.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/conversaciones-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/conversaciones-services/conversaciones-service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/conversaciones-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/conversaciones-services/conversaciones-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/intercambiosprestamos-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/intercambiosprestamos-services/intercambiosprestamos-service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/intercambiosprestamos-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/intercambiosprestamos-services/intercambiosprestamos-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/mensajes-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/mensajes-services/mensajes-service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/mensajes-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/mensajes-services/mensajes-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/prendas-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/prendas-services/prendas-service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/prendas-service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/usuario-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/usuario-services/usuario-service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/usuario-service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/valoraciones-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/valoraciones-services/valoraciones-service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/valoraciones-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/valoraciones-services/valoraciones-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/theme/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +67,19 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\pages" />
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\servicios\valoraciones-services" />
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\servicios\usuario-services" />
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\servicios\prendas-services" />
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\servicios\mensajes-services" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
       </set>
     </attachedChunks>
   </component>
@@ -60,10 +92,20 @@
       <updated>1761822343013</updated>
       <workItem from="1761822344230" duration="2739000" />
       <workItem from="1762422678261" duration="9021000" />
+      <workItem from="1765449889951" duration="4936000" />
+      <workItem from="1765454928544" duration="2394000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

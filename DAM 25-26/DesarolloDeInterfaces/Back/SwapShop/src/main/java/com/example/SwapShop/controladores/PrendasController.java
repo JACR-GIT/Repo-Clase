@@ -24,5 +24,12 @@ public class PrendasController {
         return prendasService.buscarPrendaPorTalla(talla);}
 
     @PutMapping("/{id}")
-    public PrendasDTO actualizarPrendaPorId (@PathVariable Integer id, @RequestBody PrendasDTO prendasDTO) {return prendasService.modificarPrendaPorId(id, prendasDTO);}
+    public PrendasDTO actualizarPrendaPorId (@PathVariable Integer id, @RequestBody PrendasDTO prendasDTO) {
+    return prendasService.modificarPrendaPorId(id, prendasDTO);
+}
+
+    @GetMapping("/disponibles")
+    public List<PrendasDTO> obtenerPrendasDisponibles() {
+        return prendasService.findAllPrendasWhenDisponible();
+    }
 }

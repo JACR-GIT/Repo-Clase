@@ -14,7 +14,7 @@ import java.sql.Timestamp;
 public class PrendasDTO {
 
     private Integer id;
-    private Usuario id_dueno;
+    private UsuarioDTO id_dueno;
     private String nombre_prenda;
     private String descripcion;
     private String talla;

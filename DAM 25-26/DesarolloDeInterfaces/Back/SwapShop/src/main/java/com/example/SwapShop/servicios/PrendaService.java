@@ -53,4 +53,9 @@ public class PrendaService {
     public List<EstadisticasPrendaDTO> top5PrendasMasIntercambiadasAceptadas() {
         return intercambiosPrestamosRepository.buscarTop5Intercambio();
     }
+
+    public List<PrendasDTO> findAllPrendasWhenDisponible() {
+        List<Prendas> prendasDisponibles = prendasRepository.findByDisponibleTrue();
+        return prendasMapper.listToDTOs(prendasDisponibles);
+    }
 }

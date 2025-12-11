@@ -1,2 +1,12 @@
-// For information on how to create your own theme, please see:
+:root {
+  --ion-color-primary: #FF6B6B; // Rojo-naranja principal
+  --ion-color-primary-rgb: 255,107,107;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #e05e5e;
+  --ion-color-primary-tint: #ff7a7a;
+
+  --ion-color-secondary: #FFD93D; // Amarillo para botones +
+  --ion-color-secondary-rgb: 255,217,61;
+  // ... otros colores según necesites
+}// For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/

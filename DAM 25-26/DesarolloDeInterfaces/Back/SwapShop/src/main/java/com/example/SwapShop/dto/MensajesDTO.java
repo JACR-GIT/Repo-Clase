@@ -15,5 +15,4 @@ public class MensajesDTO {
     private Integer id_conversacion;
     private Integer id_remitente;
     private String contenido;
-    private Timestamp creado_en;
 }

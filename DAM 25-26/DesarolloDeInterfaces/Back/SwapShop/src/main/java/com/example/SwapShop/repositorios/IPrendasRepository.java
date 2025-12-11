@@ -13,4 +13,6 @@ public interface IPrendasRepository extends JpaRepository<Prendas, Integer> {
 
     @Query(value = "SELECT * FROM Prendas p WHERE p.talla = :talla", nativeQuery = true)
     List<Prendas> buscarPorTalla(@Param("talla") String talla);
+
+    List<Prendas> findByDisponibleTrue();
 }

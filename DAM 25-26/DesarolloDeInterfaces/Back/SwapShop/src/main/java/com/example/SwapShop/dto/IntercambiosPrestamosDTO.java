@@ -18,10 +18,10 @@ import java.sql.Timestamp;
 public class IntercambiosPrestamosDTO {
 
     private Integer id;
-    private Prendas id_prenda;
-    private Prendas id_prenda2;
-    private Usuario id_solicitante;
-    private Usuario id_dueno;
+    private PrendasDTO id_prenda;
+    private PrendasDTO id_prenda2;
+    private UsuarioDTO id_solicitante;
+    private UsuarioDTO id_dueno;
 
     private TipoIntercambio tipo;
     private EstadoIntercambio estado;
