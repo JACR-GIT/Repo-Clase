@@ -13,7 +13,7 @@ public interface IIntercambiosPrestamosRepository extends JpaRepository<Intercam
 
 
     @Query("""
-        SELECT new com.example.SwapShop.dto.EstadisticasPrendaDTO(
+        SELECT EstadisticasPrendaDTO(
             p.id,
             p.nombrePrenda,
             p.descripcion,

@@ -24,13 +24,16 @@ public class Prendas {
     private String descripcion;
 
     @Column(name = "talla", length = 20)
-    private String talla;
+    private Talla talla;
+
+    @Column(name = "estilo", length = 30)
+    private Estilo estilo;
 
     @Column(name = "categoria", length = 50)
-    private String categoria;
+    private Categoria categoria;
 
     @Column(name = "condicion", length = 50)
-    private String condicion;
+    private Condicion condicion;
 
     @Column(name = "disponible", nullable = false)
     private Boolean disponible = true;

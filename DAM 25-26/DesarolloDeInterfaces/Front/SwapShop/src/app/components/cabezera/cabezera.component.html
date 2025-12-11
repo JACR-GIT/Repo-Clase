@@ -1,0 +1,46 @@
+<ion-header>
+  <!-- Barra superior principal con título y botones -->
+  <ion-toolbar color="primary">
+    <div class="contenido-header">
+      <!-- Flecha para volver atrás -->
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="" icon="chevron-back"></ion-back-button>
+      </ion-buttons>
+
+      <!-- Título centrado -->
+      <ion-title>SwapCloset</ion-title>
+
+      <!-- Icono de perfil de usuario a la derecha -->
+      <ion-buttons slot="end">
+        <ion-button routerLink="/profile">
+          <ion-icon name="person-circle-outline" size="large"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+
+  <!-- Barra de búsqueda con filtros y lupa -->
+  <ion-toolbar color="primary">
+    <ion-searchbar
+      placeholder="Buscar prenda..."
+      show-cancel-button="never"
+      (ionInput)="alBuscar($event)"
+      (ionClear)="alLimpiar()"
+      class="barra-busqueda-personalizada">
+    </ion-searchbar>
+
+    <!-- Botón de filtros (desplegable izquierdo dentro de la barra) -->
+    <ion-buttons slot="start" class="boton-filtros">
+      <ion-button fill="clear" (click)="abrirFiltros()">
+        <ion-icon name="options-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Icono de lupa personalizado (derecha) -->
+    <ion-buttons slot="end" class="icono-lupa">
+      <ion-button fill="clear">
+        <ion-icon name="search-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

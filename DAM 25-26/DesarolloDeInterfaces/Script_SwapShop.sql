@@ -9,33 +9,6 @@
 -- DROP TABLE IF EXISTS usuarios;
 
 
-SELECT 
-    p.id AS id,
-    p.nombre_prenda AS nombrePrenda,
-    p.descripcion AS descripcion,
-    p.talla AS talla,
-    p.categoria AS categoria,
-    p.condicion AS condicion,
-    p.disponible AS disponible,
-    p.id_dueno AS id_dueno,
-    COUNT(i.id) AS totalIntercambios
-FROM prendas p
-LEFT JOIN intercambios i ON i.id_prenda = p.id AND i.estado = 'aceptado'
-GROUP BY 
-    p.id, 
-    p.nombre_prenda, 
-    p.descripcion, 
-    p.talla, 
-    p.categoria, 
-    p.condicion, 
-    p.disponible, 
-    p.id_dueno
-ORDER BY totalIntercambios DESC
-LIMIT 5;
-
-
-
-
 -- ============================================================
 -- 1. USUARIOS
 -- ============================================================
@@ -62,6 +35,7 @@ CREATE TABLE IF NOT EXISTS prendas (
     descripcion TEXT,
     talla VARCHAR(20),
     categoria VARCHAR(50),
+    estilo VARCHAR(30),
     condicion VARCHAR(50),
     disponible BOOLEAN DEFAULT TRUE,
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -193,18 +167,18 @@ VALUES
 -- ============================================================
 -- 2. PRENDAS (10 registros)
 -- ============================================================
-INSERT INTO prendas (id_dueno, nombre_prenda, descripcion, talla, categoria, condicion)
+INSERT INTO prendas (id_dueno, nombre_prenda, descripcion, talla, categoria, estilo, condicion)
 VALUES
-(1, 'Camiseta Roja', 'Camiseta básica roja', 'M', 'Ropa', 'Buena'),
-(1, 'Pantalón Vaquero', 'Vaqueros azules', 'L', 'Ropa', 'Excelente'),
-(2, 'Sudadera Negra', 'Sudadera con capucha', 'M', 'Ropa', 'Buena'),
-(3, 'Chaqueta Cuero', 'Chaqueta estilo biker', 'L', 'Abrigo', 'Excelente'),
-(4, 'Vestido Azul', 'Vestido elegante azul', 'S', 'Ropa', 'Buena'),
-(5, 'Zapatillas Nike', 'Zapatillas deportivas', '42', 'Calzado', 'Regular'),
-(6, 'Gorra Negra', 'Gorra deportiva ajustable', 'Única', 'Accesorio', 'Buena'),
-(7, 'Bolso Marrón', 'Bolso piel sintética', 'Única', 'Accesorio', 'Excelente'),
-(8, 'Falda Roja', 'Falda ajustada', 'S', 'Ropa', 'Buena'),
-(9, 'Polo Blanco', 'Polo algodón blanco', 'M', 'Ropa', 'Buena');
+(1, 'Camiseta Roja', 'Camiseta básica roja', 'M', 'Ropa','CASUAL', 'Buena'),
+(1, 'Pantalón Vaquero', 'Vaqueros azules', 'L', 'Ropa','CASUAL', 'Excelente'),
+(2, 'Sudadera Negra', 'Sudadera con capucha', 'M', 'Ropa','CASUAL', 'Buena'),
+(3, 'Chaqueta Cuero', 'Chaqueta estilo biker', 'L', 'Abrigo','CASUAL', 'Excelente'),
+(4, 'Vestido Azul', 'Vestido elegante azul', 'S', 'Ropa','CASUAL', 'Buena'),
+(5, 'Zapatillas Nike', 'Zapatillas deportivas', '42', 'Calzado','CASUAL', 'Regular'),
+(6, 'Gorra Negra', 'Gorra deportiva ajustable', 'Única', 'Accesorio','CASUAL', 'Buena'),
+(7, 'Bolso Marrón', 'Bolso piel sintética', 'Única', 'Accesorio','CASUAL', 'Excelente'),
+(8, 'Falda Roja', 'Falda ajustada', 'S', 'Ropa','CASUAL', 'Buena'),
+(9, 'Polo Blanco', 'Polo algodón blanco', 'M', 'Ropa','CASUAL', 'Buena');
 
 
 -- ============================================================

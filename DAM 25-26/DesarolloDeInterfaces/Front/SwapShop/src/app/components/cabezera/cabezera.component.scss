@@ -1,0 +1,50 @@
+.barra-busqueda-personalizada {
+  --background: var(--ion-color-light);        // Fondo gris claro como en la imagen
+  --color: var(--ion-color-medium);
+  --placeholder-color: var(--ion-color-medium);
+  --icon-color: var(--ion-color-medium);
+  --border-radius: 50px;                       // Bordes muy redondeados
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding-left: 50px;                          // Espacio para el botón de filtros
+  padding-right: 50px;                         // Espacio para la lupa
+}
+
+.contenido-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+
+// Posicionar el botón de filtros y la lupa dentro de la barra de búsqueda
+.boton-filtros {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.icono-lupa {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+ion-back-button {
+  --color: white;
+  --icon-font-size: 30px;
+}
+
+ion-button {
+  --padding-start: 0;
+  --padding-end: 0;
+}
