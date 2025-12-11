@@ -10,8 +10,10 @@
   height: 44px;
   margin-left: 16px;
   margin-top: 16px;
-  --padding-start: 0;
-  --padding-end: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 
   ion-icon {
     color: white;
@@ -30,6 +32,7 @@
   align-items: center;
   height: 100%;
   padding: 20px;
+  position: relative; /* Para posicionar el botón atrás */
 }
 
 .logo-section {
@@ -46,7 +49,6 @@
     font-weight: 700;
     color: #222222;
     margin: 0;
-    letter-spacing: 0.5px;
   }
 }
 
@@ -85,38 +87,6 @@
   --placeholder-opacity: 0.6;
 }
 
-.options-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 28px 0 36px 0;
-}
-
-.checkbox-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.custom-checkbox {
-  --size: 22px;
-  --background-checked: #000000;
-  --border-color-checked: #000000;
-}
-
-.checkbox-label {
-  font-size: 1rem;
-  color: #333333;
-  font-weight: 500;
-}
-
-.register-link {
-  font-size: 1rem;
-  color: #000000;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 .login-button {
   --background: #000000;
   --color: white;
@@ -126,18 +96,18 @@
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0.5px;
+  margin-top: 20px;
 }
 
-.register-link {
-  font-size: 1rem;
+/* Para el ion-datetime (fecha) quede bonito como los inputs */
+ion-datetime {
+  --background: #F8F8F8;
+  --padding-start: 18px;
+  --padding-end: 18px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --border-radius: 14px;
+  font-size: 1.05rem;
+  height: 52px;
   color: #000000;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer; /* Para que se vea como enlace clickable */
 }
-
-.register-link:hover {
-  text-decoration: underline; /* Opcional: subrayado al pasar el ratón */
-}
-
-

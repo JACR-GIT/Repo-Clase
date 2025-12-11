@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CabezeraComponent } from './cabezera.component';
+import { CabeceraComponent } from './cabecera.component';
 
-describe('CabezeraComponent', () => {
-  let component: CabezeraComponent;
-  let fixture: ComponentFixture<CabezeraComponent>;
+describe('CabeceraComponent', () => {
+  let component: CabeceraComponent;
+  let fixture: ComponentFixture<CabeceraComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CabezeraComponent ],
+      declarations: [ CabeceraComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CabezeraComponent);
+    fixture = TestBed.createComponent(CabeceraComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

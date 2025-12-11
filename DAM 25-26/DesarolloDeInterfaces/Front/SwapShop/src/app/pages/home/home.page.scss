@@ -1,0 +1,29 @@
+.search-bar {
+  padding: 16px;
+  background: var(--ion-background-color);
+}
+
+ion-grid {
+  padding: 0 8px;
+}
+
+ion-col {
+  padding: 8px;
+}
+
+// Opcional: quitar padding extra si tu carta-prenda ya lo tiene
+app-carta-prenda {
+  display: block;
+  width: 100%;
+}
+
+// Botón flotante más grande y amarillo
+ion-fab-button {
+  --box-shadow: 0 4px 16px rgba(255, 193, 7, 0.4);
+  width: 64px;
+  height: 64px;
+}
+
+ion-icon {
+  font-size: 36px;
+}

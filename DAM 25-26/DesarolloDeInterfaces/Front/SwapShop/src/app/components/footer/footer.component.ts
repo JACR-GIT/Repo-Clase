@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {IonFab, IonFabButton, IonIcon, IonTabBar, IonTabButton, IonTabs} from "@ionic/angular/standalone";
 import { addIcons} from "ionicons";
 import { addCircleOutline, chatboxOutline, homeOutline } from "ionicons/icons";
@@ -16,7 +16,7 @@ import { addCircleOutline, chatboxOutline, homeOutline } from "ionicons/icons";
     IonTabButton
   ]
 })
-export class FooterComponent  implements OnInit {
+export class FooterComponent   {
 
   constructor() {
     addIcons({
@@ -26,6 +26,6 @@ export class FooterComponent  implements OnInit {
     });
   }
 
-  ngOnInit() {}
+
 
 }

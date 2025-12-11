@@ -1,7 +1,6 @@
 package com.example.SwapShop.dto;
 
-import com.example.SwapShop.modelos.Talla;
-import com.example.SwapShop.modelos.Usuario;
+import com.example.SwapShop.modelos.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,8 +18,9 @@ public class PrendasDTO {
     private String nombre_prenda;
     private String descripcion;
     private Talla talla;
-    private String categoria;
-    private String condicion;
+    private Categoria categoria;
+    private Estilo estilo;
+    private Condicion condicion;
     private Boolean disponible;
 
 }

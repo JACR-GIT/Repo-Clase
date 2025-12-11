@@ -1,17 +1,61 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>LOGING</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="login-background">
+  <div class="login-wrapper">
+    <!-- Logo y título -->
+    <div class="logo-section ion-text-center">
+      <div class="swap-logo">
+        <svg viewBox="0 0 120 120" class="shirt-icon">
+          <path d="M60 25 L35 50 L35 95 L48 95 L48 70 L72 70 L72 95 L85 95 L85 50 Z" fill="#FF4444"/>
+          <circle cx="48" cy="38" r="6" fill="#FF4444"/>
+          <circle cx="72" cy="38" r="6" fill="#FF4444"/>
+          <path d="M42 44 Q60 55 78 44" stroke="#FF4444" stroke-width="5" fill="none"/>
+          <!-- Flecha izquierda (turquesa) -->
+          <path d="M30 60 Q10 80 30 100" fill="none" stroke="#00C8AA" stroke-width="7" marker-end="url(#arrow1)"/>
+          <!-- Flecha derecha (amarillo) -->
+          <path d="M90 100 Q110 80 90 60" fill="none" stroke="#FFCC00" stroke-width="7" marker-end="url(#arrow2)"/>
+          <defs>
+            <marker id="arrow1" markerWidth="12" markerHeight="12" refX="10" refY="3.5" orient="auto">
+              <path d="M0,0 L0,7 L10,3.5 z" fill="#00C8AA"/>
+            </marker>
+            <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="3.5" orient="auto">
+              <path d="M0,0 L0,7 L10,3.5 z" fill="#FFCC00"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+      <h1>SwapShop</h1>
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <div class="ion-padding">
-    <app-formulario-login></app-formulario-login>
+    <!-- Tarjeta del formulario -->
+    <div class="login-card">
+      <form>
+        <!-- Email -->
+        <div class="input-group">
+          <ion-label class="input-label">Email</ion-label>
+          <ion-input type="email" placeholder="Email" class="custom-input"></ion-input>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="input-group">
+          <ion-label class="input-label">Contraseña</ion-label>
+          <ion-input type="password" placeholder="Contraseña" class="custom-input"></ion-input>
+        </div>
+
+        <!-- Mantener sesión + Registrarse -->
+        <div class="options-row">
+          <div class="checkbox-group">
+            <ion-checkbox class="custom-checkbox"></ion-checkbox>
+            <ion-label class="checkbox-label">Mantener sesión</ion-label>
+          </div>
+          <ion-button fill="clear" routerLink="/register" class="register-link">
+            Registrarse
+          </ion-button>
+        </div>
+
+        <!-- Botón -->
+        <ion-button expand="block" class="login-button">
+          Iniciar Sesión
+        </ion-button>
+      </form>
+    </div>
   </div>
 </ion-content>
-<app-footer></app-footer>

@@ -1,0 +1,48 @@
+<ion-header>
+  <!-- Usamos tu componente cabecera personalizado -->
+  <app-cabecera></app-cabecera>
+</ion-header>
+
+<ion-content>
+  <!-- Barra de búsqueda (opcional, si quieres mantenerla) -->
+  <div class="search-bar">
+    <ion-searchbar placeholder="Buscar prendas..."></ion-searchbar>
+  </div>
+
+  <!-- Grid de prendas (2 columnas) usando tu componente carta-prenda -->
+  <ion-grid>
+    <ion-row>
+      <!-- Ejemplo de 6 prendas (puedes repetir o usar *ngFor con datos reales) -->
+      <ion-col size="6">
+        <app-carta-prenda></app-carta-prenda>
+      </ion-col>
+      <ion-col size="6">
+        <app-carta-prenda></app-carta-prenda>
+      </ion-col>
+      <ion-col size="6">
+        <app-carta-prenda></app-carta-prenda>
+      </ion-col>
+      <ion-col size="6">
+        <app-carta-prenda></app-carta-prenda>
+      </ion-col>
+      <ion-col size="6">
+        <app-carta-prenda></app-carta-prenda>
+      </ion-col>
+      <ion-col size="6">
+        <app-carta-prenda></app-carta-prenda>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Botón flotante + grande amarillo -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <!-- Usamos tu componente footer personalizado -->
+  <app-footer></app-footer>
+</ion-footer>

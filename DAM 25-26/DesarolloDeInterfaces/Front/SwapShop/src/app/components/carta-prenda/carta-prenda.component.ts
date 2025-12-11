@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {IonCard, IonCardContent, IonCardHeader, IonCardTitle} from "@ionic/angular/standalone";
 
 @Component({
@@ -12,10 +12,10 @@ import {IonCard, IonCardContent, IonCardHeader, IonCardTitle} from "@ionic/angul
     IonCardContent
   ]
 })
-export class CartaPrendaComponent  implements OnInit {
+export class CartaPrendaComponent   {
 
   constructor() { }
 
-  ngOnInit() {}
+
 
 }

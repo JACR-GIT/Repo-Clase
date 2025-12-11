@@ -7,6 +7,7 @@ export interface PrendasDTO {
   descripcion?: string;
   talla?: string;
   categoria?: string;
+  estilos?: string;
   condicion?: string;
   disponible?: boolean;
 }
