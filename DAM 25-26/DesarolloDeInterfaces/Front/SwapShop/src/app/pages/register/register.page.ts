@@ -6,7 +6,7 @@ import {
   IonInput,
   IonLabel,
   IonCheckbox, // Si lo usas en el futuro
-  IonDatetime
+  IonDatetime, IonRouterLink
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -20,7 +20,7 @@ import {
     IonIcon,
     IonInput,
     IonLabel,
-    IonDatetime,
+    IonRouterLink,
     // IonCheckbox,  // Descomenta si lo necesitas más adelante
     // CommonModule, FormsModule si usas ngModel, etc.
   ]

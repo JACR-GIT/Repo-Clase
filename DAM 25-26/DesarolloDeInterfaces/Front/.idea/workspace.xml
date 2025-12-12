@@ -5,34 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="366493aa-6609-450b-aabd-b5f02ac8a1f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/prendas-services/prendas-service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/usuario-services/usuario-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/PrendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/PrendasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/repositorios/IPrendasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/repositorios/IPrendasRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/servicios/PrendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/servicios/PrendaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Conversaciones.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/IntercambiosPrestamos.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Mensajes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Prendas.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Usuario.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/Valoraciones.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/estado-intercambio.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/modelos/tipo-intercambio.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/conversaciones-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/conversaciones-services/conversaciones-service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/conversaciones-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/conversaciones-services/conversaciones-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/intercambiosprestamos-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/intercambiosprestamos-services/intercambiosprestamos-service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/intercambiosprestamos-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/intercambiosprestamos-services/intercambiosprestamos-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/mensajes-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/mensajes-services/mensajes-service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/mensajes-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/mensajes-services/mensajes-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/prendas-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/prendas-services/prendas-service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/prendas-service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/usuario-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/usuario-services/usuario-service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/usuario-service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/valoraciones-service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/valoraciones-services/valoraciones-service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/servicios/valoraciones-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/servicios/valoraciones-services/valoraciones-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/theme/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/pages/register/register.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/pages/register/register.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +30,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.register.page.ts.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -79,7 +57,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28539.21" />
       </set>
     </attachedChunks>
   </component>
@@ -94,11 +72,25 @@
       <workItem from="1762422678261" duration="9021000" />
       <workItem from="1765449889951" duration="4936000" />
       <workItem from="1765454928544" duration="2394000" />
+      <workItem from="1765535845036" duration="97000" />
+      <workItem from="1765535946498" duration="2644000" />
+      <workItem from="1765539368937" duration="335000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/SwapShop/src/app/app.component.ts</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
