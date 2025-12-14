@@ -6,6 +6,8 @@ import com.example.SwapShop.servicios.IntercambiosPrestamosService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid; // Importar la anotación @Valid de Jakarta
+
 @RestController
 @AllArgsConstructor
 @RequestMapping("/intercambios-prestamos")
@@ -14,7 +16,7 @@ public class IntercambiosPrestamosController {
     private IntercambiosPrestamosService intercambiosPrestamosService;
 
     @PostMapping
-    public IntercambiosPrestamosDTO crearIntercambioPrestamo(@RequestBody IntercambiosPrestamosDTO intercambiosPrestamosDTO) {
+    public IntercambiosPrestamosDTO crearIntercambioPrestamo(@Valid @RequestBody IntercambiosPrestamosDTO intercambiosPrestamosDTO) {
         return intercambiosPrestamosService.crearIntercambioPrestamo(intercambiosPrestamosDTO);
     }
 

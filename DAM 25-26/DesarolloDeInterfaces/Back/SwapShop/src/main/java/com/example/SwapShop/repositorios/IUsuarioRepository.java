@@ -3,6 +3,9 @@ package com.example.SwapShop.repositorios;
 import com.example.SwapShop.dto.EstadisticasUsuarioDTO;
 import com.example.SwapShop.dto.UsuarioDTO;
 import com.example.SwapShop.modelos.Usuario;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -10,6 +13,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Repository
@@ -29,4 +33,8 @@ public interface IUsuarioRepository extends JpaRepository<Usuario, Integer>{
              "ORDER BY total_intercambios_aceptados DESC\n" +
              "LIMIT 1;\n", nativeQuery = true)
      EstadisticasUsuarioDTO usuarioConMasIntercambios();
+
+    Optional<Usuario> findByNombreUsuario(@NotBlank(message = "El nombre de usuario no puede estar vacío") @Size(min = 3, max = 50, message = "El nombre de usuario debe tener entre 3 y 50 caracteres") String nombreUsuario);
+
+    Optional<Usuario> findByCorreo(@NotBlank(message = "El correo no puede estar vacío") @Email(message = "El formato del correo electrónico no es válido") String correo);
 }
