@@ -9,31 +9,30 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-    @AllArgsConstructor
-    @RequestMapping("/usuarios")
-    public class UsuarioController {
-        private UsuarioService usuarioService;
-        private ValoracionesServices valoracionesServices;
+@AllArgsConstructor
+@RequestMapping("/usuarios")
+public class UsuarioController {
+    private UsuarioService usuarioService;
+    private ValoracionesServices valoracionesServices;
 
-        @PostMapping
-        public UsuarioDTO crearUsuario(@RequestBody UsuarioDTO usuarioDTO) {
-            return usuarioService.crearUsuario(usuarioDTO);
-        }
-
-        @PostMapping("/{id}/valoraciones")
-        public ValoracionesDTO crearValoracionUsuario(@PathVariable Integer id, @RequestBody ValoracionesDTO valoracionesDTO) {
-            return valoracionesServices.crearValoracion(id,valoracionesDTO);
-        }
-
-        @GetMapping("/{id}")
-        public UsuarioDTO obtenerUsuarioId(@PathVariable Integer id) {
-            return usuarioService.buscarUsuarioPorId(id);
-        }
-
-        @GetMapping("/all")
-        public Iterable<UsuarioDTO> obtenerTodosLosUsuarios() {
-            return usuarioService.obtenerTodosLosUsuarios();
-        }
-
-
+    @PostMapping
+    public UsuarioDTO crearUsuario(@RequestBody UsuarioDTO usuarioDTO) {
+        return usuarioService.crearUsuario(usuarioDTO);
     }
+
+    @PostMapping("/{id}/valoraciones")
+    public ValoracionesDTO crearValoracionUsuario(@PathVariable("id") Integer idValorado, @RequestBody ValoracionesDTO valoracionesDTO) {
+        valoracionesDTO.setValorado(idValorado);
+        return valoracionesServices.crearValoracion(idValorado, valoracionesDTO);
+    }
+
+    @GetMapping("/{id}")
+    public UsuarioDTO obtenerUsuarioId(@PathVariable Integer id) {
+        return usuarioService.buscarUsuarioPorId(id);
+    }
+
+    @GetMapping("/all")
+    public Iterable<UsuarioDTO> obtenerTodosLosUsuarios() {
+        return usuarioService.obtenerTodosLosUsuarios();
+    }
+}

@@ -11,11 +11,11 @@ import java.math.BigInteger;
 @NoArgsConstructor
 public class EstadisticasUsuarioDTO {
 
-    private Integer id;
-    private UsuarioDTO nombre_usuario;
-    private UsuarioDTO nombre;
-    private UsuarioDTO apellido1;
-    private UsuarioDTO apellido2;
+    private Integer id_usuario;
+    private String nombre_usuario;
+    private String nombre;
+    private String apellido1;
+    private String apellido2;
     private Long total_intercambios_aceptados;
 
 }

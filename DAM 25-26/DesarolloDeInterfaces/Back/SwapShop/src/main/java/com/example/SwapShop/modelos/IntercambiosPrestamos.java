@@ -41,7 +41,7 @@ public class IntercambiosPrestamos {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private EstadoIntercambio estado = EstadoIntercambio.pendiente;
+    private EstadoIntercambio estado = EstadoIntercambio.PENDIENTE;
 
     // ---- FECHAS ----
 

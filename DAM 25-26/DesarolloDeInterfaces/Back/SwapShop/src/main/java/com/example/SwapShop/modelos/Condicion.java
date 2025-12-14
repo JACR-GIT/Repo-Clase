@@ -3,7 +3,7 @@ package com.example.SwapShop.modelos;
 public enum Condicion {
     MALO,
     REGULAR,
-    BUENO,
-    MUY_BUENO,
+    BUENA,
+    MUY_BUENA,
     EXCELENTE
 }

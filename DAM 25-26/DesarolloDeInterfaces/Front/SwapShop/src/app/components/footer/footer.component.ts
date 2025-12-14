@@ -1,31 +1,19 @@
-import { Component } from '@angular/core';
-import {IonFab, IonFabButton, IonIcon, IonTabBar, IonTabButton, IonTabs} from "@ionic/angular/standalone";
-import { addIcons} from "ionicons";
-import { addCircleOutline, chatboxOutline, homeOutline } from "ionicons/icons";
+import { Component, EventEmitter, Output } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
-  imports: [
-    IonTabs,
-    IonFab,
-    IonFabButton,
-    IonIcon,
-    IonTabBar,
-    IonTabButton
-  ]
+  standalone: true,
+  imports: [IonicModule]
 })
-export class FooterComponent   {
+export class FooterComponent {
+  @Output() addPrendaClick = new EventEmitter<void>();
 
-  constructor() {
-    addIcons({
-      'add-circle-outline': addCircleOutline,
-      'chatbox-outline': chatboxOutline,
-      'home-outline': homeOutline
-    });
+  constructor() { }
+
+  onAddPrendaClick() {
+    this.addPrendaClick.emit();
   }
-
-
-
 }

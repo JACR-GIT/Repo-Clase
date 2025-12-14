@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {
   IonContent,
   IonButton,
@@ -8,6 +8,7 @@ import {
   IonCheckbox, // Si lo usas en el futuro
   IonDatetime, IonRouterLink
 } from '@ionic/angular/standalone';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -26,5 +27,17 @@ import {
   ]
 })
 export class RegisterPage {
+
+  private routes = inject(Router)
   constructor() { }
+
+  protected iniciarSesion(): void {
+    console.log('Navegando a la página de login...');
+    this.routes.navigate(['/login']);
+  }
+
+  protected crearCuenta(): void {
+    console.log('Navegando a la página de tabs/home...');
+    this.routes.navigate(['/tabs/home']);
+  }
 }

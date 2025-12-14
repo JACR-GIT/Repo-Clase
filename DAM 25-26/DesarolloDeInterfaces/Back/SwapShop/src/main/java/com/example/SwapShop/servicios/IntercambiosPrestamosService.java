@@ -8,6 +8,8 @@ import com.example.SwapShop.repositorios.IIntercambiosPrestamosRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.NoSuchElementException;
+
 @Service
 @AllArgsConstructor
 public class IntercambiosPrestamosService {
@@ -19,6 +21,17 @@ public class IntercambiosPrestamosService {
         IntercambiosPrestamos intercambioPrestamo = intercambiosPrestamosMapper.toEntity(intercambiosPrestamosDTO);
         IntercambiosPrestamos intercambioPrestamoGuardado = intercambiosPrestamosRepository.save(intercambioPrestamo);
         return intercambiosPrestamosMapper.toDTO(intercambioPrestamoGuardado);
+    }
+
+    public IntercambiosPrestamosDTO modificarIntercambioPrestamo(Integer id, IntercambiosPrestamosDTO intercambiosPrestamosDTO) {
+        IntercambiosPrestamos existente = intercambiosPrestamosRepository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Intercambio o préstamo no encontrado con id: " + id));
+
+        // Usar el nuevo método de actualización del mapper
+        intercambiosPrestamosMapper.updateEntityFromDto(intercambiosPrestamosDTO, existente);
+
+        IntercambiosPrestamos intercambioPrestamoActualizado = intercambiosPrestamosRepository.save(existente);
+        return intercambiosPrestamosMapper.toDTO(intercambioPrestamoActualizado);
     }
 
     public IntercambiosPrestamosDTO cambiarEstado (Integer id, EstadoIntercambio estadoIntercambio) {
@@ -33,6 +46,4 @@ public class IntercambiosPrestamosService {
         IntercambiosPrestamos intercambioPrestamoGuardado = intercambiosPrestamosRepository.save(existente);
         return intercambiosPrestamosMapper.toDTO(intercambioPrestamoGuardado);
     }
-
-
 }

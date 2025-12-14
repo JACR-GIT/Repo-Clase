@@ -26,4 +26,9 @@ export class LoginPage  {
     this.routes.navigate(['/register']);
 
   }
+
+  protected iniciarSesion() {
+    console.log('Navegando a la pagina de tabs/home...');
+    this.routes.navigate(['/tabs/home']);
+  }
 }

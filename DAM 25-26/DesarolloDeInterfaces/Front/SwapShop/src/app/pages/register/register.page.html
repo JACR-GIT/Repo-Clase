@@ -11,17 +11,9 @@
     <!-- Logo y título -->
     <div class="logo-section ion-text-center">
       <div class="swap-logo">
-        <svg viewBox="0 0 120 120" class="shirt-icon">
-          <path d="M60 20 L40 45 L40 90 L50 90 L50 70 L70 70 L70 90 L80 90 L80 45 Z" fill="#FF4444"/>
-          <circle cx="50" cy="35" r="7" fill="#FF4444"/>
-          <circle cx="70" cy="35" r="7" fill="#FF4444"/>
-          <path d="M45 42 Q60 52 75 42" stroke="#FF4444" stroke-width="6" fill="none"/>
-          <circle cx="60" cy="60" r="45" fill="none" stroke="#FFCC00" stroke-width="10"/>
-          <path d="M90 60 Q105 75 90 90" fill="none" stroke="#FFCC00" stroke-width="10"/>
-          <path d="M30 90 Q15 75 30 60" fill="none" stroke="#00C8AA" stroke-width="10"/>
-        </svg>
+        <img src="assets/Logo.jpeg" alt="SwapShop Logo" />
       </div>
-      <h1>SwapCloset</h1>
+      <h1>SwapShop</h1>
     </div>
 
     <!-- Tarjeta del formulario -->
@@ -64,14 +56,14 @@
         </div>
 
         <!-- Botón Registrarse -->
-        <ion-button expand="block" class="login-button">
+        <ion-button expand="block" (click)="crearCuenta()" class="login-button">
           Crear cuenta
         </ion-button>
 
         <!-- Enlace volver al login -->
         <div class="options-row ion-text-center" style="margin-top: 28px;">
           <span class="checkbox-label">¿Ya tienes cuenta? </span>
-          <ion-button fill="clear" routerLink="/login" class="register-link">
+          <ion-button fill="clear" (click)="iniciarSesion()" class="register-link">
             Iniciar sesión
           </ion-button>
         </div>

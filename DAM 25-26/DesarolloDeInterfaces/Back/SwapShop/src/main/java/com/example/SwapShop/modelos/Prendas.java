@@ -23,15 +23,19 @@ public class Prendas {
     @Column(name = "descripcion", columnDefinition = "TEXT")
     private String descripcion;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "talla", length = 20)
     private Talla talla;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "estilo", length = 30)
     private Estilo estilo;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "categoria", length = 50)
     private Categoria categoria;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "condicion", length = 50)
     private Condicion condicion;
 

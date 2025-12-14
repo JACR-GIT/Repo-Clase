@@ -70,5 +70,6 @@ public enum Categoria  {
 
     // Otros
     UNIFORME,
-    DISFRAZ
+    DISFRAZ,
+    ROPA
 }

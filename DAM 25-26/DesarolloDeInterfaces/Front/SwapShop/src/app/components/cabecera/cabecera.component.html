@@ -1,44 +1,25 @@
-<ion-header>
-  <!-- Barra superior principal con título y botones -->
-  <ion-toolbar color="primary">
-    <div class="contenido-header">
-      <!-- Flecha para volver atrás -->
-      <ion-buttons slot="start">
-        <ion-back-button defaultHref="/" text="" icon="chevron-back"></ion-back-button>
-      </ion-buttons>
+<ion-header class="custom-header">
+  <div class="header-content">
+    <!-- Botón back -->
+    <button class="circle-btn">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </button>
 
-      <!-- Título centrado -->
-      <ion-title>SwapCloset</ion-title>
+    <!-- Título -->
+    <h1 class="title">SwapCloset</h1>
 
-      <!-- Icono de perfil de usuario a la derecha -->
-      <ion-buttons slot="end">
-        <ion-button routerLink="/profile">
-          <ion-icon name="person-circle-outline" size="large"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </div>
-  </ion-toolbar>
+    <!-- Perfil -->
+    <button class="circle-btn profile-btn">
+      <ion-icon name="person-outline"></ion-icon>
+    </button>
+  </div>
 
-  <!-- Barra de búsqueda con filtros y lupa -->
-  <ion-toolbar color="primary">
-    <ion-searchbar
-      placeholder="Buscar prenda..."
-      show-cancel-button="never"
-      class="barra-busqueda-personalizada">
-    </ion-searchbar>
+  <!-- Barra de búsqueda -->
+  <div class="search-bar">
+    <ion-icon name="menu-outline" class="left-icon"></ion-icon>
 
-    <!-- Botón de filtros (desplegable izquierdo dentro de la barra) -->
-    <ion-buttons slot="start" class="boton-filtros">
-      <ion-button fill="clear">
-        <ion-icon name="options-outline" slot="icon-only"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    <input type="text" placeholder="Hinted search text" />
 
-    <!-- Icono de lupa personalizado (derecha) -->
-    <ion-buttons slot="end" class="icono-lupa">
-      <ion-button fill="clear">
-        <ion-icon name="search-outline" slot="icon-only"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+    <ion-icon name="search-outline" class="right-icon"></ion-icon>
+  </div>
 </ion-header>

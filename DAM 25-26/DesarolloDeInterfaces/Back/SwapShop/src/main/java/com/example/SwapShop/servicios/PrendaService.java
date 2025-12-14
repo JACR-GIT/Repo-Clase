@@ -7,6 +7,8 @@ import com.example.SwapShop.modelos.Prendas;
 import com.example.SwapShop.repositorios.IIntercambiosPrestamosRepository;
 import com.example.SwapShop.repositorios.IPrendasRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -35,23 +37,20 @@ public class PrendaService {
         Prendas prenda = prendasRepository.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("Prenda no encontrada con id: " + id));
 
-        if (prenda != null) {
-            prendasDTO.setNombre_prenda(prendasDTO.getNombre_prenda());
-            prendasDTO.setTalla(prendasDTO.getTalla());
-            prendasDTO.setCategoria(prendasDTO.getCategoria());
-            prendasDTO.setCondicion(prendasDTO.getCondicion());
-            prendasDTO.setDescripcion(prendasDTO.getDescripcion());
-            prendasDTO.setDisponible(prendasDTO.getDisponible());
-            prendasDTO.setId(prendasDTO.getId());
-            prendasDTO.setId_dueno(prendasDTO.getId_dueno());
+        prenda.setNombrePrenda(prendasDTO.getNombre_prenda());
+        prenda.setTalla(prendasDTO.getTalla());
+        prenda.setCategoria(prendasDTO.getCategoria());
+        prenda.setCondicion(prendasDTO.getCondicion());
+        prenda.setDescripcion(prendasDTO.getDescripcion());
+        prenda.setDisponible(prendasDTO.getDisponible());
 
-            prendasRepository.save(prenda);
-        }
-        return prendasMapper.toDTO(prenda);
+        Prendas prendaActualizada = prendasRepository.save(prenda);
+        return prendasMapper.toDTO(prendaActualizada);
     }
 
     public List<EstadisticasPrendaDTO> top5PrendasMasIntercambiadasAceptadas() {
-        return intercambiosPrestamosRepository.buscarTop5Intercambio();
+        Pageable top5 = PageRequest.of(0, 5);
+        return intercambiosPrestamosRepository.buscarTop5Intercambio(top5);
     }
 
     public List<PrendasDTO> findAllPrendasWhenDisponible() {

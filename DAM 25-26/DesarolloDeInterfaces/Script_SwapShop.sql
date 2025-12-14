@@ -55,8 +55,8 @@ CREATE TABLE IF NOT EXISTS intercambios (
     id_prenda2 INT NULL,                    
     id_solicitante INT NOT NULL,
     id_dueno INT NOT NULL,
-    tipo ENUM('intercambio','prestamo') NOT NULL,
-    estado ENUM('pendiente','aceptado','rechazado','finalizado') DEFAULT 'pendiente',
+    tipo ENUM('INTERCAMBIO','PRESTAMO') NOT NULL,
+    estado ENUM('PENDIENTE','ACEPTADO','RECHAZADO','FINALIZADO') DEFAULT 'PENDIENTE',
     fecha_inicio DATE,
     fecha_fin DATE,
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -169,16 +169,16 @@ VALUES
 -- ============================================================
 INSERT INTO prendas (id_dueno, nombre_prenda, descripcion, talla, categoria, estilo, condicion)
 VALUES
-(1, 'Camiseta Roja', 'Camiseta básica roja', 'M', 'Ropa','CASUAL', 'Buena'),
-(1, 'Pantalón Vaquero', 'Vaqueros azules', 'L', 'Ropa','CASUAL', 'Excelente'),
-(2, 'Sudadera Negra', 'Sudadera con capucha', 'M', 'Ropa','CASUAL', 'Buena'),
-(3, 'Chaqueta Cuero', 'Chaqueta estilo biker', 'L', 'Abrigo','CASUAL', 'Excelente'),
-(4, 'Vestido Azul', 'Vestido elegante azul', 'S', 'Ropa','CASUAL', 'Buena'),
-(5, 'Zapatillas Nike', 'Zapatillas deportivas', '42', 'Calzado','CASUAL', 'Regular'),
-(6, 'Gorra Negra', 'Gorra deportiva ajustable', 'Única', 'Accesorio','CASUAL', 'Buena'),
-(7, 'Bolso Marrón', 'Bolso piel sintética', 'Única', 'Accesorio','CASUAL', 'Excelente'),
-(8, 'Falda Roja', 'Falda ajustada', 'S', 'Ropa','CASUAL', 'Buena'),
-(9, 'Polo Blanco', 'Polo algodón blanco', 'M', 'Ropa','CASUAL', 'Buena');
+(1, 'Camiseta Roja', 'Camiseta básica roja', 'M', 'ROPA','CASUAL', 'BUENA'),
+(1, 'Pantalón Vaquero', 'Vaqueros azules', 'L', 'ROPA','CASUAL', 'EXCELENTE'),
+(2, 'Sudadera Negra', 'Sudadera con capucha', 'M', 'ROPA','CASUAL', 'BUENA'),
+(3, 'Chaqueta Cuero', 'Chaqueta estilo biker', 'L', 'ABRIGO','CASUAL', 'EXCELENTE'),
+(4, 'Vestido Azul', 'Vestido elegante azul', 'S', 'ROPA','CASUAL', 'BUENA'),
+(5, 'Zapatillas Nike', 'Zapatillas deportivas', '42', 'CALZADO','CASUAL', 'REGULAR'),
+(6, 'Gorra Negra', 'Gorra deportiva ajustable', 'Única', 'ACCESORIO','CASUAL', 'BUENA'),
+(7, 'Bolso Marrón', 'Bolso piel sintética', 'Única', 'ACCESORIO','CASUAL', 'EXCELENTE'),
+(8, 'Falda Roja', 'Falda ajustada', 'S', 'ROPA','CASUAL', 'BUENA'),
+(9, 'Polo Blanco', 'Polo algodón blanco', 'M', 'ROPA','CASUAL', 'BUENA');
 
 
 -- ============================================================

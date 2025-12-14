@@ -2,7 +2,7 @@ package com.example.SwapShop.repositorios;
 
 import com.example.SwapShop.dto.EstadisticasPrendaDTO;
 import com.example.SwapShop.modelos.IntercambiosPrestamos;
-import com.example.SwapShop.modelos.Prendas;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -11,9 +11,8 @@ import java.util.List;
 @Repository
 public interface IIntercambiosPrestamosRepository extends JpaRepository<IntercambiosPrestamos, Integer> {
 
-
     @Query("""
-        SELECT EstadisticasPrendaDTO(
+        SELECT new com.example.SwapShop.dto.EstadisticasPrendaDTO(
             p.id,
             p.nombrePrenda,
             p.descripcion,
@@ -26,11 +25,10 @@ public interface IIntercambiosPrestamosRepository extends JpaRepository<Intercam
         FROM Prendas p
         LEFT JOIN IntercambiosPrestamos i
             ON i.prenda.id = p.id AND i.estado = 'aceptado'
-        GROUP BY 
-            p.id, p.nombrePrenda, p.descripcion, p.talla, 
+        GROUP BY
+            p.id, p.nombrePrenda, p.descripcion, p.talla,
             p.categoria, p.condicion, p.disponible
         ORDER BY COUNT(i.id) DESC
-        LIMIT 5
         """)
-    List<EstadisticasPrendaDTO> buscarTop5Intercambio();
+    List<EstadisticasPrendaDTO> buscarTop5Intercambio(Pageable pageable);
 }

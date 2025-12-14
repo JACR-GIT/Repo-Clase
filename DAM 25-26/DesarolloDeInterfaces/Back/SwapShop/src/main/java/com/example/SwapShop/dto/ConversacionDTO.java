@@ -13,9 +13,9 @@ import java.util.List;
 public class ConversacionDTO {
 
     private Integer id;
-    private UsuarioDTO id_usuario1;
-    private UsuarioDTO id_usuario2;
-    private UsuarioDTO id_intercambio;
+    private Integer id_usuario1;
+    private Integer id_usuario2;
+    private Integer id_intercambio;
     private Timestamp creado_en;
     private List<Integer> id_mensajes;
 }

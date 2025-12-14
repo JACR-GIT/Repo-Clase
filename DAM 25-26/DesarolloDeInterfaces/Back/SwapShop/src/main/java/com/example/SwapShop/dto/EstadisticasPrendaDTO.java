@@ -1,10 +1,12 @@
 package com.example.SwapShop.dto;
 
+import com.example.SwapShop.modelos.Categoria;
+import com.example.SwapShop.modelos.Condicion;
+import com.example.SwapShop.modelos.Estilo;
+import com.example.SwapShop.modelos.Talla;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.math.BigInteger;
 
 @Data
 @AllArgsConstructor
@@ -14,9 +16,9 @@ public class EstadisticasPrendaDTO {
     private Integer id;
     private String nombrePrenda;
     private String descripcion;
-    private String talla;
-    private String categoria;
-    private String condicion;
+    private Talla talla;
+    private Categoria categoria;
+    private Condicion condicion;
     private Boolean disponible;
     private Long totalIntercambios;
 }
