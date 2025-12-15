@@ -7,6 +7,7 @@ import com.example.SwapShop.servicios.UsuarioService;
 import com.example.SwapShop.servicios.ValoracionesServices;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 @RestController
 @AllArgsConstructor
@@ -16,12 +17,12 @@ public class UsuarioController {
     private ValoracionesServices valoracionesServices;
 
     @PostMapping
-    public UsuarioDTO crearUsuario(@RequestBody UsuarioDTO usuarioDTO) {
+    public UsuarioDTO crearUsuario(@Valid @RequestBody UsuarioDTO usuarioDTO) {
         return usuarioService.crearUsuario(usuarioDTO);
     }
 
     @PostMapping("/{id}/valoraciones")
-    public ValoracionesDTO crearValoracionUsuario(@PathVariable("id") Integer idValorado, @RequestBody ValoracionesDTO valoracionesDTO) {
+    public ValoracionesDTO crearValoracionUsuario(@PathVariable("id") Integer idValorado, @Valid @RequestBody ValoracionesDTO valoracionesDTO) {
         valoracionesDTO.setValorado(idValorado);
         return valoracionesServices.crearValoracion(idValorado, valoracionesDTO);
     }

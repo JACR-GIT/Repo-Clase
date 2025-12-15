@@ -37,7 +37,7 @@ public class PrendaService {
         Prendas prenda = prendasRepository.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("Prenda no encontrada con id: " + id));
 
-        prenda.setNombrePrenda(prendasDTO.getNombre_prenda());
+        prenda.setNombrePrenda(prendasDTO.getNombrePrenda());
         prenda.setTalla(prendasDTO.getTalla());
         prenda.setCategoria(prendasDTO.getCategoria());
         prenda.setCondicion(prendasDTO.getCondicion());

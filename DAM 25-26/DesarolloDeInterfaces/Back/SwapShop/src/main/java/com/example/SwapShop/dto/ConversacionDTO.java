@@ -25,9 +25,5 @@ public class ConversacionDTO {
     @NotNull(message = "El ID del intercambio no puede ser nulo")
     private Integer id_intercambio;
 
-    // 'creado_en' suele ser generado por el sistema, por lo que no se valida en el DTO de entrada
-    private Timestamp creado_en;
-
-    // 'id_mensajes' es una lista de IDs, puede estar vacía al crear una conversación
     private List<Integer> id_mensajes;
 }

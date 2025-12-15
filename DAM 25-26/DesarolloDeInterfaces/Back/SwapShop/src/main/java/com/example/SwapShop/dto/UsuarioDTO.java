@@ -8,6 +8,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.PastOrPresent; // Added import
 import java.sql.Date;
 import java.sql.Timestamp;
 
@@ -42,5 +43,6 @@ public class UsuarioDTO {
     private String contrasena;
 
     @NotNull(message = "La fecha de nacimiento no puede ser nula")
+    @PastOrPresent(message = "La fecha de nacimiento no puede ser en el futuro") // Added validation
     private Date fecha_nac;
 }

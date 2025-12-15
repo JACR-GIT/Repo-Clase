@@ -24,6 +24,5 @@ public class MensajesDTO {
     private Integer id_remitente;
 
     @NotBlank(message = "El contenido del mensaje no puede estar vacío")
-    @Size(min = 1, max = 1000, message = "El contenido del mensaje debe tener entre 1 y 1000 caracteres")
     private String contenido;
 }

@@ -36,7 +36,7 @@ public class IntercambiosPrestamosDTO {
     @NotNull(message = "El tipo de intercambio no puede ser nulo")
     private TipoIntercambio tipo;
 
-    // El estado inicial puede ser nulo o tener un valor por defecto, dependiendo de la lógica de negocio
+    @NotNull(message = "El estado de intercambio no puede ser nulo")
     private EstadoIntercambio estado;
 
     @NotNull(message = "La fecha de inicio no puede ser nula")

@@ -6,7 +6,9 @@ import lombok.NoArgsConstructor;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.sql.Timestamp;
 
@@ -20,7 +22,6 @@ public class ValoracionesDTO {
     @NotNull(message = "El ID del usuario valorador no puede ser nulo")
     private Integer valorador;
 
-    @NotNull(message = "El ID del usuario valorado no puede ser nulo")
     private Integer valorado;
 
     @NotNull(message = "La puntuación no puede ser nula")

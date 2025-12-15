@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="366493aa-6609-450b-aabd-b5f02ac8a1f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/PrendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/PrendasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/IntercambiosPrestamosDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/IntercambiosPrestamosDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/PrendasDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/PrendasDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/UsuarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/ValoracionesDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/ValoracionesDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/mapeadores/PrendasMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/mapeadores/PrendasMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/servicios/PrendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/servicios/PrendaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/pages/login/login.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SwapShop/src/app/pages/register/register.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SwapShop/src/app/pages/register/register.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,24 +36,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.register.page.ts.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jcamr/Repo-Clase/DAM 25-26/DesarolloDeInterfaces/Front&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\jcamr\\Repo-Clase\\DAM 25-26\\DesarolloDeInterfaces\\Front\\SwapShop\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.registrar-prenda.component.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.register.page.ts.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/jcamr/Repo-Clase/DAM 25-26/DesarolloDeInterfaces/Front",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\jcamr\\Repo-Clase\\DAM 25-26\\DesarolloDeInterfaces\\Front\\SwapShop\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\pages" />
@@ -75,6 +85,7 @@
       <workItem from="1765535845036" duration="97000" />
       <workItem from="1765535946498" duration="2644000" />
       <workItem from="1765539368937" duration="335000" />
+      <workItem from="1765802291619" duration="1458000" />
     </task>
     <servers />
   </component>
