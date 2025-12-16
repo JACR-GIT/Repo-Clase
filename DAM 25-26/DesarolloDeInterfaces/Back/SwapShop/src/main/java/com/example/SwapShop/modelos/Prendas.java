@@ -15,7 +15,7 @@ public class Prendas {
 
     @ManyToOne
     @JoinColumn(name = "id_dueno", nullable = false)
-    private Usuario id_dueno;
+    private Usuario dueno; // Campo renombrado de id_dueno a dueno
 
     @Column(name = "nombre_prenda", nullable = false, length = 150)
     private String nombrePrenda;
@@ -41,4 +41,7 @@ public class Prendas {
 
     @Column(name = "disponible", nullable = false)
     private Boolean disponible = true;
+
+    @Column(name = "foto")
+    private String foto;
 }

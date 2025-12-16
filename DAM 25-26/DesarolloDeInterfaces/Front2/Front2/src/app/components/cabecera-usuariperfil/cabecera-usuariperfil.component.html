@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="custom-toolbar">
+
+    <!-- Botón volver circular -->
+    <ion-buttons slot="start">
+      <ion-button class="back-circle-btn">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Título -->
+    <ion-title class="main-title">SwapCloset</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile-bg">
+  <div class="profile-content">
+
+    <!-- Avatar -->
+    <div class="avatar-wrapper">
+      <ion-avatar>
+        <ion-icon name="person-outline" class="person-icon"></ion-icon>
+      </ion-avatar>
+    </div>
+
+    <!-- Nombre + lápiz editar -->
+    <div class="username-row">
+      <h2 class="username">NombreUsuario</h2>
+      <ion-button fill="clear" class="edit-btn">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+    <!-- Estrellas (4 llenas + 1 vacía) -->
+    <div class="rating-stars">
+      <ion-icon name="star" class="star filled">⭐</ion-icon>
+      <ion-icon name="star" class="star filled">⭐</ion-icon>
+      <ion-icon name="star" class="star filled">⭐</ion-icon>
+      <ion-icon name="star" class="star filled">⭐</ion-icon>
+      <ion-icon name="star" class="star"></ion-icon>
+    </div>
+
+  </div>
+</ion-content>

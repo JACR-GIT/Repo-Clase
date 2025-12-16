@@ -1,0 +1,143 @@
+.transparent-toolbar {
+  --background: transparent;
+  --border-width: 0;
+}
+
+.back-button-circle {
+  --background: #00C8AA;
+  --border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  margin-left: 16px;
+  margin-top: 16px;
+  --padding-start: 0;
+  --padding-end: 0;
+
+  ion-icon {
+    color: white;
+    font-size: 30px;
+  }
+}
+
+.login-background {
+  --background: #f5f5f5;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.logo-section {
+  margin-bottom: 40px;
+
+  .swap-logo img {
+    height: 15rem;
+    width: auto;
+    margin: 0 auto 1rem auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222222;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+}
+
+.login-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+  padding: 32px 28px;
+}
+
+.input-group {
+  margin-bottom: 24px;
+}
+
+.input-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.custom-input {
+  --background: #F8F8F8;
+  --padding-start: 18px;
+  --padding-end: 18px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --border-radius: 14px;
+  font-size: 1.05rem;
+  height: 52px;
+  --color: #000000;
+  --placeholder-color: #000000;
+  --placeholder-opacity: 0.6;
+}
+
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px 0 36px 0;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-checkbox {
+  --size: 22px;
+  --background-checked: #000000;
+  --border-color-checked: #000000;
+}
+
+.checkbox-label {
+  font-size: 1rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+.register-link {
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-button {
+  --background: #000000;
+  --color: white;
+  --border-radius: 30px;
+  height: 54px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.register-link {
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer; /* Para que se vea como enlace clickable */
+}
+
+.register-link:hover {
+  text-decoration: underline; /* Opcional: subrayado al pasar el ratón */
+}
+
+

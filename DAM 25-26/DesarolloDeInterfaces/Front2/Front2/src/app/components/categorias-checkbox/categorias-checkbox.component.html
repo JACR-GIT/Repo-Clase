@@ -1,0 +1,16 @@
+<div class="filtro-container">
+  <h3 class="titulo">Categorías</h3>
+
+  <div class="chips-scroll">
+    <div class="chips-container">
+      <ng-container *ngFor="let cat of categorias">
+        <div
+          class="chip"
+          [class.selected]="selected.has(cat)"
+          (click)="toggleCategoria(cat)">
+          {{ cat.replace('_', ' ') | titlecase }}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

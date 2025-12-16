@@ -1,0 +1,30 @@
+<!-- El ion-tabs es el contenedor principal de toda la navegación por pestañas -->
+<ion-tabs>
+
+  <!-- El componente ion-fab-button se coloca fuera de la barra de pestañas para que pueda "flotar" por encima. -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="onAddPrendaClick()">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- Esta es la barra de pestañas que se mostrará en la parte inferior -->
+  <ion-tab-bar slot="bottom">
+
+    <!-- Botón de la izquierda (Home) -->
+    <ion-tab-button tab="home" layout="icon-top">
+      <ion-img src="assets/pagina-de-inicio.png" alt="Home"></ion-img>
+    </ion-tab-button>
+
+    <!-- Botón central de relleno -->
+    <ion-tab-button>
+    </ion-tab-button>
+
+    <!-- Botón de la derecha (Chat) -->
+    <ion-tab-button tab="chat" layout="icon-top">
+      <ion-img src="assets/charlando.png" alt="Chat"></ion-img>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>

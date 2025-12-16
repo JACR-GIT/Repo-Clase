@@ -1,0 +1,35 @@
+/* Estilo para la barra de pestañas (el fondo rojo) */
+ion-tab-bar {
+  --background: #f86969; // Color de fondo similar al de la imagen
+  --border: none; // Eliminamos cualquier borde superior que pueda tener por defecto
+  --color: #1e1e1e; // Color por defecto para los iconos
+  --color-selected: #000000; // Color para el icono de la pestaña activa
+  height: 65px; // Le damos un poco más de altura
+}
+
+/* Estilo para el botón flotante (el círculo amarillo) */
+ion-fab-button {
+  --background: #fbc127; // Fondo amarillo
+  --color: #0d2f49; // Color del icono '+' (azul oscuro)
+
+  /* Hacemos el botón un poco más grande */
+  width: clamp(56px, 8vw, 70px);
+  height: clamp(56px, 8vw, 70px);
+}
+
+/* Movemos el botón flotante hacia arriba para que se solape con la barra */
+ion-fab {
+  margin-bottom: calc(env(safe-area-inset-bottom, 0px) + clamp(30px, 1vw, 40px)); /* responsive: respeta safe-area y escala con la ventana */
+}
+
+/* Hacemos el icono '+' del botón flotante más grande y grueso */
+ion-fab-button ion-icon {
+  font-size: 7rem ; /* 2.5 veces el tamaño de fuente normal */
+  font-weight: bold;
+}
+
+/* Estilo para los iconos de la barra de pestañas (Home y Chat) */
+ion-tab-button ion-icon {
+  font-size: clamp(40px, calc(1rem + 2.5vw), 60px); /* responsive entre 20px y 40px */
+  --color: #1e1e1e; // color oscuro
+}

@@ -1,0 +1,115 @@
+/* Fondo del perfil */
+.profile-bg {
+  --background: #f46b5b; /* Color exacto del header */
+  color: white;           /* Texto blanco por defecto */
+}
+
+/* Toolbar superior */
+.custom-toolbar {
+  --background: #f46b5b;
+  border: none;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Botón circular tipo back */
+.back-circle-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background: #54a6b7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ion-icon {
+    font-size: 28px;
+    color: black;
+  }
+}
+
+/* Título principal centrado */
+.main-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Contenido del perfil */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+/* Avatar circular */
+.avatar-wrapper {
+  margin-bottom: 24px;
+
+  ion-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid black;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .person-icon {
+      font-size: 76px;
+      color: black;
+    }
+  }
+}
+
+/* Nombre + lápiz */
+.username-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+.username {
+  font-size: 26px;
+  font-weight: 700;
+  color: white; /* Texto blanco */
+  margin: 0;
+}
+
+.edit-btn {
+  background: transparent; /* Fondo transparente */
+  color: black;            /* Botón negro */
+
+  ion-icon {
+    font-size: 26px;
+    color: black;           /* Icono del lápiz negro */
+  }
+}
+
+/* Estrellas de valoración */
+.rating-stars {
+  display: flex;
+  gap: 6px;
+
+  ion-icon {
+    font-size: 32px;
+    color: #cccccc; /* Gris claro para vacías */
+
+    &.filled {
+      color: white; /* Estrellas llenas blancas */
+    }
+  }
+}

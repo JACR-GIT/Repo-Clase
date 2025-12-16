@@ -15,4 +15,6 @@ public interface IPrendasRepository extends JpaRepository<Prendas, Integer> {
     List<Prendas> buscarPorTalla(@Param("talla") String talla);
 
     List<Prendas> findByDisponibleTrue();
+
+    List<Prendas> findByDuenoId(Integer idDueno); // Método renombrado
 }

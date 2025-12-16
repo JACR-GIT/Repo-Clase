@@ -1,0 +1,16 @@
+<div class="filtro-container">
+  <h3 class="titulo">Talla</h3>
+
+  <div class="chips-scroll">
+    <div class="chips-container">
+      <ng-container *ngFor="let t of tallas">
+        <div
+          class="chip"
+          [class.selected]="selected.has(t)"
+          (click)="toggle(t)">
+          {{ t }}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

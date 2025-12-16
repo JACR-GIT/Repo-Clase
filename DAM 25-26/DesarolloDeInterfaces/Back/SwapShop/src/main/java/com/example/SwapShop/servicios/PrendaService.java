@@ -57,4 +57,14 @@ public class PrendaService {
         List<Prendas> prendasDisponibles = prendasRepository.findByDisponibleTrue();
         return prendasMapper.listToDTOs(prendasDisponibles);
     }
+
+    public List<PrendasDTO> buscarPrendasPorDueno(Integer idDueno) {
+        List<Prendas> prendas = prendasRepository.findByDuenoId(idDueno); // Llamada actualizada
+        return prendasMapper.listToDTOs(prendas);
+    }
+
+    public void eliminarPrendaPorId(Integer id) {
+        prendasRepository.deleteById(id);
+    }
+
 }

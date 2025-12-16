@@ -43,4 +43,7 @@ public class PrendasDTO {
     @NotNull(message = "El estado de disponibilidad no puede ser nulo")
     private Boolean disponible;
 
+    @NotNull(message = "La foto no puede ser nula")
+    private String foto;
+
 }

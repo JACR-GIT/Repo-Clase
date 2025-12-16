@@ -1,0 +1,16 @@
+<div class="filtro-container">
+  <h3 class="titulo">Condición</h3>
+
+  <div class="chips-scroll">
+    <div class="chips-container">
+      <ng-container *ngFor="let cond of condiciones">
+        <div
+          class="chip"
+          [class.selected]="selected.has(cond)"
+          (click)="toggle(cond)">
+          {{ cond.replace('_', ' ') | titlecase }}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
