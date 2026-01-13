@@ -1538,7 +1538,7 @@ test\\_%|schema||PUBLIC|&apos;&apos;|UPDATE|G</Grants>
     <schema id="557" parent="1" name="swapshop">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-02.08:58:30</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-12.12:33:34</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </schema>
     <schema id="558" parent="1" name="sys">
@@ -1922,7 +1922,7 @@ test\\_%|schema||PUBLIC|&apos;&apos;|UPDATE|G</Grants>
     </column>
     <column id="635" parent="569" name="fecha_nac">
       <Position>8</Position>
-      <StoredType>date|0s</StoredType>
+      <StoredType>datetime(6)|0s</StoredType>
     </column>
     <column id="636" parent="569" name="creado_en">
       <DefaultExpression>current_timestamp()</DefaultExpression>
@@ -1947,65 +1947,60 @@ test\\_%|schema||PUBLIC|&apos;&apos;|UPDATE|G</Grants>
     <key id="640" parent="569" name="correo">
       <UnderlyingIndexName>correo</UnderlyingIndexName>
     </key>
-    <check id="641" parent="570" name="puntuacion">
-      <ColNames>puntuacion</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Predicate>`puntuacion` between 1 and 5</Predicate>
-    </check>
-    <column id="642" parent="570" name="id">
+    <column id="641" parent="570" name="id">
       <AutoIncrement>11</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="643" parent="570" name="id_valorador">
+    <column id="642" parent="570" name="id_valorador">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="644" parent="570" name="id_valorado">
+    <column id="643" parent="570" name="id_valorado">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="645" parent="570" name="puntuacion">
+    <column id="644" parent="570" name="puntuacion">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>tinyint(4)|0s</StoredType>
+      <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="646" parent="570" name="creado_en">
+    <column id="645" parent="570" name="creado_en">
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <Position>5</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <foreign-key id="647" parent="570" name="fk_valorador">
+    <foreign-key id="646" parent="570" name="fk_valorador">
       <ColNames>id_valorador</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <foreign-key id="648" parent="570" name="fk_valorado">
+    <foreign-key id="647" parent="570" name="fk_valorado">
       <ColNames>id_valorado</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <index id="649" parent="570" name="PRIMARY">
+    <index id="648" parent="570" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="650" parent="570" name="fk_valorador">
+    <index id="649" parent="570" name="fk_valorador">
       <ColNames>id_valorador</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="651" parent="570" name="fk_valorado">
+    <index id="650" parent="570" name="fk_valorado">
       <ColNames>id_valorado</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="652" parent="570" name="PRIMARY">
+    <key id="651" parent="570" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
