@@ -1,0 +1,20 @@
+<ion-tabs>
+  <!-- Barra de pestañas en la parte inferior con 3 botones -->
+  <ion-tab-bar slot="bottom">
+    <!-- 1. Botón de Home (Navega a la pestaña 'home') -->
+    <ion-tab-button tab="home" layout="icon-top">
+      <ion-img src="assets/pagina-de-inicio.png" alt="Home"></ion-img>
+    </ion-tab-button>
+
+    <!-- 2. Botón de Añadir Prenda (Abre el modal, no navega) -->
+    <ion-tab-button (click)="openAddPrendaModal()" layout="icon-top">
+      <!-- Usamos el icono 'add' que es un '+' simple y claro -->
+      <ion-icon name="add" class="add-icon"></ion-icon>
+    </ion-tab-button>
+
+    <!-- 3. Botón de Chat (Navega a la pestaña 'chat') -->
+    <ion-tab-button tab="chat" layout="icon-top">
+      <ion-img src="assets/charlando.png" alt="Chat"></ion-img>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

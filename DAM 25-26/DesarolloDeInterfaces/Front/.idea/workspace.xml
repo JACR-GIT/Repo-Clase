@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="366493aa-6609-450b-aabd-b5f02ac8a1f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/PrendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/PrendasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/controladores/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/IntercambiosPrestamosDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/IntercambiosPrestamosDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/PrendasDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/PrendasDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/UsuarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/ValoracionesDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/dto/ValoracionesDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/mapeadores/PrendasMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/mapeadores/PrendasMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/servicios/PrendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/java/com/example/SwapShop/servicios/PrendaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/SwapShop/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/SwapShop/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="34mclxZzdt5nmwrwIq9j7YzEKwi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.registrar-prenda.component.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.register.page.ts.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/jcamr/Repo-Clase/DAM 25-26/DesarolloDeInterfaces/Front",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\jcamr\\Repo-Clase\\DAM 25-26\\DesarolloDeInterfaces\\Front\\SwapShop\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\pages" />
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\servicios\valoraciones-services" />
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\servicios\usuario-services" />
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\servicios\prendas-services" />
+      <recent name="C:\Users\jcamr\Repo-Clase\DAM 25-26\DesarolloDeInterfaces\Front\SwapShop\src\app\servicios\mensajes-services" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28539.21" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="366493aa-6609-450b-aabd-b5f02ac8a1f9" name="Changes" comment="" />
+      <created>1761822343013</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761822343013</updated>
+      <workItem from="1761822344230" duration="2739000" />
+      <workItem from="1762422678261" duration="9021000" />
+      <workItem from="1765449889951" duration="4936000" />
+      <workItem from="1765454928544" duration="2394000" />
+      <workItem from="1765535845036" duration="97000" />
+      <workItem from="1765535946498" duration="2644000" />
+      <workItem from="1765539368937" duration="335000" />
+      <workItem from="1765802291619" duration="1458000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/SwapShop/src/app/app.component.ts</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

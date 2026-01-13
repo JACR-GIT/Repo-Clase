@@ -1,0 +1,124 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-searchbar placeholder="Buscar prenda..." (ionInput)="buscar($event)"></ion-searchbar>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="irAPerfil()">
+        <ion-icon name="person-circle-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      @for (prenda of prendasFiltradas; track prenda.id) {
+      <ion-col size="6" size-md="4" size-lg="3">
+        <ion-card [button]="true" (click)="abrirDetalle(prenda)">
+          <ion-img
+            [src]="prenda.foto || 'https://via.placeholder.com/300x400?text=' + (prenda.nombre_prenda || 'Sin Imagen')"
+            alt="{{prenda.nombre_prenda}}">
+          </ion-img>
+          <ion-card-content>
+            <p class="ion-text-center">{{prenda.nombre_prenda}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      }
+    </ion-row>
+  </ion-grid>
+
+  <!-- Modal para ver/editar/eliminar -->
+  <ion-modal trigger="modal-trigger">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>{{esNueva ? 'Nueva prenda' : 'Detalle prenda'}}</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="cerrarModal()">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input [(ngModel)]="prendaSeleccionada!.nombre_prenda"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Descripción</ion-label>
+        <ion-textarea [(ngModel)]="prendaSeleccionada!.descripcion"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Talla</ion-label>
+        <ion-input [(ngModel)]="prendaSeleccionada!.talla"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Categoría</ion-label>
+        <ion-input [(ngModel)]="prendaSeleccionada!.categoria"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Estilos</ion-label>
+        <ion-input [(ngModel)]="prendaSeleccionada!.estilos"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Condición</ion-label>
+        <ion-input [(ngModel)]="prendaSeleccionada!.condicion"></ion-input>
+      </ion-item>
+
+      <div class="ion-padding-top">
+        <ion-button expand="block" color="success" (click)="guardar()">
+          {{esNueva ? 'Crear' : 'Guardar cambios'}}
+        </ion-button>
+
+        @if (!esNueva) {
+        <ion-button expand="block" color="danger" (click)="eliminar()">
+          Eliminar prenda
+        </ion-button>
+        }
+      </div>
+    </ion-content>
+  </ion-modal>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="abrirDetalle()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="primary">
+      <ion-button fill="clear" routerLink="/home">
+        <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="irAChats()">
+        <ion-icon slot="icon-only" name="chatbubble-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+<!-- Botón flotante alternativo si prefieres FAB -->
+<!--
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button (click)="abrirDetalle()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+-->

@@ -1,4 +1,15 @@
 -- ============================================================
+-- 0. BORRAR TODA LA BASE DE DATOS (OPCIONAL)
+-- ============================================================
+-- DROP TABLE IF EXISTS mensajes;
+-- DROP TABLE IF EXISTS conversaciones;
+-- DROP TABLE IF EXISTS valoraciones;
+-- DROP TABLE IF EXISTS intercambios;
+-- DROP TABLE IF EXISTS prendas;
+-- DROP TABLE IF EXISTS usuarios;
+
+
+-- ============================================================
 -- 1. USUARIOS
 -- ============================================================
 CREATE TABLE IF NOT EXISTS usuarios (
@@ -9,7 +20,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     apellido2 VARCHAR(100) NOT NULL,
     correo VARCHAR(150) UNIQUE NOT NULL,
     contrasena TEXT NOT NULL,
-    edad INT,
+    fecha_nac DATE,                         
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 ) ENGINE=InnoDB;
@@ -24,8 +35,8 @@ CREATE TABLE IF NOT EXISTS prendas (
     descripcion TEXT,
     talla VARCHAR(20),
     categoria VARCHAR(50),
+    estilo VARCHAR(30),
     condicion VARCHAR(50),
-    -- imagenes JSON,
     disponible BOOLEAN DEFAULT TRUE,
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
@@ -41,22 +52,31 @@ CREATE TABLE IF NOT EXISTS prendas (
 CREATE TABLE IF NOT EXISTS intercambios (
     id INT NOT NULL AUTO_INCREMENT,
     id_prenda INT NOT NULL,
+    id_prenda2 INT NULL,                    
     id_solicitante INT NOT NULL,
     id_dueno INT NOT NULL,
-    tipo ENUM('intercambio','prestamo') NOT NULL,
-    estado ENUM('pendiente','aceptado','rechazado','finalizado') DEFAULT 'pendiente',
+    tipo ENUM('INTERCAMBIO','PRESTAMO') NOT NULL,
+    estado ENUM('PENDIENTE','ACEPTADO','RECHAZADO','FINALIZADO') DEFAULT 'PENDIENTE',
     fecha_inicio DATE,
     fecha_fin DATE,
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
+
     CONSTRAINT fk_intercambio_prenda
         FOREIGN KEY (id_prenda) REFERENCES prendas(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
+
+    CONSTRAINT fk_intercambio_prenda2
+        FOREIGN KEY (id_prenda2) REFERENCES prendas(id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE,
+
     CONSTRAINT fk_intercambio_solicitante
         FOREIGN KEY (id_solicitante) REFERENCES usuarios(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
+
     CONSTRAINT fk_intercambio_dueno
         FOREIGN KEY (id_dueno) REFERENCES usuarios(id)
         ON DELETE CASCADE
@@ -113,7 +133,7 @@ CREATE TABLE IF NOT EXISTS mensajes (
 CREATE TABLE IF NOT EXISTS valoraciones (
     id INT NOT NULL AUTO_INCREMENT,
     id_valorador INT NOT NULL,
-    id_valorado INT NOT null,
+    id_valorado INT NOT NULL,
     puntuacion TINYINT NOT NULL CHECK (puntuacion BETWEEN 1 AND 5),
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
@@ -127,16 +147,104 @@ CREATE TABLE IF NOT EXISTS valoraciones (
         ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
-SELECT 
-    p.id AS id_prenda,
-    p.nombre_prenda,
-    p.descripcion,
-    p.talla,
-    p.categoria,
-    p.condicion,
-    COUNT(i.id) AS total_intercambios
-FROM prendas p
-INNER JOIN intercambios i ON i.id_prenda = p.id
-GROUP BY p.id
-ORDER BY total_intercambios DESC
-LIMIT 5;
+-- ============================================================
+-- 1. USUARIOS (10 registros)
+-- ============================================================
+INSERT INTO usuarios (nombre_usuario, nombre, apellido1, apellido2, correo, contrasena, fecha_nac)
+VALUES
+('juanito12', 'Juan', 'Pérez', 'Gómez', 'juan@gmail.com', '123456', '1990-05-12'),
+('maria23', 'María', 'López', 'Santos', 'maria@gmail.com', '123456', '1995-03-20'),
+('carlos88', 'Carlos', 'Martín', 'Ruiz', 'carlos@gmail.com', '123456', '1988-11-02'),
+('laura92', 'Laura', 'Sánchez', 'Díaz', 'laura@gmail.com', '123456', '1992-07-14'),
+('pepe01', 'José', 'Ramírez', 'Torres', 'pepe@gmail.com', '123456', '1998-01-30'),
+('ana77', 'Ana', 'Fernández', 'Rey', 'ana@gmail.com', '123456', '1977-10-10'),
+('luis55', 'Luis', 'Gil', 'Mora', 'luis@gmail.com', '123456', '1999-09-09'),
+('sofia44', 'Sofía', 'Vega', 'Castro', 'sofia@gmail.com', '123456', '2000-12-01'),
+('roberto10', 'Roberto', 'Navarro', 'Delgado', 'roberto@gmail.com', '123456', '1980-06-22'),
+('eva09', 'Eva', 'Romero', 'Flores', 'eva@gmail.com', '123456', '1994-04-17');
+
+
+-- ============================================================
+-- 2. PRENDAS (10 registros)
+-- ============================================================
+INSERT INTO prendas (id_dueno, nombre_prenda, descripcion, talla, categoria, estilo, condicion)
+VALUES
+(1, 'Camiseta Roja', 'Camiseta básica roja', 'M', 'ROPA','CASUAL', 'BUENA'),
+(1, 'Pantalón Vaquero', 'Vaqueros azules', 'L', 'ROPA','CASUAL', 'EXCELENTE'),
+(2, 'Sudadera Negra', 'Sudadera con capucha', 'M', 'ROPA','CASUAL', 'BUENA'),
+(3, 'Chaqueta Cuero', 'Chaqueta estilo biker', 'L', 'ABRIGO','CASUAL', 'EXCELENTE'),
+(4, 'Vestido Azul', 'Vestido elegante azul', 'S', 'ROPA','CASUAL', 'BUENA'),
+(5, 'Zapatillas Nike', 'Zapatillas deportivas', '42', 'CALZADO','CASUAL', 'REGULAR'),
+(6, 'Gorra Negra', 'Gorra deportiva ajustable', 'Única', 'ACCESORIO','CASUAL', 'BUENA'),
+(7, 'Bolso Marrón', 'Bolso piel sintética', 'Única', 'ACCESORIO','CASUAL', 'EXCELENTE'),
+(8, 'Falda Roja', 'Falda ajustada', 'S', 'ROPA','CASUAL', 'BUENA'),
+(9, 'Polo Blanco', 'Polo algodón blanco', 'M', 'ROPA','CASUAL', 'BUENA');
+
+
+-- ============================================================
+-- 3. INTERCAMBIOS / PRÉSTAMOS (10 registros)
+-- id_prenda2 puede ir NULL o definido
+-- ============================================================
+INSERT INTO intercambios (id_prenda, id_prenda2, id_solicitante, id_dueno, tipo, estado, fecha_inicio, fecha_fin)
+VALUES
+(1, NULL, 2, 1, 'prestamo', 'pendiente', '2024-01-01', NULL),
+(2, 3, 3, 1, 'intercambio', 'aceptado', '2024-01-05', '2024-01-20'),
+(3, NULL, 4, 2, 'prestamo', 'rechazado', '2024-02-10', NULL),
+(4, 5, 5, 3, 'intercambio', 'pendiente', '2024-03-01', NULL),
+(5, NULL, 6, 4, 'prestamo', 'aceptado', '2024-03-10', '2024-03-25'),
+(6, 7, 7, 5, 'intercambio', 'pendiente', '2024-03-15', NULL),
+(7, NULL, 8, 6, 'prestamo', 'finalizado', '2024-01-10', '2024-01-18'),
+(8, NULL, 9, 7, 'prestamo', 'pendiente', '2024-04-01', NULL),
+(9, 10, 10, 8, 'intercambio', 'aceptado', '2024-04-12', '2024-04-28'),
+(10, NULL, 1, 9, 'prestamo', 'rechazado', '2024-05-01', NULL);
+
+
+-- ============================================================
+-- 4. CONVERSACIONES (10 registros)
+-- ============================================================
+INSERT INTO conversaciones (id_usuario1, id_usuario2, id_intercambio)
+VALUES
+(1, 2, 1),
+(3, 1, 2),
+(4, 2, 3),
+(5, 3, 4),
+(6, 4, 5),
+(7, 5, 6),
+(8, 6, 7),
+(9, 7, 8),
+(10, 8, 9),
+(2, 9, 10);
+
+
+-- ============================================================
+-- 5. MENSAJES (10 registros)
+-- ============================================================
+INSERT INTO mensajes (id_conversacion, id_remitente, contenido)
+VALUES
+(1, 1, 'Hola, ¿está disponible?'),
+(1, 2, 'Sí, aún lo tengo.'),
+(2, 3, '¿Cuándo podemos quedar?'),
+(3, 4, '¿Aceptas intercambio?'),
+(4, 5, 'Me interesa tu prenda.'),
+(5, 6, '¿Podemos vernos mañana?'),
+(6, 7, '¿Qué condición tiene?'),
+(7, 8, 'Ya lo devolví.'),
+(8, 9, 'Gracias por responder.'),
+(9, 10, 'Podemos negociar.');
+
+
+-- ============================================================
+-- 6. VALORACIONES (10 registros)
+-- ============================================================
+INSERT INTO valoraciones (id_valorador, id_valorado, puntuacion)
+VALUES
+(1, 2, 5),
+(2, 1, 4),
+(3, 4, 5),
+(4, 3, 3),
+(5, 6, 4),
+(6, 5, 5),
+(7, 8, 4),
+(8, 7, 5),
+(9, 10, 3),
+(10, 9, 4);

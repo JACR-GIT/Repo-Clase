@@ -1,0 +1,98 @@
+.container {
+  padding: 20px;
+}
+
+/* Foto principal */
+.foto-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.foto-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: var(--ion-color-light, #ffffff);
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.foto-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ion-color-light-shade, #f0f0f0);
+}
+
+.camera-icon {
+  font-size: 80px;
+  color: var(--ion-color-medium, #aaa);
+}
+
+.foto-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Secciones de filtros */
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.section-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ion-color-dark, #000);
+}
+
+/* Línea fina bajo el título */
+hr {
+  border: none;
+  border-top: 1px solid var(--ion-color-medium-tint, #ccc);
+  margin: 8px 0 12px 0;
+}
+
+/* Chips/etiquetas */
+.chips-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 8px 16px;
+  background: var(--ion-color-light, #fff);
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--ion-color-light-tint, #eee);
+  color: var(--ion-color-dark, #000);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chip[selected],
+.chip.selected {
+  background-color: var(--ion-color-primary, #3880ff);
+  color: var(--ion-color-light, #fff);
+  border-color: var(--ion-color-primary, #3880ff);
+}
+
+/* Botones finales */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.action-buttons ion-button {
+  flex: 1; /* Cada botón ocupa la mitad del ancho */
+}

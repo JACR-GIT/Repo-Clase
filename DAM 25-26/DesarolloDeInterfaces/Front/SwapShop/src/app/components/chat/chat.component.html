@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="chat-header">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text=""></ion-back-button>
+    </ion-buttons>
+
+    <div class="user-info">
+      <ion-avatar>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-avatar>
+      <div class="user-text">
+        <h2>Nombre de usuario</h2>
+        <div class="stars">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="chat-content">
+  <div class="messages-container">
+
+    <!-- Mensaje recibido (izquierda) -->
+    <div class="message received">
+      <div class="bubble">Mensaje</div>
+    </div>
+
+    <!-- Mensaje enviado (derecha) -->
+    <div class="message sent">
+      <div class="bubble">Mensaje</div>
+    </div>
+
+    <!-- Espacio final para que el FAB no tape mensajes -->
+    <div class="bottom-spacer"></div>
+  </div>
+</ion-content>

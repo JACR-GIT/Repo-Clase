@@ -1,0 +1,79 @@
+.chat-header {
+  --background: #f0f0f0;
+  --border-width: 0;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --padding-start: 8px;
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  ion-avatar {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #000;
+    background: white;
+
+    ion-icon {
+      font-size: 28px;
+      color: #000;
+    }
+  }
+
+  .user-text h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .stars ion-icon {
+    font-size: 18px;
+    color: #000;
+  }
+}
+
+.chat-content {
+  --background: white;
+  --padding-bottom: 80px; // espacio para el FAB
+}
+
+.messages-container {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.message {
+  display: flex;
+  max-width: 80%;
+
+  &.received {
+    align-self: flex-start;
+  }
+
+  &.sent {
+    align-self: flex-end;
+  }
+
+  .bubble {
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+    background: #e0e0e0;
+    color: #000;
+  }
+
+  &.sent .bubble {
+    background: #e0e0e0;
+  }
+}
+
+.bottom-spacer {
+  height: 60px;
+}

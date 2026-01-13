@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import jakarta.validation.constraints.NotNull;
+
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -13,9 +15,15 @@ import java.util.List;
 public class ConversacionDTO {
 
     private Integer id;
+
+    @NotNull(message = "El ID del usuario 1 no puede ser nulo")
     private Integer id_usuario1;
+
+    @NotNull(message = "El ID del usuario 2 no puede ser nulo")
     private Integer id_usuario2;
+
+    @NotNull(message = "El ID del intercambio no puede ser nulo")
     private Integer id_intercambio;
-    private Timestamp creado_en;
-    private List<Integer> id_mensajes; // ids de los mensajes en la conversación
+
+    private List<Integer> id_mensajes;
 }

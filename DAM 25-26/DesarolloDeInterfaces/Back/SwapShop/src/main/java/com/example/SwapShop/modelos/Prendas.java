@@ -15,26 +15,33 @@ public class Prendas {
 
     @ManyToOne
     @JoinColumn(name = "id_dueno", nullable = false)
-    private Usuario id_dueno;
+    private Usuario dueno; // Campo renombrado de id_dueno a dueno
 
     @Column(name = "nombre_prenda", nullable = false, length = 150)
     private String nombrePrenda;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "descripcion", columnDefinition = "TEXT")
     private String descripcion;
 
-    @Column(length = 20)
-    private String talla;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "talla", length = 20)
+    private Talla talla;
 
-    @Column(length = 50)
-    private String categoria;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "estilo", length = 30)
+    private Estilo estilo;
 
-    @Column(length = 50)
-    private String condicion;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "categoria", length = 50)
+    private Categoria categoria;
 
-    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "condicion", length = 50)
+    private Condicion condicion;
+
+    @Column(name = "disponible", nullable = false)
     private Boolean disponible = true;
 
-    @Column(name = "creado_en", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private java.sql.Timestamp creadoEn;
+    @Column(name = "foto")
+    private String foto;
 }

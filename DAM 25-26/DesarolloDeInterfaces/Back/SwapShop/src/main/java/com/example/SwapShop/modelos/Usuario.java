@@ -15,7 +15,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "nombre_usuario", nullable = false, length = 100)
+    @Column(name = "nombre_usuario", nullable = false, length = 100, unique = true)
     private String nombreUsuario;
 
     @Column(name = "nombre", nullable = false, length = 100)
@@ -35,8 +35,4 @@ public class Usuario {
 
     @Column
     private Date fecha_nac;
-
-    @Column(name = "creado_en", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private java.sql.Timestamp creadoEn;
 }
-

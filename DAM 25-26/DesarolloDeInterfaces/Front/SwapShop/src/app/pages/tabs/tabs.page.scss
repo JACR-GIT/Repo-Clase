@@ -1,0 +1,35 @@
+/* Estilos para la barra de pestañas (el footer) */
+ion-tab-bar {
+  /* Usamos la variable de color primario definida en variables.scss */
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-primary-contrast); /* Color del texto/iconos (blanco) */
+  --border: none;
+  height: 60px;
+}
+
+/* Estilos para cada botón de la pestaña */
+ion-tab-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Usamos un borde con el color de contraste (blanco) y opacidad */
+  border-right: 1px solid rgba(var(--ion-color-primary-contrast-rgb), 0.3);
+
+  /* Estilo para las imágenes de Home y Chat */
+  ion-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Estilo específico para el icono de 'Añadir' */
+  .add-icon {
+    font-size: 38px;
+    color: var(--ion-color-primary-contrast); /* Blanco */
+    font-weight: bold;
+  }
+}
+
+/* Quitamos el borde del último botón para que quede limpio */
+ion-tab-button:last-child {
+  border-right: none;
+}

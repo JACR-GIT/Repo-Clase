@@ -1,0 +1,60 @@
+/* Estilos para la cabecera principal */
+.header-toolbar {
+  /* Usamos la variable de color primario definida en variables.scss */
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-primary-contrast); /* Blanco */
+}
+
+.header-logo {
+  height: 35px;
+  margin-left: 12px;
+}
+
+.header-title {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Estilos para el botón de avatar a la derecha */
+ion-buttons[slot="end"] ion-button {
+  --padding-start: 0;
+  --padding-end: 12px;
+}
+
+.header-avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-toolbar {
+  --background: var(--ion-color-primary); /* Mismo fondo primario */
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 0;
+  --padding-bottom: 8px;
+
+  ion-searchbar {
+    --background: var(--ion-color-light); /* Fondo blanco para el campo */
+    --border-radius: 20px;
+    --box-shadow: none;
+    height: 40px;
+  }
+}
+
+/* Estilos para la cuadrícula de prendas */
+ion-grid {
+  padding: 8px;
+}
+
+ion-col {
+  padding: 4px;
+}
+
+app-carta-prenda {
+  display: block;
+  width: 100%;
+}

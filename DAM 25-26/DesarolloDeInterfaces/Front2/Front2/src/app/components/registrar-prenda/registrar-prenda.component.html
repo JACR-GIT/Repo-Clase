@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Añadir Nueva Prenda</ion-title>
+    <ion-buttons slot="end">
+      <ion-button >Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nueva Prenda</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form >
+        <!-- Foto (opcional, según cómo lo manejes en backend) -->
+        <ion-item lines="none">
+          <div class="foto-container">
+            <img *ngIf="fotoPreview"  class="foto-prenda" />
+            <ion-button fill="outline" expand="block"  class="boton-foto">
+              <ion-icon name="camera-outline" slot="start"></ion-icon>
+
+            </ion-button>
+          </div>
+        </ion-item>
+
+        <!-- Nombre de la prenda -->
+        <ion-item>
+          <ion-label position="floating">Nombre de la prenda</ion-label>
+          <ion-input formControlName="nombre_prenda" placeholder="Ej: Camiseta negra básica"></ion-input>
+        </ion-item>
+
+        <!-- Descripción -->
+        <ion-item>
+          <ion-label position="floating">Descripción</ion-label>
+          <ion-textarea formControlName="descripcion"  placeholder="Describe el estado, marca, etc."></ion-textarea>
+        </ion-item>
+
+        <!-- Categoría -->
+        <ion-item>
+          <ion-label>Categoría</ion-label>
+          <ion-select formControlName="categoria" interface="action-sheet" placeholder="Selecciona">
+            <ion-select-option value="CAMISETA">Camiseta</ion-select-option>
+            <ion-select-option value="PANTALON">Pantalón</ion-select-option>
+            <ion-select-option value="VESTIDO">Vestido</ion-select-option>
+            <ion-select-option value="ZAPATOS">Zapatos</ion-select-option>
+            <ion-select-option value="CHAQUETA">Chaqueta</ion-select-option>
+            <ion-select-option value="ACCESORIO">Accesorio</ion-select-option>
+            <!-- Añade las que tengas en tu enum Categoria -->
+          </ion-select>
+        </ion-item>
+
+        <!-- Talla -->
+        <ion-item>
+          <ion-label>Talla</ion-label>
+          <ion-select formControlName="talla" interface="action-sheet" placeholder="Selecciona">
+            <ion-select-option value="XS">XS</ion-select-option>
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="L">L</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
+            <ion-select-option value="XXL">XXL</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Estilo -->
+        <ion-item>
+          <ion-label>Estilo</ion-label>
+          <ion-select formControlName="estilo" interface="action-sheet" placeholder="Selecciona">
+            <ion-select-option value="CASUAL">Casual</ion-select-option>
+            <ion-select-option value="FORMAL">Formal</ion-select-option>
+            <ion-select-option value="DEPORTIVO">Deportivo</ion-select-option>
+            <ion-select-option value="VINTAGE">Vintage</ion-select-option>
+            <ion-select-option value="BOHO">Boho</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Condición -->
+        <ion-item>
+          <ion-label>Condición</ion-label>
+          <ion-select formControlName="condicion" interface="action-sheet" placeholder="Selecciona">
+            <ion-select-option value="NUEVO">Nuevo</ion-select-option>
+            <ion-select-option value="COMO_NUEVO">Como nuevo</ion-select-option>
+            <ion-select-option value="BUENO">Bueno</ion-select-option>
+            <ion-select-option value="ACEPTABLE">Aceptable</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </form>
+
+      <ion-button expand="block" color="primary" >
+        Publicar Prenda
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

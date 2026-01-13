@@ -1,0 +1,59 @@
+.custom-header {
+  background: #f46b5b;
+  padding: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Parte superior */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circle-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background: #54a6b7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-btn {
+  background: transparent;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #e9e5ef;
+  border-radius: 35px;
+  padding: 12px 18px;
+  gap: 12px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+}
+
+.left-icon,
+.right-icon {
+  font-size: 22px;
+  color: #555;
+}

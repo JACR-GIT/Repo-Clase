@@ -1,0 +1,73 @@
+<ion-content class="login-background">
+  <div class="login-wrapper">
+
+    <!-- Botón atrás turquesa circular -->
+    <div class="back-button-circle">
+      <ion-button fill="clear" routerLink="/login">
+        <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </div>
+
+    <!-- Logo y título -->
+    <div class="logo-section ion-text-center">
+      <div class="swap-logo">
+        <img src="assets/Logo.jpeg" alt="SwapShop Logo" />
+      </div>
+      <h1>SwapShop</h1>
+    </div>
+
+    <!-- Tarjeta del formulario -->
+    <div class="login-card">
+      <form>
+        <!-- Nombre de usuario -->
+        <div class="input-group">
+          <ion-label class="input-label">Nombre de usuario</ion-label>
+          <ion-input placeholder="Nombre de Usuario" class="custom-input"></ion-input>
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+          <ion-label class="input-label">Email</ion-label>
+          <ion-input type="email" placeholder="tuemail@ejemplo.com" class="custom-input"></ion-input>
+        </div>
+
+        <!-- Nombre completo -->
+        <div class="input-group">
+          <ion-label class="input-label">Nombre</ion-label>
+          <ion-input placeholder="Nombre" class="custom-input"></ion-input>
+        </div>
+
+        <!-- Apellido 1 -->
+        <div class="input-group">
+          <ion-label class="input-label">Primer Apellido</ion-label>
+          <ion-input placeholder="Primer Apellido" class="custom-input"></ion-input>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="input-group">
+          <ion-label class="input-label">Contraseña</ion-label>
+          <ion-input type="password" placeholder="Mínimo 6 caracteres" class="custom-input"></ion-input>
+        </div>
+
+        <!-- Confirmar contraseña -->
+        <div class="input-group">
+          <ion-label class="input-label">Confirmar contraseña</ion-label>
+          <ion-input type="password" placeholder="Repite tu contraseña" class="custom-input"></ion-input>
+        </div>
+
+        <!-- Botón Registrarse -->
+        <ion-button expand="block" (click)="crearCuenta()" class="login-button">
+          Crear cuenta
+        </ion-button>
+
+        <!-- Enlace volver al login -->
+        <div class="options-row ion-text-center" style="margin-top: 28px;">
+          <span class="checkbox-label">¿Ya tienes cuenta? </span>
+          <ion-button fill="clear" (click)="iniciarSesion()" class="register-link">
+            Iniciar sesión
+          </ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

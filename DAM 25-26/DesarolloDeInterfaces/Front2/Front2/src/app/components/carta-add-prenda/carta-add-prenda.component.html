@@ -1,0 +1,96 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="toolbar-title">
+    <ion-title>
+      <ion-input
+        placeholder="Nombre de prenda"
+        class="editable-title">
+      </ion-input>
+      <ion-buttons slot="end">
+        <ion-button fill="clear" (click)="cerrar()">
+          <ion-icon name="close" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="modal-content">
+  <div class="container">
+
+    <!-- Sección de Foto -->
+    <div class="foto-section">
+      <div class="foto-container" (click)="seleccionarFoto()">
+        <div class="foto-placeholder">
+          <ion-icon name="camera-outline" class="camera-icon"></ion-icon>
+        </div>
+        <img [src]="fotoPreview" *ngIf="fotoPreview" class="foto-preview" />
+      </div>
+
+      <ion-button fill="clear" class="add-photo-btn">
+        <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </div>
+
+    <!-- Sección de Categorías -->
+    <div class="filter-section">
+      <div class="section-header">
+        <h4>Categoría</h4>
+        <ion-button fill="clear" size="small">
+          <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+      <hr />
+      <div class="chips-section">
+        <div class="chip">Camisa</div>
+        <div class="chip">Pantalón</div>
+        <div class="chip">Zapatos</div>
+      </div>
+    </div>
+
+    <!-- Sección de Estilo -->
+    <div class="filter-section">
+      <div class="section-header">
+        <h4>Estilo</h4>
+        <ion-button fill="clear" size="small">
+          <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+      <hr />
+      <div class="chips-section">
+        <div class="chip">Formal</div>
+        <div class="chip">Casual</div>
+        <div class="chip">Streetwear</div>
+      </div>
+    </div>
+
+    <!-- Sección de Condición -->
+    <div class="filter-section">
+      <div class="section-header">
+        <h4>Condición</h4>
+        <ion-button fill="clear" size="small">
+          <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+      <hr />
+      <div class="chips-section">
+        <div class="chip">Nuevo</div>
+        <div class="chip">Usado</div>
+      </div>
+    </div>
+
+    <!-- Sección de Talla -->
+    <div class="filter-section">
+      <div class="section-header">
+        <h4>Talla</h4>
+        <ion-button fill="clear" size="small">
+          <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+      <hr />
+      <div class="chips-section">
+        <div class="chip">S</div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

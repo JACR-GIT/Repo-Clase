@@ -1,0 +1,16 @@
+<div class="filtro-container">
+  <h3 class="titulo">Estilo</h3>
+
+  <div class="chips-scroll">
+    <div class="chips-container">
+      <ng-container *ngFor="let estilo of estilos">
+        <div
+          class="chip"
+          [class.selected]="selected.has(estilo)"
+          (click)="toggle(estilo)">
+          {{ estilo.replace('_', ' ') | titlecase }}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

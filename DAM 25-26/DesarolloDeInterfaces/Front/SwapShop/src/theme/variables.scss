@@ -1,2 +1,52 @@
+:root {
+  // Primary: Naranja coral intenso (header, footer activo, acentos principales)
+  --ion-color-primary: #FF4D4D;
+  --ion-color-primary-rgb: 255, 77, 77;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #e04343;
+  --ion-color-primary-tint: #ff5656;
+
+  // Secondary: Verde vibrante (botones "Intercambiar", "Guardar", "Prestar")
+  --ion-color-secondary: #4CAF50;
+  --ion-color-secondary-rgb: 76, 175, 80;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #429a46;
+  --ion-color-secondary-tint: #55c459;
+
+  // Tertiary / Accent: Amarillo intenso (botón flotante +)
+  --ion-color-tertiary: #FFD700;
+  --ion-color-tertiary-rgb: 255, 215, 0;
+  --ion-color-tertiary-contrast: #212121;
+  --ion-color-tertiary-shade: #e0bd00;
+  --ion-color-tertiary-tint: #fff000;
+
+  // Success / Warning: Amarillo dorado (estrellas de valoración)
+  --ion-color-success: #FFC107;
+  --ion-color-success-rgb: 255, 193, 7;
+  --ion-color-success-contrast: #212121;
+  --ion-color-success-shade: #e0a906;
+  --ion-color-success-tint: #ffd807;
+
+  // Fondo general de la app
+  --ion-background-color: #ffffff;
+  --ion-background-color-rgb: 255, 255, 255;
+
+  // Texto principal y secundario
+  --ion-text-color: #212121;
+  --ion-text-color-rgb: 33, 33, 33;
+
+  // Otros colores útiles
+  --ion-color-light: #ffffff;
+  --ion-color-medium: #888888;     // Placeholders y texto secundario
+  --ion-color-dark: #212121;
+
+  // Toolbar (header)
+  --ion-toolbar-background: var(--ion-color-primary);
+  --ion-toolbar-color: #ffffff;
+
+  // Item y card background
+  --ion-item-background: #ffffff;
+}
+
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/

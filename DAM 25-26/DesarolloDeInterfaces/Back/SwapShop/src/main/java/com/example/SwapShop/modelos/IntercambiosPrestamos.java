@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Date;
-import java.sql.Timestamp;
 
 @Getter
 @Setter
@@ -42,7 +41,7 @@ public class IntercambiosPrestamos {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private EstadoIntercambio estado = EstadoIntercambio.pendiente;
+    private EstadoIntercambio estado = EstadoIntercambio.PENDIENTE;
 
     // ---- FECHAS ----
 
@@ -51,7 +50,4 @@ public class IntercambiosPrestamos {
 
     @Column(name = "fecha_fin")
     private Date fechaFin;
-
-    @Column(name = "creado_en", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Timestamp creadoEn;
 }

@@ -1,0 +1,80 @@
+/* Contenedor principal que se parece a una tarjeta */
+.login-form-container {
+  padding: 24px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* Contenedor para cada campo (label + input) para controlar el espaciado */
+.form-field {
+  margin-bottom: 20px;
+}
+
+/* Estilo de la etiqueta (Email, Contraseña) */
+ion-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Contenedor del campo de texto */
+ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --background: #fff;
+  margin-top: 8px; /* Espacio entre la etiqueta y el input */
+
+  /* Borde redondeado para el campo de texto */
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+
+/* Estilo del campo de texto en sí */
+ion-input {
+  --padding-start: 12px;
+  font-size: 16px;
+}
+
+/* Quitamos los márgenes de la fila de opciones para que se ajuste mejor */
+.options-grid {
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* Contenedor del checkbox para quitarle el fondo y padding */
+.checkbox-item {
+  --background: transparent;
+  border: none;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+
+  /* Etiqueta del checkbox */
+  ion-label {
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+  }
+}
+
+/* Botón de "Registrarse" que parece un enlace */
+.register-button {
+  --color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: none; /* Evita las mayúsculas automáticas */
+}
+
+/* Botón principal de "Iniciar Sesión" */
+.login-button {
+  --background: #363636;
+  --color: #ffffff;
+  --border-radius: 8px;
+  --box-shadow: none;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: none;
+}

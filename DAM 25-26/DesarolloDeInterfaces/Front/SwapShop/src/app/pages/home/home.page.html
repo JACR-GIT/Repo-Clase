@@ -1,0 +1,35 @@
+<!-- Cabecera Naranja Personalizada -->
+<ion-header>
+  <ion-toolbar class="header-toolbar">
+    <!-- Logo a la izquierda -->
+    <ion-buttons slot="start">
+      <img src="assets/Logo.jpeg" alt="Logo" class="header-logo" />
+    </ion-buttons>
+
+    <!-- Título o Nombre de la App -->
+    <ion-title class="header-title">SwapShop</ion-title>
+
+    <!-- Botón con imagen de perfil a la derecha -->
+    <ion-buttons slot="end">
+      <!-- Apuntamos a la ruta de primer nivel '/user-perfil' -->
+      <ion-button [routerLink]="['/user-perfil']">
+        <img src="assets/avatar.png" alt="Perfil" class="header-avatar" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <!-- Barra de Búsqueda -->
+  <ion-toolbar class="search-toolbar">
+    <ion-searchbar placeholder="Busca tu próxima prenda..."></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let prenda of prendas">
+        <app-carta-prenda [prenda]="prenda" (click)="mostrarDetalles(prenda)"></app-carta-prenda>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
