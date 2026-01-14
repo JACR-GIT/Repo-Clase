@@ -1,14 +1,25 @@
 -- ============================================================
 -- 0. BORRAR TODA LA BASE DE DATOS (OPCIONAL)
 -- ============================================================
--- DROP TABLE IF EXISTS mensajes;
--- DROP TABLE IF EXISTS conversaciones;
--- DROP TABLE IF EXISTS valoraciones;
--- DROP TABLE IF EXISTS intercambios;
--- DROP TABLE IF EXISTS prendas;
--- DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS mensajes;
+DROP TABLE IF EXISTS conversaciones;
+DROP TABLE IF EXISTS valoraciones;
+DROP TABLE IF EXISTS intercambios;
+DROP TABLE IF EXISTS prendas;
+DROP TABLE IF EXISTS usuarios;
 
 
+ALTER TABLE prendas ADD COLUMN foto VARCHAR(500) NULL;
+UPDATE prendas SET foto = 'https://m.media-amazon.com/images/I/51YrZfhoQmL._AC_UY1000_.jpg' WHERE id = 1;  -- Camiseta roja
+UPDATE prendas SET foto = 'https://m.media-amazon.com/images/I/81rwAOfF4KL.jpg' WHERE id = 2;  -- Jeans azules
+UPDATE prendas SET foto = 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/8ff901c1-3c09-4f07-9e08-a36cd48a1768.__CR0,0,970,600_PT0_SX970_V1___.jpg' WHERE id = 3;  -- Vestido floral
+UPDATE prendas SET foto = 'https://www.univision.com/_next/image?url=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2Fc%2Fchamarra-de-piel-o-cuero-730571353.jpg&w=1280&q=75' WHERE id = 4;  -- Chaqueta cuero negra
+UPDATE prendas SET foto = 'https://hips.hearstapps.com/hmg-prod/images/gettyimages-1513904489-68aebab132fb2.jpg' WHERE id = 5;  -- Zapatillas blancas
+UPDATE prendas SET foto = 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/9ab8c948-a95e-4d29-a1ae-2fcaaf558125.__CR0,0,1800,1350_PT0_SX600_V1___.jpg' WHERE id = 6;  -- Otra camiseta
+UPDATE prendas SET foto = 'https://media.vogue.mx/photos/63eac0a418c9ac1a3d68c9f7/4:3/w_5618,h_4214,c_limit/mom-jeans-vogue-GettyImages-1397932708%20(1).jpg' WHERE id = 7;  -- Mom jeans
+UPDATE prendas SET foto = 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/df62736b-abf0-411d-b936-f6b66f8d03b5.__CR0,0,1200,900_PT0_SX600_V1___.jpg' WHERE id = 8;  -- Vestido verano
+UPDATE prendas SET foto = 'https://media.glamour.mx/photos/61908d52a6e030d6480fd613/master/w_1600,c_limit/195996.jpg' WHERE id = 9;  -- Chaqueta piel
+UPDATE prendas SET foto = 'https://e01-elmundo.uecdn.es/assets/multimedia/imagenes/2024/01/16/17054167971868.jpg' WHERE id = 10;  -- Zapatillas outfit
 -- ============================================================
 -- 1. USUARIOS
 -- ============================================================
