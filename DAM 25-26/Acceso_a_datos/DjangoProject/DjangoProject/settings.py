@@ -74,9 +74,14 @@ WSGI_APPLICATION = 'DjangoProject.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django',
+        'HOST': 'mongodb://localhost:27017/',
+        'NAME': "ProjectoRanking",
+    },
+    'mongodb': {
         'ENGINE': 'django_mongodb_backend',
         'HOST': 'mongodb://localhost:27017/',
-        'NAME': "DjangoProject",
+        'NAME': "ProjectoRanking",
     }
 }
 
@@ -110,6 +115,8 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+AUTH_USER_MODEL = 'usuarios.Usuario'
 
 
 # Static files (CSS, JavaScript, Images)
