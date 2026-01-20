@@ -49,7 +49,7 @@ public class UsuarioService {
         Pageable topOne = PageRequest.of(0, 1);
         List<EstadisticasUsuarioDTO> resultados = usuarioRepository.findUsuarioConMasIntercambios(EstadoIntercambio.ACEPTADO, topOne);
         if (resultados.isEmpty()) {
-            return null; // O lanzar una excepción si se prefiere
+            throw new ElementoNoEncontradoException("No se encuentra ningún usuario con intercambios");
         }
         return resultados.get(0);
     }

@@ -1,9 +1,13 @@
 package com.example.SwapShop.servicios;
 
+import com.example.SwapShop.dto.EstadisticasUsuarioDTO;
+import com.example.SwapShop.dto.IntercambiosPrestamosDTO;
 import com.example.SwapShop.dto.UsuarioDTO;
 import com.example.SwapShop.exception.ElementoNoEncontradoException;
 import com.example.SwapShop.exception.ResourceAlreadyExistsException;
-import com.example.SwapShop.modelos.Usuario;
+import com.example.SwapShop.modelos.*;
+import com.example.SwapShop.repositorios.IIntercambiosPrestamosRepository;
+import com.example.SwapShop.repositorios.IPrendasRepository;
 import com.example.SwapShop.repositorios.IUsuarioRepository;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.BeforeAll;
@@ -15,7 +19,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
-import java.sql.Date; // Usar java.sql.Date para la conversión de LocalDate
+import java.sql.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,6 +35,17 @@ public class UsuarioServiceTests {
     @Autowired
     private IUsuarioRepository usuarioRepository;
 
+    @Autowired
+    private IntercambiosPrestamosService intercambiosPrestamosService;
+
+    @Autowired
+    private IIntercambiosPrestamosRepository intercambiosPrestamosRepository;
+
+    @Autowired
+    private IPrendasRepository prendasRepository;
+
+
+
 
     @BeforeAll
     void cargarDatos(){
@@ -41,7 +56,7 @@ public class UsuarioServiceTests {
         usuario1.setNombre("nombre1");
         usuario1.setApellido1("apellido1");
         usuario1.setApellido2("apellido2");
-        usuario1.setFecha_nac(Date.valueOf(LocalDate.of(1990, 1, 1))); // Corregido el formato de fecha
+        usuario1.setFecha_nac(Date.valueOf(LocalDate.of(1990, 1, 1)));
 
         Usuario usuario2 = new Usuario();
         usuario2.setNombreUsuario("usuario2");
@@ -50,11 +65,56 @@ public class UsuarioServiceTests {
         usuario2.setNombre("nombre1");
         usuario2.setApellido1("apellido1");
         usuario2.setApellido2("apellido2");
-        usuario2.setFecha_nac(Date.valueOf(LocalDate.of(1990, 1, 1))); // Corregido el formato de fecha
+        usuario2.setFecha_nac(Date.valueOf(LocalDate.of(1990, 1, 1)));
 
         usuarioRepository.save(usuario1);
         usuarioRepository.save(usuario2);
 
+        Prendas prenda1 = new Prendas();
+        prenda1.setDueno(usuario1);
+        prenda1.setNombrePrenda("Camiseta Vintage");
+        prenda1.setDescripcion("Camiseta de los 90");
+        prenda1.setTalla(Talla.M);
+        prenda1.setEstilo(Estilo.VINTAGE);
+        prenda1.setCategoria(Categoria.CAMISETA);
+        prenda1.setCondicion(Condicion.BUENA);
+        prenda1.setDisponible(true);
+
+        Prendas prenda2 = new Prendas();
+        prenda2.setDueno(usuario2);
+        prenda2.setNombrePrenda("Pantalón Vaquero");
+        prenda2.setDescripcion("Pantalón azul clásico");
+        prenda2.setTalla(Talla.L);
+        prenda2.setEstilo(Estilo.CASUAL);
+        prenda2.setCategoria(Categoria.PANTALON);
+        prenda2.setCondicion(Condicion.MUY_BUENA);
+        prenda2.setDisponible(true);
+
+        prendasRepository.save(prenda1);
+        prendasRepository.save(prenda2);
+
+//        IntercambiosPrestamos intercambio1 = new IntercambiosPrestamos();
+//        intercambio1.setEstado(EstadoIntercambio.ACEPTADO);
+//        intercambio1.setTipo(TipoIntercambio.INTERCAMBIO);
+//        intercambio1.setFechaInicio(Date.valueOf(LocalDate.now()));
+//        intercambio1.setFechaFin(Date.valueOf(LocalDate.now().plusDays(7)));
+//        intercambio1.setDueno(usuario1);
+//        intercambio1.setSolicitante(usuario2);
+//        intercambio1.setPrenda(prenda1);
+//        intercambio1.setPrenda2(prenda2);
+//
+//        IntercambiosPrestamos intercambio2 = new IntercambiosPrestamos();
+//        intercambio2.setEstado(EstadoIntercambio.ACEPTADO);
+//        intercambio2.setTipo(TipoIntercambio.INTERCAMBIO);
+//        intercambio2.setFechaInicio(Date.valueOf(LocalDate.now()));
+//        intercambio2.setFechaFin(Date.valueOf(LocalDate.now().plusDays(7)));
+//        intercambio2.setDueno(usuario1);
+//        intercambio2.setSolicitante(usuario2);
+//        intercambio2.setPrenda(prenda1);
+//        intercambio2.setPrenda2(prenda2);
+//
+//        intercambiosPrestamosRepository.save(intercambio1);
+//        intercambiosPrestamosRepository.save(intercambio2);
     }
 
     @Test
@@ -92,7 +152,7 @@ public class UsuarioServiceTests {
 
         //Given
         UsuarioDTO nuevoUsuarioDTO = new UsuarioDTO();
-        nuevoUsuarioDTO.setNombreUsuario("usuario3");
+        nuevoUsuarioDTO.setNombreUsuario("usuario1");
         nuevoUsuarioDTO.setCorreo("correo1");
         nuevoUsuarioDTO.setContrasena("contrasena3");
         nuevoUsuarioDTO.setNombre("nombre3");
@@ -139,7 +199,10 @@ public class UsuarioServiceTests {
 
         //Then
 
+        EstadisticasUsuarioDTO usuarioDTO = usuarioService.usuarioConMasIntercambios();
+
         //When
+        assertNotNull(usuarioDTO, "No existen usuarios con intercambios aceptados.");
     }
 
     @Test
@@ -150,5 +213,6 @@ public class UsuarioServiceTests {
         //Then
 
         //When
+        assertThrows(ElementoNoEncontradoException.class, () -> usuarioService.usuarioConMasIntercambios());
     }
 }

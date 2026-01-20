@@ -20,6 +20,11 @@ public class ValoracionesServices {
     private UsuarioService usarioService;
 
     public ValoracionesDTO crearValoracion(Integer id_valorado, ValoracionesDTO valoracionesDTO) {
+        if (valoracionesDTO == null || valoracionesDTO.getPuntuacion() == null || valoracionesDTO.getValorador() == null
+                || valoracionesDTO.getId() == null || id_valorado == null) {
+            throw new IllegalArgumentException("Ha salido un error: Los datos de la valoración no pueden ser nulos");
+        }
+
         Valoraciones valoracion = valoracionesMapper.toEntity(valoracionesDTO);
 
         UsuarioDTO user = usarioService.buscarUsuarioPorId(id_valorado);

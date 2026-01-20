@@ -23,6 +23,25 @@ public class PrendaService {
     private PrendasMapper prendasMapper;
 
     public PrendasDTO crearPrenda(PrendasDTO prendasDTO) {
+        if (prendasDTO == null) {
+            throw new IllegalArgumentException("La prenda no puede ser nula");
+        }
+        if (prendasDTO.getNombrePrenda() == null || prendasDTO.getNombrePrenda().isEmpty()) {
+            throw new IllegalArgumentException("El nombre de la prenda es obligatorio");
+        }
+        if (prendasDTO.getTalla() == null) {
+            throw new IllegalArgumentException("La talla de la prenda es obligatoria");
+        }
+        if (prendasDTO.getCategoria() == null) {
+            throw new IllegalArgumentException("La categoría de la prenda es obligatoria");
+        }
+        if (prendasDTO.getCondicion() == null) {
+            throw new IllegalArgumentException("La condición de la prenda es obligatoria");
+        }
+        if (prendasDTO.getId_dueno() == null) {
+            throw new IllegalArgumentException("El dueño de la prenda es obligatorio");
+        }
+
         Prendas prenda = prendasMapper.toEntity(prendasDTO);
         Prendas prendaGuardada = prendasRepository.save(prenda);
         return prendasMapper.toDTO(prendaGuardada);

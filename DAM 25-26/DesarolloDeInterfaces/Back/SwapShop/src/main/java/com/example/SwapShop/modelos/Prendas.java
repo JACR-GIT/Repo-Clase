@@ -15,7 +15,7 @@ public class Prendas {
 
     @ManyToOne
     @JoinColumn(name = "id_dueno", nullable = false)
-    private Usuario dueno; // Campo renombrado de id_dueno a dueno
+    private Usuario dueno;
 
     @Column(name = "nombre_prenda", nullable = false, length = 150)
     private String nombrePrenda;
