@@ -2,6 +2,7 @@ package com.example.SwapShop.servicios;
 
 import com.example.SwapShop.dto.UsuarioDTO;
 import com.example.SwapShop.mapeadores.UsuarioMapper;
+import com.example.SwapShop.modelos.EstadoIntercambio;
 import com.example.SwapShop.modelos.Usuario;
 import com.example.SwapShop.repositorios.IUsuarioRepository;
 import org.junit.jupiter.api.DisplayName;
@@ -70,5 +71,20 @@ public class UsuarioServiceIntegrationTest {
         //When
         Mockito.verify(this.usuarioRepository).findById(Mockito.anyInt());
         Mockito.verify(this.usuarioMapper).toDTO(Mockito.any(Usuario.class));
+    }
+
+    @Test
+    @DisplayName("Test de integracion -> usuarioConMasIntercambios()")
+
+    public void usuarioConMasIntercambiosIntegrationTest(){
+        //Given
+        Mockito.when(this.usuarioRepository.findUsuarioConMasIntercambios(EstadoIntercambio.ACEPTADO, Mockito.any())).thenReturn(null);
+
+        //Then
+
+        this.usuarioService.usuarioConMasIntercambios();
+
+        //When
+        Mockito.verify(this.usuarioRepository).findUsuarioConMasIntercambios(Mockito.any(), Mockito.any());
     }
 }

@@ -70,11 +70,11 @@ public class VeloracionesServiceTest {
 
         //When
 
-        valoracionesService.crearValoracion(2,valoracionCreada);
+        ValoracionesDTO valoracionGuardada = valoracionesService.crearValoracion(1,valoracionCreada);
 
         //Then
-        assertNotNull(valoracionCreada, "La valoracion creada no debería ser nula.");
-        assertNotNull(valoracionCreada.getId(), "La valoracion creada debería tener un ID.");
+        assertNotNull(valoracionGuardada, "La valoracion creada no debería ser nula.");
+        assertNotNull(valoracionGuardada.getId(), "La valoracion creada debería tener un ID.");
     }
 
     @Test
@@ -83,7 +83,6 @@ public class VeloracionesServiceTest {
 
         //Given
         ValoracionesDTO valoracionCreada = new ValoracionesDTO();
-        valoracionCreada.setId(1);
         valoracionCreada.setPuntuacion(5);
 
         //Then
