@@ -19,7 +19,7 @@ class ImageAdapter(private val context: Context, private val imageUris: List<Uri
         val imageView: ImageView = convertView as? ImageView ?: ImageView(context).apply {
             layoutParams = ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
-                120 // Altura fija para miniaturas
+                120
             )
             scaleType = ImageView.ScaleType.CENTER_CROP
         }

@@ -2,6 +2,7 @@ package com.example.SwapShop.servicios;
 
 import com.example.SwapShop.dto.EstadisticasPrendaDTO;
 import com.example.SwapShop.dto.PrendasDTO;
+import com.example.SwapShop.exception.ElementoNoEncontradoException;
 import com.example.SwapShop.mapeadores.PrendasMapper;
 import com.example.SwapShop.modelos.Prendas;
 import com.example.SwapShop.repositorios.IIntercambiosPrestamosRepository;
@@ -49,6 +50,9 @@ public class PrendaService {
 
     public List<PrendasDTO> buscarPrendaPorTalla (String talla) {
         List<Prendas> prendaBuscada = prendasRepository.buscarPorTalla(talla);
+        if (prendaBuscada.isEmpty()) {
+            throw new ElementoNoEncontradoException("No hay ninguna prenda con la talla: " + talla);
+        }
         return prendasMapper.listToDTOs(prendaBuscada);
     }
 
@@ -69,7 +73,11 @@ public class PrendaService {
 
     public List<EstadisticasPrendaDTO> top5PrendasMasIntercambiadasAceptadas() {
         Pageable top5 = PageRequest.of(0, 5);
-        return intercambiosPrestamosRepository.buscarTop5Intercambio(top5);
+        List<EstadisticasPrendaDTO> resultado = intercambiosPrestamosRepository.buscarTop5Intercambio(top5);
+        if (resultado.isEmpty()) {
+            throw new ElementoNoEncontradoException("No se encontraron prendas intercambiadas aceptadas.");
+        }
+        return resultado;
     }
 
     public List<PrendasDTO> findAllPrendasWhenDisponible() {

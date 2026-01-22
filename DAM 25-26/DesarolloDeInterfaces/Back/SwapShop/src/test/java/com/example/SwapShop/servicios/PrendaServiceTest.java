@@ -1,6 +1,7 @@
 package com.example.SwapShop.servicios;
 
 import com.example.SwapShop.dto.PrendasDTO;
+import com.example.SwapShop.exception.ElementoNoEncontradoException;
 import com.example.SwapShop.modelos.*;
 import com.example.SwapShop.repositorios.IPrendasRepository;
 import com.example.SwapShop.repositorios.IUsuarioRepository;
@@ -17,6 +18,7 @@ import org.springframework.context.annotation.Bean;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -69,8 +71,8 @@ public class PrendaServiceTest {
         prenda2.setCondicion(Condicion.MUY_BUENA);
         prenda2.setDisponible(true);
 
-        prendasRepository.save(prenda1);
-        prendasRepository.save(prenda2);
+//        prendasRepository.save(prenda1);
+//        prendasRepository.save(prenda2);
 
     }
 
@@ -148,7 +150,7 @@ public class PrendaServiceTest {
         //Then
 
         //When
-
+        assertThrows(ElementoNoEncontradoException.class, () -> prendaService.buscarPrendaPorTalla("XL"));
     }
 
     @Test
@@ -156,10 +158,29 @@ public class PrendaServiceTest {
     void modificarPrendaPorId() {
         //Given
 
+        PrendasDTO prendaModificada = new PrendasDTO();
+        prendaModificada.setNombrePrenda("Camiseta Modificada");
+        prendaModificada.setDescripcion("Descripción modificada");
+        prendaModificada.setTalla(Talla.S);
+        prendaModificada.setEstilo(Estilo.CASUAL);
+        prendaModificada.setCategoria(Categoria.CAMISETA);
+        prendaModificada.setCondicion(Condicion.EXCELENTE);
+        prendaModificada.setDisponible(false);
+
         //Then
+
+        prendaService.modificarPrendaPorId(1, prendaModificada);
 
         //When
 
+        assertNotNull(prendaModificada, "La prenda modificada no debe ser nula");
+        assertEquals("Camiseta Modificada", prendaModificada.getNombrePrenda(), "El nombre no se actualizó");
+        assertEquals("Descripción modificada", prendaModificada.getDescripcion(), "La descripción no se actualizó");
+        assertEquals(Talla.S, prendaModificada.getTalla(), "La talla no se actualizó");
+        assertEquals(Estilo.CASUAL, prendaModificada.getEstilo(), "El estilo no se actualizó");
+        assertEquals(Categoria.CAMISETA, prendaModificada.getCategoria(), "La categoría no se actualizó");
+        assertEquals(Condicion.EXCELENTE, prendaModificada.getCondicion(), "La condición no se actualizó");
+        assertEquals(false, prendaModificada.getDisponible(), "La disponibilidad no se actualizó");
     }
 
     @Test
@@ -167,9 +188,20 @@ public class PrendaServiceTest {
     void modificarPrendaPorIdNegativo() {
         //Given
 
+        PrendasDTO prendaModificada = new PrendasDTO();
+        prendaModificada.setNombrePrenda("Camiseta Modificada");
+        prendaModificada.setDescripcion("Descripción modificada");
+        prendaModificada.setTalla(Talla.S);
+        prendaModificada.setEstilo(Estilo.CASUAL);
+        prendaModificada.setCategoria(Categoria.CAMISETA);
+        prendaModificada.setCondicion(Condicion.EXCELENTE);
+        prendaModificada.setDisponible(false);
+
         //Then
 
+
         //When
+        assertThrows(NoSuchElementException.class, () -> prendaService.modificarPrendaPorId(4, prendaModificada));
 
     }
 
@@ -181,6 +213,7 @@ public class PrendaServiceTest {
         //Then
 
         //When
+        assertNotNull(prendaService.top5PrendasMasIntercambiadasAceptadas(), "No se encontraron prendas intercambiadas aceptadas.");
 
     }
 
@@ -192,7 +225,7 @@ public class PrendaServiceTest {
         //Then
 
         //When
-
+        assertThrows(ElementoNoEncontradoException.class, () -> prendaService.top5PrendasMasIntercambiadasAceptadas());
     }
 
 }

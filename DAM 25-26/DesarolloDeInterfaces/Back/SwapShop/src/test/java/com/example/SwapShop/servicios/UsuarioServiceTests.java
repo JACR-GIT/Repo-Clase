@@ -45,8 +45,6 @@ public class UsuarioServiceTests {
     private IPrendasRepository prendasRepository;
 
 
-
-
     @BeforeAll
     void cargarDatos(){
         Usuario usuario1 = new Usuario();
