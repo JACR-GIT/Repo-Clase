@@ -1,8 +1,10 @@
 package com.example.SwapShop.servicios;
 
 import com.example.SwapShop.dto.PrendasDTO;
+import com.example.SwapShop.exception.ElementoNoEncontradoException;
 import com.example.SwapShop.mapeadores.PrendasMapper;
 import com.example.SwapShop.modelos.*;
+import com.example.SwapShop.repositorios.IIntercambiosPrestamosRepository;
 import com.example.SwapShop.repositorios.IPrendasRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -10,9 +12,15 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Optional;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 public class PrendasServiceIntegrationTest {
@@ -25,6 +33,9 @@ public class PrendasServiceIntegrationTest {
 
     @Mock
     private PrendasMapper prendasMapper;
+
+    @Mock
+    private IIntercambiosPrestamosRepository intercambiosPrestamosRepository;
 
 
     @Test
@@ -69,7 +80,7 @@ public class PrendasServiceIntegrationTest {
         String tallaBuscada = "L";
 
         List<Prendas> prendasMock = List.of(
-                new Prendas(),  // al menos 1 prenda para que !isEmpty()
+                new Prendas(),
                 new Prendas()
         );
 
@@ -78,12 +89,8 @@ public class PrendasServiceIntegrationTest {
                 new PrendasDTO()
         );
 
-        // ← AQUÍ EL CAMBIO CLAVE: thenReturn(LISTA_REAL) NO anyList()
         Mockito.when(prendasRepository.buscarPorTalla(tallaBuscada)).thenReturn(prendasMock);
         Mockito.when(prendasMapper.listToDTOs(prendasMock)).thenReturn(dtosMock);
-
-//        Mockito.when(prendasRepository.buscarPorTalla(Mockito.anyString())).thenReturn(Mockito.anyList());
-//        Mockito.when(prendasMapper.listToDTOs(Mockito.anyList())).thenReturn(Mockito.anyList());
 
         //Then
 
@@ -94,8 +101,6 @@ public class PrendasServiceIntegrationTest {
         Mockito.verify(prendasRepository).buscarPorTalla(tallaBuscada);
         Mockito.verify(prendasMapper).listToDTOs(prendasMock);
 
-//        Mockito.verify(prendasRepository).buscarPorTalla(Mockito.anyString());
-//        Mockito.verify(prendasMapper).listToDTOs(Mockito.anyList());
     }
 
     @Test
@@ -122,7 +127,6 @@ public class PrendasServiceIntegrationTest {
 
         Mockito.when(prendasRepository.save(Mockito.any(Prendas.class)))
                 .thenAnswer(invocation -> invocation.getArgument(0));
-        // devuelve la misma entidad modificada
 
         Mockito.when(prendasMapper.toDTO(Mockito.any(Prendas.class)))
                 .thenReturn(dtoModificado);
@@ -134,6 +138,27 @@ public class PrendasServiceIntegrationTest {
         Mockito.verify(prendasRepository).findById(idPrenda);
         Mockito.verify(prendasRepository).save(prendaExistente);
         Mockito.verify(prendasMapper).toDTO(prendaExistente);
+    }
+
+    @Test
+    @DisplayName("Test de integracion -> top5PrendasMasIntercambiadasAceptadas()")
+    public void top5PrendasMasIntercambiadasAceptadasIntegrationTest() {
+        // Given
+        Pageable top5Pageable = PageRequest.of(0, 5);
+
+        Mockito.when(intercambiosPrestamosRepository.buscarTop5Intercambio(top5Pageable))
+                .thenReturn(List.of());
+
+        // When
+        try {
+            prendaService.top5PrendasMasIntercambiadasAceptadas();
+        } catch (ElementoNoEncontradoException e) {
+            assertEquals("No se encontraron prendas intercambiadas aceptadas.", e.getMessage());
+        }
+
+        // Then
+        Mockito.verify(intercambiosPrestamosRepository).buscarTop5Intercambio(top5Pageable);
+        Mockito.verifyNoMoreInteractions(intercambiosPrestamosRepository);
     }
 
 }

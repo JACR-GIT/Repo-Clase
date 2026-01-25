@@ -91,26 +91,26 @@ public class UsuarioServiceTests {
         prendasRepository.save(prenda1);
         prendasRepository.save(prenda2);
 
-//        IntercambiosPrestamos intercambio1 = new IntercambiosPrestamos();
-//        intercambio1.setEstado(EstadoIntercambio.ACEPTADO);
-//        intercambio1.setTipo(TipoIntercambio.INTERCAMBIO);
-//        intercambio1.setFechaInicio(Date.valueOf(LocalDate.now()));
-//        intercambio1.setFechaFin(Date.valueOf(LocalDate.now().plusDays(7)));
-//        intercambio1.setDueno(usuario1);
-//        intercambio1.setSolicitante(usuario2);
-//        intercambio1.setPrenda(prenda1);
-//        intercambio1.setPrenda2(prenda2);
-//
-//        IntercambiosPrestamos intercambio2 = new IntercambiosPrestamos();
-//        intercambio2.setEstado(EstadoIntercambio.ACEPTADO);
-//        intercambio2.setTipo(TipoIntercambio.INTERCAMBIO);
-//        intercambio2.setFechaInicio(Date.valueOf(LocalDate.now()));
-//        intercambio2.setFechaFin(Date.valueOf(LocalDate.now().plusDays(7)));
-//        intercambio2.setDueno(usuario1);
-//        intercambio2.setSolicitante(usuario2);
-//        intercambio2.setPrenda(prenda1);
-//        intercambio2.setPrenda2(prenda2);
-//
+        IntercambiosPrestamos intercambio1 = new IntercambiosPrestamos();
+        intercambio1.setEstado(EstadoIntercambio.ACEPTADO);
+        intercambio1.setTipo(TipoIntercambio.INTERCAMBIO);
+        intercambio1.setFechaInicio(Date.valueOf(LocalDate.now()));
+        intercambio1.setFechaFin(Date.valueOf(LocalDate.now().plusDays(7)));
+        intercambio1.setDueno(usuario1);
+        intercambio1.setSolicitante(usuario2);
+        intercambio1.setPrenda(prenda1);
+        intercambio1.setPrenda2(prenda2);
+
+        IntercambiosPrestamos intercambio2 = new IntercambiosPrestamos();
+        intercambio2.setEstado(EstadoIntercambio.ACEPTADO);
+        intercambio2.setTipo(TipoIntercambio.INTERCAMBIO);
+        intercambio2.setFechaInicio(Date.valueOf(LocalDate.now()));
+        intercambio2.setFechaFin(Date.valueOf(LocalDate.now().plusDays(7)));
+        intercambio2.setDueno(usuario1);
+        intercambio2.setSolicitante(usuario2);
+        intercambio2.setPrenda(prenda1);
+        intercambio2.setPrenda2(prenda2);
+
 //        intercambiosPrestamosRepository.save(intercambio1);
 //        intercambiosPrestamosRepository.save(intercambio2);
     }
