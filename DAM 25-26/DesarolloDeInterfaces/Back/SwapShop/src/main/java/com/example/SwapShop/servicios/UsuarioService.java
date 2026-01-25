@@ -51,7 +51,7 @@ public class UsuarioService {
         if (resultados.isEmpty()) {
             throw new ElementoNoEncontradoException("No se encuentra ningún usuario con intercambios");
         }
-        return resultados.get(0);
+        return resultados.getFirst();
     }
 
     public List<UsuarioDTO> obtenerTodosLosUsuarios() {

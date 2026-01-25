@@ -1,5 +1,6 @@
 package com.example.SwapShop.servicios;
 
+import com.example.SwapShop.dto.EstadisticasUsuarioDTO;
 import com.example.SwapShop.dto.UsuarioDTO;
 import com.example.SwapShop.mapeadores.UsuarioMapper;
 import com.example.SwapShop.modelos.EstadoIntercambio;
@@ -14,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @SpringBootTest
@@ -77,8 +79,12 @@ public class UsuarioServiceIntegrationTest {
     @DisplayName("Test de integracion -> usuarioConMasIntercambios()")
 
     public void usuarioConMasIntercambiosIntegrationTest(){
+
+        EstadisticasUsuarioDTO dto = new EstadisticasUsuarioDTO();
+        List<EstadisticasUsuarioDTO> lista = List.of(dto);
+
         //Given
-        Mockito.when(this.usuarioRepository.findUsuarioConMasIntercambios(EstadoIntercambio.ACEPTADO, Mockito.any())).thenReturn(null);
+        Mockito.when(this.usuarioRepository.findUsuarioConMasIntercambios(Mockito.any(EstadoIntercambio.class), Mockito.any())).thenReturn(lista);
 
         //Then
 

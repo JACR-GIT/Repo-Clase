@@ -29,31 +29,37 @@ public class PrendasServiceIntegrationTest {
 
     @Test
     @DisplayName("Test de integracion -> crearPrenda()")
-    public void crearPrendaIntegrationTest(){
-        //Given
+    public void crearPrendaIntegrationTest() {
 
-        PrendasDTO prenda = new PrendasDTO();
-        prenda.setId_dueno(1);
-        prenda.setNombrePrenda("Pantalón Vaquero");
-        prenda.setDescripcion("Pantalón azul clásico");
-        prenda.setTalla(Talla.L);
-        prenda.setEstilo(Estilo.CASUAL);
-        prenda.setCategoria(Categoria.PANTALON);
-        prenda.setCondicion(Condicion.MUY_BUENA);
-        prenda.setDisponible(true);
+        // Given
+        PrendasDTO prendaDto = new PrendasDTO();
+        prendaDto.setNombrePrenda("Pantalón Vaquero");
+        prendaDto.setTalla(Talla.L);
+        prendaDto.setCategoria(Categoria.PANTALON);
+        prendaDto.setCondicion(Condicion.MUY_BUENA);
+        prendaDto.setId_dueno(1);
 
-        Mockito.when(prendasRepository.save(Mockito.any(Prendas.class))).thenReturn(new Prendas());
-        Mockito.when(prendasMapper.toDTO(Mockito.any(Prendas.class))).thenReturn(new PrendasDTO());
-        Mockito.when(prendasMapper.toEntity(prenda)).thenReturn(new Prendas());
+        Prendas prendaEntity = new Prendas();
+        Prendas prendaGuardada = new Prendas();
+        PrendasDTO prendaDtoResultado = new PrendasDTO();
 
-        //Then
+        Mockito.when(prendasMapper.toEntity(Mockito.any(PrendasDTO.class)))
+                .thenReturn(prendaEntity);
 
-        this.prendaService.crearPrenda(prenda);
+        Mockito.when(prendasRepository.save(Mockito.any(Prendas.class)))
+                .thenReturn(prendaGuardada);
 
-        //When
-        Mockito.verify(prendasRepository.save(Mockito.any(Prendas.class)));
-        Mockito.verify(prendasMapper.toDTO(Mockito.any(Prendas.class)));
+        Mockito.when(prendasMapper.toDTO(Mockito.any(Prendas.class)))
+                .thenReturn(prendaDtoResultado);
+
+        // When
+        PrendasDTO resultado = prendaService.crearPrenda(prendaDto);
+
+        // Then
+        Mockito.verify(prendasRepository).save(prendaEntity);
+        Mockito.verify(prendasMapper).toDTO(prendaGuardada);
     }
+
 
     @Test
     @DisplayName("Test de integracion -> buscarPrendaPorTalla()")
@@ -94,11 +100,11 @@ public class PrendasServiceIntegrationTest {
 
     @Test
     @DisplayName("Test de integracion -> modificarPrendaPorId()")
-    public void modificarPrendaPorIdIntegrationTest(){
-        // Given
-        Integer idPrenda  = 1;
+    public void modificarPrendaPorIdIntegrationTest() {
 
-        // 1. Creamos el DTO de entrada (lo que llega desde el controller o cliente)
+        // Given
+        Integer idPrenda = 1;
+
         PrendasDTO dtoModificado = new PrendasDTO();
         dtoModificado.setNombrePrenda("Camiseta Modificada");
         dtoModificado.setDescripcion("Descripción modificada");
@@ -108,35 +114,26 @@ public class PrendasServiceIntegrationTest {
         dtoModificado.setCondicion(Condicion.EXCELENTE);
         dtoModificado.setDisponible(false);
 
-        // 2. Entidad que SIMULAMOS que existe en la base de datos
         Prendas prendaExistente = new Prendas();
-        // prendaExistente.setId(idExistente);   ← recomendable ponerlo
-        // puedes poner más campos si tu mapper los usa
+        prendaExistente.setId(idPrenda);
 
-        // 3. Entidad después de aplicar cambios (la que se guarda)
-        Prendas prendaActualizada = new Prendas();
-        // prendaActualizada.setId(idExistente);
-        // puedes copiar campos o dejar que el servicio los setee
-
-        // Stubbing (mocks)
         Mockito.when(prendasRepository.findById(idPrenda))
                 .thenReturn(Optional.of(prendaExistente));
 
-        Mockito.when(prendasMapper.toEntity(dtoModificado))
-                .thenReturn(prendaActualizada);   // o puedes devolver la misma prendaExistente si el mapper actualiza sobre existente
-
         Mockito.when(prendasRepository.save(Mockito.any(Prendas.class)))
-                .thenReturn(prendaActualizada);
+                .thenAnswer(invocation -> invocation.getArgument(0));
+        // devuelve la misma entidad modificada
 
-        Mockito.when(prendasMapper.toDTO(prendaActualizada))
-                .thenReturn(dtoModificado);   // o un DTO nuevo con los valores actualizados
+        Mockito.when(prendasMapper.toDTO(Mockito.any(Prendas.class)))
+                .thenReturn(dtoModificado);
 
         // When
-        PrendasDTO resultado = prendaService.modificarPrendaPorId(idPrenda, dtoModificado);
+        prendaService.modificarPrendaPorId(idPrenda, dtoModificado);
 
-        // Verificaciones de interacciones
+        // Then
         Mockito.verify(prendasRepository).findById(idPrenda);
-        Mockito.verify(prendasRepository).save(prendaActualizada);   // o any() si no te importa la referencia exacta
-        Mockito.verify(prendasMapper).toDTO(prendaActualizada);
+        Mockito.verify(prendasRepository).save(prendaExistente);
+        Mockito.verify(prendasMapper).toDTO(prendaExistente);
     }
+
 }
