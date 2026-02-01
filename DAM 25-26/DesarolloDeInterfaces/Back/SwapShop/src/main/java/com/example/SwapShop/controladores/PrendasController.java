@@ -38,7 +38,6 @@ public class PrendasController {
         return ResponseEntity.noContent().build();
     }
 
-    // Mantengo los otros endpoints que tenías
     @GetMapping
     public List<PrendasDTO> listarPrendas(@RequestParam String talla) {
         return prendasService.buscarPrendaPorTalla(talla);
@@ -46,7 +45,7 @@ public class PrendasController {
 
     @GetMapping("/disponibles")
     public List<PrendasDTO> obtenerTodasDisponibles() {
-        return prendasService.findAllPrendasWhenDisponible();  // Devuelve todas disponibles
+        return prendasService.findAllPrendasWhenDisponible();
     }
 
     @GetMapping("/test")
