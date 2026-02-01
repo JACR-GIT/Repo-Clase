@@ -1,17 +1,20 @@
-# Fase 1: Compilar la aplicación (Build)
-FROM maven:3.9.6-amazoncorretto-21 AS build
+# ETAPA DE CONSTRUCCIÓN
+FROM amazoncorretto:21-alpine-jdk AS build
 WORKDIR /app
-COPY . .
-RUN mvn clean package -DskipTests
 
-# Fase 2: Ejecutar la aplicación (Runtime)
-FROM amazoncorretto:21-al2023-headless
+# Copiamos todo lo que hay en SwapShop al contenedor
+COPY . .
+
+# Corregimos permisos y compilamos
+RUN chmod +x mvnw
+RUN ./mvnw clean package -DskipTests
+
+# ETAPA DE EJECUCIÓN
+FROM amazoncorretto:21-alpine
 WORKDIR /app
-# Copiamos el archivo .jar generado en la fase anterior
+
+# Buscamos el JAR generado en target y lo copiamos
 COPY --from=build /app/target/*.jar app.jar
 
-# Exponemos el puerto (aunque Render usa su propia variable $PORT)
 EXPOSE 8080
-
-# Comando para ejecutar la app usando el puerto dinámico de Render
-ENTRYPOINT ["java", "-Dserver.port=${PORT}", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
