@@ -1,30 +1,24 @@
-# Usa una imagen oficial de OpenJDK con Maven
-FROM amazoncorretto:21-alpine-jdk
-
-# Establece el directorio de trabajo dentro del contenedor
+FROM amazoncorretto:21-alpine-jdk AS build
 WORKDIR /app
 
-# Copia Maven Wrapper correctamente
+# Al definir el Root Directory en Render, '.' ahora es la carpeta 'SwapShop'
 COPY .mvn/ .mvn/
-COPY mvnw mvnw.cmd pom.xml ./
-
-# Da permisos de ejecución al wrapper de Maven
+COPY mvnw pom.xml ./
 RUN chmod +x mvnw
 
-# Descarga las dependencias para mejorar la cacheabilidad
-RUN ./mvnw dependency:resolve dependency:go-offline
+# Descargar dependencias
+RUN ./mvnw dependency:go-offline
 
-# Copia el código fuente
+# Copiar el código fuente (src/ está dentro de SwapShop)
 COPY src/ src/
 
-# Compila la aplicación
+# Compilar
 RUN ./mvnw clean package -DskipTests
 
-# Verifica que el JAR se haya generado
-RUN ls -l target/
+# Etapa final de ejecución
+FROM amazoncorretto:21-alpine
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 
-# Expone el puerto 8080
 EXPOSE 8080
-
-# Ejecuta la aplicación
-CMD ["java", "-jar", "target/safajobs-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
