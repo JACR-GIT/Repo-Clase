@@ -1,21 +1,22 @@
+# ETAPA DE CONSTRUCCIÓN
 FROM amazoncorretto:21-alpine-jdk AS build
 WORKDIR /app
 
-# Al definir el Root Directory en Render, '.' ahora es la carpeta 'SwapShop'
-COPY .mvn/ .mvn/
+# 1. Copia los archivos de Maven (ya estamos dentro de SwapShop gracias a Render)
 COPY mvnw pom.xml ./
-RUN chmod +x mvnw
+COPY .mvn/ .mvn/
 
-# Descargar dependencias
+# 2. Permisos y descarga de dependencias
+RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 
-# Copiar el código fuente (src/ está dentro de SwapShop)
+# 3. Copia SOLO la carpeta src (que está al mismo nivel que este Dockerfile)
 COPY src/ src/
 
-# Compilar
+# 4. Compila
 RUN ./mvnw clean package -DskipTests
 
-# Etapa final de ejecución
+# ETAPA DE EJECUCIÓN
 FROM amazoncorretto:21-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
