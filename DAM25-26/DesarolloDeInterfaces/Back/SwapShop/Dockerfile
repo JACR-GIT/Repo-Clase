@@ -2,28 +2,27 @@
 FROM amazoncorretto:21-alpine-jdk AS build
 WORKDIR /app
 
-# Definimos la ruta del proyecto como argumento
+# Instalamos Maven manualmente en la etapa de build
+RUN apk add --no-cache maven
+
+# Definimos la ruta del proyecto
 ARG PROJECT_PATH=DAM25-26/DesarolloDeInterfaces/Back/SwapShop
 
-# En lugar de copiar uno a uno, copiamos TODO el contenido de la carpeta del proyecto
-# Esto incluirá .mvn, mvnw, pom.xml y src de una sola vez
+# Copiamos el contenido del proyecto
 COPY ${PROJECT_PATH}/ .
 
-# Corregimos los finales de línea (por si vienes de Windows) y damos permisos
-RUN tr -d '\r' < mvnw > mvnw_unix && mv mvnw_unix mvnw
-RUN chmod +x mvnw
+# Como instalamos Maven en el sistema, usamos 'mvn' en lugar de './mvnw'
+# Esto ignora completamente la carpeta .mvn/wrapper que está fallando
+RUN mvn dependency:go-offline -B
 
-# Descargamos dependencias
-RUN ./mvnw dependency:go-offline -B
-
-# Compilamos (el código ya se copió en el paso anterior)
-RUN ./mvnw clean package -DskipTests
+# Compilamos
+RUN mvn clean package -DskipTests
 
 # --- ETAPA DE EJECUCIÓN ---
 FROM amazoncorretto:21-alpine
 WORKDIR /app
 
-# Copiamos el JAR generado
+# El JAR se genera en la carpeta target/
 COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
