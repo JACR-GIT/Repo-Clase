@@ -1,25 +1,17 @@
-# ETAPA DE CONSTRUCCIÓN
-FROM amazoncorretto:21-alpine-jdk AS build
+# Fase 1: Compilar la aplicación (Build)
+FROM maven:3.9.6-amazoncorretto-21 AS build
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# 1. Copia los archivos de Maven (ya estamos dentro de SwapShop gracias a Render)
-COPY mvnw pom.xml ./
-COPY .mvn/ .mvn/
-
-# 2. Permisos y descarga de dependencias
-RUN chmod +x mvnw
-RUN ./mvnw dependency:go-offline
-
-# 3. Copia SOLO la carpeta src (que está al mismo nivel que este Dockerfile)
-COPY src/ src/
-
-# 4. Compila
-RUN ./mvnw clean package -DskipTests
-
-# ETAPA DE EJECUCIÓN
-FROM amazoncorretto:21-alpine
+# Fase 2: Ejecutar la aplicación (Runtime)
+FROM amazoncorretto:21-al2023-headless
 WORKDIR /app
+# Copiamos el archivo .jar generado en la fase anterior
 COPY --from=build /app/target/*.jar app.jar
 
+# Exponemos el puerto (aunque Render usa su propia variable $PORT)
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# Comando para ejecutar la app usando el puerto dinámico de Render
+ENTRYPOINT ["java", "-Dserver.port=${PORT}", "-jar", "app.jar"]
