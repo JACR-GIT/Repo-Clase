@@ -2,27 +2,28 @@
 FROM amazoncorretto:21-alpine-jdk AS build
 WORKDIR /app
 
-# Definimos una variable para no repetir la ruta larga (ajusta si tiene errores de escritura)
+# Definimos la ruta del proyecto como argumento
 ARG PROJECT_PATH=DAM25-26/DesarolloDeInterfaces/Back/SwapShop
 
-# Copiamos los archivos de Maven usando la ruta completa del repo
-COPY ${PROJECT_PATH}/mvnw ${PROJECT_PATH}/pom.xml ./
-COPY ${PROJECT_PATH}/.mvn/ .mvn/
+# En lugar de copiar uno a uno, copiamos TODO el contenido de la carpeta del proyecto
+# Esto incluirá .mvn, mvnw, pom.xml y src de una sola vez
+COPY ${PROJECT_PATH}/ .
 
-# Corregimos permisos y descargamos dependencias
-RUN chmod +x mvnw && ./mvnw dependency:go-offline -B
+# Corregimos los finales de línea (por si vienes de Windows) y damos permisos
+RUN tr -d '\r' < mvnw > mvnw_unix && mv mvnw_unix mvnw
+RUN chmod +x mvnw
 
-# Copiamos el código fuente desde la ruta larga
-COPY ${PROJECT_PATH}/src/ src/
+# Descargamos dependencias
+RUN ./mvnw dependency:go-offline -B
 
-# Compilamos
+# Compilamos (el código ya se copió en el paso anterior)
 RUN ./mvnw clean package -DskipTests
 
 # --- ETAPA DE EJECUCIÓN ---
 FROM amazoncorretto:21-alpine
 WORKDIR /app
 
-# El JAR se genera en la raíz de /app/target dentro del contenedor
+# Copiamos el JAR generado
 COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
