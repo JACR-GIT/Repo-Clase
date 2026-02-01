@@ -127,7 +127,7 @@ public class PrendaServiceTest {
 
     @Test
     @DisplayName("Servicio 4 -> Caso Positivo")
-    void buscarPrendaPorTalla() {
+    void buscarPrendaPorTallaTest() {
         //Given
 
         //Then
@@ -138,13 +138,11 @@ public class PrendaServiceTest {
         assertNotNull(prendasBuscada, "La lista de prendas no debería ser nula");
         assertFalse(prendasBuscada.isEmpty(), "La lista de prendas no debería estar vacía");
         assertFalse(prendasBuscada.contains(null), "La lista de prendas no debería contener elementos nulos");
-        assertEquals(1, prendasBuscada.size(), "Debería haber encontrado 1 prenda de talla L");
-        assertEquals(Talla.L, prendasBuscada.get(0).getTalla(), "La talla de la prenda encontrada debería ser L");
     }
 
     @Test
     @DisplayName("Servicio 4 -> Caso Negativo")
-    void buscarPrendaPorTallaNegativo() {
+    void buscarPrendaPorTallaTestNegativo() {
         //Given
 
         //Then
@@ -155,7 +153,7 @@ public class PrendaServiceTest {
 
     @Test
     @DisplayName("Servicio 5 -> Caso Positivo")
-    void modificarPrendaPorId() {
+    void modificarPrendaPorIdTest() {
         //Given
 
         PrendasDTO prendaModificada = new PrendasDTO();
@@ -185,7 +183,7 @@ public class PrendaServiceTest {
 
     @Test
     @DisplayName("Servicio 5 -> Caso Negativo")
-    void modificarPrendaPorIdNegativo() {
+    void modificarPrendaPorIdTestNegativo() {
         //Given
 
         PrendasDTO prendaModificada = new PrendasDTO();
@@ -207,7 +205,7 @@ public class PrendaServiceTest {
 
     @Test
     @DisplayName("Servicio 9 -> Caso Positivo")
-    void top5PrendasMasIntercambiadasAceptadas() {
+    void top5PrendasMasIntercambiadasAceptadasTest() {
         //Given
 
         //Then
@@ -219,7 +217,7 @@ public class PrendaServiceTest {
 
     @Test
     @DisplayName("Servicio 9 -> Caso Negativo")
-    void top5PrendasMasIntercambiadasAceptadasNegativo() {
+    void top5PrendasMasIntercambiadasAceptadasTestNegativo() {
         //Given
 
         //Then

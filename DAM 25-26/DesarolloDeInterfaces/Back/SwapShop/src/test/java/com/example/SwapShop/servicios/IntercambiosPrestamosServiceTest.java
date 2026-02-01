@@ -161,13 +161,6 @@ public class IntercambiosPrestamosServiceTest {
 
         //When
         assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.crearIntercambioPrestamo(intercambioNuevo));
-        assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.crearIntercambioPrestamo(intercambioNuevo));
-        assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.crearIntercambioPrestamo(intercambioNuevo));
-        assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.crearIntercambioPrestamo(intercambioNuevo));
-        assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.crearIntercambioPrestamo(intercambioNuevo));
-        assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.crearIntercambioPrestamo(intercambioNuevo));
-        assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.crearIntercambioPrestamo(intercambioNuevo));
-
     }
 
     @Test
@@ -192,6 +185,7 @@ public class IntercambiosPrestamosServiceTest {
         //Then
 
         //When
+        assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.cambiarEstado(6, EstadoIntercambio.ACEPTADO));
         assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.cambiarEstado(1, null));
         assertThrows(IllegalArgumentException.class, () -> intercambiosPrestamosService.cambiarEstado(null, EstadoIntercambio.FINALIZADO));
     }

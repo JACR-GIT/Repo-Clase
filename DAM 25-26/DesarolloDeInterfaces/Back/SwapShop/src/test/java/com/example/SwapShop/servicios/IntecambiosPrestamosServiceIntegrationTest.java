@@ -59,7 +59,7 @@ public class IntecambiosPrestamosServiceIntegrationTest {
 
     @Test
     @DisplayName("Test de integracion -> cambiarEstado()")
-    public void cambiarEstadoIntafrationTest(){
+    public void cambiarEstadoIntegrationTest(){
         //Given
 
         Mockito.when(this.intercambiosPrestamosRepository.findById(Mockito.anyInt())).thenReturn(Optional.of(new IntercambiosPrestamos()));

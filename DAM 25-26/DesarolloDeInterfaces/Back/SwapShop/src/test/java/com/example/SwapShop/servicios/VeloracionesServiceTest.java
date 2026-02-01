@@ -79,7 +79,7 @@ public class VeloracionesServiceTest {
 
     @Test
     @DisplayName("Servicio 8 -> Caso Negativo")
-    void crearValoracionNegativo() {
+    void crearValoracionTestNegativo() {
 
         //Given
         ValoracionesDTO valoracionCreada = new ValoracionesDTO();
