@@ -1,45 +1,59 @@
-import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import {
-  IonHeader, IonToolbar, IonTitle, IonContent,
-  IonItem, IonLabel, IonInput, IonButton, IonList, IonCard, IonCardContent
-} from '@ionic/angular/standalone';
+import { Component } from '@angular/core';
 import { UsuarioService } from '../servicios/usuario-services/usuario-service';
 import { UsuarioDTO } from '../modelos/UsuarioDTO';
+import {
+  IonButton,
+  IonContent,
+  IonHeader,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonTitle,
+  IonToolbar
+} from "@ionic/angular/standalone";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  standalone: true,
   imports: [
-    FormsModule, IonHeader, IonToolbar, IonTitle, IonContent,
-    IonItem, IonLabel, IonInput, IonButton, IonList, IonCard, IonCardContent
-  ],
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonList,
+    IonInput,
+    IonLabel,
+    IonItem,
+    FormsModule,
+    IonButton
+  ]
 })
 export class HomePage {
-  private usuarioService = inject(UsuarioService);
-
+  // Creamos el objeto vacío basado en tu DTO
   usuario: UsuarioDTO = {
     nombreUsuario: '',
     nombre: '',
     apellido1: '',
-    apellido2: '',
     correo: '',
     contrasena: '',
     fecha_nac: ''
   };
 
-  onLogin() {
-    console.log('Datos a enviar:', this.usuario);
+  constructor(private usuarioService: UsuarioService) {}
+
+  enviarLogin() {
+    console.log('Datos que viajan a Render:', this.usuario);
 
     this.usuarioService.crearUsuario(this.usuario).subscribe({
-      next: (res: UsuarioDTO) => {
-        alert('Éxito: Usuario ' + res.nombreUsuario + ' creado.');
+      next: (res) => {
+        alert('¡Bienvenido ' + res.nombreUsuario + '!');
       },
-      error: (err: any) => {
-        console.error('Error de conexión:', err);
-        alert('Error al conectar con Render. Revisa la consola.');
+      error: (err) => {
+        console.error('Error al conectar:', err);
+        alert('Hubo un error con el servidor en Render.');
       }
     });
   }
