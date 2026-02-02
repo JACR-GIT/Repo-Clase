@@ -8,7 +8,7 @@ import java.sql.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "intercambios")
+@Table(name = "intercambios", schema = "swapshop")
 public class IntercambiosPrestamos {
 
     @Id

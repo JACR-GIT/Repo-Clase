@@ -7,7 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "valoraciones")
+@Table(name = "valoraciones", schema = "swapshop")
 public class Valoraciones {
 
     @Id
