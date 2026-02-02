@@ -42,69 +42,72 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.IntecambiosPrestamosServiceIntegrationTest.cambiarEstadoIntafrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.IntecambiosPrestamosServiceIntegrationTest.crearIntercambioIntafrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.IntercambiosPrestamosServiceTest.cambiarEstadoTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.IntercambiosPrestamosServiceTest.cambiarEstadoTestNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.IntercambiosPrestamosServiceTest.crearIntercambioPrestamoTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.IntercambiosPrestamosServiceTest.crearIntercambioPrestamoTestNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendaServiceTest.buscarPrendaPorTalla.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendaServiceTest.buscarPrendaPorTallaNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendaServiceTest.crearPrendaNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendaServiceTest.crearPrendaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendaServiceTest.modificarPrendaPorId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendaServiceTest.modificarPrendaPorIdNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendaServiceTest.top5PrendasMasIntercambiadasAceptadas.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.PrendaServiceTest.top5PrendasMasIntercambiadasAceptadasNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendasServiceIntegrationTest.buscarPrendaPorTallaIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendasServiceIntegrationTest.crearPrendaIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PrendasServiceIntegrationTest.modificarPrendaPorIdIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsuarioServiceIntegrationTest.buscarUsuarioPorIdIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsuarioServiceIntegrationTest.crearUsuarioIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsuarioServiceIntegrationTest.usuarioConMasIntercambiosIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsuarioServiceTests.buscarUsuarioPorIdTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.UsuarioServiceTests.buscarUsuarioPorIdTestNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsuarioServiceTests.crearUsuarioTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsuarioServiceTests.crearUsuarioTets.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsuarioServiceTests.crearUsuarioTetsNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsuarioServiceTests.usuarioConMasIntercambiosTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsuarioServiceTests.usuarioConMasIntercambiosTestNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ValoracionesServiceIntegrationTest.crearValoracionIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VeloracionesServiceTest.crearValoracionNegativo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VeloracionesServiceTest.crearValoracionTest.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
-    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SwapShopApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.IntecambiosPrestamosServiceIntegrationTest.cambiarEstadoIntafrationTest.executor": "Run",
+    "JUnit.IntecambiosPrestamosServiceIntegrationTest.crearIntercambioIntafrationTest.executor": "Run",
+    "JUnit.IntercambiosPrestamosServiceTest.cambiarEstadoTest.executor": "Debug",
+    "JUnit.IntercambiosPrestamosServiceTest.cambiarEstadoTestNegativo.executor": "Run",
+    "JUnit.IntercambiosPrestamosServiceTest.crearIntercambioPrestamoTest.executor": "Run",
+    "JUnit.IntercambiosPrestamosServiceTest.crearIntercambioPrestamoTestNegativo.executor": "Run",
+    "JUnit.PrendaServiceTest.buscarPrendaPorTalla.executor": "Run",
+    "JUnit.PrendaServiceTest.buscarPrendaPorTallaNegativo.executor": "Run",
+    "JUnit.PrendaServiceTest.crearPrendaNegativo.executor": "Run",
+    "JUnit.PrendaServiceTest.crearPrendaTest.executor": "Run",
+    "JUnit.PrendaServiceTest.modificarPrendaPorId.executor": "Run",
+    "JUnit.PrendaServiceTest.modificarPrendaPorIdNegativo.executor": "Run",
+    "JUnit.PrendaServiceTest.top5PrendasMasIntercambiadasAceptadas.executor": "Debug",
+    "JUnit.PrendaServiceTest.top5PrendasMasIntercambiadasAceptadasNegativo.executor": "Run",
+    "JUnit.PrendasServiceIntegrationTest.buscarPrendaPorTallaIntegrationTest.executor": "Run",
+    "JUnit.PrendasServiceIntegrationTest.crearPrendaIntegrationTest.executor": "Run",
+    "JUnit.PrendasServiceIntegrationTest.modificarPrendaPorIdIntegrationTest.executor": "Run",
+    "JUnit.UsuarioServiceIntegrationTest.buscarUsuarioPorIdIntegrationTest.executor": "Run",
+    "JUnit.UsuarioServiceIntegrationTest.crearUsuarioIntegrationTest.executor": "Run",
+    "JUnit.UsuarioServiceIntegrationTest.usuarioConMasIntercambiosIntegrationTest.executor": "Run",
+    "JUnit.UsuarioServiceTests.buscarUsuarioPorIdTest.executor": "Debug",
+    "JUnit.UsuarioServiceTests.buscarUsuarioPorIdTestNegativo.executor": "Run",
+    "JUnit.UsuarioServiceTests.crearUsuarioTest.executor": "Run",
+    "JUnit.UsuarioServiceTests.crearUsuarioTets.executor": "Run",
+    "JUnit.UsuarioServiceTests.crearUsuarioTetsNegativo.executor": "Run",
+    "JUnit.UsuarioServiceTests.usuarioConMasIntercambiosTest.executor": "Run",
+    "JUnit.UsuarioServiceTests.usuarioConMasIntercambiosTestNegativo.executor": "Run",
+    "JUnit.ValoracionesServiceIntegrationTest.crearValoracionIntegrationTest.executor": "Run",
+    "JUnit.VeloracionesServiceTest.crearValoracionNegativo.executor": "Run",
+    "JUnit.VeloracionesServiceTest.crearValoracionTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.SwapShopApplication.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.IntecambiosPrestamosServiceIntegrationTest.cambiarEstadoIntafrationTest">
     <configuration name="IntecambiosPrestamosServiceIntegrationTest.cambiarEstadoIntafrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SwapShop" />
       <extension name="coverage">
@@ -206,8 +209,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
       </set>
     </attachedChunks>
   </component>
@@ -243,6 +246,7 @@
       <workItem from="1769683643332" duration="431000" />
       <workItem from="1769684095301" duration="59000" />
       <workItem from="1769960155512" duration="8663000" />
+      <workItem from="1770012755361" duration="26000" />
     </task>
     <servers />
   </component>
