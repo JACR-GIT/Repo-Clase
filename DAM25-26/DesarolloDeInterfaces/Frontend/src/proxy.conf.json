@@ -1,0 +1,9 @@
+{
+  "/api": {
+    "target": "http://swapshop-f96d.onrender.com/",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": { "^/api": "" },
+    "logLevel": "debug"
+  }
+}

@@ -22,7 +22,7 @@ export class UsuarioService {
 
   // Crear usuario (por si lo llamas desde otro sitio)
   crearUsuario(usuario: UsuarioDTO): Observable<UsuarioDTO> {
-    return this.http.post<UsuarioDTO>(this.apiUrl, usuario);
+    return this.http.post<UsuarioDTO>(`${this.apiUrl}/usuarios`, usuario);
   }
 
   // Obtener usuario por ID
