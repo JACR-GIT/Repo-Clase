@@ -1,0 +1,307 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <div class="container py-5">
+        <h1 class="mb-5 text-center" style="color: var(--primary-orange);">
+            {{ titulo }}
+        </h1>
+
+        <!-- Tier List con títulos a la izquierda -->
+        <div class="tier-list mb-5">
+            <div class="row g-3">
+                <!-- Tier S -->
+                <div class="col-12">
+                    <div class="d-flex align-items-start flex-column flex-md-row">
+                        <div class="tier-label bg-danger text-white p-2 text-center fw-bold me-md-3 mb-2 mb-md-0"
+                             style="min-width: 60px; flex-shrink: 0;">
+                            S
+                        </div>
+                        <div class="tier-dropzone border border-danger border-2 p-3 flex-grow-1 d-flex flex-wrap gap-2"
+                             ondrop="drop(event)" ondragover="allowDrop(event)" id="tier-s"></div>
+                    </div>
+                </div>
+
+                <!-- Tier A -->
+                <div class="col-12">
+                    <div class="d-flex align-items-start flex-column flex-md-row">
+                        <div class="tier-label bg-warning text-dark p-2 text-center fw-bold me-md-3 mb-2 mb-md-0"
+                             style="min-width: 60px; flex-shrink: 0;">
+                            A
+                        </div>
+                        <div class="tier-dropzone border border-warning border-2 p-3 flex-grow-1 d-flex flex-wrap gap-2"
+                             ondrop="drop(event)" ondragover="allowDrop(event)" id="tier-a"></div>
+                    </div>
+                </div>
+
+                <!-- Tier B -->
+                <div class="col-12">
+                    <div class="d-flex align-items-start flex-column flex-md-row">
+                        <div class="tier-label bg-info text-white p-2 text-center fw-bold me-md-3 mb-2 mb-md-0"
+                             style="min-width: 60px; flex-shrink: 0;">
+                            B
+                        </div>
+                        <div class="tier-dropzone border border-info border-2 p-3 flex-grow-1 d-flex flex-wrap gap-2"
+                             ondrop="drop(event)" ondragover="allowDrop(event)" id="tier-b"></div>
+                    </div>
+                </div>
+
+                <!-- Tier C -->
+                <div class="col-12">
+                    <div class="d-flex align-items-start flex-column flex-md-row">
+                        <div class="tier-label bg-secondary text-white p-2 text-center fw-bold me-md-3 mb-2 mb-md-0"
+                             style="min-width: 60px; flex-shrink: 0;">
+                            C
+                        </div>
+                        <div class="tier-dropzone border border-secondary border-2 p-3 flex-grow-1 d-flex flex-wrap gap-2"
+                             ondrop="drop(event)" ondragover="allowDrop(event)" id="tier-c"></div>
+                    </div>
+                </div>
+
+                <!-- Tier D -->
+                <div class="col-12">
+                    <div class="d-flex align-items-start flex-column flex-md-row">
+                        <div class="tier-label bg-dark text-white p-2 text-center fw-bold me-md-3 mb-2 mb-md-0"
+                             style="min-width: 60px; flex-shrink: 0;">
+                            D
+                        </div>
+                        <div class="tier-dropzone border border-dark border-2 p-3 flex-grow-1 d-flex flex-wrap gap-2"
+                             ondrop="drop(event)" ondragover="allowDrop(event)" id="tier-d"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Guardar -->
+            <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg" onclick="guardarRanking()">
+                    Guardar Ranking
+                </button>
+            </div>
+        </div>
+
+        <!-- Lista de álbumes -->
+        <h3 class="mb-4 text-center">Álbumes de {{ categoria.name }}</h3>
+
+        {% if albumes %}
+            <div class="album-grid" id="albumList">
+                {% for album in albumes %}
+                    <div class="album-item">
+                        <div class="card album-card shadow-sm border-0 position-relative"
+                             draggable="true" ondragstart="drag(event)" id="album-{{ album.code }}"
+                             style="width: 140px; height: 140px; overflow: hidden;">
+
+                            {% if album.image %}
+                                <img src="{{ album.image }}" class="w-100 h-100" alt="{{ album.title }}"
+                                     style="object-fit: cover; pointer-events: none;">
+                            {% else %}
+                                <img src="{% static 'img/no-image.jpg' %}" class="w-100 h-100" alt="Sin portada"
+                                     style="object-fit: cover; pointer-events: none;">
+                            {% endif %}
+
+                            <!-- Botón X -->
+                            <button class="btn btn-sm btn-danger position-absolute top-0 end-0 m-1 remove-btn"
+                                    style="display: none; width: 24px; height: 24px; padding: 0; font-size: 12px;"
+                                    onclick="removeFromTier('album-{{ album.code }}')">
+                                X
+                            </button>
+
+                            <!-- Select con valor pre-seleccionado si estaba colocado -->
+                            <select class="form-select form-select-sm position-absolute bottom-0 start-50 translate-middle-x mb-1"
+                                    style="width: 80%; font-size: 10px;"
+                                    onchange="placeInTier(this.value, 'album-{{ album.code }}')">
+                                <option value="">Mover a...</option>
+                                <option value="tier-s">S</option>
+                                <option value="tier-a">A</option>
+                                <option value="tier-b">B</option>
+                                <option value="tier-c">C</option>
+                                <option value="tier-d">D</option>
+                            </select>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="alert alert-info text-center">
+                No hay álbumes en esta categoría todavía.
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Estilos para el grid de álbumes (mejor espaciado) -->
+    <style>
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 1.25rem;           /* Espacio mínimo entre tarjetas */
+            padding: 1rem 0;
+            justify-items: center;  /* Centra las tarjetas en cada celda */
+        }
+
+        .album-item {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        // Datos del ranking anterior (pasados desde la vista)
+        const initialTiers = {{ tiers|safe|default:"{}" }};
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            const dragged = document.getElementById(data);
+
+            if (dragged.parentNode.classList.contains('tier-dropzone')) {
+                dragged.parentNode.removeChild(dragged);
+            }
+
+            dragged.style.width = '140px';
+            dragged.style.height = '140px';
+
+            const select = dragged.querySelector('select');
+            const removeBtn = dragged.querySelector('.remove-btn');
+            if (select) select.style.display = 'none';
+            if (removeBtn) removeBtn.style.display = 'block';
+
+            ev.target.appendChild(dragged);
+        }
+
+        function placeInTier(tierId, albumId) {
+            if (!tierId) return;
+            const dragged = document.getElementById(albumId);
+            const target = document.getElementById(tierId);
+
+            if (!target) return;
+
+            if (dragged.parentNode.classList.contains('tier-dropzone')) {
+                dragged.parentNode.removeChild(dragged);
+            } else if (dragged.parentNode.id === 'albumList') {
+                dragged.parentNode.removeChild(dragged);
+            }
+
+            dragged.style.width = '140px';
+            dragged.style.height = '140px';
+
+            const select = dragged.querySelector('select');
+            const removeBtn = dragged.querySelector('.remove-btn');
+            if (select) select.style.display = 'none';
+            if (removeBtn) removeBtn.style.display = 'block';
+
+            target.appendChild(dragged);
+        }
+
+        function removeFromTier(albumId) {
+            const dragged = document.getElementById(albumId);
+            const albumList = document.getElementById('albumList');
+
+            if (dragged.parentNode.classList.contains('tier-dropzone')) {
+                dragged.parentNode.removeChild(dragged);
+            }
+
+            dragged.style.width = '140px';
+            dragged.style.height = '140px';
+
+            const select = dragged.querySelector('select');
+            const removeBtn = dragged.querySelector('.remove-btn');
+            if (select) select.style.display = 'block';
+            if (removeBtn) removeBtn.style.display = 'none';
+
+            albumList.appendChild(dragged);
+        }
+
+        // Inicializamos eventos de drag & drop
+        document.querySelectorAll('.tier-dropzone').forEach(zone => {
+            zone.addEventListener('dragover', allowDrop);
+            zone.addEventListener('drop', drop);
+        });
+
+        // Función para guardar el ranking con validación
+        function guardarRanking() {
+            const tiers = {};
+            let totalAlbums = 0;
+
+            document.querySelectorAll('.tier-dropzone').forEach(zone => {
+                const tierId = zone.id.replace('tier-', '');
+                const albums = Array.from(zone.querySelectorAll('.album-card')).map(card => {
+                    return parseInt(card.id.replace('album-', ''));
+                });
+                tiers[tierId] = albums;
+                totalAlbums += albums.length;
+            });
+
+            // Validación: mínimo 1 álbum colocado en algún tier
+            if (totalAlbums === 0) {
+                alert('Debes colocar al menos un álbum en algún tier (S, A, B, C o D) antes de guardar el ranking.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('ranking_list', JSON.stringify(tiers));
+            formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+
+            fetch("{% url 'rankingApp:ranking' category_code=categoria.code %}", {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+                    alertDiv.innerHTML = `
+                        ${data.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    `;
+                    document.querySelector('.tier-list').appendChild(alertDiv);
+
+                    setTimeout(() => {
+                        window.location.href = "{% url 'rankingApp:show_categorias' %}";
+                    }, 2000);
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al guardar el ranking');
+            });
+        }
+
+        // Inicializar selects con posiciones guardadas
+        window.addEventListener('load', function() {
+            const tiers = initialTiers || {};
+
+            Object.keys(tiers).forEach(tierKey => {
+                const tierId = 'tier-' + tierKey;
+                const albumCodes = tiers[tierKey];
+
+                albumCodes.forEach(albumCode => {
+                    const albumId = 'album-' + albumCode;
+                    const card = document.getElementById(albumId);
+                    if (card) {
+                        const select = card.querySelector('select');
+                        if (select) {
+                            const option = select.querySelector(`option[value="${tierId}"]`);
+                            if (option) {
+                                option.selected = true;
+                            }
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+{% endblock %}

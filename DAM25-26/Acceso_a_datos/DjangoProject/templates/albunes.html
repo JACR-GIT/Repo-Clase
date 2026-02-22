@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <div class="container py-5">
+        <h1 class="mb-5 text-center" style="color: var(--primary-orange);">Álbumes</h1>
+
+        <!-- Buscador implementado (mantenido de la versión anterior) -->
+        <div class="mb-4">
+            <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Buscar por nombre de álbum...">
+        </div>
+
+        {% if list_albunes %}
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="albumGrid">
+                {% for album in list_albunes %}
+                    <div class="col album-card">
+                        <a href="{% url 'rankingApp:review' album.code %}" class="text-decoration-none">
+                            <div class="card h-100 shadow-sm border-0" style="transition: transform 0.2s; cursor: pointer;">
+                                {% if album.image %}
+                                    <img src="{{ album.image }}" class="card-img-top" alt="{{ album.title }}" style="height: 220px; object-fit: cover;">
+                                {% else %}
+                                    <img src="{% static 'img/no-image.jpg' %}" class="card-img-top" alt="Sin portada" style="height: 220px; object-fit: cover;">
+                                {% endif %}
+
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold mb-1 album-title" style="color: var(--primary-orange);">
+                                        {{ album.title }}
+                                    </h5>
+                                    <p class="card-text text-muted mb-0">
+                                        {% if album.artist %}
+                                            {{ album.artist.0|default:album.artist }}
+                                        {% else %}
+                                            Artista desconocido
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div id="noResults" class="alert alert-info text-center py-4 mt-4" style="display: none;">
+                <h4>No se encontraron álbumes que coincidan con la búsqueda.</h4>
+            </div>
+        {% else %}
+            <div class="alert alert-info text-center py-4">
+                <h4>No hay álbumes disponibles en este momento.</h4>
+                <p>Intenta cargar datos o revisa la base de datos.</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- JavaScript para el filtro (mantenido) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const albumCards = document.querySelectorAll('.album-card');
+            const noResults = document.getElementById('noResults');
+
+            searchInput.addEventListener('input', function() {
+                const filter = searchInput.value.toLowerCase();
+                let visibleCount = 0;
+
+                albumCards.forEach(function(card) {
+                    const title = card.querySelector('.album-title').textContent.toLowerCase();
+                    if (title.includes(filter)) {
+                        card.style.display = '';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+{% endblock %}

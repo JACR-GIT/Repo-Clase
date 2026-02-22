@@ -11,8 +11,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/prendas")  // Cambiado a /api/prendas para el frontend
-@CrossOrigin(origins = "http://localhost:8100")  // Evita errores CORS
+@RequestMapping("/prendas")  // Cambiado a /api/prendas para el frontend // Evita errores CORS
 public class PrendasController {
 
     private final PrendaService prendasService;

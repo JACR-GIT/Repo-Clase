@@ -32,8 +32,8 @@ public class IntecambiosPrestamosServiceIntegrationTest {
     @Test
     @DisplayName("Test de integracion -> crearIntercambioPrestamo()")
     public void crearIntercambioIntafrationTest(){
-        //Given
 
+        //Given
         IntercambiosPrestamosDTO dto = new IntercambiosPrestamosDTO();
         dto.setEstado(EstadoIntercambio.ACEPTADO);
         dto.setTipo(TipoIntercambio.INTERCAMBIO);

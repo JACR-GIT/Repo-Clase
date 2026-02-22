@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gestionar Usuarios{% endblock %}
+
+{% block body %}
+<div class="container py-6">
+    <h1 class="title is-1 has-text-centered">Gestionar Usuarios</h1>
+    
+    <div class="table-container">
+        <table class="table is-fullwidth is-striped is-hoverable is-bordered">
+            <thead>
+                <tr>
+                    <th class="has-text-centered">ID</th>
+                    <th class="has-text-centered">Username</th>
+                    <th class="has-text-centered">Email</th>
+                    <th class="has-text-centered">Rol</th>
+                    <th class="has-text-centered">Staff</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in list_usuarios %}
+                    <tr>
+                        <td class="has-text-centered">{{ usuario.id }}</td>
+                        <td class="has-text-centered">{{ usuario.username }}</td>
+                        <td class="has-text-centered">{{ usuario.mail }}</td>
+                        <td class="has-text-centered">{{ usuario.get_role_display }}</td>
+                        <td class="has-text-centered">
+                            {% if usuario.is_staff %}
+                                <span class="tag is-success">Sí</span>
+                            {% else %}
+                                <span class="tag is-light">No</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

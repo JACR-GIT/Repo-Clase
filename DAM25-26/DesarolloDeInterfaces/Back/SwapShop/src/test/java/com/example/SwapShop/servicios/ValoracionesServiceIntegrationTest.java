@@ -55,6 +55,5 @@ public class ValoracionesServiceIntegrationTest {
         //When
 
         Mockito.verify(valoracionesRepository).save(Mockito.any());
-
     }
 }

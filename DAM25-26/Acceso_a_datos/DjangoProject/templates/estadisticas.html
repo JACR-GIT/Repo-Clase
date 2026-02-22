@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container py-6">
+    <h1 class="title has-text-centered" style="color: #ff6200;">Análisis de Rankings</h1>
+
+    <div class="field mb-5">
+        <div class="control has-icons-left">
+            <input class="input is-rounded" type="text" id="albumSearch" placeholder="Buscar canción, álbum o artista...">
+            <span class="icon is-left"><i class="bi bi-search"></i></span>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table class="table is-fullwidth is-hoverable is-bordered" id="resultsTable">
+            <thead>
+                <tr style="background-color: #ff6200;">
+                    <th class="has-text-white">Álbum / Artista</th>
+                    <th class="has-text-centered has-text-white">S</th>
+                    <th class="has-text-centered has-text-white">A</th>
+                    <th class="has-text-centered has-text-white">B</th>
+                    <th class="has-text-centered has-text-white">C</th>
+                    <th class="has-text-centered has-text-white">D</th>
+                    <th class="has-text-centered has-text-white">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fila in tabla %}
+                <tr>
+                    <td>
+                        <strong>{{ fila.titulo }}</strong><br>
+                        <small class="has-text-grey">{{ fila.artista }}</small>
+                    </td>
+                    {% for nivel in fila.niveles %}
+                    <td class="has-text-centered">
+                        <div class="is-size-5 has-text-weight-bold">{{ nivel.cantidad }}</div>
+                        <div class="tag is-warning is-light">{{ nivel.porcentaje }}%</div>
+                    </td>
+                    {% endfor %}
+                    <td class="has-text-centered is-vcentered">
+                        <span class="tag is-info is-medium">{{ fila.total_global }}</span>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.getElementById('albumSearch').addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        const rows = document.querySelectorAll('#resultsTable tbody tr');
+        rows.forEach(row => {
+            const text = row.cells[0].textContent.toLowerCase();
+            row.style.display = text.includes(query) ? '' : 'none';
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Modificar Categorías{% endblock %}
+
+{% block body %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+    :root {
+        --primary-orange: #ff6200;
+    }
+    .title.is-1 { color: var(--primary-orange); }
+    .table thead th {
+        background-color: var(--primary-orange);
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .table td, .table th { text-align: center; vertical-align: middle; }
+    .table.is-hoverable tbody tr:hover { background-color: #fff5e6; }
+    .notification.is-success { background-color: #e6ffe6; color: #006400; }
+    .notification.is-danger { background-color: #ffe6e6; color: #8b0000; }
+    .button.is-small { min-width: 100px; }
+    #searchInput { max-width: 400px; margin: 0 auto 1.5rem; }
+    .hidden { display: none !important; }
+    #album-selector {
+        margin-top: 3rem;
+        padding: 2rem;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .album-table {
+        max-height: 420px;
+        overflow-y: auto;
+        border: 1px solid #dbdbdb;
+        border-radius: 6px;
+    }
+    .album-table td { padding: 0.6rem; }
+</style>
+
+<div class="container py-6">
+    <h1 class="title is-1 has-text-centered">Modificar Categorías</h1>
+
+    <div class="level">
+        <div class="level-left">
+            <button class="button is-primary is-rounded mb-4" onclick="openModal('addCategoryModal')">
+                <span class="icon"><i class="bi bi-plus-circle"></i></span>
+                <span>Nueva Categoría</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="field has-addons has-addons-centered mb-5">
+        <div class="control is-expanded">
+            <input class="input is-medium" type="text" id="searchInput" placeholder="Buscar por nombre de categoría...">
+        </div>
+        <div class="control">
+            <button class="button is-primary is-medium" onclick="document.getElementById('searchInput').value = ''; filterTable();">
+                Limpiar
+            </button>
+        </div>
+    </div>
+
+    <div id="messages-container" class="mb-5"></div>
+
+    {% if categorias %}
+        <div class="table-container">
+            <table class="table is-fullwidth is-striped is-hoverable is-bordered" id="categoryTable">
+                <thead>
+                    <tr>
+                        <th class="has-text-centered">Código</th>
+                        <th class="has-text-centered" style="width: 35%;">Nombre</th>
+                        <th class="has-text-centered" style="width: 40%;">Descripción</th>
+                        <th class="has-text-centered" style="width: 25%;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="categorias-table">
+                    {% for cat in categorias %}
+                        <tr data-category-codigo="{{ cat.codigo }}" data-nombre="{{ cat.nombre|lower }}">
+                            <td class="has-text-centered">{{ cat.codigo }}</td>
+                            <td class="has-text-centered">{{ cat.nombre }}</td>
+                            <td class="has-text-centered">{{ cat.descripcion|default:"—"|truncatewords:25 }}</td>
+                            <td class="has-text-centered is-vcentered">
+                                <div class="buttons is-centered is-grouped is-grouped-multiline">
+                                    <button class="button is-small is-warning edit-btn mr-2"
+                                            data-codigo="{{ cat.codigo }}"
+                                            data-nombre="{{ cat.nombre|escapejs }}"
+                                            data-descripcion="{{ cat.descripcion|escapejs }}"
+                                            data-logo="{{ cat.logo|default:''|escapejs }}">
+                                        <span class="icon is-small"><i class="bi bi-pencil-square"></i></span>
+                                        <span>Editar</span>
+                                    </button>
+
+                                    <button class="button is-small is-info select-albums-btn mr-2"
+                                            data-codigo="{{ cat.codigo }}"
+                                            data-nombre="{{ cat.nombre|escapejs }}">
+                                        <span class="icon is-small"><i class="bi bi-collection-play"></i></span>
+                                        <span>Seleccionar álbumes</span>
+                                    </button>
+
+                                    <button class="button is-small is-danger delete-btn"
+                                            data-codigo="{{ cat.codigo }}"
+                                            data-nombre="{{ cat.nombre|escapejs }}">
+                                        <span class="icon is-small"><i class="bi bi-trash3"></i></span>
+                                        <span>Eliminar</span>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+
+    <div id="album-selector" class="hidden">
+        <h2 class="title is-4 has-text-centered mb-5">
+            Gestionar álbumes para: <strong id="selected-cat-name"></strong>
+        </h2>
+        <div class="columns is-variable is-4">
+            <div class="column">
+                <h3 class="title is-5 has-text-centered">No asociados</h3>
+                <div class="album-table">
+                    <table class="table is-fullwidth is-striped is-hoverable" id="non-associated-table">
+                        <thead><tr><th>Título - Artista</th><th style="width: 120px;">Acción</th></tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="column">
+                <h3 class="title is-5 has-text-centered">Asociados</h3>
+                <div class="album-table">
+                    <table class="table is-fullwidth is-striped is-hoverable" id="associated-table">
+                        <thead><tr><th>Título - Artista</th><th style="width: 120px;">Acción</th></tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="has-text-centered mt-6">
+            <button class="button is-light is-medium" id="cancel-album-changes">Cerrar Gestión</button>
+        </div>
+    </div>
+</div>
+
+<div id="editModal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head"><p class="modal-card-title">Editar Categoría</p><button class="delete" aria-label="close"></button></header>
+        <section class="modal-card-body">
+            <form id="editForm">
+                <input type="hidden" name="category_code" id="category_code">
+                <div class="field"><label class="label">Nombre</label><div class="control"><input class="input" type="text" id="name" name="name" required></div></div>
+                <div class="field"><label class="label">Descripción</label><div class="control"><textarea class="textarea" id="description" name="description"></textarea></div></div>
+                <div class="field"><label class="label">URL Logo</label><div class="control"><input class="input" type="url" id="logo" name="logo"></div></div>
+            </form>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" id="saveChangesBtn">Guardar cambios</button>
+            <button class="button" id="cancelEdit">Cancelar</button>
+        </footer>
+    </div>
+</div>
+
+<div id="deleteConfirmModal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head has-background-danger has-text-white"><p class="modal-card-title">Confirmar Eliminación</p><button class="delete" aria-label="close"></button></header>
+        <section class="modal-card-body"><p>¿Eliminar la categoría <strong id="catTitleToDelete"></strong>?</p></section>
+        <footer class="modal-card-foot"><button class="button" id="cancelDelete">Cancelar</button><button class="button is-danger" id="confirmDeleteBtn">Eliminar</button></footer>
+    </div>
+</div>
+
+<div id="addCategoryModal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head"><p class="modal-card-title">Crear Nueva Categoría</p><button class="delete" aria-label="close" onclick="closeModal('addCategoryModal')"></button></header>
+        <section class="modal-card-body">
+            <form id="addCategoryForm">
+                <div class="field"><label class="label">Nombre</label><div class="control"><input class="input" type="text" id="newCatName" required></div></div>
+                <div class="field"><label class="label">Descripción</label><div class="control"><textarea class="textarea" id="newCatDesc"></textarea></div></div>
+                <div class="field"><label class="label">URL Logo</label><div class="control"><input class="input" type="url" id="newCatLogo"></div></div>
+            </form>
+        </section>
+        <footer class="modal-card-foot"><button class="button is-success" id="saveNewCategory">Guardar</button><button class="button" onclick="closeModal('addCategoryModal')">Cancelar</button></footer>
+    </div>
+</div>
+
+<script>
+function openModal(id) { document.getElementById(id).classList.add('is-active'); }
+function closeModal(id) { document.getElementById(id).classList.remove('is-active'); }
+
+// Guardar Nueva
+document.getElementById('saveNewCategory').addEventListener('click', function() {
+    const data = { name: document.getElementById('newCatName').value, description: document.getElementById('newCatDesc').value, logo: document.getElementById('newCatLogo').value };
+    if(!data.name) return alert("Nombre obligatorio");
+    fetch("{% url 'rankingApp:add_categoria_ajax' %}", { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}' }, body: JSON.stringify(data) })
+    .then(r => r.json()).then(data => data.status === 'success' ? location.reload() : alert(data.message));
+});
+
+// Editar Lógica
+document.querySelectorAll('.edit-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.getElementById('category_code').value = this.dataset.codigo;
+        document.getElementById('name').value = this.dataset.nombre;
+        document.getElementById('description').value = this.dataset.descripcion;
+        document.getElementById('logo').value = this.dataset.logo;
+        openModal('editModal');
+    });
+});
+
+document.getElementById('saveChangesBtn').addEventListener('click', () => {
+    const formData = new FormData(document.getElementById('editForm'));
+    fetch("{% url 'rankingApp:editar_categoria_ajax' %}", { method: 'POST', body: formData, headers: { 'X-CSRFToken': '{{ csrf_token }}' } })
+    .then(r => r.json()).then(data => data.status === 'success' ? location.reload() : alert(data.message));
+});
+
+// Gestión álbumes
+let currentCatCodigo = null;
+let allAlbumsCache = [];
+document.querySelectorAll('.select-albums-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        currentCatCodigo = this.dataset.codigo;
+        document.getElementById('selected-cat-name').textContent = this.dataset.nombre;
+        if (allAlbumsCache.length === 0) {
+            fetch("{% url 'rankingApp:buscar_albumes' %}?q=").then(r => r.json()).then(data => { allAlbumsCache = data; loadAlbumsTables(); });
+        } else { loadAlbumsTables(); }
+        document.getElementById('album-selector').classList.remove('hidden');
+    });
+});
+
+function loadAlbumsTables() {
+    fetch("{% url 'rankingApp:get_category_albums' %}", { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}' }, body: JSON.stringify({ category_code: currentCatCodigo }) })
+    .then(r => r.json()).then(data => {
+        const associated = new Set(data.current_codes || []);
+        const nonBody = document.querySelector('#non-associated-table tbody');
+        const assocBody = document.querySelector('#associated-table tbody');
+        nonBody.innerHTML = assocBody.innerHTML = '';
+        allAlbumsCache.forEach(alb => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${alb.text}</td><td><button class="button is-small ${associated.has(alb.id) ? 'is-danger' : 'is-primary'}">${associated.has(alb.id) ? 'Desasociar' : 'Asociar'}</button></td>`;
+            tr.querySelector('button').onclick = function() {
+                const isAssoc = this.textContent === 'Asociar';
+                fetch(isAssoc ? "{% url 'rankingApp:add_album_to_category' %}" : "{% url 'rankingApp:remove_album_from_category' %}", {
+                    method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}' },
+                    body: JSON.stringify({ category_code: currentCatCodigo, album_code: alb.id })
+                }).then(r => r.json()).then(() => loadAlbumsTables());
+            };
+            (associated.has(alb.id) ? assocBody : nonBody).appendChild(tr);
+        });
+    });
+}
+
+// Eliminar
+let catToDelete = null;
+document.querySelectorAll('.delete-btn').forEach(btn => {
+    btn.addEventListener('click', function() { catToDelete = this.dataset.codigo; document.getElementById('catTitleToDelete').textContent = this.dataset.nombre; openModal('deleteConfirmModal'); });
+});
+document.getElementById('confirmDeleteBtn').onclick = () => {
+    fetch("{% url 'rankingApp:eliminar_categoria_ajax' %}", { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}' }, body: JSON.stringify({ categoria_code: catToDelete }) })
+    .then(r => r.json()).then(() => location.reload());
+};
+
+// Auxiliares
+document.getElementById('searchInput').oninput = function() {
+    const val = this.value.toLowerCase();
+    document.querySelectorAll('#categoryTable tbody tr').forEach(tr => tr.style.display = tr.dataset.nombre.includes(val) ? '' : 'none');
+};
+document.getElementById('cancel-album-changes').onclick = () => document.getElementById('album-selector').classList.add('hidden');
+document.querySelectorAll('.modal-background, .delete, #cancelEdit, #cancelDelete').forEach(el => el.onclick = () => document.querySelectorAll('.modal').forEach(m => m.classList.remove('is-active')));
+</script>
+
+{% endblock %}

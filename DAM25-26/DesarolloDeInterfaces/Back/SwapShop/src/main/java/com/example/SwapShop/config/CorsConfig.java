@@ -12,7 +12,7 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addMapping("/**")  // Permite todas las rutas y subrutas
                 .allowedOrigins(
                         "https://repo-clase.onrender.com",  // Tu frontend en Render
-                        "http://localhost",  // Localhost HTTP
+                        "http://localhost:4200",  // Localhost HTTP
                         "https://localhost",  // Localhost HTTPS
                         "capacitor://localhost",  // Para apps Capacitor
                         "ionic://localhost"  // Para apps Ionic
