@@ -1,13 +1,16 @@
 package com.example.SwapShop.servicios;
 
 import com.example.SwapShop.dto.IntercambiosPrestamosDTO;
+import com.example.SwapShop.dto.UsuarioDTO;
 import com.example.SwapShop.mapeadores.IntercambiosPrestamosMapper;
 import com.example.SwapShop.modelos.EstadoIntercambio;
 import com.example.SwapShop.modelos.IntercambiosPrestamos;
+import com.example.SwapShop.modelos.Usuario;
 import com.example.SwapShop.repositorios.IIntercambiosPrestamosRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
@@ -68,5 +71,20 @@ public class IntercambiosPrestamosService {
         existente.setEstado(estadoIntercambio);
         IntercambiosPrestamos intercambioPrestamoGuardado = intercambiosPrestamosRepository.save(existente);
         return intercambiosPrestamosMapper.toDTO(intercambioPrestamoGuardado);
+    }
+
+    public List<IntercambiosPrestamosDTO> obtenerTodosLosIntercambiosPrestamos() {
+        List<IntercambiosPrestamos> intercambiosPrestamos = intercambiosPrestamosRepository.findAll();
+        return intercambiosPrestamosMapper.toDTOList(intercambiosPrestamos);
+    }
+
+    public void eliminarIntercambioPrestamo(Integer id) {
+        if (id == null) {
+            throw new IllegalArgumentException("El id del intercambio o préstamo es requerido para eliminar.");
+        }
+        IntercambiosPrestamos existente = intercambiosPrestamosRepository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Intercambio o préstamo no encontrado con id: " + id));
+
+        intercambiosPrestamosRepository.delete(existente);
     }
 }

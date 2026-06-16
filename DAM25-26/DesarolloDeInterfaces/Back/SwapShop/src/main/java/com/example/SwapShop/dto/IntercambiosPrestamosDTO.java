@@ -40,7 +40,6 @@ public class IntercambiosPrestamosDTO {
     private EstadoIntercambio estado;
 
     @NotNull(message = "La fecha de inicio no puede ser nula")
-    @FutureOrPresent(message = "La fecha de inicio debe ser en el presente o futuro")
     private Date fecha_inicio;
 
     @FutureOrPresent(message = "La fecha de fin debe ser en el presente o futuro")

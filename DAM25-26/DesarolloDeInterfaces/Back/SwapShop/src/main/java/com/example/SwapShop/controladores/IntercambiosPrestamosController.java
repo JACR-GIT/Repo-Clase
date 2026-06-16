@@ -24,4 +24,14 @@ public class IntercambiosPrestamosController {
     public IntercambiosPrestamosDTO actualizarEstadoIntercambioPrestamo(@PathVariable Integer id, @RequestParam("estado") EstadoIntercambio estadoIntercambio) {
         return intercambiosPrestamosService.cambiarEstado(id, estadoIntercambio);
     }
+
+    @GetMapping
+    public Iterable<IntercambiosPrestamosDTO> obtenerTodosLosIntercambiosPrestamos() {
+        return intercambiosPrestamosService.obtenerTodosLosIntercambiosPrestamos();
+    }
+
+    @DeleteMapping
+    public void eliminarIntercambioPrestamo(@RequestParam Integer id) {
+        intercambiosPrestamosService.eliminarIntercambioPrestamo(id);
+    }
 }

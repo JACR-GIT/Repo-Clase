@@ -11,6 +11,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Mapper(componentModel = "spring")
@@ -28,6 +29,9 @@ public abstract class IntercambiosPrestamosMapper {
     @Mapping(source = "fechaInicio", target = "fecha_inicio")
     @Mapping(source = "fechaFin", target = "fecha_fin")
     public abstract IntercambiosPrestamosDTO toDTO(IntercambiosPrestamos intercambios);
+
+    // MapStruct manejará la conversión elemento a elemento usando toDTO
+    public abstract List<IntercambiosPrestamosDTO> toDTOList(List<IntercambiosPrestamos> intercambiosList);
 
     @Mapping(source = "id_prenda", target = "prenda")
     @Mapping(source = "id_prenda2", target = "prenda2")
