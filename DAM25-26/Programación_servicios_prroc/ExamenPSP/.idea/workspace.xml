@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8da3e8da-622b-42e7-a3fa-818ace29dd0f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/safa/HiloPares.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenPSPUltimaOportunidad/src/main/java/com/safa/ModeloProductoConsumidor/Consumidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenPSPUltimaOportunidad/src/main/java/com/safa/ModeloProductoConsumidor/PaqueteTelemetria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenPSPUltimaOportunidad/src/main/java/com/safa/ModeloProductoConsumidor/Productor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenPSPUltimaOportunidad/src/main/java/com/safa/ModeloProductoConsumidor/SistemaTelemetria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExamenPSPUltimaOportunidad/src/main/java/com/safa/ModeloProductoConsumidor/keys.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º DAM - PSP-Criterios_Evaluacion.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examenpsp/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examenpsp/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examenpsp/Launcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examenpsp/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa-JACR.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa/Categoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa/ClienteUDP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa/Producto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa/Proveedor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa/ServidorInventario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa/ServidorUDP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/com/safa/TerminalOperario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad1_Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad1_Servidor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad2_ClienteMulticast.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad2_ServidorMulticast.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad3_ClienteUDP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad3_ServidorUDP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad4_ClienteTCP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad4_ServidorTCP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad5_Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad5_Servidor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad6_ClienteMastermind.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Actividad6_ServidorMastermind.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Alumno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Asignatura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Curso.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Ejemplo1URL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Ejemplo1urlCon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Ejemplo2URL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Ejemplo2urlCon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Ejemplo3urlCon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Especialidad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Numeros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/NumerosCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/Profesor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/README_SIMPLIFICADO.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/RespuestaMastermind.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/SocketCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP2/src/main/java/practicas/SocketServidor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ExamenPSP3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ExamenPSP3/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ExamenPSP3/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/ClienteFTP1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/ClienteFTP2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/ClienteFTPBasicoPractica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/ClienteSMTP1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/ClienteSMTP2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/ClienteSMTP2_NOTLS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/ClienteSMTPGrafico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/DescargarFichero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/FTPExamen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/SubirFichero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExamenPSP3/src/main/java/com/safa/clienteFTPBasico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticasURL/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticasURL/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/jcamr/Repo-Clase/DAM25-26/Programación_servicios_prroc/ExamenPSP" value="3FETQmqXr45Fd5jMdNVebNvGj7g" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3FETQmqXr45Fd5jMdNVebNvGj7g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/jcamr/Repo-Clase/DAM25-26/Programación_servicios_prroc/ExamenPSP/src/main/java/com/safa/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8da3e8da-622b-42e7-a3fa-818ace29dd0f" name="Changes" comment="" />
+      <created>1781639215044</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781639215044</updated>
+      <workItem from="1781639216136" duration="854000" />
+      <workItem from="1781641287657" duration="432000" />
+      <workItem from="1781683300918" duration="674000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
